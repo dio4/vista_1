@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RBCounterEditor</class>
+ <widget class="QDialog" name="RBCounterEditor">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>338</width>
+    <height>474</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>true</bool>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="margin">
+    <number>4</number>
+   </property>
+   <property name="spacing">
+    <number>4</number>
+   </property>
+   <item row="15" column="0" colspan="2">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="lblCode">
+     <property name="text">
+      <string>&amp;Код</string>
+     </property>
+     <property name="buddy">
+      <cstring>edtCode</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QLineEdit" name="edtCode"/>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="lblName">
+     <property name="text">
+      <string>&amp;Наименование</string>
+     </property>
+     <property name="buddy">
+      <cstring>edtName</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QLineEdit" name="edtName"/>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="lblValue">
+     <property name="text">
+      <string>Текущее &amp;значение</string>
+     </property>
+     <property name="buddy">
+      <cstring>edtValue</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1">
+    <widget class="CBigIntSpinBox" name="edtValue">
+     <property name="minimum">
+      <number>-2147483647</number>
+     </property>
+     <property name="maximum">
+      <number>2147483647</number>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0">
+    <widget class="QLabel" name="lblPrefix">
+     <property name="text">
+      <string>&amp;Префикс</string>
+     </property>
+     <property name="buddy">
+      <cstring>edtPrefix</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="1">
+    <widget class="QLineEdit" name="edtPrefix">
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Разделенные через точку с запятой блоки данных (без кавычек): &lt;/p&gt;&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&amp;quot;&lt;span style=&quot; font-weight:600;&quot;&gt;date(&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;&amp;lt;формат_даты&amp;gt;&lt;/span&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;)&lt;/span&gt;&amp;quot; - текущая дата (на момент формирования имени) в указанном формате &lt;/li&gt;&lt;ul type=&quot;circle&quot; style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 2;&quot;&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&amp;quot;&lt;span style=&quot; font-style:italic;&quot;&gt;D&lt;/span&gt;&amp;quot; или &amp;quot;&lt;span style=&quot; font-style:italic;&quot;&gt;d&lt;/span&gt;&amp;quot; - обозначение дня без предшествующего нуля (&lt;span style=&quot; font-style:italic;&quot;&gt;1-31&lt;/span&gt;). &lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&amp;quot;&lt;span style=&quot; font-style:italic;&quot;&gt;DD&lt;/span&gt;&amp;quot; или &amp;quot;&lt;span style=&quot; font-style:italic;&quot;&gt;dd&lt;/span&gt;&amp;quot; - обозначение дня с предшествующим нулем (&lt;span style=&quot; font-style:italic;&quot;&gt;01-31&lt;/span&gt;). &lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&amp;quot;&lt;span style=&quot; font-style:italic;&quot;&gt;DDD&lt;/span&gt;&amp;quot; или &amp;quot;&lt;span style=&quot; font-style:italic;&quot;&gt;ddd&lt;/span&gt;&amp;quot; - обозначение дня в виде сокращенного наименования недели в соотв. с локалью системы(&lt;span style=&quot; font-style:italic;&quot;&gt;Mon-Su&lt;/span&gt;n). &lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&amp;quot;&lt;span style=&quot; font-style:italic;&quot;&gt;DDDD&lt;/span&gt;&amp;quot; или &amp;quot;&lt;span style=&quot; font-style:italic;&quot;&gt;dddd&lt;/span&gt;&amp;quot; - обозначение дня в виде полного наименования недели в соотв. с локалью системы (&lt;span style=&quot; font-style:italic;&quot;&gt;Monday-Sunday&lt;/span&gt;). &lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&amp;quot;&lt;span style=&quot; font-style:italic;&quot;&gt;M&lt;/span&gt;&amp;quot; или &amp;quot;&lt;span style=&quot; font-style:italic;&quot;&gt;m&lt;/span&gt;&amp;quot; - обозначение месяца без предшествующего нуля (&lt;span style=&quot; font-style:italic;&quot;&gt;1-12&lt;/span&gt;). &lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&amp;quot;&lt;span style=&quot; font-style:italic;&quot;&gt;MM&lt;/span&gt;&amp;quot; или &amp;quot;&lt;span style=&quot; font-style:italic;&quot;&gt;mm&lt;/span&gt;&amp;quot; - обозначение месяца с предшествующим нулем (&lt;span style=&quot; font-style:italic;&quot;&gt;01-12&lt;/span&gt;). &lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&amp;quot;&lt;span style=&quot; font-style:italic;&quot;&gt;MMM&lt;/span&gt;&amp;quot; или &amp;quot;&lt;span style=&quot; font-style:italic;&quot;&gt;mmm&lt;/span&gt;&amp;quot; - обозначение месяца в виде сокращенного имени в соотв. с локалью системы(&lt;span style=&quot; font-style:italic;&quot;&gt;Jan-Dec&lt;/span&gt;). &lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&amp;quot;&lt;span style=&quot; font-style:italic;&quot;&gt;MMMM&lt;/span&gt;&amp;quot; или &amp;quot;&lt;span style=&quot; font-style:italic;&quot;&gt;mmmm&lt;/span&gt;&amp;quot; - обозначение месяца в виде полного имени в соотв. с локалью системы (&lt;span style=&quot; font-style:italic;&quot;&gt;January-December&lt;/span&gt;). &lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&amp;quot;&lt;span style=&quot; font-style:italic;&quot;&gt;YY&lt;/span&gt;&amp;quot; или &amp;quot;&lt;span style=&quot; font-style:italic;&quot;&gt;yy&lt;/span&gt;&amp;quot; - обозначение года в двухзначном формате(&lt;span style=&quot; font-style:italic;&quot;&gt;00-99&lt;/span&gt;). &lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&amp;quot;&lt;span style=&quot; font-style:italic;&quot;&gt;YYYY&lt;/span&gt;&amp;quot; или &amp;quot;&lt;span style=&quot; font-style:italic;&quot;&gt;yyyy&lt;/span&gt;&amp;quot; - обозначение года в четырехзначном формате(&lt;span style=&quot; font-style:italic;&quot;&gt;0000-9999&lt;/span&gt;). &lt;/li&gt;&lt;/ul&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&amp;quot;&lt;span style=&quot; font-weight:600;&quot;&gt;id(&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;&amp;lt;код_внешней_системы&amp;gt;&lt;/span&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;)&lt;/span&gt;&amp;quot; - Идентификатор пациента (ClientIdentification.identifier) в системе с кодом &lt;span style=&quot; font-style:italic;&quot;&gt;&amp;lt;код_внешней_системы&amp;gt;&lt;/span&gt; (rbAccountingSystem.code). &lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&amp;quot;&lt;span style=&quot; font-weight:600;&quot;&gt;str(&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;&amp;lt;произвольная_постоянная_строка&amp;gt;&lt;/span&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;)&lt;/span&gt;&amp;quot; - постоянная произвольная строка.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Пример: prefix = &amp;quot;&lt;span style=&quot; font-weight:600; font-style:italic;&quot;&gt;date(dd.MM.yyyy);str(__);id(test)&lt;/span&gt;&amp;quot;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="0">
+    <widget class="QLabel" name="lblSeparator">
+     <property name="text">
+      <string>&amp;Разделитель</string>
+     </property>
+     <property name="buddy">
+      <cstring>edtSeparator</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="1">
+    <widget class="QLineEdit" name="edtSeparator"/>
+   </item>
+   <item row="9" column="0">
+    <widget class="QLabel" name="lblStartDate">
+     <property name="text">
+      <string>&amp;Дата начала работы</string>
+     </property>
+     <property name="buddy">
+      <cstring>edtStartDate</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="1">
+    <widget class="CDateEdit" name="edtStartDate"/>
+   </item>
+   <item row="10" column="0">
+    <widget class="QLabel" name="lblReset">
+     <property name="text">
+      <string>&amp;Сброс</string>
+     </property>
+     <property name="buddy">
+      <cstring>cmbReset</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="1">
+    <widget class="QComboBox" name="cmbReset">
+     <item>
+      <property name="text">
+       <string>Не сбрасывается</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Через сутки</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Через неделю</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Через месяц</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Через квартал</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Через полугодие</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Через год</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="11" column="1">
+    <widget class="QCheckBox" name="chkSequenceFlag">
+     <property name="text">
+      <string>&amp;Флаг последовательности</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0">
+    <widget class="QLabel" name="lblPostfix">
+     <property name="text">
+      <string>П&amp;остфикс</string>
+     </property>
+     <property name="buddy">
+      <cstring>edtPostfix</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="1">
+    <widget class="QLineEdit" name="edtPostfix">
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Разделенные через точку с запятой блоки данных (без кавычек): &lt;/p&gt;&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&amp;quot;&lt;span style=&quot; font-weight:600;&quot;&gt;date(&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;&amp;lt;формат_даты&amp;gt;&lt;/span&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;)&lt;/span&gt;&amp;quot; - текущая дата (на момент формирования имени) в указанном формате &lt;/li&gt;&lt;ul type=&quot;circle&quot; style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 2;&quot;&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&amp;quot;&lt;span style=&quot; font-style:italic;&quot;&gt;D&lt;/span&gt;&amp;quot; или &amp;quot;&lt;span style=&quot; font-style:italic;&quot;&gt;d&lt;/span&gt;&amp;quot; - обозначение дня без предшествующего нуля (&lt;span style=&quot; font-style:italic;&quot;&gt;1-31&lt;/span&gt;). &lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&amp;quot;&lt;span style=&quot; font-style:italic;&quot;&gt;DD&lt;/span&gt;&amp;quot; или &amp;quot;&lt;span style=&quot; font-style:italic;&quot;&gt;dd&lt;/span&gt;&amp;quot; - обозначение дня с предшествующим нулем (&lt;span style=&quot; font-style:italic;&quot;&gt;01-31&lt;/span&gt;). &lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&amp;quot;&lt;span style=&quot; font-style:italic;&quot;&gt;DDD&lt;/span&gt;&amp;quot; или &amp;quot;&lt;span style=&quot; font-style:italic;&quot;&gt;ddd&lt;/span&gt;&amp;quot; - обозначение дня в виде сокращенного наименования недели в соотв. с локалью системы(&lt;span style=&quot; font-style:italic;&quot;&gt;Mon-Su&lt;/span&gt;n). &lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&amp;quot;&lt;span style=&quot; font-style:italic;&quot;&gt;DDDD&lt;/span&gt;&amp;quot; или &amp;quot;&lt;span style=&quot; font-style:italic;&quot;&gt;dddd&lt;/span&gt;&amp;quot; - обозначение дня в виде полного наименования недели в соотв. с локалью системы (&lt;span style=&quot; font-style:italic;&quot;&gt;Monday-Sunday&lt;/span&gt;). &lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&amp;quot;&lt;span style=&quot; font-style:italic;&quot;&gt;M&lt;/span&gt;&amp;quot; или &amp;quot;&lt;span style=&quot; font-style:italic;&quot;&gt;m&lt;/span&gt;&amp;quot; - обозначение месяца без предшествующего нуля (&lt;span style=&quot; font-style:italic;&quot;&gt;1-12&lt;/span&gt;). &lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&amp;quot;&lt;span style=&quot; font-style:italic;&quot;&gt;MM&lt;/span&gt;&amp;quot; или &amp;quot;&lt;span style=&quot; font-style:italic;&quot;&gt;mm&lt;/span&gt;&amp;quot; - обозначение месяца с предшествующим нулем (&lt;span style=&quot; font-style:italic;&quot;&gt;01-12&lt;/span&gt;). &lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&amp;quot;&lt;span style=&quot; font-style:italic;&quot;&gt;MMM&lt;/span&gt;&amp;quot; или &amp;quot;&lt;span style=&quot; font-style:italic;&quot;&gt;mmm&lt;/span&gt;&amp;quot; - обозначение месяца в виде сокращенного имени в соотв. с локалью системы(&lt;span style=&quot; font-style:italic;&quot;&gt;Jan-Dec&lt;/span&gt;). &lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&amp;quot;&lt;span style=&quot; font-style:italic;&quot;&gt;MMMM&lt;/span&gt;&amp;quot; или &amp;quot;&lt;span style=&quot; font-style:italic;&quot;&gt;mmmm&lt;/span&gt;&amp;quot; - обозначение месяца в виде полного имени в соотв. с локалью системы (&lt;span style=&quot; font-style:italic;&quot;&gt;January-December&lt;/span&gt;). &lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&amp;quot;&lt;span style=&quot; font-style:italic;&quot;&gt;YY&lt;/span&gt;&amp;quot; или &amp;quot;&lt;span style=&quot; font-style:italic;&quot;&gt;yy&lt;/span&gt;&amp;quot; - обозначение года в двухзначном формате(&lt;span style=&quot; font-style:italic;&quot;&gt;00-99&lt;/span&gt;). &lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&amp;quot;&lt;span style=&quot; font-style:italic;&quot;&gt;YYYY&lt;/span&gt;&amp;quot; или &amp;quot;&lt;span style=&quot; font-style:italic;&quot;&gt;yyyy&lt;/span&gt;&amp;quot; - обозначение года в четырехзначном формате(&lt;span style=&quot; font-style:italic;&quot;&gt;0000-9999&lt;/span&gt;). &lt;/li&gt;&lt;/ul&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&amp;quot;&lt;span style=&quot; font-weight:600;&quot;&gt;id(&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;&amp;lt;код_внешней_системы&amp;gt;&lt;/span&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;)&lt;/span&gt;&amp;quot; - Идентификатор пациента (ClientIdentification.identifier) в системе с кодом &lt;span style=&quot; font-style:italic;&quot;&gt;&amp;lt;код_внешней_системы&amp;gt;&lt;/span&gt; (rbAccountingSystem.code). &lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&amp;quot;&lt;span style=&quot; font-weight:600;&quot;&gt;str(&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;&amp;lt;произвольная_постоянная_строка&amp;gt;&lt;/span&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;)&lt;/span&gt;&amp;quot; - постоянная произвольная строка.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Пример: prefix = &amp;quot;&lt;span style=&quot; font-weight:600; font-style:italic;&quot;&gt;date(dd.MM.yyyy);str(__);id(test)&lt;/span&gt;&amp;quot;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+   </item>
+   <item row="13" column="0">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="12" column="1">
+    <widget class="QPushButton" name="btnAddOrgCounter">
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Установить текущий счетчик для источника финансирования.&lt;/p&gt;&lt;p&gt;Счетчик используется для организации сквозной нумерации счетов.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="statusTip">
+      <string>рпа</string>
+     </property>
+     <property name="whatsThis">
+      <string/>
+     </property>
+     <property name="text">
+      <string>Счетчик ИФ</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="CRBComboBox" name="cmbCompulsoryPolisCompany">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="sizeAdjustPolicy">
+      <enum>QComboBox::AdjustToMinimumContentsLength</enum>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CDateEdit</class>
+   <extends>QDateEdit</extends>
+   <header>library/DateEdit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CRBComboBox</class>
+   <extends>QComboBox</extends>
+   <header>library/crbcombobox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CBigIntSpinBox</class>
+   <extends>QSpinBox</extends>
+   <header>library/BigIntSpinBox.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>edtCode</tabstop>
+  <tabstop>edtName</tabstop>
+  <tabstop>edtValue</tabstop>
+  <tabstop>edtPrefix</tabstop>
+  <tabstop>edtPostfix</tabstop>
+  <tabstop>edtSeparator</tabstop>
+  <tabstop>edtStartDate</tabstop>
+  <tabstop>cmbReset</tabstop>
+  <tabstop>chkSequenceFlag</tabstop>
+  <tabstop>buttonBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>RBCounterEditor</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>252</x>
+     <y>245</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>249</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>RBCounterEditor</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>294</x>
+     <y>245</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>249</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+    xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:tns="urn:ZSI"
+    targetNamespace="urn:ZSI" >
+
+	<types>
+		<xsd:schema elementFormDefault="qualified"
+                    targetNamespace="urn:ZSI">
+            <xsd:element name="iemc">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="Org" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+                        <xsd:element name="Clients" type="ClientListType" minOccurs="1" maxOccurs="1"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+			<xsd:element name="Errors">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Error" type="ErrorType" minOccurs="1" maxOccurs="unbounded" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+            <xsd:complexType name="ClientListType">
+                <xsd:sequence>
+                    <xsd:element name="Client" type="ClientType" minOccurs="1" maxOccurs="unbounded"/>
+                </xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ClientType">
+                <xsd:sequence>
+                    <xsd:element name="ClientId" type="xsd:integer" minOccurs="1" maxOccurs="1"/>
+                    <xsd:element name="modifyDatetime" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+                    <xsd:element name="lastName" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+                    <xsd:element name="firstName" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+                    <xsd:element name="patrName" type="xsd:string" maxOccurs="1"/>
+                    <xsd:element name="sex" type="xsd:integer" maxOccurs="1"/>
+                    <xsd:element name="birthDate" type="xsd:string" maxOccurs="1"/>
+                    <xsd:element name="birthPlace" type="xsd:string" maxOccurs="1"/>
+                    <xsd:element name="SNILS" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+                    <xsd:element name="document" type="DocumentType" minOccurs="0" maxOccurs="1"/>
+                    <xsd:element name="policy" type="PolicyType" minOccurs="0" maxOccurs="1"/>
+                    <xsd:element name="RegAddress" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+                    <xsd:element name="LocAddress" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+                    <xsd:element name="Event" type="EventType" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="DocumentType">
+                <xsd:sequence>
+                    <xsd:element name="documentTypeCode" type="xsd:string" minOccurs="1" maxOccurs="1" default=""/>
+                    <xsd:element name="serial" type="xsd:string" maxOccurs="1" default=""/>
+                    <xsd:element name="number" type="xsd:string" maxOccurs="1" default=""/>
+                    <xsd:element name="date" type="xsd:string" maxOccurs="1" default=""/>
+                    <xsd:element name="origin" type="xsd:string" maxOccurs="1" default=""/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="PolicyType">
+                <xsd:sequence>
+                    <xsd:element name="policyTypeCode" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+                    <xsd:element name="policyKindCode" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+                    <xsd:element name="serial" type="xsd:string" minOccurs="0" maxOccurs="1" default=""/>
+                    <xsd:element name="number" type="xsd:string" minOccurs="0" maxOccurs="1" default=""/>
+                    <xsd:element name="begDate" type="xsd:string" minOccurs="0" maxOccurs="1" default=""/>
+                    <xsd:element name="endDate" type="xsd:string" minOccurs="0" maxOccurs="1" default=""/>
+                    <xsd:element name="name" type="xsd:string" minOccurs="0" maxOccurs="1" default=""/>
+                    <xsd:element name="insurerCode" type="xsd:string" minOccurs="0" maxOccurs="1" default=""/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="EventType">
+                <xsd:sequence>
+                    <xsd:element name="modifyDatetime" type="xsd:string" maxOccurs="1"/>
+                    <xsd:element name="setDate" type="xsd:string" maxOccurs="1"/>
+                    <xsd:element name="execDate" type="xsd:string" maxOccurs="1"/>
+                    <xsd:element name="eventTypeCode" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+                    <xsd:element name="execPersonCode" type="xsd:string" maxOccurs="1"/>
+                    <xsd:element name="externalId" type="xsd:integer" minOccurs="1" maxOccurs="1"/>
+                    <xsd:element name="isPrimary" type="xsd:integer" maxOccurs="1" default="0"/>
+                    <xsd:element name="order" type="xsd:integer" maxOccurs="1" default="0"/>
+                    <xsd:element name="orgCode" type="xsd:string" maxOccurs="1" default=""/>
+                    <xsd:element name="resultCode" type="xsd:string" maxOccurs="1" default=""/>
+                    <xsd:element name="MESCode" type="xsd:string" maxOccurs="1" default=""/>
+                    <xsd:element name="Diagnosis" type="DiagnosisType" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element name="Visit" type="VisitType" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element name="Action" type="ActionType" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="DiagnosisType">
+                <xsd:sequence>
+                    <xsd:element name="diagnosticTypeCode" type="xsd:string" maxOccurs="1"/>
+                    <xsd:element name="diagnosticCharacterCode" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+                    <xsd:element name="diagnosticStageCode" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+                    <xsd:element name="diagnosticPhaseCode" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+                    <xsd:element name="diagnosticSetDate" type="xsd:string" maxOccurs="1"/>
+                    <xsd:element name="diagnosticEndDate" type="xsd:string" maxOccurs="1"/>
+                    <xsd:element name="diagnosticPersonCode" type="xsd:string" maxOccurs="1" default=""/>
+                    <xsd:element name="diagnosticResultCode" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+                    <xsd:element name="MKB" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="VisitType">
+                <xsd:sequence>
+                    <xsd:element name="sceneCode" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+                    <xsd:element name="visitTypeCode" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+                    <xsd:element name="personCode" type="xsd:string" maxOccurs="1" default=""/>
+                    <xsd:element name="isPrimary" type="xsd:integer" maxOccurs="1"/>
+                    <xsd:element name="date" type="xsd:string" maxOccurs="1"/>
+                    <xsd:element name="serviceCode" type="xsd:string" maxOccurs="1"/>
+                    <xsd:element name="financeCode" type="xsd:string" maxOccurs="1"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="ActionType">
+                <xsd:sequence>
+                    <xsd:element name="actionTypeCode" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+                    <xsd:element name="status" type="xsd:integer" maxOccurs="1"/>
+                    <xsd:element name="begDate" type="xsd:string" maxOccurs="1"/>
+                    <xsd:element name="endDate" type="xsd:string" maxOccurs="1"/>
+                    <xsd:element name="personCode" type="xsd:string" maxOccurs="1"/>
+                    <xsd:element name="amount" type="xsd:decimal" maxOccurs="1"/>
+                    <xsd:element name="uet" type="xsd:decimal" maxOccurs="1"/>
+                    <xsd:element name="MKB" type="xsd:string" maxOccurs="1"/>
+                    <xsd:element name="orgCode" type="xsd:string" maxOccurs="1"/>
+                    <xsd:element name="duration" type="xsd:integer" maxOccurs="1"/>
+                    <xsd:element name="ActionProperty" type="ActionPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="ActionPropertyType">
+                <xsd:sequence>
+                    <xsd:element name="actionPropertyType" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+                    <xsd:element name="actionPropertyValue" type="xsd:string" maxOccurs="1"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="ErrorType">
+                <xsd:sequence>
+                    <xsd:element name="type" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+                    <xsd:element name="remoteId" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+                    <xsd:element name="description" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+                </xsd:sequence>
+            </xsd:complexType>
+		</xsd:schema>
+	</types>
+
+	<message name="SendEventDataRequest">
+		<part name="iemc" element="tns:iemc" />
+	</message>
+	<message name="SendEventDataResponse">
+		<part name="Errors" element="tns:Errors" />
+	</message>
+
+	<portType name="IemcServer">
+		<operation name="SendEventData">
+			<input message="tns:SendEventDataRequest" />
+			<output message="tns:SendEventDataResponse" />
+		</operation>
+	</portType>
+
+	<binding name="IemcServer" type="tns:IemcServer">
+		<soap:binding style="document"
+					  transport="http://schemas.xmlsoap.org/soap/http" />
+		<operation name="SendEventData">
+			<soap:operation soapAction="SendEventData" />
+			<input>
+				<soap:body use="literal" />
+			</input>
+			<output>
+				<soap:body use="literal" />
+			</output>
+		</operation>
+	</binding>
+
+	<service name="IemcServer">
+		<port name="IemcServer" binding="tns:IemcServer">
+			<soap:address location="http://localhost:7000"/>
+		</port>
+	</service>
+
+</definitions>

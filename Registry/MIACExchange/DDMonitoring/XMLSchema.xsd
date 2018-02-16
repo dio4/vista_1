@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema targetNamespace="http://portal.zdrav/_layouts/projects/dd/myXSD/2008-07-16T06:56:43" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:rs="urn:schemas-microsoft-com:rowset" xmlns:z="#RowsetSchema" xmlns:dfs="http://portal.zdrav/_layouts/projects/dd/dataFormSolution" xmlns:tns="http://tempuri.org/" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:_xdns0="http://portal.zdrav/_layouts/projects/dd/changeTracking" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:ns1="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:my="http://portal.zdrav/_layouts/projects/dd/myXSD/2008-07-16T06:56:43" xmlns:xd="http://portal.zdrav/_layouts/projects/dd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:attribute name="name" type="xsd:string"/>
+	<xsd:attribute name="project" type="xsd:string"/>
+	<xsd:attribute name="version" type="xsd:double"/>
+	<xsd:attribute name="lpu_id" type="xsd:integer"/>
+	<xsd:attribute name="email" type="xsd:string"/>
+	<xsd:attribute name="period" type="my:requiredString"/>
+	<xsd:element name="form">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:LPU" minOccurs="0"/>
+				<xsd:element ref="my:data" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:attribute ref="my:name"/>
+			<xsd:attribute ref="my:project"/>
+			<xsd:attribute ref="my:version"/>
+			<xsd:anyAttribute processContents="lax" namespace="http://www.w3.org/XML/1998/namespace"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="LPU">
+		<xsd:complexType>
+			<xsd:sequence/>
+			<xsd:attribute ref="my:lpu_id"/>
+			<xsd:attribute ref="my:email"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="data">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:DD1000" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="my:DD2000" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="my:DD3000" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:attribute ref="my:period"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="DD1000">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:Complete" minOccurs="0"/>
+				<xsd:element ref="my:NotComplete" minOccurs="0"/>
+				<xsd:element ref="my:ORDER_DD" minOccurs="0"/>
+				<xsd:element ref="my:AttachedOrgs" minOccurs="0"/>
+				<xsd:element ref="my:Summary" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="Complete" nillable="true" type="xsd:integer"/>
+	<xsd:element name="NotComplete" nillable="true" type="xsd:integer"/>
+	<xsd:element name="ORDER_DD">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:NoEquipment" minOccurs="0"/>
+				<xsd:element ref="my:NoExpert" minOccurs="0"/>
+				<xsd:element ref="my:NoEqNEx" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="NoEquipment" nillable="true" type="xsd:integer"/>
+	<xsd:element name="NoExpert" nillable="true" type="xsd:integer"/>
+	<xsd:element name="NoEqNEx" nillable="true" type="xsd:integer"/>
+	<xsd:element name="AttachedOrgs" nillable="true" type="xsd:integer"/>
+	<xsd:element name="Summary" nillable="true" type="xsd:double"/>
+	<xsd:element name="DD2000">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:citizen" minOccurs="0"/>
+				<xsd:element ref="my:groups" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="citizen">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:observable" minOccurs="0"/>
+				<xsd:element ref="my:observated_complete" minOccurs="0"/>
+				<xsd:element ref="my:observated_incomplete" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="observable" nillable="true" type="xsd:integer"/>
+	<xsd:element name="observated_complete" nillable="true" type="xsd:integer"/>
+	<xsd:element name="observated_incomplete" nillable="true" type="xsd:integer"/>
+	<xsd:element name="groups">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:healthy" minOccurs="0"/>
+				<xsd:element ref="my:risk_II" minOccurs="0"/>
+				<xsd:element ref="my:risk_III" minOccurs="0"/>
+				<xsd:element ref="my:risk_VI" minOccurs="0"/>
+				<xsd:element ref="my:risk_V" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="healthy" nillable="true" type="xsd:integer"/>
+	<xsd:element name="risk_II" nillable="true" type="xsd:integer"/>
+	<xsd:element name="risk_III" nillable="true" type="xsd:integer"/>
+	<xsd:element name="risk_VI" nillable="true" type="xsd:integer"/>
+	<xsd:element name="risk_V" nillable="true" type="xsd:integer"/>
+	<xsd:element name="DD3000">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:A15-A19" minOccurs="0"/>
+				<xsd:element ref="my:malignant" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="A15-A19" nillable="true" type="xsd:integer"/>
+	<xsd:element name="malignant">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:C15-C26" minOccurs="0"/>
+				<xsd:element ref="my:C33-C34" minOccurs="0"/>
+				<xsd:element ref="my:C43-C44" minOccurs="0"/>
+				<xsd:element ref="my:C50" minOccurs="0"/>
+				<xsd:element ref="my:C50-C58" minOccurs="0"/>
+				<xsd:element ref="my:C61" minOccurs="0"/>
+				<xsd:element ref="my:C81" minOccurs="0"/>
+				<xsd:element ref="my:D50-D64" minOccurs="0"/>
+				<xsd:element ref="my:E10-E14" minOccurs="0"/>
+				<xsd:element ref="my:E66" minOccurs="0"/>
+				<xsd:element ref="my:E78" minOccurs="0"/>
+				<xsd:element ref="my:I10-I15" minOccurs="0"/>
+				<xsd:element ref="my:I20-I25" minOccurs="0"/>
+				<xsd:element ref="my:R73" minOccurs="0"/>
+				<xsd:element ref="my:R91" minOccurs="0"/>
+				<xsd:element ref="my:R92" minOccurs="0"/>
+				<xsd:element ref="my:R94.3" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="C15-C26" nillable="true" type="xsd:integer"/>
+	<xsd:element name="C33-C34" nillable="true" type="xsd:integer"/>
+	<xsd:element name="C43-C44" nillable="true" type="xsd:integer"/>
+	<xsd:element name="C50" nillable="true" type="xsd:integer"/>
+	<xsd:element name="C50-C58" nillable="true" type="xsd:integer"/>
+	<xsd:element name="C61" nillable="true" type="xsd:integer"/>
+	<xsd:element name="C81" nillable="true" type="xsd:integer"/>
+	<xsd:element name="D50-D64" nillable="true" type="xsd:integer"/>
+	<xsd:element name="E10-E14" nillable="true" type="xsd:integer"/>
+	<xsd:element name="E66" nillable="true" type="xsd:integer"/>
+	<xsd:element name="E78" nillable="true" type="xsd:integer"/>
+	<xsd:element name="I10-I15" nillable="true" type="xsd:integer"/>
+	<xsd:element name="I20-I25" nillable="true" type="xsd:integer"/>
+	<xsd:element name="R73" nillable="true" type="xsd:integer"/>
+	<xsd:element name="R91" nillable="true" type="xsd:integer"/>
+	<xsd:element name="R92" nillable="true" type="xsd:integer"/>
+	<xsd:element name="R94.3" nillable="true" type="xsd:integer"/>
+	<xsd:simpleType name="requiredString">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="requiredAnyURI">
+		<xsd:restriction base="xsd:anyURI">
+			<xsd:minLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="requiredBase64Binary">
+		<xsd:restriction base="xsd:base64Binary">
+			<xsd:minLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

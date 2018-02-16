@@ -1,0 +1,1081 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CashRegisterWindow</class>
+ <widget class="QDialog" name="CashRegisterWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>978</width>
+    <height>658</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Менеджер ККМ</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="0" colspan="2">
+    <widget class="QGroupBox" name="gbLogging">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="title">
+      <string>Служебный вывод</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_6">
+      <item row="0" column="0">
+       <widget class="QPlainTextEdit" name="edtLogging">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="toolTip">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Список операций, производимых по кассе за текущий сеанс &lt;span style=&quot; font-style:italic;&quot;&gt;(очищается после закрытия окна)&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="lineWrapMode">
+         <enum>QPlainTextEdit::NoWrap</enum>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+        <property name="plainText">
+         <string>Вывод ошибок</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="2" rowspan="2">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QGroupBox" name="gbECRInfo">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="title">
+        <string>ККМ</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="2" column="0" colspan="2">
+         <widget class="QLabel" name="lblPassword">
+          <property name="text">
+           <string>Пароль:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="2" colspan="3">
+         <widget class="QLabel" name="lblModeName">
+          <property name="text">
+           <string>&lt;Имя режима&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" colspan="2">
+         <widget class="QLabel" name="lblECRNumberCaption">
+          <property name="text">
+           <string>Номер ККМ:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0" colspan="2">
+         <widget class="QLabel" name="lblFiscalEnabledStateCaption">
+          <property name="text">
+           <string>Фискал.:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="2" colspan="3">
+         <widget class="QLabel" name="lblFiscalEnabledState">
+          <property name="text">
+           <string>&lt;ВКЛ/ВЫКЛ&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="5">
+         <widget class="QToolButton" name="btnBrowseECR">
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;При нажатии открывается окно настроек драйвера ККМ.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="text">
+           <string>...</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0" colspan="2">
+         <widget class="QLabel" name="lblModeCaption">
+          <property name="text">
+           <string>Режим:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="0" colspan="2">
+         <widget class="QLabel" name="lblDriverNameCaption">
+          <property name="text">
+           <string>Драйвер:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="0" colspan="2">
+         <widget class="QLabel" name="lblModelCaption">
+          <property name="text">
+           <string>Модель:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="2" colspan="3">
+         <widget class="QLabel" name="lblDriverName">
+          <property name="text">
+           <string>&lt;Имя драйвера&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="2" colspan="3">
+         <widget class="QLabel" name="lblModel">
+          <property name="text">
+           <string>&lt;Код и имя модели&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="9" column="2">
+         <widget class="QLabel" name="lblINN">
+          <property name="text">
+           <string>&lt;001122334455&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="9" column="0">
+         <widget class="QLabel" name="lblINNCaption">
+          <property name="text">
+           <string>ИНН:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="10" column="2">
+         <widget class="QLabel" name="lblCurrentSession">
+          <property name="text">
+           <string>&lt;Смена&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="11" column="2">
+         <widget class="QLabel" name="lblCurrentCheckNumber">
+          <property name="text">
+           <string>&lt;Номер&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="10" column="0">
+         <widget class="QLabel" name="lblCurrentSessionCaption">
+          <property name="text">
+           <string>Смена:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="11" column="0">
+         <widget class="QLabel" name="lblCurrentCheckNumberCaption">
+          <property name="text">
+           <string>Номер тек. чека:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="2" colspan="3">
+         <widget class="QLabel" name="lblOperatorName">
+          <property name="text">
+           <string>&lt;Имя/номер оператора&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="2" colspan="3">
+         <widget class="QLabel" name="lblECRDate">
+          <property name="text">
+           <string>&lt;dd.mm.yyyy&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="0" colspan="2">
+         <widget class="QLabel" name="lblECRDateCaption">
+          <property name="text">
+           <string>Дата ККМ:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0" colspan="2">
+         <widget class="QLabel" name="lblOperatorCaption">
+          <property name="text">
+           <string>Оператор:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2" colspan="4">
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QLineEdit" name="edtPassword">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Пароль оператора/кассира ККМ.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Примечание:&lt;/span&gt; данный пароль используется для переходов в различные режимы при каждом действии с кассой, поэтому у оператора/ кассира, чей пароль введен, должны быть права на те операции, которые он собирается выполнять с ККМ.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="maxLength">
+             <number>8</number>
+            </property>
+            <property name="echoMode">
+             <enum>QLineEdit::PasswordEchoOnEdit</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="chkRemeberPassword">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Сохранить введеный пароль.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Запомнить</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="2" colspan="3">
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QLabel" name="lblDeviceStateIcon">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Индикатор обращения к кассовому аппарату (ККМ).&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#ff0000;&quot;&gt;Красный&lt;/span&gt; - ККМ не используется в данный момент.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#00aa00;&quot;&gt;Зеленый&lt;/span&gt; - Идет обмен данными с ККМ.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Примечание:&lt;/span&gt; в момент обращения к кассе (метка зеленого цвета) нельзя получить к ней доступ из других программ, поэтому доступ к кассе происходит только в момент выполнения конкретных операций, чтобы в остальное время ККМ было доступно для других программ.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>вкл</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lblECRNumber">
+            <property name="text">
+             <string>&lt;Номер ККМ&gt;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item row="4" column="1" colspan="2">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Close</set>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="2">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="currentIndex">
+      <number>2</number>
+     </property>
+     <widget class="QWidget" name="tabRegistration">
+      <attribute name="title">
+       <string>Основное</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="13" column="0" colspan="3">
+        <widget class="QLabel" name="lblCheckTotalInfo">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>&lt;Итоговая информация по чеку&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="2">
+        <widget class="QGroupBox" name="gbDiscount">
+         <property name="title">
+          <string>Скидка</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_13">
+          <item row="0" column="0">
+           <widget class="QDoubleSpinBox" name="dsbDiscount">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Устанавливает размер применяемой процентной скидки.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="suffix">
+             <string>%</string>
+            </property>
+            <property name="decimals">
+             <number>1</number>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QPushButton" name="btnApplyDiscount">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;При нажатии выбранная скидка применяется ко всем элементам будущего чека.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(Изменения будут отражены в таблице элементов чека)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Применить скидку</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="11" column="2">
+        <spacer name="verticalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="0" column="2" rowspan="4">
+        <widget class="QGroupBox" name="gbCheckType">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="title">
+          <string>Тип чека</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_10">
+          <item row="2" column="0">
+           <widget class="QRadioButton" name="rbAnnulate">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Операция «Аннулирование» используется для аннулирования ошибочно&lt;/p&gt;&lt;p&gt;пробитого чека после его закрытия (в той же смене, в которой был пробит чек). &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Примечание:&lt;/span&gt; Регистрация аннулирования не является фискальной операцией, поэтому&lt;/p&gt;&lt;p&gt;при печати чека с регистрацией аннулирования на фискализированных ПД признак&lt;/p&gt;&lt;p&gt;фискального режима не печатается. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Внимание!&lt;/span&gt; Операции аннулирования не уменьшают сменный итог.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(Данная операция поддерживается ограниченным числом ККМ)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Аннулирование</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QRadioButton" name="rbRegistration">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Продажа</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QRadioButton" name="rbReturn">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Операция «Возврат» регистрирует возврат товара после закрытия смены, в&lt;/p&gt;&lt;p&gt;которой была зарегистрирована продажа товара. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Примечание:&lt;/span&gt; Регистрация возврата не является фискальной операцией, поэтому при&lt;/p&gt;&lt;p&gt;печати чека с регистрацией возврата на фискализированных ПД признак фискального&lt;/p&gt;&lt;p&gt;режима не печатается. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Внимание!&lt;/span&gt; Операции возврата не уменьшают сменный итог. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Возврат продажи</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="7" column="2">
+        <widget class="QProgressBar" name="progressBar">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximum">
+          <number>1</number>
+         </property>
+         <property name="value">
+          <number>-1</number>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="2">
+        <widget class="QCheckBox" name="chkEnableCheckSum">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;При регистрации &lt;span style=&quot; font-style:italic;&quot;&gt;возврата/анулирования&lt;/span&gt; ККМ производит контроль наличности, то есть должно выполняться неравенство: &lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;x ≤ Пр – Ан – Вз + Вн – Вп&lt;/span&gt;&lt;/p&gt;&lt;p&gt;, где &lt;/p&gt;&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;x&lt;/span&gt; – размер регистрируемого возврата/аннулирования; &lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Пр&lt;/span&gt; – сумма регистраций продаж, оплаченных наличными, за смену; &lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Ан&lt;/span&gt; – сумма аннулирований, оплаченных наличными, за смену + промежуточная сумма текущего чека (аннулирования); &lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Вз&lt;/span&gt; – сумма возвратов, оплаченных наличными, за смену; &lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Вн&lt;/span&gt; – сумма внесений денег в кассу за смену; &lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Вп&lt;/span&gt; – сумма выплат денег из кассы за смену. &lt;/li&gt;&lt;/ul&gt;&lt;p&gt;ККМ позволяет отключить эту проверку (неравенство может нарушаться) с единственным ограничением: ККМ запрещает закрывать наличными чек, в котором присутствуют регистрации без проверки наличности, если после этого нарушится неравенство (при этом в &lt;span style=&quot; font-style:italic;&quot;&gt;Вз&lt;/span&gt;/&lt;span style=&quot; font-style:italic;&quot;&gt;Ан&lt;/span&gt; включен данный чек): &lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;0 ≤ Пр – Ан – Вз + Вн – Вп&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="text">
+          <string>Проверять наличность</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Цветовая индикация таблицы: Выставлено, &lt;span style=&quot; color:#008000;&quot;&gt;Оплачено&lt;/span&gt;, &lt;span style=&quot; color:#ff0000;&quot;&gt;Отказано&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0" rowspan="11" colspan="2">
+        <widget class="QTableView" name="tblItems"/>
+       </item>
+       <item row="9" column="2">
+        <widget class="QLabel" name="lblItemInfo">
+         <property name="text">
+          <string>&lt;Элемент не выбран&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="2">
+        <widget class="QPushButton" name="btnStartStop">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;При нажатии будет произведена регистрация нового чека (продажи/возврата/аннулирования), в который будут включены &lt;span style=&quot; font-weight:600;&quot;&gt;только выбранные&lt;/span&gt; в таблице элементы.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="text">
+          <string>Выполнить</string>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="2">
+        <widget class="QPushButton" name="btnSendMail">
+         <property name="text">
+          <string>Отправить</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabOther">
+      <attribute name="title">
+       <string>Прочее</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_8">
+       <item row="4" column="0">
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="3" column="2">
+        <widget class="QGroupBox" name="gbClipping">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="title">
+          <string>Отрезка чековой ленты</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_7">
+          <item row="1" column="0">
+           <widget class="QPushButton" name="btnFullCut">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;При нажатии производится полная отрезка кассовой ленты.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Полная</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QPushButton" name="btnPartialCut">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;При нажатии производится частичная отрезка кассовой ленты.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Частичная</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="2" rowspan="2">
+        <widget class="QGroupBox" name="gbCashMovement">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="title">
+          <string>Оперции с наличными</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_5">
+          <item row="1" column="0">
+           <widget class="QComboBox" name="cmbCashMovement">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выбор операции по внесению или изъятию денежных средств.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QPushButton" name="btnCashMovementExecute">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;При нажатии производится регистрация выбранной операции по внесению или изъятию денежных средств.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Выполнить</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QDoubleSpinBox" name="spbCashMovementAmount">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Размер вносимых или изымаемых из кассы денежных средств.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="prefix">
+             <string>=</string>
+            </property>
+            <property name="suffix">
+             <string>руб.</string>
+            </property>
+            <property name="decimals">
+             <number>3</number>
+            </property>
+            <property name="maximum">
+             <double>999999.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QPushButton" name="btnOpenCashBox">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;При нажатии подается команда ККМ «Открыть денежный ящик, подключенный к ККМ», а та, в свою очередь, посылает команду ящику.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Открыть ящик</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QPushButton" name="btnOpenSession">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;При нажатии происходит открытие смены на ККМ.&lt;/p&gt;&lt;p&gt;Примечание: На некоторых моделях ККМ операция открытия смены производится автоматически с формированием первого чека после отчета с гашением, наприем, модели &amp;quot;ШТРИХ&amp;quot; с суффиксом &amp;quot;-К&amp;quot; в названии модели.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;ККМ МЕРКУРИЙ-114.1Ф&lt;/span&gt;: открытие смены обязательно. Указанный пароль оператора/кассира действует в течении всей смены, не зависимо от пароля передаваемого для конкретной операции.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="text">
+          <string>Открыть смену</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1" rowspan="2">
+        <widget class="QGroupBox" name="gbPrintByTemplate">
+         <property name="title">
+          <string>Печать отчетов</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_14">
+          <item row="0" column="0">
+           <widget class="CPrintButton" name="btnPrintByTemplate">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Список доступных шаблонов печати для формирования отчетов по кассе.&lt;/p&gt;&lt;p&gt;Чтобы шаблон печати попал в этот список, он должен иметь контекст &lt;span style=&quot; font-weight:600;&quot;&gt;&amp;quot;ecr&amp;quot;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Примечание: &lt;/span&gt;При печати этих отчетов данные в памяти ККМ не изменяются, но могут подгружаться из ККМ.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Выберите отчет</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="0" column="0" rowspan="2">
+        <widget class="QGroupBox" name="gbReport">
+         <property name="title">
+          <string>Отчеты на кассовую ленту</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_4">
+          <item row="0" column="0">
+           <widget class="QComboBox" name="cmbReportType">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Список доступных для формирования отчетов ККМ.&lt;/p&gt;&lt;p&gt;После выбора нужного отчета необходимо нажать кнопку &amp;quot;Сформировать&amp;quot; для его формирования.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Внимание!&lt;/span&gt; Данные отчеты печатаются на кассовой ленте и некоторые из них могут приводить к закрытию смены и гашению остатка (отчеты с гашением).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QPushButton" name="btnPrintReport">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;При нажатии производит формирование выбранного отчета ККМ.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Сформировать</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="2" column="0" rowspan="2" colspan="2">
+        <widget class="QGroupBox" name="gbExportFilter">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Блок параметров импорта в файл операций по кассе.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Примечание:&lt;/span&gt; экспорт производится на основе данных из базы данных МИС, а не из кассы. Таким образом в файл попадут лишь те операции, которые были выполнены через интерфейс кассы Виста-мед и независимо от того, какая касса сейчас подключена к компьютеру и подключена ли она вообще, с тем лишь условием, что метка &amp;quot;фискализированности&amp;quot; операции должна соответствовать это метке у подключенной ККМ (т.е., если подключена нефискализированная касса, то экспортироваться будут только операции, совершенные через нефискализированные ККМ).&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Внимание!&lt;/span&gt; В данной версии модуля экспорт будет работать некорректно при использовании нескольких ККМ с одной МИС (базой данных). Т.е. экспортироваться будут операции, совершенные со всех ККМ, а не конкретной.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="title">
+          <string>Экспорт операций</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_12">
+          <item row="1" column="1">
+           <widget class="QSpinBox" name="spbExportSession">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Номер смены, в которую были совершенны выгружаемые операции.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="maximum">
+             <number>2000</number>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1" colspan="5">
+           <layout class="QHBoxLayout" name="ltExportDate">
+            <item>
+             <widget class="QDateEdit" name="edtExportBegDate">
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Начало периода, операции по кассе из которого будут выгруженны в файл.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="lblExportDateDash">
+              <property name="text">
+               <string>-</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QDateEdit" name="edtExportEndDate">
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Конец периода, операции по кассе из которого будут выгруженны в файл.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_4">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="0">
+           <widget class="QCheckBox" name="chkExportDateEnabled">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ограничить операции для экспорта по указанному периоду дат.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Период</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="5">
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="1" column="0">
+           <widget class="QCheckBox" name="chkExportSessionEnabled">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Включает импорт операций только по конкретной смене.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Смена</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="3" colspan="3">
+           <widget class="QPushButton" name="btnExport">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;При нажатии будет произведена выгрузка в файл операций по кассе, с учетом выбранных параметров фильтрации.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Выполнить</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3">
+           <widget class="QCheckBox" name="chkExportCheckNumberEnabled">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Включает экспорт операций только по конкретному чеку.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Чек №</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="4">
+           <widget class="QSpinBox" name="spbExportCheckNumber">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Номер чека, по которому проводились выгружаемые операции.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="maximum">
+             <number>9999</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabSettings">
+      <attribute name="title">
+       <string>Настройки</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_9">
+       <item row="2" column="0">
+        <widget class="QGroupBox" name="gbExportSettings">
+         <property name="title">
+          <string>Экспорт операций</string>
+         </property>
+         <property name="checkable">
+          <bool>false</bool>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_11">
+          <item row="1" column="0" colspan="3">
+           <widget class="QLabel" name="lblExportDir">
+            <property name="text">
+             <string>Директория для файлов выгрузки</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="lblExportFileCodec">
+            <property name="text">
+             <string>Кодировка</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0" colspan="4">
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QLineEdit" name="edtExportDir">
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Поле для ввода пути к директории, в которую будут помещаться файлы с результами экспорта операций по кассе.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="btnExportDirBrowse">
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;При нажатии открывается диалоговое окно выбора директории, в которую будут помещаться файлы с результами экспорта операций по кассе.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="text">
+               <string>...</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="3" column="1">
+           <widget class="QComboBox" name="cmbExportFileEncoding">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Кодировка файлов с результами экспорта операций по кассе.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="2">
+           <widget class="QLabel" name="lblExportFormat">
+            <property name="text">
+             <string>Формат</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="3">
+           <widget class="QComboBox" name="cmbExportFormat">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Формат файлов с результами экспорта операций по кассе.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0" colspan="4">
+           <widget class="QCheckBox" name="chkAutoExportDuringZReport">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Включает автоматическую выгрузку в файл операций по текущей смене при формировани Z-отчета с гашением.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Экспорт текущей смены при формировании Z-отчета</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="lblFileNameLanguage">
+            <property name="text">
+             <string>Имя файла на</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QComboBox" name="cmbFileNameLanguage">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Список для выбора методики формирования имен файлов с результами экспорта операций по кассе.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="2" column="1">
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="0" column="0" colspan="2">
+        <widget class="QCheckBox" name="chkDoublePrintCheck">
+         <property name="text">
+          <string>Печатать чек дважды</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="2">
+        <widget class="QCheckBox" name="chkFillPersonDocument">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Включает механимз автозаполнения полей документа плательщика/получателя в окне информации об кассовой операции, отображаемом после нажатия кнопки &amp;quot;Выполнить&amp;quot; на вкладке &amp;quot;Основное&amp;quot; и перед непосредственным формированием чека.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="text">
+          <string>По возможности заполнять данные о документе
+ плательщика/получателя</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CPrintButton</class>
+   <extends>QPushButton</extends>
+   <header>library/PrintTemplates.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>buttonBox</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>tblItems</tabstop>
+  <tabstop>rbRegistration</tabstop>
+  <tabstop>rbAnnulate</tabstop>
+  <tabstop>chkEnableCheckSum</tabstop>
+  <tabstop>dsbDiscount</tabstop>
+  <tabstop>btnApplyDiscount</tabstop>
+  <tabstop>btnStartStop</tabstop>
+  <tabstop>edtLogging</tabstop>
+  <tabstop>cmbReportType</tabstop>
+  <tabstop>btnPrintReport</tabstop>
+  <tabstop>btnPrintByTemplate</tabstop>
+  <tabstop>btnOpenSession</tabstop>
+  <tabstop>btnOpenCashBox</tabstop>
+  <tabstop>cmbCashMovement</tabstop>
+  <tabstop>spbCashMovementAmount</tabstop>
+  <tabstop>btnCashMovementExecute</tabstop>
+  <tabstop>chkExportDateEnabled</tabstop>
+  <tabstop>edtExportBegDate</tabstop>
+  <tabstop>edtExportEndDate</tabstop>
+  <tabstop>chkExportSessionEnabled</tabstop>
+  <tabstop>spbExportSession</tabstop>
+  <tabstop>btnExport</tabstop>
+  <tabstop>btnPartialCut</tabstop>
+  <tabstop>btnFullCut</tabstop>
+  <tabstop>chkFillPersonDocument</tabstop>
+  <tabstop>chkAutoExportDuringZReport</tabstop>
+  <tabstop>edtExportDir</tabstop>
+  <tabstop>cmbExportFileEncoding</tabstop>
+  <tabstop>cmbFileNameLanguage</tabstop>
+  <tabstop>cmbExportFormat</tabstop>
+  <tabstop>btnExportDirBrowse</tabstop>
+  <tabstop>edtPassword</tabstop>
+  <tabstop>chkRemeberPassword</tabstop>
+  <tabstop>btnBrowseECR</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>clicked(QAbstractButton*)</signal>
+   <receiver>CashRegisterWindow</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>804</x>
+     <y>425</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>265</x>
+     <y>339</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rbRegistration</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>chkEnableCheckSum</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>497</x>
+     <y>79</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>507</x>
+     <y>158</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

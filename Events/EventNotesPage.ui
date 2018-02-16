@@ -1,0 +1,882 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EventNotesPageWidget</class>
+ <widget class="QWidget" name="EventNotesPageWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>732</width>
+    <height>659</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tabMain">
+      <attribute name="title">
+       <string>Основное</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QScrollArea" name="scrollArea">
+         <property name="minimumSize">
+          <size>
+           <width>700</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="lineWidth">
+          <number>0</number>
+         </property>
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>680</width>
+            <height>1010</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <property name="margin">
+            <number>0</number>
+           </property>
+           <item>
+            <layout class="QGridLayout" name="gridLayout">
+             <item row="28" column="1" colspan="3">
+              <widget class="CRBComboBox" name="cmbCureType">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+             <item row="10" column="1">
+              <widget class="CDateEdit" name="edtPlannedDate">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="toolTip">
+                <string>Заполняется только для направлений на ВМП</string>
+               </property>
+               <property name="calendarPopup">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="15" column="1" colspan="3">
+              <widget class="CICDCodeEditEx" name="cmbMKB"/>
+             </item>
+             <item row="11" column="1" colspan="3">
+              <layout class="QHBoxLayout" name="horizontalLayout">
+               <item>
+                <widget class="CPolyclinicComboBox" name="cmbRelegateOrg">
+                 <property name="enabled">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QToolButton" name="btnSelectRelegateOrg">
+                 <property name="text">
+                  <string>...</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item row="11" column="0">
+              <widget class="QLabel" name="lblRelegateOrg">
+               <property name="text">
+                <string>Направитель</string>
+               </property>
+               <property name="buddy">
+                <cstring>cmbRelegateOrg</cstring>
+               </property>
+              </widget>
+             </item>
+             <item row="29" column="1" colspan="3">
+              <widget class="CRBComboBox" name="cmbCureMethod">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+             <item row="23" column="0">
+              <widget class="QLabel" name="lblEventCreateDateTime">
+               <property name="text">
+                <string>Дата и время создания</string>
+               </property>
+              </widget>
+             </item>
+             <item row="18" column="0">
+              <widget class="QLabel" name="lblArmyDate">
+               <property name="text">
+                <string>Дата выдачи направления</string>
+               </property>
+               <property name="buddy">
+                <cstring>edtArmyDate</cstring>
+               </property>
+              </widget>
+             </item>
+             <item row="22" column="0">
+              <widget class="QLabel" name="lblEventCuratorIdValue">
+               <property name="text">
+                <string>Куратор</string>
+               </property>
+               <property name="buddy">
+                <cstring>cmbEventCurator</cstring>
+               </property>
+              </widget>
+             </item>
+             <item row="24" column="1" colspan="3">
+              <widget class="QLabel" name="lblEventCreatePersonValue">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Sunken</enum>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="textInteractionFlags">
+                <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
+               </property>
+              </widget>
+             </item>
+             <item row="32" column="1" colspan="3">
+              <widget class="QCheckBox" name="chkLock">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item row="13" column="1" colspan="3">
+              <widget class="QLineEdit" name="edtPerson">
+               <property name="minimumSize">
+                <size>
+                 <width>347</width>
+                 <height>0</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="16" column="0" colspan="4">
+              <widget class="QCheckBox" name="chkArmyReferral">
+               <property name="text">
+                <string>Прикрепить направление из военкомата</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1" colspan="3">
+              <widget class="QLineEdit" name="edtPrevEventInfo">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="21" column="0">
+              <widget class="QLabel" name="lblEventAssistantIdValue">
+               <property name="text">
+                <string>Ассистент</string>
+               </property>
+               <property name="buddy">
+                <cstring>cmbEventAssistant</cstring>
+               </property>
+              </widget>
+             </item>
+             <item row="24" column="0">
+              <widget class="QLabel" name="lblEventCreatePerson">
+               <property name="text">
+                <string>Автор</string>
+               </property>
+              </widget>
+             </item>
+             <item row="14" column="0">
+              <widget class="QLabel" name="lblSpeciality">
+               <property name="text">
+                <string>Специальность</string>
+               </property>
+               <property name="buddy">
+                <cstring>cmbSpeciality</cstring>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="1" colspan="3">
+              <widget class="CClientPolicyComboBox" name="cmbClientPolicy"/>
+             </item>
+             <item row="17" column="0">
+              <widget class="QLabel" name="lblArmyNumber">
+               <property name="text">
+                <string>Номер направления</string>
+               </property>
+               <property name="buddy">
+                <cstring>cmbArmyNumber</cstring>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="0">
+              <widget class="QLabel" name="lblNumber">
+               <property name="text">
+                <string>Номер направления</string>
+               </property>
+              </widget>
+             </item>
+             <item row="22" column="1" colspan="3">
+              <widget class="CPersonComboBoxEx" name="cmbEventCurator">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+             <item row="28" column="0">
+              <widget class="QLabel" name="lblCureType">
+               <property name="text">
+                <string>Вид лечения</string>
+               </property>
+               <property name="buddy">
+                <cstring>cmbCureType</cstring>
+               </property>
+              </widget>
+             </item>
+             <item row="14" column="1" colspan="3">
+              <widget class="CRBComboBox" name="cmbSpeciality">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>32</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>321</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="whatsThis">
+                <string>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="0">
+              <widget class="QLabel" name="lblClientPolicy">
+               <property name="text">
+                <string>Полис пациента</string>
+               </property>
+              </widget>
+             </item>
+             <item row="19" column="1" colspan="3">
+              <layout class="QHBoxLayout" name="horizontalLayout_4">
+               <item>
+                <widget class="CArmyOrgComboBox" name="cmbArmyOrg"/>
+               </item>
+               <item>
+                <widget class="QToolButton" name="btnSelectArmyOrg">
+                 <property name="text">
+                  <string>...</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item row="20" column="1" colspan="3">
+              <layout class="QHBoxLayout" name="horizontalLayout_3">
+               <item>
+                <widget class="QCheckBox" name="chkArmyFreeInput">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="edtArmyFreeInput">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item row="21" column="1" colspan="3">
+              <widget class="CPersonComboBoxEx" name="cmbEventAssistant">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="lblPrevEvent">
+               <property name="text">
+                <string>Предыдущее событие</string>
+               </property>
+              </widget>
+             </item>
+             <item row="27" column="1" colspan="3">
+              <widget class="CModelPatientComboBox" name="cmbPatientModel">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="1" colspan="3">
+              <widget class="CDateEdit" name="edtDate">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="calendarPopup">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1">
+              <widget class="QPushButton" name="btnExternalIdupd">
+               <property name="visible">
+                <bool>false</bool>
+               </property>
+               <property name="text">
+                <string>Обновить внешний индентификатор записи</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="lblEventExternalId">
+               <property name="text">
+                <string>Внешний идентификатор записи</string>
+               </property>
+               <property name="buddy">
+                <cstring>edtEventExternalIdValue</cstring>
+               </property>
+              </widget>
+             </item>
+             <item row="31" column="0">
+              <widget class="QLabel" name="lblEventNote">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Примечания</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+               </property>
+               <property name="buddy">
+                <cstring>edtEventNote</cstring>
+               </property>
+              </widget>
+             </item>
+             <item row="10" column="0">
+              <widget class="QLabel" name="lblPlannedDate">
+               <property name="toolTip">
+                <string>Заполняется только для направлений на ВМП</string>
+               </property>
+               <property name="text">
+                <string>Дата планируемой госпитализации</string>
+               </property>
+              </widget>
+             </item>
+             <item row="26" column="1" colspan="3">
+              <widget class="QLabel" name="lblEventModifyPersonValue">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Sunken</enum>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="textInteractionFlags">
+                <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
+               </property>
+              </widget>
+             </item>
+             <item row="29" column="0">
+              <widget class="QLabel" name="lblCureMethod">
+               <property name="text">
+                <string>Метод лечения</string>
+               </property>
+               <property name="buddy">
+                <cstring>cmbCureMethod</cstring>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="0" colspan="4">
+              <widget class="QCheckBox" name="chkLPUReferral">
+               <property name="text">
+                <string>Прикрепить направление из ЛПУ</string>
+               </property>
+              </widget>
+             </item>
+             <item row="31" column="1" colspan="3">
+              <widget class="QTextEdit" name="edtEventNote"/>
+             </item>
+             <item row="9" column="0">
+              <widget class="QLabel" name="lblDate">
+               <property name="text">
+                <string>Дата выдачи направления</string>
+               </property>
+               <property name="buddy">
+                <cstring>edtDate</cstring>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1" colspan="3">
+              <widget class="QLineEdit" name="edtEventExternalIdValue">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="15" column="0">
+              <widget class="QLabel" name="lblDiagnosis">
+               <property name="text">
+                <string>Диагноз</string>
+               </property>
+               <property name="buddy">
+                <cstring>cmbMKB</cstring>
+               </property>
+              </widget>
+             </item>
+             <item row="25" column="0">
+              <widget class="QLabel" name="lblEventModifyDateTime">
+               <property name="text">
+                <string>Дата и время последнего изменения</string>
+               </property>
+              </widget>
+             </item>
+             <item row="27" column="0">
+              <widget class="QLabel" name="lblPatientModel">
+               <property name="text">
+                <string>Модель пациента</string>
+               </property>
+               <property name="buddy">
+                <cstring>cmbPatientModel</cstring>
+               </property>
+              </widget>
+             </item>
+             <item row="12" column="1" colspan="3">
+              <layout class="QHBoxLayout" name="horizontalLayout_2">
+               <item>
+                <widget class="QCheckBox" name="chkFreeInput">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="edtFreeInput">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item row="23" column="1" colspan="3">
+              <widget class="QLabel" name="lblEventCreateDateTimeValue">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Sunken</enum>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="textInteractionFlags">
+                <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
+               </property>
+              </widget>
+             </item>
+             <item row="19" column="0">
+              <widget class="QLabel" name="lblArmyFreeInput">
+               <property name="text">
+                <string>Направитель</string>
+               </property>
+               <property name="buddy">
+                <cstring>edtArmyFreeInput</cstring>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QLabel" name="lblEventId">
+               <property name="text">
+                <string>Идентификатор записи</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1" colspan="3">
+              <widget class="QLabel" name="lblEventIdValue">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Sunken</enum>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="textInteractionFlags">
+                <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
+               </property>
+              </widget>
+             </item>
+             <item row="32" column="0">
+              <widget class="QLabel" name="lblLock">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="text">
+                <string>Заблокировать обращение</string>
+               </property>
+               <property name="buddy">
+                <cstring>chkLock</cstring>
+               </property>
+              </widget>
+             </item>
+             <item row="17" column="1" colspan="3">
+              <widget class="CReferralComboBox" name="cmbArmyNumber">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+             <item row="25" column="1" colspan="3">
+              <widget class="QLabel" name="lblEventModifyDateTimeValue">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Sunken</enum>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="textInteractionFlags">
+                <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
+               </property>
+              </widget>
+             </item>
+             <item row="26" column="0">
+              <widget class="QLabel" name="lblEventModifyPerson">
+               <property name="text">
+                <string>Автор последнего изменения</string>
+               </property>
+              </widget>
+             </item>
+             <item row="18" column="1" colspan="2">
+              <widget class="CDateEdit" name="edtArmyDate">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="calendarPopup">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="13" column="0">
+              <widget class="QLabel" name="lblPerson">
+               <property name="text">
+                <string>Врач</string>
+               </property>
+               <property name="buddy">
+                <cstring>edtPerson</cstring>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="0">
+              <widget class="QLabel" name="lblRefType">
+               <property name="text">
+                <string>Тип направления</string>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="1" colspan="3">
+              <widget class="CRBComboBox" name="cmbReferralType"/>
+             </item>
+             <item row="8" column="1" colspan="3">
+              <widget class="QLineEdit" name="edtNumber"/>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabIEMK">
+      <attribute name="title">
+       <string>ЭМК</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="1" column="0" colspan="4">
+        <widget class="QTextBrowser" name="txtBrowserIEMKHistoryLog">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="2" colspan="2">
+        <widget class="QPushButton" name="btnSendCase">
+         <property name="text">
+          <string>Отправить случай</string>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="0" colspan="2">
+        <widget class="QPushButton" name="btnSendClient">
+         <property name="text">
+          <string>Отправить человека</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0" colspan="4">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>История посылок</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="0" colspan="4">
+        <widget class="QCheckBox" name="chkWebEpicrisis">
+         <property name="text">
+          <string>Посылать веб эпикризы</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0" colspan="4">
+        <widget class="QTextBrowser" name="txtBrowserIEMKCurrentLog">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Адрес сервиса случаев</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1" colspan="3">
+        <widget class="QLineEdit" name="edtCaseURL"/>
+       </item>
+       <item row="2" column="0" colspan="4">
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Лог текущей посылки</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1" colspan="3">
+        <widget class="QLineEdit" name="edtPixURL"/>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>Адрес сервиса пациентов</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0" colspan="4">
+        <widget class="QPushButton" name="btnCreateService">
+         <property name="text">
+          <string>Использовать адреса</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>GUID</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1" colspan="3">
+        <widget class="QLineEdit" name="edtGUID"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CRBComboBox</class>
+   <extends>QComboBox</extends>
+   <header>library/crbcombobox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CDateEdit</class>
+   <extends>QDateEdit</extends>
+   <header>library/DateEdit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CPersonComboBoxEx</class>
+   <extends>QComboBox</extends>
+   <header>Orgs/PersonComboBoxEx.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CPolyclinicComboBox</class>
+   <extends>QComboBox</extends>
+   <header>Orgs/OrgComboBox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CICDCodeEditEx</class>
+   <extends>QComboBox</extends>
+   <header>library/ICDCodeEdit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CReferralComboBox</class>
+   <extends>QComboBox</extends>
+   <header>library/ReferralComboBox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CArmyOrgComboBox</class>
+   <extends>QComboBox</extends>
+   <header>Orgs/OrgComboBox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CModelPatientComboBox</class>
+   <extends>QComboBox</extends>
+   <header>library/ModelPatientComboBox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CClientPolicyComboBox</class>
+   <extends>QComboBox</extends>
+   <header>Events/ClientPolicyComboBox.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>edtEventExternalIdValue</tabstop>
+  <tabstop>edtPrevEventInfo</tabstop>
+  <tabstop>cmbClientPolicy</tabstop>
+  <tabstop>chkLPUReferral</tabstop>
+  <tabstop>cmbReferralType</tabstop>
+  <tabstop>edtNumber</tabstop>
+  <tabstop>edtDate</tabstop>
+  <tabstop>edtPlannedDate</tabstop>
+  <tabstop>cmbRelegateOrg</tabstop>
+  <tabstop>btnSelectRelegateOrg</tabstop>
+  <tabstop>chkFreeInput</tabstop>
+  <tabstop>edtFreeInput</tabstop>
+  <tabstop>edtPerson</tabstop>
+  <tabstop>cmbSpeciality</tabstop>
+  <tabstop>cmbMKB</tabstop>
+  <tabstop>chkArmyReferral</tabstop>
+  <tabstop>cmbArmyNumber</tabstop>
+  <tabstop>edtArmyDate</tabstop>
+  <tabstop>cmbArmyOrg</tabstop>
+  <tabstop>btnSelectArmyOrg</tabstop>
+  <tabstop>chkArmyFreeInput</tabstop>
+  <tabstop>edtArmyFreeInput</tabstop>
+  <tabstop>cmbEventAssistant</tabstop>
+  <tabstop>cmbEventCurator</tabstop>
+  <tabstop>chkLock</tabstop>
+  <tabstop>cmbCureType</tabstop>
+  <tabstop>cmbPatientModel</tabstop>
+  <tabstop>cmbCureMethod</tabstop>
+  <tabstop>edtEventNote</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

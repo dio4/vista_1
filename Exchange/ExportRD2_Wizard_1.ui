@@ -1,0 +1,86 @@
+<ui version="4.0" >
+ <class>ExportRD2_Wizard_1</class>
+ <widget class="QDialog" name="ExportRD2_Wizard_1" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>526</width>
+    <height>456</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Dialog</string>
+  </property>
+  <layout class="QGridLayout" >
+   <item row="0" column="0" >
+    <widget class="QComboBox" name="cmbExportFormat" />
+   </item>
+   <item row="1" column="0" >
+    <widget class="QCheckBox" name="checkRAR" >
+     <property name="text" >
+      <string>архивировать в RAR</string>
+     </property>
+     <property name="checked" >
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0" >
+    <widget class="QProgressBar" name="progressBar" >
+     <property name="value" >
+      <number>24</number>
+     </property>
+     <property name="orientation" >
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0" >
+    <widget class="QTableWidget" name="tableWidget" />
+   </item>
+   <item row="4" column="0" >
+    <layout class="QHBoxLayout" >
+     <property name="spacing" >
+      <number>6</number>
+     </property>
+     <property name="margin" >
+      <number>0</number>
+     </property>
+     <item>
+      <spacer>
+       <property name="orientation" >
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0" >
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnExport" >
+       <property name="text" >
+        <string>начать экспорт</string>
+       </property>
+       <property name="checkable" >
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnClose" >
+       <property name="text" >
+        <string>прервать</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

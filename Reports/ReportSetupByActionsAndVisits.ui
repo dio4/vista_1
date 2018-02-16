@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ReportSetupByOrgStructureDialog</class>
+ <widget class="QDialog" name="ReportSetupByOrgStructureDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>860</width>
+    <height>866</height>
+   </rect>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::NoContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="32" column="1" colspan="3">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="2" colspan="2">
+    <widget class="CRBComboBox" name="cmbFinance"/>
+   </item>
+   <item row="6" column="0" colspan="2">
+    <widget class="QCheckBox" name="chkOrgStructure">
+     <property name="text">
+      <string>Подразделение</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0" colspan="2">
+    <widget class="QLabel" name="lblEventType">
+     <property name="text">
+      <string>Тип обращения</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="2" colspan="2">
+    <widget class="QComboBox" name="cmbStatus">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="23" column="2" colspan="2">
+    <widget class="QComboBox" name="cmbClientAgeCategory">
+     <item>
+      <property name="text">
+       <string>Дети от 0 до 17 лет</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Взрослые от 18 лет</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="20" column="3">
+    <widget class="QCheckBox" name="chkGroupByPatient">
+     <property name="text">
+      <string>Группировать по пациентам</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="26" column="0" colspan="2">
+    <widget class="QCheckBox" name="chkOnlyDiscountPayment">
+     <property name="text">
+      <string>Оплата со скидкой</string>
+     </property>
+    </widget>
+   </item>
+   <item row="31" column="0" rowspan="2" colspan="4">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>585</width>
+       <height>63</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="13" column="2" colspan="2">
+    <widget class="QComboBox" name="cmbReportType">
+     <item>
+      <property name="text">
+       <string>отделениям выполнившего действие врача</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>отделениям за которым закреплено действие</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="28" column="0">
+    <widget class="QCheckBox" name="chkRefused">
+     <property name="text">
+      <string>Исключение отмененных услуг</string>
+     </property>
+    </widget>
+   </item>
+   <item row="15" column="2">
+    <widget class="QCheckBox" name="chkAllOrgStructure">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string>Учитывать все возможные подразделения</string>
+     </property>
+    </widget>
+   </item>
+   <item row="17" column="0">
+    <widget class="QCheckBox" name="chkPerson">
+     <property name="text">
+      <string>Группировать по врачу/ассистенту</string>
+     </property>
+    </widget>
+   </item>
+   <item row="23" column="0" colspan="2">
+    <widget class="QCheckBox" name="chkClientAgeCategory">
+     <property name="text">
+      <string>Возраст пациента</string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="0">
+    <widget class="QCheckBox" name="chkAssistant">
+     <property name="text">
+      <string>Ассистент в услуге</string>
+     </property>
+    </widget>
+   </item>
+   <item row="27" column="0">
+    <widget class="QCheckBox" name="chkOnlyStaffRelative">
+     <property name="text">
+      <string>Родственники сотрудников</string>
+     </property>
+    </widget>
+   </item>
+   <item row="17" column="2">
+    <widget class="QCheckBox" name="chkPost">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string>Выводить должность врача/ассистента</string>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="2" colspan="2">
+    <widget class="CRBComboBox" name="cmbAssistantPost">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="0">
+    <widget class="QLabel" name="lblAssistantPost">
+     <property name="text">
+      <string>Должность ассистента</string>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="0">
+    <widget class="QLabel" name="lblAssistant">
+     <property name="text">
+      <string>Ассистент</string>
+     </property>
+    </widget>
+   </item>
+   <item row="13" column="0" colspan="2">
+    <widget class="QLabel" name="lblReportType">
+     <property name="text">
+      <string>Формировать отчет по</string>
+     </property>
+     <property name="buddy">
+      <cstring>cmbReportType</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="2" colspan="2">
+    <widget class="CPersonComboBoxEx" name="cmbAssistant">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="2" colspan="2">
+    <widget class="CPersonComboBoxEx" name="cmbPerson"/>
+   </item>
+   <item row="2" column="2" colspan="2">
+    <widget class="CContractComboBox" name="cmbContract"/>
+   </item>
+   <item row="7" column="2" colspan="2">
+    <widget class="CRBComboBox" name="cmbEventType"/>
+   </item>
+   <item row="20" column="2">
+    <widget class="QCheckBox" name="chkPresenceInTariffs">
+     <property name="text">
+      <string>Проверять наличие услуги в тарифах</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="20" column="0">
+    <widget class="QCheckBox" name="chkPatientInfo">
+     <property name="text">
+      <string>Информация о пациенте</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0" colspan="2">
+    <widget class="QCheckBox" name="chkStatus">
+     <property name="text">
+      <string>Статус</string>
+     </property>
+    </widget>
+   </item>
+   <item row="25" column="0" colspan="3">
+    <widget class="QCheckBox" name="chkOnlyClientAsPersonInLPU">
+     <property name="text">
+      <string>Только пациенты сотрудники учереждения</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0" colspan="2">
+    <widget class="QLabel" name="lblFinance">
+     <property name="text">
+      <string>Тип финансирования</string>
+     </property>
+     <property name="buddy">
+      <cstring>cmbFinance</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="0">
+    <widget class="QLabel" name="lblPerson">
+     <property name="text">
+      <string>Врач</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0" colspan="2">
+    <widget class="QLabel" name="lblContract">
+     <property name="text">
+      <string>Контракт</string>
+     </property>
+     <property name="buddy">
+      <cstring>cmbContract</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="15" column="0">
+    <widget class="QCheckBox" name="chkOutputByOrgStructure">
+     <property name="text">
+      <string>Выводить по отделениям</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QCheckBox" name="chkNotContract">
+     <property name="text">
+      <string>Без контракта</string>
+     </property>
+    </widget>
+   </item>
+   <item row="24" column="0">
+    <widget class="QCheckBox" name="chkDetailServiceTypes">
+     <property name="text">
+      <string>Детализировать виды услуг</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="4">
+    <widget class="QGroupBox" name="gbDateInterval">
+     <property name="title">
+      <string>Период</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="1" colspan="2">
+       <widget class="QRadioButton" name="rbtnByActionEndDate">
+        <property name="text">
+         <string>выполнения услуги</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <spacer name="spacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>78</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="3" column="3">
+       <spacer name="spacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>78</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="1" column="0" colspan="2">
+       <widget class="QLabel" name="lblBegDate">
+        <property name="text">
+         <string>Дата &amp;начала периода</string>
+        </property>
+        <property name="buddy">
+         <cstring>edtBegDate</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="CDateEdit" name="edtBegDate">
+        <property name="calendarPopup">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0" colspan="2">
+       <widget class="QLabel" name="lblEndDate">
+        <property name="text">
+         <string>Дата &amp;окончания периода</string>
+        </property>
+        <property name="buddy">
+         <cstring>edtEndDate</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QRadioButton" name="rbtnByFormingAccountDate">
+        <property name="text">
+         <string>формирования счета</string>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2">
+       <widget class="CDateEdit" name="edtEndDate">
+        <property name="calendarPopup">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+     <zorder>spacer</zorder>
+     <zorder>spacer_2</zorder>
+     <zorder>lblBegDate</zorder>
+     <zorder>lblEndDate</zorder>
+     <zorder>rbtnByFormingAccountDate</zorder>
+     <zorder>rbtnByActionEndDate</zorder>
+     <zorder>edtBegDate</zorder>
+     <zorder>edtEndDate</zorder>
+    </widget>
+   </item>
+   <item row="16" column="0">
+    <widget class="QCheckBox" name="chkShowClient">
+     <property name="text">
+      <string>Выводить пациента</string>
+     </property>
+    </widget>
+   </item>
+   <item row="16" column="2">
+    <widget class="QCheckBox" name="chkShowDates">
+     <property name="text">
+      <string>Выводить даты</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="15" column="3">
+    <widget class="QCheckBox" name="chkOnlyOrgStructures">
+     <property name="text">
+      <string>Только отделения</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="2" colspan="2">
+    <widget class="COrgStructureComboBox" name="cmbOrgStructure">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="24" column="2" colspan="2">
+    <widget class="QListView" name="lstServiceTypes">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>75</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>130</height>
+      </size>
+     </property>
+     <property name="editTriggers">
+      <set>QAbstractItemView::NoEditTriggers</set>
+     </property>
+     <property name="selectionMode">
+      <enum>QAbstractItemView::MultiSelection</enum>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CPersonComboBoxEx</class>
+   <extends>QComboBox</extends>
+   <header>Orgs/PersonComboBoxEx.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CDateEdit</class>
+   <extends>QDateEdit</extends>
+   <header>library/DateEdit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CRBComboBox</class>
+   <extends>QComboBox</extends>
+   <header>library/crbcombobox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>COrgStructureComboBox</class>
+   <extends>QComboBox</extends>
+   <header>Orgs/OrgStructComboBoxes</header>
+  </customwidget>
+  <customwidget>
+   <class>CContractComboBox</class>
+   <extends>QComboBox</extends>
+   <header>Accounting/ContractComboBox.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>cmbContract</tabstop>
+  <tabstop>cmbFinance</tabstop>
+  <tabstop>chkStatus</tabstop>
+  <tabstop>cmbStatus</tabstop>
+  <tabstop>chkOrgStructure</tabstop>
+  <tabstop>cmbOrgStructure</tabstop>
+  <tabstop>cmbReportType</tabstop>
+  <tabstop>chkAllOrgStructure</tabstop>
+  <tabstop>buttonBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>ReportSetupByOrgStructureDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>640</x>
+     <y>534</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>255</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>ReportSetupByOrgStructureDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>640</x>
+     <y>534</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>255</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkStatus</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>cmbStatus</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>80</x>
+     <y>138</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>645</x>
+     <y>140</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkOrgStructure</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>cmbOrgStructure</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>102</x>
+     <y>164</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>420</x>
+     <y>166</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkClientAgeCategory</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>cmbClientAgeCategory</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>119</x>
+     <y>340</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>533</x>
+     <y>342</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkOnlyDiscountPayment</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>chkOnlyStaffRelative</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>97</x>
+     <y>388</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>99</x>
+     <y>411</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkAssistant</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cmbAssistant</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>139</x>
+     <y>233</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>192</x>
+     <y>233</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkAssistant</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cmbPerson</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>118</x>
+     <y>229</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>221</x>
+     <y>212</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkAssistant</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>lblPerson</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>54</x>
+     <y>231</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>45</x>
+     <y>213</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkAssistant</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cmbAssistantPost</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>110</x>
+     <y>233</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>526</x>
+     <y>257</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkPerson</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>chkPost</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>110</x>
+     <y>357</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>345</x>
+     <y>357</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

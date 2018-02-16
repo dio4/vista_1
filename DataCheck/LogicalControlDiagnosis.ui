@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>672</width>
+    <height>568</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Логический контроль заболеваний в ЛУД</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="margin">
+    <number>4</number>
+   </property>
+   <property name="spacing">
+    <number>4</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QLabel" name="lblBegin">
+     <property name="text">
+      <string>Период с   </string>
+     </property>
+     <property name="buddy">
+      <cstring>dateBeginPeriod</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="CDateEdit" name="dateBeginPeriod">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="displayFormat">
+      <string>dd.MM.yyyy</string>
+     </property>
+     <property name="calendarPopup">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2">
+    <widget class="QLabel" name="lblEnd">
+     <property name="text">
+      <string>  по    </string>
+     </property>
+     <property name="buddy">
+      <cstring>dateEndPeriod</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="3" colspan="2">
+    <widget class="CDateEdit" name="dateEndPeriod">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="displayFormat">
+      <string>dd.MM.yyyy</string>
+     </property>
+     <property name="calendarPopup">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="5">
+    <spacer name="horizontalSpacer_10">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>68</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="0" column="6">
+    <widget class="QCheckBox" name="chkMKB">
+     <property name="text">
+      <string>Коды диагнозов по &amp;МКБ</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="7">
+    <widget class="CICDCodeEdit" name="edtMKBFrom">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>50</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="inputMask">
+      <string>a00.00; </string>
+     </property>
+     <property name="text">
+      <string>A.</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="8">
+    <widget class="CICDCodeEdit" name="edtMKBTo">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>50</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="inputMask">
+      <string>a00.00; </string>
+     </property>
+     <property name="text">
+      <string>T99.9</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="9">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>14</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="2" column="0" colspan="3">
+    <widget class="QCheckBox" name="chkAccountChronicDisease">
+     <property name="text">
+      <string>Учитывать хронические</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="4" colspan="2">
+    <spacer name="horizontalSpacer_3">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>50</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="2" column="6" colspan="3">
+    <widget class="QCheckBox" name="chkDiseaseDiagnostic">
+     <property name="text">
+      <string>Контроль длительности по случаям</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0" colspan="3">
+    <widget class="QCheckBox" name="chkAccountAcuteDisease">
+     <property name="text">
+      <string>Учитывать острые</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="4" colspan="2">
+    <spacer name="horizontalSpacer_4">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>50</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="3" column="6" colspan="2">
+    <widget class="QCheckBox" name="chkDataDiagnosis">
+     <property name="text">
+      <string>Контроль длительности периода</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0" colspan="3">
+    <widget class="QCheckBox" name="chkControlIntegrity">
+     <property name="text">
+      <string>Контроль целостности</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="4" colspan="2">
+    <spacer name="horizontalSpacer_5">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>50</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="4" column="6" colspan="3">
+    <widget class="QCheckBox" name="chkCharacterChronicFirstDisease">
+     <property name="text">
+      <string>Контроль начала хронического заболевания</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0" colspan="4">
+    <widget class="QCheckBox" name="chkCodingMKBEx">
+     <property name="text">
+      <string>Различие в шифрах доп.секции</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="4" colspan="2">
+    <spacer name="horizontalSpacer_6">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>50</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="5" column="6" colspan="4">
+    <widget class="QCheckBox" name="chkCharacterChronicKnowDisease">
+     <property name="text">
+      <string>Контроль характера хронического заболевания</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0" colspan="3">
+    <widget class="QCheckBox" name="chkCodingMKB">
+     <property name="text">
+      <string>Одинаковые блоки МКБ</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="4" colspan="2">
+    <spacer name="horizontalSpacer_7">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>50</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="6" column="6" colspan="3">
+    <widget class="QCheckBox" name="chkChronicAcuteDisease">
+     <property name="text">
+      <string>Контроль острое-хроническое-обострение</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0" colspan="4">
+    <widget class="QCheckBox" name="chkCodingTraumaType">
+     <property name="text">
+      <string>Несоответствие типа травмы</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="4" colspan="2">
+    <spacer name="horizontalSpacer_8">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="7" column="6" colspan="3">
+    <widget class="QCheckBox" name="chkIgnoreCorrectionUser">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string>Игнорировать участие пользователя</string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="0" colspan="10">
+    <widget class="CRemarkListWidget" name="listResultControlDiagnosis">
+     <property name="editTriggers">
+      <set>QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed|QAbstractItemView::SelectedClicked</set>
+     </property>
+     <property name="selectionMode">
+      <enum>QAbstractItemView::ExtendedSelection</enum>
+     </property>
+     <property name="flow">
+      <enum>QListView::TopToBottom</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="0" colspan="10">
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <property name="spacing">
+      <number>4</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="btnStartControl">
+       <property name="text">
+        <string>начать выполнение</string>
+       </property>
+       <property name="autoDefault">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="lblCountLine">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnCorrectControl">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>исправить</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnEndControl">
+       <property name="text">
+        <string>прервать</string>
+       </property>
+       <property name="autoDefault">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="8" column="0" colspan="10">
+    <widget class="CProgressBar" name="prbControlDiagnosis">
+     <property name="format">
+      <string>%p%</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="lblAge">
+     <property name="text">
+      <string>Возраст с</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QSpinBox" name="edtAgeFrom">
+     <property name="maximum">
+      <number>150</number>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2">
+    <widget class="QLabel" name="lblAgeTo">
+     <property name="text">
+      <string>  по</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="3" colspan="2">
+    <widget class="QSpinBox" name="edtAgeTo">
+     <property name="maximum">
+      <number>150</number>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="5" colspan="5">
+    <spacer name="horizontalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CDateEdit</class>
+   <extends>QDateEdit</extends>
+   <header>library/DateEdit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CProgressBar</class>
+   <extends>QProgressBar</extends>
+   <header>library/ProgressBar.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CRemarkListWidget</class>
+   <extends>QListWidget</extends>
+   <header>RemarkListWidget.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CICDCodeEdit</class>
+   <extends>QLineEdit</extends>
+   <header>library/ICDCodeEdit.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>dateBeginPeriod</tabstop>
+  <tabstop>dateEndPeriod</tabstop>
+  <tabstop>edtAgeFrom</tabstop>
+  <tabstop>edtAgeTo</tabstop>
+  <tabstop>chkAccountChronicDisease</tabstop>
+  <tabstop>chkAccountAcuteDisease</tabstop>
+  <tabstop>chkControlIntegrity</tabstop>
+  <tabstop>chkCodingMKBEx</tabstop>
+  <tabstop>chkCodingMKB</tabstop>
+  <tabstop>chkCodingTraumaType</tabstop>
+  <tabstop>chkMKB</tabstop>
+  <tabstop>edtMKBFrom</tabstop>
+  <tabstop>edtMKBTo</tabstop>
+  <tabstop>chkDiseaseDiagnostic</tabstop>
+  <tabstop>chkDataDiagnosis</tabstop>
+  <tabstop>chkCharacterChronicFirstDisease</tabstop>
+  <tabstop>chkCharacterChronicKnowDisease</tabstop>
+  <tabstop>chkChronicAcuteDisease</tabstop>
+  <tabstop>chkIgnoreCorrectionUser</tabstop>
+  <tabstop>listResultControlDiagnosis</tabstop>
+  <tabstop>btnStartControl</tabstop>
+  <tabstop>btnCorrectControl</tabstop>
+  <tabstop>btnEndControl</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

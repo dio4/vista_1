@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ReportDDStudentsResultsSetupDialog</class>
+ <widget class="QDialog" name="ReportDDStudentsResultsSetupDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>463</width>
+    <height>302</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="CDateEdit" name="edtBegDate">
+   <property name="geometry">
+    <rect>
+     <x>249</x>
+     <y>10</y>
+     <width>205</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CDateEdit" name="edtEndDate">
+   <property name="geometry">
+    <rect>
+     <x>249</x>
+     <y>43</y>
+     <width>205</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblEndDate">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>43</y>
+     <width>233</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Дата окончания периода</string>
+   </property>
+   <property name="buddy">
+    <cstring>edtEndDate</cstring>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblBegDate">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>233</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Дата начала периода</string>
+   </property>
+   <property name="buddy">
+    <cstring>edtBegDate</cstring>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblPodtver">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>104</y>
+     <width>143</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Тип подтве&amp;рждения:</string>
+   </property>
+   <property name="buddy">
+    <cstring>cmbPodtver</cstring>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblBegDatePodtver">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>137</y>
+     <width>233</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Начало пер&amp;иода подтверждения:</string>
+   </property>
+   <property name="buddy">
+    <cstring>edtBegDatePodtver</cstring>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cmbPodtver">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>104</y>
+     <width>144</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CDateEdit" name="edtEndDatePodtver">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>170</y>
+     <width>144</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CRBComboBox" name="cmbRefuseType">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>203</y>
+     <width>144</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblRefuseType">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>203</y>
+     <width>143</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>При&amp;чина отказа:</string>
+   </property>
+   <property name="buddy">
+    <cstring>cmbRefuseType</cstring>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="chkPodtver">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>76</y>
+     <width>233</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Подтверждение оп&amp;латы</string>
+   </property>
+  </widget>
+  <widget class="CDateEdit" name="edtBegDatePodtver">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>137</y>
+     <width>144</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblEndDatePodtver">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>170</y>
+     <width>294</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Окончание периода подтверждени&amp;я:</string>
+   </property>
+   <property name="buddy">
+    <cstring>edtEndDatePodtver</cstring>
+   </property>
+  </widget>
+  <widget class="QDialogButtonBox" name="buttonBox">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>260</y>
+     <width>176</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CDateEdit</class>
+   <extends>QDateEdit</extends>
+   <header>library/DateEdit</header>
+  </customwidget>
+  <customwidget>
+   <class>CRBComboBox</class>
+   <extends>QComboBox</extends>
+   <header>library/crbcombobox.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>ReportDDStudentsResultsSetupDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>377</x>
+     <y>283</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>235</x>
+     <y>237</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>ReportDDStudentsResultsSetupDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>377</x>
+     <y>283</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>235</x>
+     <y>237</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,4903 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>704</width>
+    <height>435</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>:/new/prefix1/icons/Icon2.png</normaloff>:/new/prefix1/icons/Icon2.png</iconset>
+  </property>
+  <property name="animated">
+   <bool>false</bool>
+  </property>
+  <property name="dockNestingEnabled">
+   <bool>true</bool>
+  </property>
+  <property name="dockOptions">
+   <set>QMainWindow::AllowNestedDocks|QMainWindow::AllowTabbedDocks|QMainWindow::ForceTabbedDocks</set>
+  </property>
+  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>704</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>Сессия</string>
+    </property>
+    <widget class="QMenu" name="mnuMruEvents">
+     <property name="title">
+      <string>Список недавних обращений</string>
+     </property>
+     <addaction name="separator"/>
+     <addaction name="actClearMruEvents"/>
+    </widget>
+    <addaction name="separator"/>
+    <addaction name="actLogin"/>
+    <addaction name="actLogout"/>
+    <addaction name="mnuMruEvents"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="actInformer"/>
+    <addaction name="actQuit"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="mnuAccounting">
+    <property name="title">
+     <string>Рас&amp;чёт</string>
+    </property>
+    <addaction name="actAccounting"/>
+    <addaction name="actCashBook"/>
+    <addaction name="actContract"/>
+    <addaction name="actECROther"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>&amp;Помощь</string>
+    </property>
+    <addaction name="actUserManual"/>
+    <addaction name="actStandards"/>
+    <addaction name="actSendBugReport"/>
+    <addaction name="separator"/>
+    <addaction name="actAbout"/>
+    <addaction name="actLic"/>
+    <addaction name="separator"/>
+    <addaction name="actAboutQt"/>
+    <addaction name="separator"/>
+    <addaction name="actionGo1"/>
+   </widget>
+   <widget class="QMenu" name="mnuWork">
+    <property name="title">
+     <string>&amp;Работа</string>
+    </property>
+    <addaction name="actRegistry"/>
+    <addaction name="actTimeline"/>
+    <addaction name="actDeferredQueue"/>
+    <addaction name="actJobJournal"/>
+    <addaction name="actFormRegistration"/>
+    <addaction name="actHospitalBeds"/>
+    <addaction name="actJobsPlanning"/>
+    <addaction name="actJobsOperating"/>
+    <addaction name="actStockControl"/>
+    <addaction name="actQuoting"/>
+    <addaction name="actTissueJournal"/>
+    <addaction name="actDiabetRegistry"/>
+    <addaction name="actSsmp"/>
+    <addaction name="actPharmacyStore"/>
+   </widget>
+   <widget class="QMenu" name="mnuExchange">
+    <property name="title">
+     <string>&amp;Обмен</string>
+    </property>
+    <widget class="QMenu" name="mnuImport">
+     <property name="title">
+      <string>Импорт</string>
+     </property>
+     <widget class="QMenu" name="menu_7">
+      <property name="title">
+       <string>Импорт справочников</string>
+      </property>
+      <addaction name="actImportEisOmsLpu"/>
+      <addaction name="actImportOrgsINFIS"/>
+      <addaction name="actImportEisOmsSmo"/>
+      <addaction name="actImportOrganisations"/>
+      <addaction name="actImportActionType"/>
+      <addaction name="actImportEventType"/>
+      <addaction name="actImportActionTemplate"/>
+      <addaction name="actImportRbResult"/>
+      <addaction name="actImportRbUnit"/>
+      <addaction name="actImportRbThesaurus"/>
+      <addaction name="actImportRbComplain"/>
+      <addaction name="actImportRbService"/>
+      <addaction name="actImportServiceNomen"/>
+      <addaction name="actImportServiceMes"/>
+      <addaction name="actImportPolicySerialDBF"/>
+      <addaction name="actImportPersons_VM"/>
+      <addaction name="actImportDiagnosticResult"/>
+      <addaction name="actImportRefBooks"/>
+     </widget>
+     <widget class="QMenu" name="menuImportProfiles">
+      <property name="title">
+       <string>Импорт профилей</string>
+      </property>
+      <addaction name="actImportProfilesEIS"/>
+      <addaction name="actImportProfilesINFIS"/>
+     </widget>
+     <widget class="QMenu" name="menu_132">
+      <property name="title">
+       <string>Импорт формы &amp;131</string>
+      </property>
+      <addaction name="actImport131DBF"/>
+      <addaction name="actImport131XML"/>
+      <addaction name="actImport131Errors"/>
+     </widget>
+     <widget class="QMenu" name="menu_SPR">
+      <property name="title">
+       <string>Импорт справочников &amp;SPR (Краснодарский край)</string>
+      </property>
+      <addaction name="actImportSPR18"/>
+      <addaction name="actImportSPR69"/>
+      <addaction name="actImportSPR70"/>
+      <addaction name="actImportSPR71"/>
+      <addaction name="actImportSPR72"/>
+      <addaction name="actImportSPR73"/>
+      <addaction name="actImportSPR01"/>
+      <addaction name="actImportSPRSMO"/>
+      <addaction name="actImportMKB"/>
+      <addaction name="actImportSPR64"/>
+      <addaction name="actImportSPR15"/>
+     </widget>
+     <addaction name="actImportEIS"/>
+     <addaction name="actImportDD"/>
+     <addaction name="menu_132"/>
+     <addaction name="menuImportProfiles"/>
+     <addaction name="actImportLgot"/>
+     <addaction name="actImportQuotaFromVTMP"/>
+     <addaction name="actImpotrFromSail"/>
+     <addaction name="actImportEisOmsFull"/>
+     <addaction name="actImportPersons"/>
+     <addaction name="actImportCrimea"/>
+     <addaction name="actImportClients"/>
+     <addaction name="separator"/>
+     <addaction name="menu_7"/>
+     <addaction name="actImportR67_VM"/>
+     <addaction name="actImportR67Duplicates"/>
+     <addaction name="actImportFLS"/>
+     <addaction name="actImportFormularyDLO"/>
+     <addaction name="menu_SPR"/>
+     <addaction name="actImportR85ERZCentral"/>
+     <addaction name="actImportMIS"/>
+     <addaction name="actImportDLOMIAC"/>
+     <addaction name="actImportEISOMS_SMP"/>
+     <addaction name="actImportPACS"/>
+    </widget>
+    <widget class="QMenu" name="mnuExport">
+     <property name="title">
+      <string>Экспорт</string>
+     </property>
+     <widget class="QMenu" name="menuExportRB">
+      <property name="title">
+       <string>Экспорт справочников</string>
+      </property>
+      <addaction name="actExportActionType"/>
+      <addaction name="actExportEventType"/>
+      <addaction name="actExportActionTemplate"/>
+      <addaction name="actExportRbResult"/>
+      <addaction name="actExportRbUnit"/>
+      <addaction name="actExportRbThesaurus"/>
+      <addaction name="actExportRbComplain"/>
+      <addaction name="actExportRbService"/>
+      <addaction name="actExportOrganisations"/>
+      <addaction name="actExportPersons_VM"/>
+      <addaction name="actExportDiagnosticResult"/>
+      <addaction name="actExportRefBooks"/>
+     </widget>
+     <widget class="QMenu" name="menu_8">
+      <property name="title">
+       <string>Экспорт первичных документов</string>
+      </property>
+      <addaction name="actExportHL7v2_5"/>
+      <addaction name="actExportPervDoc"/>
+      <addaction name="actExportPrimaryDocInXml"/>
+     </widget>
+     <addaction name="actExport131"/>
+     <addaction name="actExportRD2"/>
+     <addaction name="menu_8"/>
+     <addaction name="actExportActionResult"/>
+     <addaction name="separator"/>
+     <addaction name="menuExportRB"/>
+     <addaction name="actExportR67_VM"/>
+     <addaction name="actExportR67Duplicates"/>
+     <addaction name="actExportFedRegPer"/>
+     <addaction name="actExportFLCR23"/>
+     <addaction name="actExportAttachClient"/>
+     <addaction name="actExportAttachedClientsR23MIAC"/>
+     <addaction name="actExportIEMK"/>
+    </widget>
+    <addaction name="mnuImport"/>
+    <addaction name="mnuExport"/>
+   </widget>
+   <widget class="QMenu" name="menuPreferences">
+    <property name="title">
+     <string>На&amp;стройки</string>
+    </property>
+    <addaction name="actConnection"/>
+    <addaction name="separator"/>
+    <addaction name="actAppPreferences"/>
+    <addaction name="actAdditionalFeaturesUrls"/>
+    <addaction name="actDecor"/>
+    <addaction name="actMIACExchangePreferences"/>
+    <addaction name="actEMSRNExchangePreferences"/>
+    <addaction name="separator"/>
+    <addaction name="actRBPrintTemplate"/>
+    <addaction name="actRBAccountExportFormat"/>
+    <addaction name="actRBAccountingSystem"/>
+    <addaction name="actRBCounter"/>
+    <addaction name="separator"/>
+    <addaction name="actUserRightListDialog"/>
+    <addaction name="actUserRightProfileListDialog"/>
+    <addaction name="separator"/>
+    <addaction name="actChangeCurrentUserPassword"/>
+    <addaction name="separator"/>
+    <addaction name="actCalendar"/>
+    <addaction name="actInformerMessages"/>
+    <addaction name="actEQueueSettings"/>
+   </widget>
+   <widget class="QMenu" name="mnuService">
+    <property name="windowIcon">
+     <iconset>
+      <normaloff>:/new/prefix1/icons/Icon2.png</normaloff>:/new/prefix1/icons/Icon2.png</iconset>
+    </property>
+    <property name="title">
+     <string>Сервис</string>
+    </property>
+    <widget class="QMenu" name="mnuCheck">
+     <property name="title">
+      <string>Логический контроль</string>
+     </property>
+     <widget class="QMenu" name="menuControlKrasnodar">
+      <property name="title">
+       <string>Для Краснодарского края</string>
+      </property>
+      <addaction name="actReportControlSurgery"/>
+      <addaction name="actReportControlMKB"/>
+      <addaction name="actReportDuplicateEvents"/>
+      <addaction name="actReportUnclosedEvents"/>
+      <addaction name="actControlEventResult"/>
+      <addaction name="actControlHospBedProfile"/>
+      <addaction name="actControlServiceSex"/>
+      <addaction name="actReportControlPaymentAmount"/>
+      <addaction name="actReportControlDischarge"/>
+     </widget>
+     <addaction name="actEventsCheck"/>
+     <addaction name="actClientsCheck"/>
+     <addaction name="actTempInvalidCheck"/>
+     <addaction name="actClientDocumentsCheck"/>
+     <addaction name="actControlDiagnosis"/>
+     <addaction name="actControlDoubles"/>
+     <addaction name="actControlMes"/>
+     <addaction name="menuControlKrasnodar"/>
+     <addaction name="actEventContractCheck"/>
+    </widget>
+    <widget class="QMenu" name="menu_29">
+     <property name="title">
+      <string>Синхронизация МИАЦ</string>
+     </property>
+     <addaction name="actSynchronizeDLOMIAC"/>
+    </widget>
+    <widget class="QMenu" name="menu_30">
+     <property name="title">
+      <string>Синхронизация МИАЦ/КЛАДР</string>
+     </property>
+     <addaction name="actSynchronizeAttach"/>
+    </widget>
+    <addaction name="mnuCheck"/>
+    <addaction name="actCheckAccounts"/>
+    <addaction name="actCreateAttachClientsForArea"/>
+    <addaction name="actCheckJury"/>
+    <addaction name="actDbfView"/>
+    <addaction name="actDBFToMySql"/>
+    <addaction name="actTestSendMail"/>
+    <addaction name="actKSGReselect"/>
+    <addaction name="actReportFromLogger"/>
+    <addaction name="actOldStyleServiceModifierRemake"/>
+    <addaction name="actQueueControl"/>
+    <addaction name="actClientExaminationPlan"/>
+    <addaction name="actLDES"/>
+    <addaction name="separator"/>
+    <addaction name="actTestMKB"/>
+    <addaction name="actTestRLS"/>
+    <addaction name="actTestMES"/>
+    <addaction name="actTestTNMS"/>
+    <addaction name="actSchemaSync"/>
+    <addaction name="actSchemaClean"/>
+    <addaction name="separator"/>
+    <addaction name="menu_29"/>
+    <addaction name="menu_30"/>
+    <addaction name="separator"/>
+    <addaction name="actCleanIniFile"/>
+    <addaction name="actUpdatesChecker"/>
+    <addaction name="separator"/>
+    <addaction name="actRecreateEvent"/>
+    <addaction name="actRecreateEventCancel"/>
+   </widget>
+   <widget class="QMenu" name="menuRefBooks">
+    <property name="title">
+     <string>&amp;Справочники</string>
+    </property>
+    <widget class="QMenu" name="menu">
+     <property name="title">
+      <string>Адреса</string>
+     </property>
+     <addaction name="actKLADR"/>
+     <addaction name="actAreas"/>
+     <addaction name="actMilitaryUnits"/>
+    </widget>
+    <widget class="QMenu" name="menu_2">
+     <property name="title">
+      <string>Персонал</string>
+     </property>
+     <addaction name="actOrgStructure"/>
+     <addaction name="actRBSpeciality"/>
+     <addaction name="actRBPost"/>
+     <addaction name="actPersonal"/>
+     <addaction name="actRBActivity"/>
+     <addaction name="actRBActionAssistantType"/>
+    </widget>
+    <widget class="QMenu" name="menu_3">
+     <property name="title">
+      <string>Медицинские</string>
+     </property>
+     <addaction name="actMKB"/>
+     <addaction name="actMKBSubclass"/>
+     <addaction name="actMKBMorphology"/>
+     <addaction name="actRBDiseaseCharacter"/>
+     <addaction name="actRBDiseaseStage"/>
+     <addaction name="actRBDiagnosisType"/>
+     <addaction name="actRBTraumaType"/>
+     <addaction name="actRBHealthGroup"/>
+     <addaction name="actRBMedicalGroup"/>
+     <addaction name="actRBDispanser"/>
+     <addaction name="actRBResult"/>
+     <addaction name="actRBDiagnosticResult"/>
+     <addaction name="separator"/>
+     <addaction name="actRBTempInvalidReason"/>
+     <addaction name="actRBTempInvalidExtraReason"/>
+     <addaction name="actRBTempInvalidDocument"/>
+     <addaction name="actRBTempInvalidRegime"/>
+     <addaction name="actRBTempInvalidBreak"/>
+     <addaction name="actRBTempInvalidResult"/>
+     <addaction name="actRBTempInvalidDuplicateReason"/>
+     <addaction name="separator"/>
+     <addaction name="actRBComplain"/>
+     <addaction name="actRBThesaurus"/>
+     <addaction name="actRBBloodType"/>
+     <addaction name="actRBDiseasePhases"/>
+     <addaction name="actRBImageMap"/>
+     <addaction name="separator"/>
+     <addaction name="actCureType"/>
+     <addaction name="actCureMethod"/>
+     <addaction name="actPatientModel"/>
+    </widget>
+    <widget class="QMenu" name="menu_4">
+     <property name="title">
+      <string>Классификаторы</string>
+     </property>
+     <addaction name="actRBOKPF"/>
+     <addaction name="actRBOKFS"/>
+     <addaction name="actRBHurtType"/>
+     <addaction name="actRBHurtFactorType"/>
+     <addaction name="actRBUnit"/>
+    </widget>
+    <widget class="QMenu" name="menu_12">
+     <property name="title">
+      <string>Социальный статус</string>
+     </property>
+     <addaction name="actRBSocStatusType"/>
+     <addaction name="actRBSocStatusClass"/>
+    </widget>
+    <widget class="QMenu" name="menu_13">
+     <property name="title">
+      <string>Персонификация</string>
+     </property>
+     <addaction name="actRBPolicyType"/>
+     <addaction name="actRBPolicyKind"/>
+     <addaction name="actRBDocumentTypeGroup"/>
+     <addaction name="actRBDocumentType"/>
+     <addaction name="actRBContactType"/>
+     <addaction name="actRecativeClient"/>
+     <addaction name="actRBLocationCardType"/>
+     <addaction name="actRBStatusObservationClientType"/>
+     <addaction name="actRBHospitalBedsLocationCardType"/>
+     <addaction name="actRBInfoSource"/>
+    </widget>
+    <widget class="QMenu" name="menu_11">
+     <property name="title">
+      <string>Организации</string>
+     </property>
+     <addaction name="actRBNet"/>
+     <addaction name="actBank"/>
+     <addaction name="actOrganisation"/>
+     <addaction name="actRBPaidServices"/>
+     <addaction name="actRBClinicalTrials"/>
+    </widget>
+    <widget class="QMenu" name="menu_5">
+     <property name="title">
+      <string>Финансовые</string>
+     </property>
+     <addaction name="actRBFinance"/>
+     <addaction name="actRBServiceGroup"/>
+     <addaction name="actRBServiceCategory"/>
+     <addaction name="actRBService"/>
+     <addaction name="actRBTariffCategory"/>
+     <addaction name="actRBExpenseServiceItem"/>
+     <addaction name="actRBPayRefuseType"/>
+     <addaction name="actRBCashOperation"/>
+     <addaction name="actRBAccountType"/>
+    </widget>
+    <widget class="QMenu" name="menu_6">
+     <property name="title">
+      <string>Учёт</string>
+     </property>
+     <widget class="QMenu" name="menuAttachmentDetachment">
+      <property name="title">
+       <string>Прикрепления/открепления</string>
+      </property>
+      <addaction name="actRBAttachType"/>
+      <addaction name="actRBDetachmentReason"/>
+     </widget>
+     <addaction name="actRBScene"/>
+     <addaction name="actRBVisitType"/>
+     <addaction name="separator"/>
+     <addaction name="actActionPropertyTemplate"/>
+     <addaction name="actActionTemplate"/>
+     <addaction name="actRBActionShedule"/>
+     <addaction name="actActionType"/>
+     <addaction name="actRBActionTypeIncompatibilities"/>
+     <addaction name="actRBActionTypeSimilarity"/>
+     <addaction name="separator"/>
+     <addaction name="actRBMedicalAidProfile"/>
+     <addaction name="actRBMedicalAidKind"/>
+     <addaction name="actRBMedicalAidType"/>
+     <addaction name="actRBEventTypePurpose"/>
+     <addaction name="actRBEventProfile"/>
+     <addaction name="actEventType"/>
+     <addaction name="actRBEventGoal"/>
+     <addaction name="actRBMesSpecification"/>
+     <addaction name="separator"/>
+     <addaction name="menuAttachmentDetachment"/>
+     <addaction name="actRBMedicalAidUnit"/>
+     <addaction name="actRBReasonOfAbsence"/>
+     <addaction name="actRBHospitalBedProfile"/>
+     <addaction name="actRBJobType"/>
+     <addaction name="separator"/>
+     <addaction name="actQuotaType"/>
+     <addaction name="actRBAgreementType"/>
+     <addaction name="separator"/>
+     <addaction name="actBlankType"/>
+    </widget>
+    <widget class="QMenu" name="menu_9">
+     <property name="title">
+      <string>Скорая помощь</string>
+     </property>
+     <addaction name="actRBEmergencyBrigade"/>
+     <addaction name="actRBEmergencyCauseCall"/>
+     <addaction name="actRBEmergencyTransferredTransportation"/>
+     <addaction name="actRBEmergencyPlaceReceptionCall"/>
+     <addaction name="actRBEmergencyReceivedCall"/>
+     <addaction name="actRBEmergencyReasondDelays"/>
+     <addaction name="actRBEmergencyResult"/>
+     <addaction name="actRBEmergencyAccident"/>
+     <addaction name="actRBEmergencyDeath"/>
+     <addaction name="actRBEmergencyEbriety"/>
+     <addaction name="actRBEmergencyDiseased"/>
+     <addaction name="actRBEmergencyPlaceCall"/>
+     <addaction name="actRBEmergencyMethodTransportation"/>
+     <addaction name="actRBEmergencyTypeAsset"/>
+    </widget>
+    <widget class="QMenu" name="menu_16">
+     <property name="title">
+      <string>Питание</string>
+     </property>
+     <addaction name="actRBMealTime"/>
+     <addaction name="actRBDiet"/>
+     <addaction name="actRBMenu"/>
+     <addaction name="actRBMeal"/>
+    </widget>
+    <widget class="QMenu" name="mnuNomenclature">
+     <property name="title">
+      <string>Лекарственные средства и изделия медицинского назначения</string>
+     </property>
+     <addaction name="actRBNomenclatureClass"/>
+     <addaction name="actRBNomenclatureKind"/>
+     <addaction name="actRBNomenclatureType"/>
+     <addaction name="actRBNomenclature"/>
+     <addaction name="actRBStockRecipe"/>
+    </widget>
+    <widget class="QMenu" name="mnuLaboratory">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="title">
+      <string>Лаборатория</string>
+     </property>
+     <addaction name="actRBTissueType"/>
+     <addaction name="actRBTestGroup"/>
+     <addaction name="actRBTest"/>
+     <addaction name="actRBLaboratory"/>
+     <addaction name="actRBSuiteReagent"/>
+    </widget>
+    <widget class="QMenu" name="mnuEquipment">
+     <property name="title">
+      <string>Оборудование</string>
+     </property>
+     <addaction name="actRBEquipmentType"/>
+     <addaction name="actRBEquipment"/>
+     <addaction name="actRBContainerType"/>
+     <addaction name="separator"/>
+     <addaction name="actEQueueType"/>
+    </widget>
+    <widget class="QMenu" name="menu_27">
+     <property name="title">
+      <string>Медикаментозные</string>
+     </property>
+     <addaction name="actRBFormularies"/>
+     <addaction name="actRBDloFormularies"/>
+     <addaction name="actRBMedicinesGroup"/>
+     <addaction name="actRBMedicines"/>
+    </widget>
+    <widget class="QMenu" name="mnuDeferredQueue">
+     <property name="title">
+      <string>ЖОС</string>
+     </property>
+     <addaction name="actRBDeferredQueueStatus"/>
+    </widget>
+    <addaction name="menu"/>
+    <addaction name="menu_2"/>
+    <addaction name="menu_3"/>
+    <addaction name="menu_27"/>
+    <addaction name="menu_4"/>
+    <addaction name="menu_6"/>
+    <addaction name="menu_11"/>
+    <addaction name="menu_5"/>
+    <addaction name="menu_12"/>
+    <addaction name="menu_13"/>
+    <addaction name="menu_9"/>
+    <addaction name="menu_16"/>
+    <addaction name="mnuNomenclature"/>
+    <addaction name="mnuLaboratory"/>
+    <addaction name="mnuEquipment"/>
+    <addaction name="mnuDeferredQueue"/>
+   </widget>
+   <widget class="QMenu" name="mnuReports">
+    <property name="title">
+     <string>&amp;Анализ</string>
+    </property>
+    <widget class="QMenu" name="mnuStatReports">
+     <property name="title">
+      <string>Статистические отчёты</string>
+     </property>
+     <widget class="QMenu" name="mnu1NP">
+      <property name="title">
+       <string>Форма &amp;1 НП</string>
+      </property>
+      <addaction name="actStatReport1NP2000"/>
+      <addaction name="actStatReport1NP3000"/>
+      <addaction name="actStatReport1NP4000"/>
+      <addaction name="actStatReport1NP5000"/>
+      <addaction name="actStatReport1NP7000"/>
+     </widget>
+     <widget class="QMenu" name="mnuDD2007">
+      <property name="title">
+       <string>Отчёты по ДД образца &amp;2007 года</string>
+      </property>
+      <addaction name="actStatReportF12_D_1_07"/>
+      <addaction name="actStatReportF12_D_2_07"/>
+     </widget>
+     <widget class="QMenu" name="mnuDD2008">
+      <property name="title">
+       <string>Отчёты по ДД образца 2&amp;008 года</string>
+      </property>
+      <addaction name="actStatReportF12_D_1_08"/>
+      <addaction name="actStatReportF12_D_2_08"/>
+      <addaction name="actStatReportF12_D_3_M"/>
+     </widget>
+     <widget class="QMenu" name="mnu1DD">
+      <property name="title">
+       <string>Форма 1-ДД</string>
+      </property>
+      <addaction name="actStatReport1DDAll"/>
+      <addaction name="actStatReport1DD2000"/>
+      <addaction name="actStatReport1DD3000"/>
+      <addaction name="actStatReport1DD4000"/>
+     </widget>
+     <widget class="QMenu" name="mnuDD2009">
+      <property name="title">
+       <string>Отчёты по ДД образца 200&amp;9 года</string>
+      </property>
+      <addaction name="actStatReportF12_D_2_09"/>
+     </widget>
+     <widget class="QMenu" name="mnu1MUOMSOF">
+      <property name="title">
+       <string comment="Сведения об объёмах и финансовом обеспечении медицинской помощи в рамках введения одноканального финансирования">Отчёт №1 МУОМС-ОФ</string>
+      </property>
+      <addaction name="actMUOMSOFTable1"/>
+      <addaction name="actMUOMSOFTable3"/>
+     </widget>
+     <widget class="QMenu" name="mnuDD2010">
+      <property name="title">
+       <string>Отчёты по ДД образца 2010 года</string>
+      </property>
+      <addaction name="actStatReportF12_D_1_10"/>
+      <addaction name="actStatReportF12_D_2_10"/>
+     </widget>
+     <widget class="QMenu" name="mnuDDTeenager">
+      <property name="title">
+       <string>Отчёты по ДД подростков</string>
+      </property>
+      <addaction name="actStatReportF5_D_For_Teenager"/>
+      <addaction name="actStatReportF4_D_For_Teenager"/>
+      <addaction name="actReportUnderageMedicalExamination"/>
+      <addaction name="actReportResultAdditionalConsultation"/>
+      <addaction name="actReportResultMedicationBeforeInspection"/>
+      <addaction name="actReportNumberChildrenDisabilities"/>
+      <addaction name="actReportIndividualProgram"/>
+      <addaction name="actReportImmunizations"/>
+      <addaction name="actReportUnderagePhysicalDevelopment"/>
+      <addaction name="actReportMedicalGroups"/>
+      <addaction name="actReportHealthGroups"/>
+     </widget>
+     <widget class="QMenu" name="menu_2013">
+      <property name="title">
+       <string>Отчеты по ДД образца 2013 - 201&amp;4 годов</string>
+      </property>
+      <addaction name="actStatReportDD2013Weekly"/>
+      <addaction name="actStatReportDD2013Monthly"/>
+      <addaction name="actStatReportExposedDD"/>
+      <addaction name="actStatReportDD2013Results"/>
+      <addaction name="actStatReportDDSexAgeStructure"/>
+      <addaction name="actStatReportDDPopulationGroupsFS"/>
+      <addaction name="actStatReportDDPopulationGroupsSS"/>
+      <addaction name="actStatReportDDRiskFactors"/>
+      <addaction name="actStatReportDDFoundIllnesses"/>
+      <addaction name="actStatReportDDFoundSuspicions"/>
+      <addaction name="actStatReportDDCommonResults"/>
+     </widget>
+     <widget class="QMenu" name="menu_23">
+      <property name="title">
+       <string>Госпитализация</string>
+      </property>
+      <addaction name="actReportHospitalization"/>
+      <addaction name="actReferralForHospitalization"/>
+      <addaction name="actRemoveReferralForHospitalization"/>
+      <addaction name="actReportPrimaryRepeatHospitalization"/>
+      <addaction name="actReportProphilaxy"/>
+     </widget>
+     <widget class="QMenu" name="menu_2015">
+      <property name="title">
+       <string>Отчеты по ДД образца 201&amp;5 года</string>
+      </property>
+      <addaction name="actStatReportDD2015_1000"/>
+      <addaction name="actStatReportDD2015_2000"/>
+      <addaction name="actStatReportDD2015_3000"/>
+      <addaction name="actStatReportDD2015_4000"/>
+      <addaction name="actStatReportDD2015_5000"/>
+      <addaction name="actStatReportDD2015_5001"/>
+      <addaction name="actStatReportDD2015_6000"/>
+      <addaction name="actStatReportDD2015_7000"/>
+     </widget>
+     <widget class="QMenu" name="menu_2017">
+      <property name="title">
+       <string>Отчеты по ДД образца 201&amp;7 года</string>
+      </property>
+      <addaction name="actStatReportDD2017_1000"/>
+      <addaction name="actStatReportDD2017_2000"/>
+      <addaction name="actStatReportDD2017_3000"/>
+      <addaction name="actStatReportDD2017_4000"/>
+      <addaction name="actStatReportDD2017_5000"/>
+      <addaction name="actStatReportDD2017_5001"/>
+      <addaction name="actStatReportDD2017_6000"/>
+      <addaction name="actStatReportDD2017_7000"/>
+     </widget>
+     <widget class="QMenu" name="menu_Crimea">
+      <property name="title">
+       <string>Отчеты для Крыма</string>
+      </property>
+      <addaction name="actReportStatMainIndicatorsLPU"/>
+      <addaction name="actAmbMainIndicatorsLPU"/>
+      <addaction name="actAStomMainIndicatorsLPU"/>
+      <addaction name="actReportStatDsMainIndicatorsLPU"/>
+     </widget>
+     <addaction name="mnuDD2007"/>
+     <addaction name="mnuDD2008"/>
+     <addaction name="mnuDD2009"/>
+     <addaction name="mnuDD2010"/>
+     <addaction name="menu_2013"/>
+     <addaction name="menu_2015"/>
+     <addaction name="menu_2017"/>
+     <addaction name="mnuDDTeenager"/>
+     <addaction name="mnu1NP"/>
+     <addaction name="mnu1DD"/>
+     <addaction name="mnu1MUOMSOF"/>
+     <addaction name="actReportF14App3ksg"/>
+     <addaction name="actFormaF32"/>
+     <addaction name="actTreatmentRoom"/>
+     <addaction name="actPsychologicalAssistance"/>
+     <addaction name="actLogopedicAssistance"/>
+     <addaction name="actPaidServices"/>
+     <addaction name="actNeurologicalAssistance"/>
+     <addaction name="menu_23"/>
+     <addaction name="actReportPreventiveExaminations"/>
+     <addaction name="menu_Crimea"/>
+    </widget>
+    <widget class="QMenu" name="menu_15">
+     <property name="title">
+      <string>Аналитические отчёты</string>
+     </property>
+     <widget class="QMenu" name="menu_131">
+      <property name="title">
+       <string>Форма &amp;131</string>
+      </property>
+      <addaction name="actStatReportF131ByDoctors"/>
+      <addaction name="actStatReportF131ByEmployer"/>
+      <addaction name="actStatReportF131ByRaion"/>
+      <addaction name="actStatReportF131Raion"/>
+      <addaction name="actStatReportF131ByDD"/>
+     </widget>
+     <widget class="QMenu" name="mnuUnfinishedEvents">
+      <property name="title">
+       <string>Незакрытые &amp;cлучаи лечения</string>
+      </property>
+      <addaction name="actUnfinishedEventsByDoctor"/>
+      <addaction name="actUnfinishedEventsByMes"/>
+     </widget>
+     <widget class="QMenu" name="mnuStationaryAnalytics">
+      <property name="title">
+       <string>Стационар</string>
+      </property>
+      <widget class="QMenu" name="menu_28">
+       <property name="title">
+        <string>Коечный фонд (БСВГ)</string>
+       </property>
+       <addaction name="actReportBedspacePEOForm1"/>
+       <addaction name="actReportBedspacePEOForm2"/>
+       <addaction name="actReportBedspacePEOForm3"/>
+       <addaction name="actReportBedspacePEOForm4"/>
+       <addaction name="actReportBedspacePEOForm5"/>
+      </widget>
+      <addaction name="actAnalyticsReportHospitalizedClients"/>
+      <addaction name="actAnalyticsReportIncomeAndLeavedClients"/>
+      <addaction name="actAnalyticsReportAnalysisOfDisease"/>
+      <addaction name="actReportAcute"/>
+      <addaction name="actReportAnalyticTable"/>
+      <addaction name="actReportF007"/>
+      <addaction name="actReportBedspace"/>
+      <addaction name="actReportBedspaceDC"/>
+      <addaction name="actReportHospitalBeds"/>
+      <addaction name="menu_28"/>
+      <addaction name="actReportOperationsActivity"/>
+      <addaction name="actReportOperationsActivityByActions"/>
+      <addaction name="actReportZNOEstablishedFirst"/>
+      <addaction name="actReportF027Verification"/>
+      <addaction name="actReportBedspaceUsage"/>
+      <addaction name="actReportOperationProtocolB36"/>
+      <addaction name="actReportStationaryF007"/>
+      <addaction name="actReportOnkoHospital"/>
+      <addaction name="actArrivedDepartedClients"/>
+     </widget>
+     <widget class="QMenu" name="menu_25">
+      <property name="title">
+       <string>Отчет по архиву</string>
+      </property>
+      <addaction name="actReportLocationCard"/>
+     </widget>
+     <addaction name="menu_131"/>
+     <addaction name="mnuUnfinishedEvents"/>
+     <addaction name="mnuStationaryAnalytics"/>
+     <addaction name="actReportClientsWithValidPolis"/>
+     <addaction name="actReportUncheckedPolicy"/>
+     <addaction name="menu_25"/>
+     <addaction name="actReportVerifiedAction"/>
+     <addaction name="actReportCancelationReason"/>
+     <addaction name="actReportHospitalizationTransferReason"/>
+    </widget>
+    <widget class="QMenu" name="mnuVisits">
+     <property name="title">
+      <string>Посещаемость</string>
+     </property>
+     <addaction name="actPersonVisits"/>
+     <addaction name="actVisitsServiceUET"/>
+     <addaction name="actReportF30"/>
+     <addaction name="actReportF39"/>
+     <addaction name="actReportRecordPersonVisits"/>
+     <addaction name="actReportTypeVisits"/>
+     <addaction name="actReportF39PND"/>
+     <addaction name="actReportVisitsByClientType"/>
+     <addaction name="actReportMSCH3Outpatient"/>
+    </widget>
+    <widget class="QMenu" name="menu_21">
+     <property name="title">
+      <string>Заболеваемость</string>
+     </property>
+     <addaction name="actReportAcuteInfections"/>
+     <addaction name="actReportDailyAcuteInfections"/>
+     <addaction name="actSickRateSurvey"/>
+     <addaction name="actFactorRateSurvey"/>
+     <addaction name="actReportPersonSickList"/>
+     <addaction name="actReportPersonSickListNew"/>
+     <addaction name="actStatReportF12"/>
+     <addaction name="actStatReportF57"/>
+     <addaction name="actStatReportF57New"/>
+     <addaction name="actStatReportF57Temporary"/>
+     <addaction name="actStatReportF63"/>
+     <addaction name="actStatReportF71"/>
+     <addaction name="actReportMentalDisorderF10"/>
+     <addaction name="actReportEventByMKB"/>
+    </widget>
+    <widget class="QMenu" name="mnuDispObservation">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="title">
+      <string>Диспансерное наблюдение</string>
+     </property>
+     <addaction name="actDispObservationList"/>
+     <addaction name="actDispObservationSurvey"/>
+     <addaction name="actReportDDStudentsInfo"/>
+     <addaction name="actReportDDStudentsResults"/>
+     <addaction name="actDispanserRegistry"/>
+     <addaction name="actMovingDispClients"/>
+     <addaction name="actF030_13U"/>
+    </widget>
+    <widget class="QMenu" name="mnuDeath">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="title">
+      <string>Летальность</string>
+     </property>
+     <addaction name="actDeathList"/>
+     <addaction name="actDeathReport"/>
+     <addaction name="actDeathSurvey"/>
+    </widget>
+    <widget class="QMenu" name="mnuTempInvalid">
+     <property name="title">
+      <string>ВУТ</string>
+     </property>
+     <addaction name="actTempInvalidList"/>
+     <addaction name="actTempInvalidSurvey"/>
+     <addaction name="actTempInvalidF16"/>
+     <addaction name="separator"/>
+     <addaction name="actTempInvalidExpert"/>
+     <addaction name="actReportSickList"/>
+     <addaction name="actRegisterSickLeave"/>
+     <addaction name="actReportSickLeaveByPerson"/>
+    </widget>
+    <widget class="QMenu" name="mnuContingent">
+     <property name="title">
+      <string>Контингент</string>
+     </property>
+     <widget class="QMenu" name="menuVIP">
+      <property name="title">
+       <string>&amp;VIP-пациенты</string>
+      </property>
+      <addaction name="actReportVIPClients"/>
+      <addaction name="actReportVIPClientsDetalization"/>
+     </widget>
+     <addaction name="actAttachedContingent"/>
+     <addaction name="actReportAttachedClient"/>
+     <addaction name="actPopulationStructure"/>
+     <addaction name="actPopulationStructureDetailed"/>
+     <addaction name="actReportSocStatus"/>
+     <addaction name="actAttachingMotion"/>
+     <addaction name="actVeterans"/>
+     <addaction name="actReportPNDClientsRegistry"/>
+     <addaction name="actReportPNDClientsRegistryByEvent"/>
+     <addaction name="actReportPNDClientsRegistryByDisability"/>
+     <addaction name="actAttachmentPerson"/>
+     <addaction name="actAttachment"/>
+     <addaction name="actPatientAtHome"/>
+     <addaction name="actSelectionDiagnosis"/>
+     <addaction name="actMilitaryAge"/>
+     <addaction name="actWokingAge"/>
+     <addaction name="actReportTakenClientMonitoringD"/>
+     <addaction name="actReportTakenClientMonitoringK"/>
+     <addaction name="actReportTakenOffClientMonitoringD"/>
+     <addaction name="actReportTakenOffClientMonitoringK"/>
+     <addaction name="actReportInfoSource"/>
+     <addaction name="separator"/>
+     <addaction name="menuVIP"/>
+     <addaction name="actClientInfoSource"/>
+     <addaction name="separator"/>
+     <addaction name="actReportMSCH3Contingent"/>
+    </widget>
+    <widget class="QMenu" name="mnuService_2">
+     <property name="title">
+      <string>Обслуживание</string>
+     </property>
+     <widget class="QMenu" name="mnuEventResult">
+      <property name="title">
+       <string>Результаты обращений</string>
+      </property>
+      <addaction name="actEventResultList"/>
+      <addaction name="actEventResultSurvey"/>
+     </widget>
+     <widget class="QMenu" name="mnuSummaryActions">
+      <property name="title">
+       <string>Сводка</string>
+      </property>
+      <addaction name="actReportActions"/>
+      <addaction name="actReportMonthActions"/>
+      <addaction name="actUETService"/>
+      <addaction name="actReportOnPerson"/>
+      <addaction name="actReportActionsByServiceType"/>
+     </widget>
+     <widget class="QMenu" name="menu_17">
+      <property name="title">
+       <string>Отчеты</string>
+      </property>
+      <addaction name="actReportActionsByOrgStructure"/>
+      <addaction name="actReportDoneActions"/>
+      <addaction name="actReportClientActions"/>
+      <addaction name="actReportVisits"/>
+      <addaction name="actReportActionsAndVisits"/>
+      <addaction name="actDailyServicesReport"/>
+     </widget>
+     <widget class="QMenu" name="menu_22">
+      <property name="title">
+       <string>Стоматология</string>
+      </property>
+      <addaction name="actReportPeriodontist"/>
+      <addaction name="actWorkAccount"/>
+      <addaction name="actSurgicalReport"/>
+      <addaction name="actReportTherapeutic"/>
+      <addaction name="actReportTherapeuticClients"/>
+      <addaction name="actReportChildrenTherapeutic"/>
+      <addaction name="actReportChildrenSurgical"/>
+      <addaction name="actReportOnPaidServicesPZ12"/>
+      <addaction name="actReportOnEconomicCalcServicesPZ12"/>
+     </widget>
+     <addaction name="actReportClients"/>
+     <addaction name="mnuEventResult"/>
+     <addaction name="mnuSummaryActions"/>
+     <addaction name="menu_17"/>
+     <addaction name="menu_22"/>
+     <addaction name="actReportTreatments"/>
+     <addaction name="actReportLifetimeCytology"/>
+     <addaction name="actReportBasicIndicators"/>
+     <addaction name="actAgeClassification"/>
+     <addaction name="actReportRecommendations"/>
+     <addaction name="actReportDeathBSK"/>
+     <addaction name="actReportPrimaryEventsOnko"/>
+     <addaction name="actReportPrimarySecondaryOnko"/>
+    </widget>
+    <widget class="QMenu" name="mnuStationary">
+     <property name="title">
+      <string>Стационар</string>
+     </property>
+     <widget class="QMenu" name="menu_14">
+      <property name="title">
+       <string>форма 1&amp;4ДС</string>
+      </property>
+      <widget class="QMenu" name="menu_I">
+       <property name="title">
+        <string> (&amp;2000) Дневной стационар - койки </string>
+       </property>
+       <addaction name="actReportF14DS_stat"/>
+       <addaction name="actReportF14DS_ambul"/>
+      </widget>
+      <widget class="QMenu" name="menu_II_0_17">
+       <property name="title">
+        <string> Раздел &amp;II. 18 лет и старше </string>
+       </property>
+       <addaction name="actTwoAdultPoliclinicF14DC"/>
+      </widget>
+      <addaction name="menu_I"/>
+      <addaction name="actReport2500_2600"/>
+      <addaction name="actReportF14DS_vzroslye"/>
+      <addaction name="actReportF14DS_deti"/>
+      <addaction name="menu_II_0_17"/>
+     </widget>
+     <widget class="QMenu" name="menu_014">
+      <property name="title">
+       <string>форма 014</string>
+      </property>
+      <widget class="QMenu" name="menu1">
+       <property name="title">
+        <string>(&amp;2000-2000а)Состав больных в стационаре, сроки и исходы лечения</string>
+       </property>
+       <addaction name="actFormaChildrenF142000"/>
+       <addaction name="actFormaAdultF142000"/>
+       <addaction name="actFormaSeniorF142000"/>
+      </widget>
+      <addaction name="menu1"/>
+      <addaction name="actStationaryF142100"/>
+      <addaction name="actFormaF0143000"/>
+      <addaction name="actFormaF0144000"/>
+      <addaction name="actFormaF0144001"/>
+      <addaction name="actFormaF0144100"/>
+      <addaction name="actFormaF0144200"/>
+      <addaction name="actFormaF0144201"/>
+      <addaction name="actFormaF0144202"/>
+      <addaction name="actFormaF0144400"/>
+      <addaction name="actStationaryReportF14"/>
+     </widget>
+     <widget class="QMenu" name="menu_007">
+      <property name="title">
+       <string>форма &amp;007</string>
+      </property>
+      <addaction name="actForma007Moving"/>
+      <addaction name="actForma007ClientList"/>
+      <addaction name="actForma007Moving2013"/>
+      <addaction name="actForma007ClientList2013"/>
+      <addaction name="actForma007Moving2015"/>
+     </widget>
+     <widget class="QMenu" name="menu_31">
+      <property name="title">
+       <string>форма &amp;30</string>
+      </property>
+      <addaction name="actStatuonaryF30_3100"/>
+      <addaction name="actStatuonaryF30_3101"/>
+     </widget>
+     <widget class="QMenu" name="menu_24">
+      <property name="title">
+       <string>Выгрузки</string>
+      </property>
+      <addaction name="actSendPlanOrdersClinic"/>
+      <addaction name="actSendFactOrdersHospital"/>
+      <addaction name="actSendOrdersHospitalUrgently"/>
+      <addaction name="actSendOrdersLeave"/>
+     </widget>
+     <widget class="QMenu" name="menu_26">
+      <property name="title">
+       <string>Приемное отделение</string>
+      </property>
+      <addaction name="actReportReceivedClientsByOrgStructure"/>
+      <addaction name="actReportReceivedClientsByProfileBeds"/>
+      <addaction name="actReportReceivedOrgStructure"/>
+      <addaction name="actReportActirovania"/>
+      <addaction name="actReportTelefonogramm"/>
+      <addaction name="actReportPatientEntrance"/>
+      <addaction name="actReportFeedDistribution"/>
+      <addaction name="actReportPatientEntranceOrgStructure"/>
+      <addaction name="actReportReceivedAndRefusalClients"/>
+     </widget>
+     <widget class="QMenu" name="menuBearMonitoring">
+      <property name="title">
+       <string>Система мониторинга мед. учреждений &quot;МедВедь&quot;</string>
+      </property>
+      <addaction name="actStatReportCVD"/>
+     </widget>
+     <widget class="QMenu" name="mnuDispatchingB36">
+      <property name="title">
+       <string>Диспетчерская</string>
+      </property>
+      <addaction name="actDispatchingForAdmin"/>
+      <addaction name="actDispatchingByOrgStructure"/>
+      <addaction name="actDispatching3"/>
+      <addaction name="actDispatchingByHospChannels"/>
+     </widget>
+     <addaction name="actReHospitalization"/>
+     <addaction name="menu_007"/>
+     <addaction name="actF13"/>
+     <addaction name="menu_14"/>
+     <addaction name="actFormaF016"/>
+     <addaction name="menu_014"/>
+     <addaction name="actFormaF007DC"/>
+     <addaction name="menu_31"/>
+     <addaction name="actStationaryReportMoved"/>
+     <addaction name="actReportLeavedClients"/>
+     <addaction name="actReportEmergencySurgery"/>
+     <addaction name="actReportListLeavedClient"/>
+     <addaction name="actReportMonitoringOIM"/>
+     <addaction name="menu_24"/>
+     <addaction name="actReportBedspaceInsurance"/>
+     <addaction name="actReportAgeSexCompositionLeavedClients"/>
+     <addaction name="menu_26"/>
+     <addaction name="actReportSurgicalIndicators"/>
+     <addaction name="actReportSomeSurgicalIndicators"/>
+     <addaction name="actReportF16"/>
+     <addaction name="actReportDiagnosisLeaved"/>
+     <addaction name="actReportOperation"/>
+     <addaction name="actReportF14Children"/>
+     <addaction name="actReportMoving"/>
+     <addaction name="actReportCompositionNewborn"/>
+     <addaction name="actReportStandart"/>
+     <addaction name="actReportExistingClients"/>
+     <addaction name="menuBearMonitoring"/>
+     <addaction name="actReportLeavedMovedDead"/>
+     <addaction name="actReportMovingB36"/>
+     <addaction name="actReportMovingRVC"/>
+     <addaction name="actReportMovingB36Monthly"/>
+     <addaction name="mnuDispatchingB36"/>
+    </widget>
+    <widget class="QMenu" name="mnuAccountingAnalysis">
+     <property name="title">
+      <string>Счета</string>
+     </property>
+     <widget class="QMenu" name="menu_20">
+      <property name="title">
+       <string>Протоколы</string>
+      </property>
+      <addaction name="actReportNonCash"/>
+      <addaction name="actReportNonCashDetails"/>
+      <addaction name="actReportClinicalIssues"/>
+      <addaction name="actReportClinicalIssuesDetails"/>
+      <addaction name="actReportCurrentProtocol"/>
+     </widget>
+     <addaction name="actFinanceSummaryByDoctors"/>
+     <addaction name="actReportFinanceSummary"/>
+     <addaction name="actFinanceSummaryByServices"/>
+     <addaction name="actFinanceSummaryByRejections"/>
+     <addaction name="actFinanceSumByServicesExpenses"/>
+     <addaction name="actFinanceSummaryByLoadOnDoctor"/>
+     <addaction name="actReportPayers"/>
+     <addaction name="actReportActionsWithLatePayment"/>
+     <addaction name="actReportContractsRegistry"/>
+     <addaction name="actReportR61Annex11"/>
+     <addaction name="actNewFinanceSum"/>
+     <addaction name="actPrintAnalysisServicesByCompany"/>
+     <addaction name="actPrintAnalysisServicesByDiagnosis"/>
+     <addaction name="actReportFinance"/>
+     <addaction name="actReportAccount"/>
+     <addaction name="actReportRegisterContracts"/>
+     <addaction name="actReportAccountService"/>
+     <addaction name="actReportAnalizeBillOnDirections"/>
+     <addaction name="menu_20"/>
+    </widget>
+    <widget class="QMenu" name="menu_10">
+     <property name="title">
+      <string>Скорая помощь</string>
+     </property>
+     <widget class="QMenu" name="menu_40">
+      <property name="title">
+       <string>форма &amp;40</string>
+      </property>
+      <addaction name="actEmergency2000"/>
+      <addaction name="actEmergency2001"/>
+      <addaction name="actEmergency2100"/>
+      <addaction name="actEmergency2500"/>
+     </widget>
+     <addaction name="menu_40"/>
+     <addaction name="actEmergencyAdditionally"/>
+     <addaction name="actEmergencyTalonSignal"/>
+     <addaction name="actMedicinesSMP"/>
+    </widget>
+    <widget class="QMenu" name="mnuTimelineReports">
+     <property name="title">
+      <string>Расписание</string>
+     </property>
+     <widget class="QMenu" name="mnuPreRecord">
+      <property name="title">
+       <string>Предварительная запись</string>
+      </property>
+      <addaction name="actPreRecordDoctors"/>
+      <addaction name="actPreRecordUsers"/>
+      <addaction name="actPreRecordSpeciality"/>
+      <addaction name="actJournalBeforeRecord"/>
+      <addaction name="actDailyJournalBeforeRecord"/>
+      <addaction name="actPreRecordReport"/>
+     </widget>
+     <widget class="QMenu" name="menu_18">
+      <property name="title">
+       <string>Отчёты журнала отложенного спроса</string>
+      </property>
+      <addaction name="actReportDeferredQueueCount"/>
+     </widget>
+     <addaction name="actTimelineForPerson"/>
+     <addaction name="actTimelineForOffices"/>
+     <addaction name="mnuPreRecord"/>
+     <addaction name="actReportVisitByQueue"/>
+     <addaction name="actReportVisitByQueueNext"/>
+     <addaction name="menu_18"/>
+     <addaction name="actReportPersonTimetable"/>
+    </widget>
+    <widget class="QMenu" name="menuPED">
+     <property name="title">
+      <string>Планово-экономический отдел</string>
+     </property>
+     <widget class="QMenu" name="mnuPEDKrasnodar">
+      <property name="title">
+       <string>Для Краснодарского края</string>
+      </property>
+      <addaction name="actReportFE5P"/>
+      <addaction name="actReportFE24S"/>
+      <addaction name="actReportE15S"/>
+     </widget>
+     <widget class="QMenu" name="mnuReportSalary">
+      <property name="title">
+       <string>Отчёты по з/п</string>
+      </property>
+      <addaction name="actReportSalary_Service"/>
+      <addaction name="actReportSalary_Performer"/>
+      <addaction name="actReportSalary_Patient"/>
+      <addaction name="actReportSalary_OrgStructure"/>
+     </widget>
+     <addaction name="actPEDSalaryReports"/>
+     <addaction name="actReportPlanningAndEconomicIndicators"/>
+     <addaction name="mnuPEDKrasnodar"/>
+     <addaction name="actEconomicReports"/>
+     <addaction name="actExposedServicesReport"/>
+     <addaction name="mnuReportSalary"/>
+     <addaction name="actReportOrgByOrganisation"/>
+     <addaction name="actReportOrgByService"/>
+     <addaction name="actReportOrgByDoctor"/>
+     <addaction name="actReportOrgBySection"/>
+     <addaction name="actReportCurePatients"/>
+     <addaction name="actReportReceivedPatients"/>
+     <addaction name="actRemoveServiceSpecification"/>
+     <addaction name="actAddServiceSpecification"/>
+     <addaction name="actChangeServiceSpecification"/>
+     <addaction name="actNonPaidEvents"/>
+    </widget>
+    <widget class="QMenu" name="menu_19">
+     <property name="title">
+      <string>Диспансерные отчеты детей</string>
+     </property>
+     <addaction name="actDispanserRegistryTeenager"/>
+     <addaction name="actDispObservationListChildren"/>
+     <addaction name="actDispObservationSurveyChildren"/>
+    </widget>
+    <widget class="QMenu" name="mnuDLOKrasnodar_2">
+     <property name="title">
+      <string>ДЛО (Краснодарский край)</string>
+     </property>
+     <addaction name="actF030ru"/>
+     <addaction name="actReportExemptionRecipes"/>
+    </widget>
+    <widget class="QMenu" name="mnuPND">
+     <property name="title">
+      <string>ПНД</string>
+     </property>
+     <addaction name="actReport2000"/>
+     <addaction name="actReport2100"/>
+     <addaction name="actReport2101"/>
+     <addaction name="actReport2110"/>
+     <addaction name="actReport2120"/>
+     <addaction name="actReport2150"/>
+     <addaction name="actReport2180"/>
+     <addaction name="actReport2181"/>
+     <addaction name="actReport2190"/>
+     <addaction name="actReport2200"/>
+     <addaction name="actReport2600"/>
+     <addaction name="actReport2900"/>
+    </widget>
+    <addaction name="mnuStatReports"/>
+    <addaction name="menu_15"/>
+    <addaction name="separator"/>
+    <addaction name="actGenRep"/>
+    <addaction name="mnuVisits"/>
+    <addaction name="menu_21"/>
+    <addaction name="mnuDispObservation"/>
+    <addaction name="menu_19"/>
+    <addaction name="mnuService_2"/>
+    <addaction name="mnuTempInvalid"/>
+    <addaction name="mnuDeath"/>
+    <addaction name="mnuContingent"/>
+    <addaction name="actWorkload"/>
+    <addaction name="mnuStationary"/>
+    <addaction name="mnuAccountingAnalysis"/>
+    <addaction name="menu_10"/>
+    <addaction name="mnuTimelineReports"/>
+    <addaction name="menuPED"/>
+    <addaction name="mnuDLOKrasnodar_2"/>
+    <addaction name="mnuPND"/>
+    <addaction name="actReportConstructor"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="mnuWork"/>
+   <addaction name="mnuAccounting"/>
+   <addaction name="mnuExchange"/>
+   <addaction name="mnuReports"/>
+   <addaction name="menuRefBooks"/>
+   <addaction name="mnuService"/>
+   <addaction name="menuPreferences"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actConnection">
+   <property name="text">
+    <string>База данных</string>
+   </property>
+  </action>
+  <action name="actDecor">
+   <property name="text">
+    <string>Внешний вид</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::ApplicationSpecificRole</enum>
+   </property>
+  </action>
+  <action name="actAbout">
+   <property name="text">
+    <string>О программе</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::AboutRole</enum>
+   </property>
+  </action>
+  <action name="actAboutQt">
+   <property name="text">
+    <string>О &amp;Qt</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::AboutQtRole</enum>
+   </property>
+  </action>
+  <action name="actLogin">
+   <property name="text">
+    <string>Подключиться к базе данных</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::ApplicationSpecificRole</enum>
+   </property>
+  </action>
+  <action name="actLogout">
+   <property name="text">
+    <string>Отключиться от базы данных</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::ApplicationSpecificRole</enum>
+   </property>
+  </action>
+  <action name="actQuit">
+   <property name="text">
+    <string>Закрыть программу</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::QuitRole</enum>
+   </property>
+  </action>
+  <action name="actPatientSearch">
+   <property name="icon">
+    <iconset>
+     <normaloff>../.designer/.designer/.designer/.designer/.designer/backup</normaloff>../.designer/.designer/.designer/.designer/.designer/backup</iconset>
+   </property>
+   <property name="text">
+    <string>Поиск пациента</string>
+   </property>
+  </action>
+  <action name="actUsers">
+   <property name="text">
+    <string>Пользователи</string>
+   </property>
+  </action>
+  <action name="actRBAccountingSystem">
+   <property name="text">
+    <string>Внешние учётные системы</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::ApplicationSpecificRole</enum>
+   </property>
+  </action>
+  <action name="actRBContactType">
+   <property name="text">
+    <string>Способы связи с пациентом</string>
+   </property>
+  </action>
+  <action name="actRBDiagnosisType">
+   <property name="text">
+    <string>Типы диагноза</string>
+   </property>
+  </action>
+  <action name="actRBDiseaseCharacter">
+   <property name="text">
+    <string>Характеры заболеваний</string>
+   </property>
+  </action>
+  <action name="actRBDiseaseStage">
+   <property name="text">
+    <string>Стадии заболевания</string>
+   </property>
+  </action>
+  <action name="actRBDispanser">
+   <property name="text">
+    <string>Отметки диспансерного наблюдения</string>
+   </property>
+  </action>
+  <action name="actRBDocumentType">
+   <property name="text">
+    <string>Типы документов (паспорт и пр.)</string>
+   </property>
+  </action>
+  <action name="actRBDocumentTypeGroup">
+   <property name="text">
+    <string>Группы типов документов (удостоверения, льготы и т.д.)</string>
+   </property>
+  </action>
+  <action name="actRBEventTypePurpose">
+   <property name="text">
+    <string>Назначение типов событий</string>
+   </property>
+  </action>
+  <action name="actRBFinance">
+   <property name="text">
+    <string>Источники финансирования</string>
+   </property>
+  </action>
+  <action name="actRBHealthGroup">
+   <property name="text">
+    <string>Группы здоровья</string>
+   </property>
+  </action>
+  <action name="actRBHurtFactorType">
+   <property name="text">
+    <string>Факторы вредности</string>
+   </property>
+  </action>
+  <action name="actRBHurtType">
+   <property name="text">
+    <string>Типы вредности</string>
+   </property>
+  </action>
+  <action name="actRBNet">
+   <property name="text">
+    <string>Сети (взрослая/детская/женская)</string>
+   </property>
+  </action>
+  <action name="actRBOKFS">
+   <property name="text">
+    <string>ОКФС (форма собственности)</string>
+   </property>
+  </action>
+  <action name="actRBOKPF">
+   <property name="text">
+    <string>ОКПФ (организационно-правовая форма)</string>
+   </property>
+  </action>
+  <action name="actRBPayRefuseType">
+   <property name="text">
+    <string>Причины отказа платежа</string>
+   </property>
+  </action>
+  <action name="actRBPolicyType">
+   <property name="text">
+    <string>Типы полиса</string>
+   </property>
+  </action>
+  <action name="actRBPost">
+   <property name="text">
+    <string>Должности</string>
+   </property>
+  </action>
+  <action name="actRBResult">
+   <property name="text">
+    <string>Результаты обращения</string>
+   </property>
+  </action>
+  <action name="actRBScene">
+   <property name="text">
+    <string>Место выполнения визита</string>
+   </property>
+  </action>
+  <action name="actRBService">
+   <property name="text">
+    <string>Услуги (профили оплаты)</string>
+   </property>
+  </action>
+  <action name="actRBSocStatusClass">
+   <property name="text">
+    <string>Классы социального статуса</string>
+   </property>
+  </action>
+  <action name="actRBSocStatusType">
+   <property name="text">
+    <string>Типы социального статуса (льготы)</string>
+   </property>
+  </action>
+  <action name="actRBSpeciality">
+   <property name="text">
+    <string>Специальности</string>
+   </property>
+  </action>
+  <action name="actRBTempInvalidReason">
+   <property name="text">
+    <string>Причины ВУТ, инвалидности или ограничения жизнедеятельности</string>
+   </property>
+  </action>
+  <action name="actRBTraumaType">
+   <property name="text">
+    <string>Типы травмы</string>
+   </property>
+  </action>
+  <action name="actRBUnit">
+   <property name="text">
+    <string>Единицы измерения</string>
+   </property>
+  </action>
+  <action name="actRBVisitType">
+   <property name="text">
+    <string>Типы визитов</string>
+   </property>
+  </action>
+  <action name="actKLADR">
+   <property name="text">
+    <string>КЛАДР</string>
+   </property>
+  </action>
+  <action name="actAreas">
+   <property name="text">
+    <string>Участки</string>
+   </property>
+  </action>
+  <action name="actPersonal">
+   <property name="text">
+    <string>Сотрудники</string>
+   </property>
+  </action>
+  <action name="actOrgStructure">
+   <property name="text">
+    <string>Структура ЛПУ</string>
+   </property>
+  </action>
+  <action name="actMKB">
+   <property name="text">
+    <string>Коды МКБ Х</string>
+   </property>
+  </action>
+  <action name="actMainForm">
+   <property name="text">
+    <string>Главная форма</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::ApplicationSpecificRole</enum>
+   </property>
+  </action>
+  <action name="actRegistry">
+   <property name="text">
+    <string>Обслуживание пациентов</string>
+   </property>
+  </action>
+  <action name="actAccounting">
+   <property name="text">
+    <string>Счета</string>
+   </property>
+  </action>
+  <action name="actContract">
+   <property name="text">
+    <string>Договоры</string>
+   </property>
+  </action>
+  <action name="actAppPreferences">
+   <property name="text">
+    <string>Умолчания</string>
+   </property>
+  </action>
+  <action name="actAdditionalFeaturesUrls">
+   <property name="text">
+    <string>Связанные &amp;URL</string>
+   </property>
+  </action>
+  <action name="actUserManual">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Руководство пользователя</string>
+   </property>
+  </action>
+  <action name="actStandards">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Нормативные документы</string>
+   </property>
+  </action>
+  <action name="actFinReports">
+   <property name="text">
+    <string>Финансовые отчеты</string>
+   </property>
+  </action>
+  <action name="actEventType">
+   <property name="text">
+    <string>Типы событий</string>
+   </property>
+  </action>
+  <action name="actOrganisation">
+   <property name="text">
+    <string>Организации</string>
+   </property>
+  </action>
+  <action name="actBank">
+   <property name="text">
+    <string>Банки</string>
+   </property>
+  </action>
+  <action name="actImportDD">
+   <property name="text">
+    <string>Импорт списка населения</string>
+   </property>
+  </action>
+  <action name="actImport131DBF">
+   <property name="text">
+    <string>Импорт формы &amp;131 из dbf</string>
+   </property>
+  </action>
+  <action name="actExport131">
+   <property name="text">
+    <string>Экспорт форм &amp;131</string>
+   </property>
+  </action>
+  <action name="actExportRD2">
+   <property name="text">
+    <string>Экспорт ДН</string>
+   </property>
+  </action>
+  <action name="actRBAccountExportFormat">
+   <property name="text">
+    <string>Форматы экспорта счёта</string>
+   </property>
+  </action>
+  <action name="actRBMedicalAidUnit">
+   <property name="text">
+    <string>Единицы учета медицинской помощи</string>
+   </property>
+  </action>
+  <action name="actStatReportF12_D_1_07">
+   <property name="text">
+    <string>Сведения о ДД работающих граждан, Ф.№ &amp;12-Д-1-07</string>
+   </property>
+  </action>
+  <action name="actStatReportF12_D_2_07">
+   <property name="text">
+    <string>Сведения о результатах ДД работающих граждан, Ф.№ 12-Д-&amp;2-07</string>
+   </property>
+  </action>
+  <action name="actStatReport1NP1000">
+   <property name="text">
+    <string>1000</string>
+   </property>
+  </action>
+  <action name="actStatReport1NP2000">
+   <property name="text">
+    <string>таблица &amp;2000</string>
+   </property>
+  </action>
+  <action name="actStatReport1NP3000">
+   <property name="text">
+    <string>таблица &amp;3000</string>
+   </property>
+  </action>
+  <action name="actStatReport1NP5000">
+   <property name="text">
+    <string>таблица &amp;5000</string>
+   </property>
+  </action>
+  <action name="actStatReport1NP7000">
+   <property name="text">
+    <string>таблица &amp;7000</string>
+   </property>
+  </action>
+  <action name="actStatReport1NP4000">
+   <property name="text">
+    <string>таблица &amp;4000</string>
+   </property>
+  </action>
+  <action name="actTestSendMail">
+   <property name="text">
+    <string>Отправка почты</string>
+   </property>
+  </action>
+  <action name="actStatReportF131ByDoctors">
+   <property name="text">
+    <string>Сводка обращений по врачам</string>
+   </property>
+  </action>
+  <action name="actStatReportF131ByEmployer">
+   <property name="text">
+    <string>Сводка обращений по работодателю</string>
+   </property>
+  </action>
+  <action name="actDbfView">
+   <property name="text">
+    <string>Просмотр D&amp;BF файлов</string>
+   </property>
+  </action>
+  <action name="actStatReportF131ByRaion">
+   <property name="text">
+    <string>Сводка обращений по районам</string>
+   </property>
+  </action>
+  <action name="actGenRep">
+   <property name="text">
+    <string>Генератор отчётов</string>
+   </property>
+  </action>
+  <action name="actTestMKB">
+   <property name="text">
+    <string>коды МКБ</string>
+   </property>
+  </action>
+  <action name="actEventsCheck">
+   <property name="text">
+    <string>Проверка карточек</string>
+   </property>
+  </action>
+  <action name="actClientsCheck">
+   <property name="text">
+    <string>Проверка клиентов</string>
+   </property>
+  </action>
+  <action name="actImportEIS">
+   <property name="text">
+    <string>Импорт списка населения из ЕИС.ОМС.ВМУ.АПУ</string>
+   </property>
+  </action>
+  <action name="actTimeline">
+   <property name="text">
+    <string>Учёт рабочего времени</string>
+   </property>
+  </action>
+  <action name="actActionType">
+   <property name="text">
+    <string>Типы действий</string>
+   </property>
+  </action>
+  <action name="actRBReasonOfAbsence">
+   <property name="text">
+    <string>Причины отсутствия</string>
+   </property>
+  </action>
+  <action name="actRBTempInvalidRegime">
+   <property name="text">
+    <string>Режимы периода ВУТ, инвалидности или ограничения жизнедеятельности</string>
+   </property>
+  </action>
+  <action name="actRBTempInvalidBreak">
+   <property name="text">
+    <string>Нарушения режима ВУТ</string>
+   </property>
+  </action>
+  <action name="actRBTempInvalidResult">
+   <property name="text">
+    <string>Результаты периода ВУТ, инвалидности или ограничения жизнедеятельности</string>
+   </property>
+  </action>
+  <action name="actReportF30">
+   <property name="text">
+    <string>Ф.&amp;30</string>
+   </property>
+  </action>
+  <action name="actImportLgot">
+   <property name="text">
+    <string>Импорт льготников</string>
+   </property>
+  </action>
+  <action name="actReportAcuteInfections">
+   <property name="text">
+    <string>Сводка по выявленным острым инфекционным заболеваниям</string>
+   </property>
+  </action>
+  <action name="actActionPropertyTemplate">
+   <property name="text">
+    <string>Библиотека свойств действий</string>
+   </property>
+  </action>
+  <action name="actSickRateSurvey">
+   <property name="text">
+    <string>Общая сводка по заболеваемости</string>
+   </property>
+  </action>
+  <action name="actStatReportF63">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Ф.&amp;63</string>
+   </property>
+  </action>
+  <action name="actStatReportF71">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Ф.&amp;71</string>
+   </property>
+  </action>
+  <action name="actStatReportF12Children">
+   <property name="text">
+    <string>Дети</string>
+   </property>
+  </action>
+  <action name="actStatReportF12Teenagers">
+   <property name="text">
+    <string>Подростки</string>
+   </property>
+  </action>
+  <action name="actStatReportF12Adults">
+   <property name="text">
+    <string>Взрослые</string>
+   </property>
+  </action>
+  <action name="actStatReportF12RegisteredInPeriodChildren">
+   <property name="text">
+    <string>Дети</string>
+   </property>
+  </action>
+  <action name="actStatReportF12RegisteredInPeriodTeenagers">
+   <property name="text">
+    <string>Подростки</string>
+   </property>
+  </action>
+  <action name="actStatReportF12RegisteredInPeriodAdults">
+   <property name="text">
+    <string>Взрослые</string>
+   </property>
+  </action>
+  <action name="actStatReportF57">
+   <property name="text">
+    <string>Ф.&amp;57</string>
+   </property>
+  </action>
+  <action name="actDispObservationSurvey">
+   <property name="text">
+    <string>Сводка</string>
+   </property>
+  </action>
+  <action name="actDispObservationList">
+   <property name="text">
+    <string>Список пациентов</string>
+   </property>
+  </action>
+  <action name="actTempInvalidList">
+   <property name="text">
+    <string>Список пациентов с ВУТ</string>
+   </property>
+  </action>
+  <action name="actTempInvalidF16">
+   <property name="text">
+    <string>Ф.&amp;16ВН</string>
+   </property>
+  </action>
+  <action name="actReportF39">
+   <property name="text">
+    <string>Ф.3&amp;9</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::ApplicationSpecificRole</enum>
+   </property>
+  </action>
+  <action name="actDeathList">
+   <property name="text">
+    <string>Журнал</string>
+   </property>
+  </action>
+  <action name="actDeathSurvey">
+   <property name="text">
+    <string>Сводка</string>
+   </property>
+  </action>
+  <action name="actTempInvalidSurvey">
+   <property name="text">
+    <string>Сводка</string>
+   </property>
+  </action>
+  <action name="actRBPrintTemplate">
+   <property name="text">
+    <string>Шаблоны печати</string>
+   </property>
+  </action>
+  <action name="actTempInvalidCheck">
+   <property name="text">
+    <string>Проверка документов ВУТ</string>
+   </property>
+  </action>
+  <action name="actPersonVisits">
+   <property name="text">
+    <string>Сводка на врача</string>
+   </property>
+  </action>
+  <action name="actFactorRateSurvey">
+   <property name="text">
+    <string>Общая сводка по факторам</string>
+   </property>
+  </action>
+  <action name="actReportPersonSickList">
+   <property name="text">
+    <string>Список пациентов</string>
+   </property>
+  </action>
+  <action name="actAttachedContingent">
+   <property name="text">
+    <string>Прикреплённый контингент</string>
+   </property>
+  </action>
+  <action name="actUsersListDialog">
+   <property name="text">
+    <string>Список пользователей</string>
+   </property>
+  </action>
+  <action name="actUserRightProfileListDialog">
+   <property name="text">
+    <string>Профили прав пользователей</string>
+   </property>
+  </action>
+  <action name="actUserRightListDialog">
+   <property name="text">
+    <string>Права пользователей</string>
+   </property>
+  </action>
+  <action name="actMKBSubclass">
+   <property name="text">
+    <string>Субклассификация МКБ по пятому знаку</string>
+   </property>
+  </action>
+  <action name="actReportActions">
+   <property name="text">
+    <string>Сводка</string>
+   </property>
+  </action>
+  <action name="actDeathReport">
+   <property name="text">
+    <string>Отчёт</string>
+   </property>
+  </action>
+  <action name="actRBComplain">
+   <property name="text">
+    <string>Жалобы</string>
+   </property>
+  </action>
+  <action name="actExportActionType">
+   <property name="text">
+    <string>Типы действий</string>
+   </property>
+  </action>
+  <action name="actStatReportF131ByDD">
+   <property name="text">
+    <string>Список пациентов</string>
+   </property>
+  </action>
+  <action name="actImportActionType">
+   <property name="text">
+    <string>Типы действий</string>
+   </property>
+  </action>
+  <action name="actPopulationStructure">
+   <property name="text">
+    <string>Состав населения по участкам</string>
+   </property>
+  </action>
+  <action name="actRBThesaurus">
+   <property name="text">
+    <string>Тезаурус</string>
+   </property>
+  </action>
+  <action name="actEMSRNExchangePreferences">
+   <property name="text">
+    <string>Настройки соединения с ЭМСРН</string>
+   </property>
+  </action>
+  <action name="actStatReportF12_D_1_08">
+   <property name="text">
+    <string>Сведения о ДД работающих граждан, Ф.№ &amp;12-Д-1-08</string>
+   </property>
+  </action>
+  <action name="actStatReportF12_D_2_08">
+   <property name="text">
+    <string>Сведения о результатах ДД работающих граждан, Ф.№ 12-Д-&amp;2-08</string>
+   </property>
+  </action>
+  <action name="actStatReport1DD2000">
+   <property name="text">
+    <string>Таблица &amp;2000</string>
+   </property>
+  </action>
+  <action name="actStatReport1DD3000">
+   <property name="text">
+    <string>Таблица &amp;3000</string>
+   </property>
+  </action>
+  <action name="actStatReport1DD4000">
+   <property name="text">
+    <string>Таблица &amp;4000</string>
+   </property>
+  </action>
+  <action name="actStatReportF131Raion">
+   <property name="text">
+    <string>Сводка обращений по району</string>
+   </property>
+  </action>
+  <action name="actStatReportF12_D_3_M">
+   <property name="text">
+    <string>Сведения о ДД работающих граждан, Ф.№ 12-Д-&amp;3-М</string>
+   </property>
+  </action>
+  <action name="actSchemaSync">
+   <property name="text">
+    <string>Синхронизация структуры БД</string>
+   </property>
+  </action>
+  <action name="actMIACExchangePreferences">
+   <property name="text">
+    <string>Настройки соединения с МИАЦ</string>
+   </property>
+  </action>
+  <action name="actImportEisOmsLpu">
+   <property name="text">
+    <string>Организации ЛПУ из ЕИС.ОМС</string>
+   </property>
+  </action>
+  <action name="actImportEisOmsSmo">
+   <property name="text">
+    <string>Организации СМО из ЕИС.ОМС</string>
+   </property>
+  </action>
+  <action name="actCalendar">
+   <property name="text">
+    <string>Календарь</string>
+   </property>
+  </action>
+  <action name="actStatReport1DDAll">
+   <property name="text">
+    <string>Все таблицы</string>
+   </property>
+  </action>
+  <action name="actTestRLS">
+   <property name="text">
+    <string>Испытание РЛС</string>
+   </property>
+  </action>
+  <action name="actActionTemplate">
+   <property name="text">
+    <string>Шаблоны действий</string>
+   </property>
+  </action>
+  <action name="actExportEventType">
+   <property name="text">
+    <string>Типы событий</string>
+   </property>
+  </action>
+  <action name="actImportEventType">
+   <property name="text">
+    <string>Типы событий</string>
+   </property>
+  </action>
+  <action name="actReportClients">
+   <property name="text">
+    <string>Список пациентов</string>
+   </property>
+  </action>
+  <action name="actFormRegistration">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Учёт бланков</string>
+   </property>
+  </action>
+  <action name="actHospitalBeds">
+   <property name="text">
+    <string>Стационарный монитор</string>
+   </property>
+  </action>
+  <action name="actStockControl">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Складской учёт</string>
+   </property>
+  </action>
+  <action name="actJobsPlanning">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Планирование работ</string>
+   </property>
+  </action>
+  <action name="actRBHospitalBedProfile">
+   <property name="text">
+    <string>Профили коек</string>
+   </property>
+  </action>
+  <action name="actReportSocStatus">
+   <property name="text">
+    <string>Социальный статус</string>
+   </property>
+  </action>
+  <action name="actStatReportF12Inset2008">
+   <property name="text">
+    <string>Вкладыш-2008</string>
+   </property>
+  </action>
+  <action name="actExportActionResult">
+   <property name="text">
+    <string>Экспорт результатов действий</string>
+   </property>
+  </action>
+  <action name="actRBTempInvalidDocument">
+   <property name="text">
+    <string>Документы ВУТ, инвалидности или ограничения жизнедеятельности</string>
+   </property>
+  </action>
+  <action name="actEventResultList">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Список пациентов</string>
+   </property>
+  </action>
+  <action name="actEventResultSurvey">
+   <property name="text">
+    <string>Сводка</string>
+   </property>
+  </action>
+  <action name="actExportActionTemplate">
+   <property name="text">
+    <string>Шаблоны действий</string>
+   </property>
+  </action>
+  <action name="actRBBloodType">
+   <property name="text">
+    <string>Группы крови</string>
+   </property>
+  </action>
+  <action name="actImportActionTemplate">
+   <property name="text">
+    <string>Шаблоны действий</string>
+   </property>
+  </action>
+  <action name="actFinanceSummaryByDoctors">
+   <property name="text">
+    <string>Финансовая сводка по врачам</string>
+   </property>
+  </action>
+  <action name="actFinanceSummaryByServices">
+   <property name="text">
+    <string>Финансовая сводка по услугам</string>
+   </property>
+  </action>
+  <action name="actInformerMessages">
+   <property name="text">
+    <string>Сообщения информатора</string>
+   </property>
+  </action>
+  <action name="actInformer">
+   <property name="text">
+    <string>Информатор</string>
+   </property>
+  </action>
+  <action name="actHospitalBedComboBoxTest">
+   <property name="text">
+    <string>Испытание комбо-бокса койки</string>
+   </property>
+  </action>
+  <action name="actControlDiagnosis">
+   <property name="text">
+    <string>Контроль заболеваний в ЛУД</string>
+   </property>
+  </action>
+  <action name="actImportRbResult">
+   <property name="text">
+    <string>Результаты события</string>
+   </property>
+  </action>
+  <action name="actExportRbResult">
+   <property name="text">
+    <string>Результаты события</string>
+   </property>
+  </action>
+  <action name="actStatReportF12_D_2_09">
+   <property name="text">
+    <string>Сведения о результатах ДД работающих граждан, Ф.№ &amp;12-Д-2-09</string>
+   </property>
+  </action>
+  <action name="actExportHL7v2_5">
+   <property name="text">
+    <string>&amp;HL7 v2.5</string>
+   </property>
+  </action>
+  <action name="actExportPervDoc">
+   <property name="text">
+    <string>&amp;DBF</string>
+   </property>
+  </action>
+  <action name="actTempInvalidExpert">
+   <property name="text">
+    <string>Экспертный отчет</string>
+   </property>
+  </action>
+  <action name="actExportRbUnit">
+   <property name="text">
+    <string>Единицы измерения</string>
+   </property>
+  </action>
+  <action name="actImportRbUnit">
+   <property name="text">
+    <string>Единицы измерения</string>
+   </property>
+  </action>
+  <action name="actExportRbThesaurus">
+   <property name="text">
+    <string>Тезаурус</string>
+   </property>
+  </action>
+  <action name="actImportRbThesaurus">
+   <property name="text">
+    <string>Тезаурус</string>
+   </property>
+  </action>
+  <action name="actExportRbComplain">
+   <property name="text">
+    <string>Жалобы</string>
+   </property>
+  </action>
+  <action name="actImportRbComplain">
+   <property name="text">
+    <string>Жалобы</string>
+   </property>
+  </action>
+  <action name="actSchemaClean">
+   <property name="text">
+    <string>Очистка БД</string>
+   </property>
+  </action>
+  <action name="actExportRbService">
+   <property name="text">
+    <string>Услуги</string>
+   </property>
+  </action>
+  <action name="actImportRbService">
+   <property name="text">
+    <string>Услуги</string>
+   </property>
+  </action>
+  <action name="actControlDoubles">
+   <property name="text">
+    <string>Контроль двойников</string>
+   </property>
+  </action>
+  <action name="actReportDailyAcuteInfections">
+   <property name="text">
+    <string>Ежедневный отчёт по выявленным острым инфекционным заболеваниям</string>
+   </property>
+  </action>
+  <action name="actRBTempInvalidDuplicateReason">
+   <property name="text">
+    <string>Причины выдачи дубликатов документов ВУТ</string>
+   </property>
+  </action>
+  <action name="actRBDiseasePhases">
+   <property name="text">
+    <string>Фазы заболевания</string>
+   </property>
+  </action>
+  <action name="actRBEmergencyBrigade">
+   <property name="text">
+    <string>Бригады</string>
+   </property>
+  </action>
+  <action name="actRBMedicalAidType">
+   <property name="text">
+    <string>Типы медицинской помощи</string>
+   </property>
+  </action>
+  <action name="actRBEmergencyCauseCall">
+   <property name="text">
+    <string>Повод к вызову</string>
+   </property>
+  </action>
+  <action name="actRBEmergencyTransferredTransportation">
+   <property name="text">
+    <string>Транспортировку перенес</string>
+   </property>
+  </action>
+  <action name="actRBEmergencyPlaceReceptionCall">
+   <property name="text">
+    <string>Место получения вызова</string>
+   </property>
+  </action>
+  <action name="actRBEmergencyReceivedCall">
+   <property name="text">
+    <string>Вызов получен</string>
+   </property>
+  </action>
+  <action name="actRBEmergencyReasondDelays">
+   <property name="text">
+    <string>Причина задержки</string>
+   </property>
+  </action>
+  <action name="actRBEmergencyResult">
+   <property name="text">
+    <string>Результат</string>
+   </property>
+  </action>
+  <action name="actRBEmergencyAccident">
+   <property name="text">
+    <string>Несчастный случай</string>
+   </property>
+  </action>
+  <action name="actRBEmergencyDeath">
+   <property name="text">
+    <string>Смерть</string>
+   </property>
+  </action>
+  <action name="actRBEmergencyEbriety">
+   <property name="text">
+    <string>Опьянение</string>
+   </property>
+  </action>
+  <action name="actRBEmergencyDiseased">
+   <property name="text">
+    <string>Больной</string>
+   </property>
+  </action>
+  <action name="actRBEmergencyPlaceCall">
+   <property name="text">
+    <string>Место вызова</string>
+   </property>
+  </action>
+  <action name="actRBEmergencyMethodTransportation">
+   <property name="text">
+    <string>Способ транспортировки</string>
+   </property>
+  </action>
+  <action name="actRBEmergencyTypeAsset">
+   <property name="text">
+    <string>Активное посещение</string>
+   </property>
+  </action>
+  <action name="actMUOMSOFTable1">
+   <property name="text">
+    <string>Таблица &amp;1</string>
+   </property>
+   <property name="toolTip">
+    <string>Сведения об объёмах и финансовом обеспечении медицинской помощи в рамках введения одноканального финансирования, таблица 1</string>
+   </property>
+  </action>
+  <action name="actMUOMSOFTable3">
+   <property name="text">
+    <string>Таблица &amp;3</string>
+   </property>
+   <property name="toolTip">
+    <string>Сведения об объёмах и финансовом обеспечении медицинской помощи в рамках введения одноканального финансирования, таблица 3</string>
+   </property>
+  </action>
+  <action name="actRBJobType">
+   <property name="text">
+    <string>Типы работ</string>
+   </property>
+  </action>
+  <action name="actJobsOperating">
+   <property name="text">
+    <string>Выполнение работ</string>
+   </property>
+  </action>
+  <action name="actForma14">
+   <property name="text">
+    <string>форма 14</string>
+   </property>
+  </action>
+  <action name="actForma016">
+   <property name="text">
+    <string>форма 016</string>
+   </property>
+  </action>
+  <action name="actTestMES">
+   <property name="text">
+    <string>Испытание МЭС</string>
+   </property>
+  </action>
+  <action name="actRBEventProfile">
+   <property name="text">
+    <string>Профили событий</string>
+   </property>
+  </action>
+  <action name="actRecativeClient">
+   <property name="text">
+    <string>Типы связей пациента</string>
+   </property>
+  </action>
+  <action name="actFormaF016">
+   <property name="text">
+    <string>форма 01&amp;6</string>
+   </property>
+  </action>
+  <action name="actReportF14DS_stat">
+   <property name="text">
+    <string>Стационар дневного пребывания</string>
+   </property>
+  </action>
+  <action name="actReportF14DS_ambul">
+   <property name="text">
+    <string>Дневной стационар при амбулаторно-поликлиническом учреждениии</string>
+   </property>
+  </action>
+  <action name="actOneForma14DC">
+   <property name="text">
+    <string>Общий</string>
+   </property>
+  </action>
+  <action name="actReportF14DS_vzroslye">
+   <property name="text">
+    <string> (&amp;3000) Дневные стационары для взрослых</string>
+   </property>
+  </action>
+  <action name="actReportF14DS_deti">
+   <property name="text">
+    <string> (35&amp;00) Дневные стационары для детей</string>
+   </property>
+  </action>
+  <action name="actTwoAdultPoliclinicF14DC">
+   <property name="text">
+    <string>Дневной стационар при амбулаторно-поликлинических учреждениях</string>
+   </property>
+  </action>
+  <action name="actFinanceSummaryByRejections">
+   <property name="text">
+    <string>Финансовая сводка по причинам отказа в оплате услуг</string>
+   </property>
+  </action>
+  <action name="actFormaF0143000">
+   <property name="text">
+    <string>(&amp;3000)Состав больных новорожденных</string>
+   </property>
+  </action>
+  <action name="actFormaF0144000">
+   <property name="text">
+    <string>(&amp;4000)Хирургическая работа учреждения</string>
+   </property>
+  </action>
+  <action name="actFormaF0144002">
+   <property name="text">
+    <string>(4002)Операции у детей в возрасте до 1 года</string>
+   </property>
+  </action>
+  <action name="actEmergency2000">
+   <property name="text">
+    <string>Медицинская помощь при выездах(&amp;2000)</string>
+   </property>
+  </action>
+  <action name="actEmergency2001">
+   <property name="text">
+    <string>Медицинская помощь при выездах(2&amp;001)</string>
+   </property>
+  </action>
+  <action name="actEmergency2100">
+   <property name="text">
+    <string>Число лиц, кот.оказана мед. помощь при выездах(2&amp;100) </string>
+   </property>
+  </action>
+  <action name="actEmergency2500">
+   <property name="text">
+    <string>Число выездов бригад СМП по времени(2&amp;500)</string>
+   </property>
+  </action>
+  <action name="actEmergencyAdditionally">
+   <property name="text">
+    <string>Сводка о вызовах СМП</string>
+   </property>
+  </action>
+  <action name="actEmergencyTalonSignal">
+   <property name="text">
+    <string>Сигнальный талон</string>
+   </property>
+  </action>
+  <action name="actRBTest">
+   <property name="text">
+    <string>Показатели исследований(Тесты)</string>
+   </property>
+  </action>
+  <action name="actRBLaboratory">
+   <property name="text">
+    <string>Лабораторные информационные системы</string>
+   </property>
+  </action>
+  <action name="actImport131XML">
+   <property name="text">
+    <string>Импорт формы 131 из &amp;XML</string>
+   </property>
+  </action>
+  <action name="actRBActivity">
+   <property name="text">
+    <string>Виды деятельности</string>
+   </property>
+  </action>
+  <action name="actUnfinishedEventsByDoctor">
+   <property name="text">
+    <string>По врачам</string>
+   </property>
+  </action>
+  <action name="actUnfinishedEventsByMes">
+   <property name="text">
+    <string>По МЭС</string>
+   </property>
+  </action>
+  <action name="actImportProfilesEIS">
+   <property name="text">
+    <string>из ЕИС</string>
+   </property>
+  </action>
+  <action name="actImportProfilesINFIS">
+   <property name="text">
+    <string>из ИНФИС</string>
+   </property>
+  </action>
+  <action name="actRBImageMap">
+   <property name="text">
+    <string>Отметки проблемных зон</string>
+   </property>
+  </action>
+  <action name="actReportF14App3ksg">
+   <property name="text">
+    <string>Приложение №3-ксг к отчёту по форме №14-Ф</string>
+   </property>
+  </action>
+  <action name="actImportServiceNomen">
+   <property name="text">
+    <string>Услуги из номенклатуры</string>
+   </property>
+  </action>
+  <action name="actClearMruEvents">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Очистить</string>
+   </property>
+  </action>
+  <action name="actImportPolicySerialDBF">
+   <property name="text">
+    <string>Серии полисов ОМС</string>
+   </property>
+  </action>
+  <action name="actRBTariffCategory">
+   <property name="text">
+    <string>Тарифные категории</string>
+   </property>
+  </action>
+  <action name="actImportOrgsINFIS">
+   <property name="text">
+    <string>Организации ЛПУ из ИНФИС</string>
+   </property>
+  </action>
+  <action name="actRBActionShedule">
+   <property name="text">
+    <string>Графики выполнения назначения</string>
+   </property>
+  </action>
+  <action name="actRBMealTime">
+   <property name="text">
+    <string>Периоды питания</string>
+   </property>
+  </action>
+  <action name="actRBDiet">
+   <property name="text">
+    <string>Столы питания</string>
+   </property>
+  </action>
+  <action name="actRBMenu">
+   <property name="text">
+    <string>Шаблоны питания</string>
+   </property>
+  </action>
+  <action name="actRBMeal">
+   <property name="text">
+    <string>Рацион</string>
+   </property>
+  </action>
+  <action name="actTimelineForPerson">
+   <property name="text">
+    <string>Расписание приёма врача</string>
+   </property>
+  </action>
+  <action name="actTimelineForOffices">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Расписание кабинетов</string>
+   </property>
+  </action>
+  <action name="actStatReportF12_D_1_10">
+   <property name="text">
+    <string>Сведения о ДД работающих граждан, Ф.№ &amp;12-Д-1-10</string>
+   </property>
+  </action>
+  <action name="actStatReportF12_D_2_10">
+   <property name="text">
+    <string>Сведения о результатах ДД работающих граждан, Ф.№ 12-Д-&amp;2-10</string>
+   </property>
+  </action>
+  <action name="actMilitaryUnits">
+   <property name="text">
+    <string>Воинские части</string>
+   </property>
+  </action>
+  <action name="actImport131Errors">
+   <property name="text">
+    <string>Импорт протокола ошибок</string>
+   </property>
+  </action>
+  <action name="actPreRecordDoctors">
+   <property name="text">
+    <string>По врачам</string>
+   </property>
+  </action>
+  <action name="actPreRecordUsers">
+   <property name="text">
+    <string>По пользователям</string>
+   </property>
+  </action>
+  <action name="actQuotaType">
+   <property name="text">
+    <string>Виды квот</string>
+   </property>
+  </action>
+  <action name="actQuoting">
+   <property name="text">
+    <string>Квотирование</string>
+   </property>
+  </action>
+  <action name="actRBAgreementType">
+   <property name="text">
+    <string>Типы согласования</string>
+   </property>
+  </action>
+  <action name="actImportQuotaFromVTMP">
+   <property name="text">
+    <string>Импорт квот из ВТМП</string>
+   </property>
+  </action>
+  <action name="actRBCounter">
+   <property name="text">
+    <string>Счётчики</string>
+   </property>
+  </action>
+  <action name="actRBCashOperation">
+   <property name="text">
+    <string>Кассовые операции</string>
+   </property>
+  </action>
+  <action name="actCashBook">
+   <property name="text">
+    <string>Журнал кассовых операций</string>
+   </property>
+  </action>
+  <action name="actRBMedicalAidProfile">
+   <property name="text">
+    <string>Профили медицинской помощи</string>
+   </property>
+  </action>
+  <action name="actImportServiceMes">
+   <property name="text">
+    <string>Услуги из номенклатуры МЭС</string>
+   </property>
+  </action>
+  <action name="actRBMesSpecification">
+   <property name="text">
+    <string>Особенности выполнения МЭС</string>
+   </property>
+  </action>
+  <action name="actJournalBeforeRecord">
+   <property name="text">
+    <string>Журнал предварительной записи </string>
+   </property>
+  </action>
+  <action name="actExportPrimaryDocInXml">
+   <property name="text">
+    <string>&amp;XML</string>
+   </property>
+  </action>
+  <action name="actControlMes">
+   <property name="text">
+    <string>Контроль событий с МЭС</string>
+   </property>
+  </action>
+  <action name="actDailyJournalBeforeRecord">
+   <property name="text">
+    <string>Суточный журнал предварительной записи</string>
+   </property>
+  </action>
+  <action name="actCreateAttachClientsForArea">
+   <property name="text">
+    <string>Выполнить прикрепление пациентов к участкам</string>
+   </property>
+  </action>
+  <action name="actImpotrFromSail">
+   <property name="text">
+    <string>Импорт из ИС &quot;Парус&quot;/1С</string>
+   </property>
+  </action>
+  <action name="actRBNomenclature">
+   <property name="text">
+    <string>Номенклатура</string>
+   </property>
+  </action>
+  <action name="actRBTissueType">
+   <property name="text">
+    <string>Типы биоматериалов</string>
+   </property>
+  </action>
+  <action name="actTissueJournal">
+   <property name="text">
+    <string>Лабораторный журнал</string>
+   </property>
+  </action>
+  <action name="actUETService">
+   <property name="text">
+    <string>Сводка (УЕТ)</string>
+   </property>
+  </action>
+  <action name="actStatReportF12Seniors">
+   <property name="text">
+    <string>Пожилые</string>
+   </property>
+  </action>
+  <action name="actVisitsServiceUET">
+   <property name="text">
+    <string>Сводка (УЕТ)</string>
+   </property>
+  </action>
+  <action name="actBlankType">
+   <property name="text">
+    <string>Типы бланков</string>
+   </property>
+  </action>
+  <action name="actRBStockRecipe">
+   <property name="text">
+    <string>Рецепты производства ЛСиИМН</string>
+   </property>
+  </action>
+  <action name="actReportOnPerson">
+   <property name="text">
+    <string>Сводка на врача</string>
+   </property>
+  </action>
+  <action name="actRBExpenseServiceItem">
+   <property name="text">
+    <string>Статьи затрат услуг</string>
+   </property>
+  </action>
+  <action name="actRBNomenclatureClass">
+   <property name="text">
+    <string>Классы</string>
+   </property>
+  </action>
+  <action name="actRBNomenclatureKind">
+   <property name="text">
+    <string>Виды</string>
+   </property>
+  </action>
+  <action name="actRBNomenclatureType">
+   <property name="text">
+    <string>Типы</string>
+   </property>
+  </action>
+  <action name="actMKBMorphology">
+   <property name="text">
+    <string>Морфология диагнозов МКБ</string>
+   </property>
+  </action>
+  <action name="actFinanceSumByServicesExpenses">
+   <property name="text">
+    <string>Финансовая сводка по услугам с нормативным составом затрат</string>
+   </property>
+  </action>
+  <action name="actRBServiceGroup">
+   <property name="text">
+    <string>Группы услуг</string>
+   </property>
+  </action>
+  <action name="actRBEquipmentType">
+   <property name="text">
+    <string>Типы оборудования</string>
+   </property>
+  </action>
+  <action name="actRBEquipment">
+   <property name="text">
+    <string>Оборудование</string>
+   </property>
+  </action>
+  <action name="actReportMonthActions">
+   <property name="text">
+    <string>Сводка об услугах за месяц</string>
+   </property>
+  </action>
+  <action name="actReportActionsByOrgStructure">
+   <property name="text">
+    <string>Отчет по отделениям</string>
+   </property>
+  </action>
+  <action name="actReportDoneActions">
+   <property name="text">
+    <string>Отчет по выписанным услугам</string>
+   </property>
+  </action>
+  <action name="actForma007Moving">
+   <property name="text">
+    <string>Листок учета</string>
+   </property>
+  </action>
+  <action name="actForma007ClientList">
+   <property name="text">
+    <string>Сводка</string>
+   </property>
+  </action>
+  <action name="actReportClientActions">
+   <property name="text">
+    <string>Отчет по пациенту</string>
+   </property>
+  </action>
+  <action name="actFormaAdultF142000">
+   <property name="text">
+    <string>Взрослые (&amp;18 лет и старше)</string>
+   </property>
+  </action>
+  <action name="actFormaChildrenF142000">
+   <property name="text">
+    <string>Дети (в возрасте &amp;0-17 лет включительно)</string>
+   </property>
+  </action>
+  <action name="actFormaSeniorF142000">
+   <property name="text">
+    <string>Взрослые старше трудоспособного возраста</string>
+   </property>
+  </action>
+  <action name="actAnalyticsReportHospitalizedClients">
+   <property name="text">
+    <string>Отчет по пациентам</string>
+   </property>
+  </action>
+  <action name="actFormaF0144100">
+   <property name="text">
+    <string>(4100)</string>
+   </property>
+  </action>
+  <action name="actFormaF0144200">
+   <property name="text">
+    <string>(4200)Из общего числа операций(единиц)</string>
+   </property>
+  </action>
+  <action name="actFormaF0144201">
+   <property name="text">
+    <string>(4201)</string>
+   </property>
+  </action>
+  <action name="actFormaF0144202">
+   <property name="text">
+    <string>(4202)</string>
+   </property>
+  </action>
+  <action name="actFormaF0144400">
+   <property name="text">
+    <string>(4400)</string>
+   </property>
+  </action>
+  <action name="actAnalyticsReportIncomeAndLeavedClients">
+   <property name="text">
+    <string>Поступление и выписка пациентов</string>
+   </property>
+  </action>
+  <action name="actRBPolicyKind">
+   <property name="text">
+    <string>Виды полиса (старый, новый, временный и т.п.)</string>
+   </property>
+   <property name="toolTip">
+    <string>Вид полиса (старый, новый, временный и т.п.)</string>
+   </property>
+  </action>
+  <action name="actReport2500_2600">
+   <property name="text">
+    <string> (2&amp;500 - 2600) </string>
+   </property>
+  </action>
+  <action name="actRBDiagnosticResult">
+   <property name="text">
+    <string>Результаты осмотра</string>
+   </property>
+  </action>
+  <action name="actPreRecordSpeciality">
+   <property name="text">
+    <string>По специальности</string>
+   </property>
+  </action>
+  <action name="actRBTempInvalidExtraReason">
+   <property name="text">
+    <string>Дополнительные причины ВУТ, инвалидности или ограничения жизнедеятельности</string>
+   </property>
+  </action>
+  <action name="actRBTestGroup">
+   <property name="text">
+    <string>Группы показателей исследований</string>
+   </property>
+  </action>
+  <action name="actRBSuiteReagent">
+   <property name="text">
+    <string>Наборы реактивов</string>
+   </property>
+  </action>
+  <action name="actRBContainerType">
+   <property name="text">
+    <string>Типы контейнеров</string>
+   </property>
+  </action>
+  <action name="actCureType">
+   <property name="text">
+    <string>Виды лечения</string>
+   </property>
+  </action>
+  <action name="actCureMethod">
+   <property name="text">
+    <string>Методы лечения</string>
+   </property>
+  </action>
+  <action name="actPatientModel">
+   <property name="text">
+    <string>Модели пациента</string>
+   </property>
+  </action>
+  <action name="actTypeMethodCure">
+   <property name="text">
+    <string>Методы видов лечения</string>
+   </property>
+  </action>
+  <action name="actStatReportF5_D_For_Teenager">
+   <property name="text">
+    <string>Сведения о диспансеризации детей (годовая)</string>
+   </property>
+  </action>
+  <action name="actStatReportF4_D_For_Teenager">
+   <property name="text">
+    <string>Сведения о диспансеризации подростков (квартальная)</string>
+   </property>
+  </action>
+  <action name="actTestTNMS">
+   <property name="text">
+    <string>Испытание T&amp;NMS</string>
+   </property>
+  </action>
+  <action name="actRBLocationCardType">
+   <property name="text">
+    <string>Место нахождения амбулаторной карты</string>
+   </property>
+  </action>
+  <action name="actRBStatusObservationClientType">
+   <property name="text">
+    <string>Статус наблюдения пациента</string>
+   </property>
+  </action>
+  <action name="actReportVisitByQueue">
+   <property name="text">
+    <string>Выполнение предварительной записи</string>
+   </property>
+  </action>
+  <action name="actReportVisitByQueueNext">
+   <property name="text">
+    <string>Следующая явка не выполнена</string>
+   </property>
+  </action>
+  <action name="actReportTreatments">
+   <property name="text">
+    <string>Обращения</string>
+   </property>
+  </action>
+  <action name="actReportPayers">
+   <property name="text">
+    <string>Сводный отчет по плательщикам</string>
+   </property>
+  </action>
+  <action name="actAttachingMotion">
+   <property name="text">
+    <string>Движение контингента</string>
+   </property>
+  </action>
+  <action name="actReportActionsByServiceType">
+   <property name="text">
+    <string>Сводка об оказанных услугах</string>
+   </property>
+  </action>
+  <action name="actStationaryF142100">
+   <property name="text">
+    <string>(2&amp;100)</string>
+   </property>
+  </action>
+  <action name="actRBMedicalAidKind">
+   <property name="text">
+    <string>Виды медицинской помощи</string>
+   </property>
+  </action>
+  <action name="actFormaF007DC">
+   <property name="text">
+    <string>форма 007ДС</string>
+   </property>
+  </action>
+  <action name="actFormaF32">
+   <property name="text">
+    <string>Форма &amp;32</string>
+   </property>
+  </action>
+  <action name="actVeterans">
+   <property name="text">
+    <string>Ветераны ВОВ</string>
+   </property>
+  </action>
+  <action name="actLic">
+   <property name="text">
+    <string>Лицензия</string>
+   </property>
+  </action>
+  <action name="actFormaF0144500">
+   <property name="text">
+    <string>(4500)</string>
+   </property>
+  </action>
+  <action name="action">
+   <property name="text">
+    <string>Взрослые трудоспособного возраста</string>
+   </property>
+  </action>
+  <action name="actFormaF0144001">
+   <property name="text">
+    <string>(4&amp;001)Хирургическая работа учреждения (лица старше трудоспособного возраста)</string>
+   </property>
+  </action>
+  <action name="actDBFToMySql">
+   <property name="text">
+    <string>&amp;DBF -&gt; дамп MySql</string>
+   </property>
+  </action>
+  <action name="actReportActionsWithLatePayment">
+   <property name="text">
+    <string>Отчет по услугам с поздней оплатой</string>
+   </property>
+  </action>
+  <action name="actReportVisits">
+   <property name="text">
+    <string>Отчет по посещениям</string>
+   </property>
+  </action>
+  <action name="actReportDDStudentsInfo">
+   <property name="text">
+    <string>Информация о диспансеризации студентов</string>
+   </property>
+  </action>
+  <action name="actReportDDStudentsResults">
+   <property name="text">
+    <string>Результаты диспансеризации студентов</string>
+   </property>
+  </action>
+  <action name="actReportActionsAndVisits">
+   <property name="text">
+    <string>Отчет по посещениям и услугам</string>
+   </property>
+  </action>
+  <action name="actReportClientsWithValidPolis">
+   <property name="text">
+    <string>Отчет по застрахованным лицам</string>
+   </property>
+  </action>
+  <action name="actImportEisOmsFull">
+   <property name="text">
+    <string>Импорт из &amp;DBF с полной загрузкой данных</string>
+   </property>
+  </action>
+  <action name="actRBPaidServices">
+   <property name="text">
+    <string>Безналичные договоры</string>
+   </property>
+  </action>
+  <action name="actRBClinicalTrials">
+   <property name="text">
+    <string>Клинические исследования</string>
+   </property>
+  </action>
+  <action name="actImportPersons">
+   <property name="text">
+    <string>Импорт врачей</string>
+   </property>
+  </action>
+  <action name="actReportRecordPersonVisits">
+   <property name="text">
+    <string>Ведомость учета врачебных посещений</string>
+   </property>
+  </action>
+  <action name="actReportContractsRegistry">
+   <property name="text">
+    <string>Реестр договоров</string>
+   </property>
+  </action>
+  <action name="actDeferredQueue">
+   <property name="text">
+    <string>Журнал отложенного спроса</string>
+   </property>
+  </action>
+  <action name="actPEDSalaryReports">
+   <property name="text">
+    <string>Отчёты по заработной плате</string>
+   </property>
+  </action>
+  <action name="actReportR61Annex11">
+   <property name="text">
+    <string>Приложение &amp;11</string>
+   </property>
+  </action>
+  <action name="actChangeCurrentUserPassword">
+   <property name="text">
+    <string>Сменить пароль текущего пользователя</string>
+   </property>
+  </action>
+  <action name="actDiabetRegistry">
+   <property name="text">
+    <string>Регистр диабета</string>
+   </property>
+  </action>
+  <action name="actPreRecordReport">
+   <property name="text">
+    <string>По отделениям</string>
+   </property>
+  </action>
+  <action name="actPopulation">
+   <property name="text">
+    <string>Состав населения</string>
+   </property>
+  </action>
+  <action name="actStatuonaryF30_3100">
+   <property name="text">
+    <string>(&amp;3100)</string>
+   </property>
+  </action>
+  <action name="actStatuonaryF30_3101">
+   <property name="text">
+    <string>(3&amp;101)</string>
+   </property>
+  </action>
+  <action name="actForma007Moving2013">
+   <property name="text">
+    <string>Листок учета (2&amp;013)</string>
+   </property>
+  </action>
+  <action name="actForma007ClientList2013">
+   <property name="text">
+    <string>Сводка (&amp;2013)</string>
+   </property>
+  </action>
+  <action name="actStatReportDD2013Weekly">
+   <property name="text">
+    <string>Объемы диспансеризации за неделю</string>
+   </property>
+  </action>
+  <action name="actStatReportDD2013Monthly">
+   <property name="text">
+    <string>Объемы диспансеризации за месяц</string>
+   </property>
+  </action>
+  <action name="actStatReportExposedDD">
+   <property name="text">
+    <string>Предъявленные к оплате реестры счетов</string>
+   </property>
+  </action>
+  <action name="actStatReportDDSexAgeStructure">
+   <property name="text">
+    <string>Половозрастной состав населения (таблица &amp;1000)</string>
+   </property>
+  </action>
+  <action name="actStatReportDDRiskFactors">
+   <property name="text">
+    <string>Распространенность факторов риска (таблица &amp;4000)</string>
+   </property>
+  </action>
+  <action name="actStatReportDDFoundIllnesses">
+   <property name="text">
+    <string>Сведения о выявленных заболеваниях (таблица &amp;5000)</string>
+   </property>
+  </action>
+  <action name="actStatReportDDFoundSuspicions">
+   <property name="text">
+    <string>Сведения о  подозрениях на наличие заболеваний (таблица &amp;6000)</string>
+   </property>
+  </action>
+  <action name="actStatReportDDCommonResults">
+   <property name="text">
+    <string>Общие результаты диспансеризации (таблица &amp;7000)</string>
+   </property>
+  </action>
+  <action name="actStatReportF12">
+   <property name="text">
+    <string>Ф.&amp;12</string>
+   </property>
+  </action>
+  <action name="actRBEventGoal">
+   <property name="text">
+    <string>Цели событий</string>
+   </property>
+  </action>
+  <action name="actECROther">
+   <property name="text">
+    <string>Работа с кассовым аппаратом</string>
+   </property>
+  </action>
+  <action name="actStatReportDDPopulationGroupsFS">
+   <property name="text">
+    <string>Сведения о первом этапе диспансеризации (таблица &amp;2000)</string>
+   </property>
+  </action>
+  <action name="actStatReportDDPopulationGroupsSS">
+   <property name="text">
+    <string>Сведения о втором этапе диспансеризации (таблица &amp;3000)</string>
+   </property>
+  </action>
+  <action name="actStationaryReportMoved">
+   <property name="text">
+    <string>Сведения о переведенных</string>
+   </property>
+  </action>
+  <action name="actStationaryReportF14">
+   <property name="text">
+    <string>(2000) Образец 2013 года.</string>
+   </property>
+  </action>
+  <action name="actStatReportDD2013Results">
+   <property name="text">
+    <string>Сведения о результатах проведения диспансеризации взрослого населения</string>
+   </property>
+  </action>
+  <action name="actReportMentalDisorderF10">
+   <property name="text">
+    <string>Ф.1&amp;0 - Психические заболевания</string>
+   </property>
+  </action>
+  <action name="actExportR67_VM">
+   <property name="text">
+    <string>Экспорт ИЭМК Смоленск</string>
+   </property>
+  </action>
+  <action name="actImportR67_VM">
+   <property name="text">
+    <string>Импорт ИЭМК Смоленск</string>
+   </property>
+  </action>
+  <action name="actExportRefBooks">
+   <property name="text">
+    <string>Мастер экспорта справочников</string>
+   </property>
+  </action>
+  <action name="actImportRefBooks">
+   <property name="text">
+    <string>Мастер импорта справочников</string>
+   </property>
+  </action>
+  <action name="actExportOrganisations">
+   <property name="text">
+    <string>Организации</string>
+   </property>
+  </action>
+  <action name="actImportOrganisations">
+   <property name="text">
+    <string>Организации из ЛПУ</string>
+   </property>
+  </action>
+  <action name="actExportPersons_VM">
+   <property name="text">
+    <string>Врачи</string>
+   </property>
+  </action>
+  <action name="actImportPersons_VM">
+   <property name="text">
+    <string>Врачи (Виста-Мед)</string>
+   </property>
+  </action>
+  <action name="actExportDiagnosticResult">
+   <property name="text">
+    <string>Результаты диагнозов</string>
+   </property>
+  </action>
+  <action name="actImportDiagnosticResult">
+   <property name="text">
+    <string>Результаты диагнозов</string>
+   </property>
+  </action>
+  <action name="actRBAttachType">
+   <property name="text">
+    <string>Тип прикрепления</string>
+   </property>
+  </action>
+  <action name="actRBDetachmentReason">
+   <property name="text">
+    <string>Причина открепления</string>
+   </property>
+  </action>
+  <action name="actImportR67Duplicates">
+   <property name="text">
+    <string>Импорт дубликатов (Смоленск)</string>
+   </property>
+  </action>
+  <action name="actExportR67Duplicates">
+   <property name="text">
+    <string>Экспорт дубликатов (Смоленск)</string>
+   </property>
+  </action>
+  <action name="actReportPNDClientsRegistry">
+   <property name="text">
+    <string>Переосвидетельствование (Соц. Статус)</string>
+   </property>
+  </action>
+  <action name="actReportPNDClientsRegistryByEvent">
+   <property name="text">
+    <string>Переосвидетельствование (Тип обращения)</string>
+   </property>
+  </action>
+  <action name="actAnalyticsReportAnalysisOfDisease">
+   <property name="text">
+    <string>Анализ заболеваний &quot;Острый инфаркт миокарда&quot;</string>
+   </property>
+  </action>
+  <action name="actDispanserRegistry">
+   <property name="text">
+    <string>Диспансерный учёт</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::WindowShortcut</enum>
+   </property>
+  </action>
+  <action name="actRBActionTypeIncompatibilities">
+   <property name="text">
+    <string>Совместимость типов действий</string>
+   </property>
+  </action>
+  <action name="actSendBugReport">
+   <property name="text">
+    <string>Написать разработчикам</string>
+   </property>
+  </action>
+  <action name="actReportUnderageMedicalExamination">
+   <property name="text">
+    <string>&amp;1. - 9. Сведения о профилактических медицинских осмотрах несовершеннолетних</string>
+   </property>
+  </action>
+  <action name="actReportResultAdditionalConsultation">
+   <property name="text">
+    <string>1&amp;0. Сведения о дополнительных  консультациях,  исследованиях,  лечении  и медицинских  реабилитациях  несовершеннолетних</string>
+   </property>
+  </action>
+  <action name="actReportResultMedicationBeforeInspection">
+   <property name="text">
+    <string>11. - 1&amp;2.Сведения о лечении, медицинской реабилитации и (или) санаторно-курортном лечении детей до проведения настоящего профилактического осмотра</string>
+   </property>
+  </action>
+  <action name="actReportNumberChildrenDisabilities">
+   <property name="text">
+    <string>1&amp;3. Число детей-инвалидов из числа детей, прошедших профилактические
+осмотры</string>
+   </property>
+  </action>
+  <action name="actReportIndividualProgram">
+   <property name="text">
+    <string>1&amp;4. Сведения о выполнении индивидуальных программ реабилитации (ИПР) детей-инвалидов</string>
+   </property>
+  </action>
+  <action name="actReportImmunizations">
+   <property name="text">
+    <string>1&amp;5. Охват профилактическими прививками</string>
+   </property>
+  </action>
+  <action name="actReportUnderagePhysicalDevelopment">
+   <property name="text">
+    <string>1&amp;6. Сведения о распределении детей по уровню физического развития</string>
+   </property>
+  </action>
+  <action name="actReportMedicalGroups">
+   <property name="text">
+    <string>1&amp;7. Сведения о распределении детей по медицинским группам для занятий физической
+культурой</string>
+   </property>
+  </action>
+  <action name="actReportHealthGroups">
+   <property name="text">
+    <string>1&amp;8. Сведения о распределении детей по группам состояния здоровья</string>
+   </property>
+  </action>
+  <action name="actNewFinanceSum">
+   <property name="text">
+    <string>Сводный счёт</string>
+   </property>
+  </action>
+  <action name="actReportPeriodontist">
+   <property name="text">
+    <string>Отчет врача пародонтолога</string>
+   </property>
+  </action>
+  <action name="actReferralForHospitalization">
+   <property name="text">
+    <string>Сведения о направлении на госпитализацию</string>
+   </property>
+  </action>
+  <action name="actRemoveReferralForHospitalization">
+   <property name="text">
+    <string>Сведения об аннулировании направления на госпитализацию</string>
+   </property>
+  </action>
+  <action name="actAttachmentPerson">
+   <property name="text">
+    <string>Прикрепление по врачам</string>
+   </property>
+  </action>
+  <action name="actReportLifetimeCytology">
+   <property name="text">
+    <string>Прижизненные цитологические диагностические исследования</string>
+   </property>
+  </action>
+  <action name="actAttachment">
+   <property name="text">
+    <string>Установлено/снято с наблюдения</string>
+   </property>
+  </action>
+  <action name="actPatientAtHome">
+   <property name="text">
+    <string>Сводка по количеству принятых и осмотренных на дому больных</string>
+   </property>
+  </action>
+  <action name="actSelectionDiagnosis">
+   <property name="text">
+    <string>Подборка по диагнозам</string>
+   </property>
+  </action>
+  <action name="actMilitaryAge">
+   <property name="text">
+    <string>Отчет по количеству мужчин призывного возраста</string>
+   </property>
+  </action>
+  <action name="actWokingAge">
+   <property name="text">
+    <string>Первичные инвалиды</string>
+   </property>
+  </action>
+  <action name="actReportPersonSickListNew">
+   <property name="text">
+    <string>Список пациентов (новый)</string>
+   </property>
+  </action>
+  <action name="actAccountingWork">
+   <property name="text">
+    <string>Сводная ведомость учета рабочего времени</string>
+   </property>
+  </action>
+  <action name="actSurgical">
+   <property name="text">
+    <string>Хирургический отчет</string>
+   </property>
+  </action>
+  <action name="actTreatmentRoom">
+   <property name="text">
+    <string>Процедурный кабинет</string>
+   </property>
+  </action>
+  <action name="actPaidServices">
+   <property name="text">
+    <string>Платные услуги</string>
+   </property>
+  </action>
+  <action name="actSurgical_2">
+   <property name="text">
+    <string>Хирургический отчет</string>
+   </property>
+  </action>
+  <action name="actAccountingWork_2">
+   <property name="text">
+    <string>Сводная ведомость учета работы</string>
+   </property>
+  </action>
+  <action name="actAccountingWork_3">
+   <property name="text">
+    <string>Сводная ведомость учета рабочего времени</string>
+   </property>
+  </action>
+  <action name="actWorkAccount">
+   <property name="text">
+    <string>Сводная ведомость учета рабочего времени(ф.&amp;39)</string>
+   </property>
+  </action>
+  <action name="actSurgicalReport">
+   <property name="text">
+    <string>Отчет врача хирурга</string>
+   </property>
+  </action>
+  <action name="actCheckJury">
+   <property name="text">
+    <string>Сверка списка присяжных</string>
+   </property>
+  </action>
+  <action name="actKLADRUpdate">
+   <property name="text">
+    <string>Обновление КЛАДР</string>
+   </property>
+  </action>
+  <action name="actMovingDispClients">
+   <property name="text">
+    <string>Движение диспансерных больных (по нозологии)</string>
+   </property>
+  </action>
+  <action name="actReportDeferredQueueCount">
+   <property name="text">
+    <string>Количество записей в журнале отложенного спроса</string>
+   </property>
+  </action>
+  <action name="actRBActionTypeSimilarity">
+   <property name="text">
+    <string>Схожесть типов действий</string>
+   </property>
+  </action>
+  <action name="actReportLeavedClients">
+   <property name="text">
+    <string>Пациенты, подлежащие сан-кор лечению (Б1&amp;5)</string>
+   </property>
+  </action>
+  <action name="actReportEmergencySurgery">
+   <property name="text">
+    <string>Сведения по экстренной хирургической помощи по &amp;7-ми формам &quot;острого живота&quot; </string>
+   </property>
+  </action>
+  <action name="actReportListLeavedClient">
+   <property name="text">
+    <string>Список больных, выбывших из отделений</string>
+   </property>
+  </action>
+  <action name="actReportAcutePankriotit">
+   <property name="text">
+    <string>Доп. сведения по экстренной хирургической помощи по &quot;Острому панкреатиту&quot; </string>
+   </property>
+  </action>
+  <action name="actReportAcute">
+   <property name="text">
+    <string>Доп. сведения по экстренной хирургической помощи по &quot;Острому панкреатиту&quot; </string>
+   </property>
+  </action>
+  <action name="actExportFedRegPer">
+   <property name="text">
+    <string>Экспорт данных по врачам (Ростов)</string>
+   </property>
+  </action>
+  <action name="actReportTypeVisits">
+   <property name="text">
+    <string>Типы посещений</string>
+   </property>
+  </action>
+  <action name="actReportF39ForPND">
+   <property name="text">
+    <string>Ф.39 - ПНД</string>
+   </property>
+  </action>
+  <action name="actReportF39PND">
+   <property name="text">
+    <string>Ф.39 - ПНД</string>
+   </property>
+  </action>
+  <action name="actReportAnalyticTable">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Аналитическая таблица</string>
+   </property>
+   <property name="visible">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actDispanserRegistryTeenager">
+   <property name="text">
+    <string>Диспансерный учет</string>
+   </property>
+  </action>
+  <action name="actDispObservationListChildren">
+   <property name="text">
+    <string>Список пациентов</string>
+   </property>
+  </action>
+  <action name="actDispObservationSurveyChildren">
+   <property name="text">
+    <string>Сводка</string>
+   </property>
+  </action>
+  <action name="actReportBedspace">
+   <property name="text">
+    <string>Коечный фонд (ОНКО)</string>
+   </property>
+  </action>
+  <action name="actReportBedspaceDC">
+   <property name="text">
+    <string>Коечный фонд ДС (ОНКО)</string>
+   </property>
+  </action>
+  <action name="actReportMonitoringOIM">
+   <property name="text">
+    <string>Мониторинг ОИМ и ОНМК</string>
+   </property>
+  </action>
+  <action name="actReHospitalization">
+   <property name="text">
+    <string>Повторная госпитализация</string>
+   </property>
+  </action>
+  <action name="actF13">
+   <property name="text">
+    <string>форма &amp;13</string>
+   </property>
+  </action>
+  <action name="actReportHospitalization">
+   <property name="text">
+    <string>Госпитализация</string>
+   </property>
+  </action>
+  <action name="actReportPrimaryRepeatHospitalization">
+   <property name="text">
+    <string>Первично и повторно обратившиеся пострадавшие</string>
+   </property>
+  </action>
+  <action name="actReportEventByMKB">
+   <property name="text">
+    <string>Обращаемость по основным нозологическим формам</string>
+   </property>
+  </action>
+  <action name="actReportSickList">
+   <property name="text">
+    <string>Развернутая форма по больничным листам</string>
+   </property>
+  </action>
+  <action name="actReportTakenClientMonitoringKindD">
+   <property name="text">
+    <string>Взято на Д учет</string>
+   </property>
+  </action>
+  <action name="actReportBasicIndicators">
+   <property name="text">
+    <string>Основные показатели деятельности медицинских организаций</string>
+   </property>
+  </action>
+  <action name="actRegisterSickLeave">
+   <property name="text">
+    <string>Реестр листков нетрудоспособности</string>
+   </property>
+  </action>
+  <action name="actPrintAnalysisServicesByCompany">
+   <property name="text">
+    <string>Анализ услуг по компаниям</string>
+   </property>
+  </action>
+  <action name="actPrintAnalysisServicesByDiagnosis">
+   <property name="text">
+    <string>Анализ услуг по диагнозам</string>
+   </property>
+  </action>
+  <action name="actReportSickLeaveByPerson">
+   <property name="text">
+    <string>Отчёт по больничным листам по врачам</string>
+   </property>
+  </action>
+  <action name="actReportPreventiveExaminations">
+   <property name="text">
+    <string>Профилактические осмотры</string>
+   </property>
+  </action>
+  <action name="actReportTakenClientMonitoringD">
+   <property name="text">
+    <string>Взято на Д учет</string>
+   </property>
+  </action>
+  <action name="actReportTakenClientMonitoringK">
+   <property name="text">
+    <string>Взято на К учет</string>
+   </property>
+  </action>
+  <action name="actReportTakenOffClientMonitoringD">
+   <property name="text">
+    <string>Снято с Д учета</string>
+   </property>
+  </action>
+  <action name="actReportTakenOffClientMonitoringK">
+   <property name="text">
+    <string>Снято с К учета</string>
+   </property>
+  </action>
+  <action name="actImportClients">
+   <property name="text">
+    <string>Импорт клиентов</string>
+   </property>
+  </action>
+  <action name="actReportPersonTimetable">
+   <property name="text">
+    <string>Список пациентов по всем врачам на день</string>
+   </property>
+  </action>
+  <action name="actReportUncheckedPolicy">
+   <property name="text">
+    <string>Отчет по пациентам, не прошедших проверку по полису ОМС</string>
+   </property>
+  </action>
+  <action name="actRBHospitalBedsLocationCardType">
+   <property name="text">
+    <string>Место нахождения истории болезни</string>
+   </property>
+  </action>
+  <action name="actReportPlanningAndEconomicIndicators">
+   <property name="text">
+    <string>Отчет о выполнении планово-экономических показателей по объемам медицинской помощи</string>
+   </property>
+  </action>
+  <action name="actSendPlanOrdersClinic">
+   <property name="text">
+    <string>Детализированный список сведений о направлениях на госпитализацию</string>
+   </property>
+  </action>
+  <action name="actSendFactOrdersHospital">
+   <property name="text">
+    <string>Детализированный список сведений о госпитализациях</string>
+   </property>
+  </action>
+  <action name="actSendOrdersHospitalUrgently">
+   <property name="text">
+    <string>Детализированный список сведений об экстренных госпитализациях</string>
+   </property>
+  </action>
+  <action name="actSendOrdersLeave">
+   <property name="text">
+    <string>Детализированный список сведений о выбывших пациентах</string>
+   </property>
+  </action>
+  <action name="actReportProphilaxy">
+   <property name="text">
+    <string>Отчет по экстренной профилактике столбняка при травмах</string>
+   </property>
+  </action>
+  <action name="actReportHospitalBeds">
+   <property name="text">
+    <string>Коечный фонд (б&amp;15)</string>
+   </property>
+  </action>
+  <action name="actReportF007">
+   <property name="text">
+    <string>ф00&amp;7/у-02(ОНКО)</string>
+   </property>
+  </action>
+  <action name="actMedicinesSMP">
+   <property name="text">
+    <string>Отчет по лекарственным средствам СМП</string>
+   </property>
+  </action>
+  <action name="actReportLocationCard">
+   <property name="text">
+    <string>По месту нахождения амбулаторной карты</string>
+   </property>
+  </action>
+  <action name="actReportBedspaceInsurance">
+   <property name="text">
+    <string>Использование коечного фонда по страховым компаниям</string>
+   </property>
+  </action>
+  <action name="actEQueueType">
+   <property name="text">
+    <string>Типы эл.очереди</string>
+   </property>
+  </action>
+  <action name="actEQueueSettings">
+   <property name="text">
+    <string>Электронная очередь</string>
+   </property>
+  </action>
+  <action name="actReportAgeSexCompositionLeavedClients">
+   <property name="text">
+    <string>Возрастно-половой состав выбывших</string>
+   </property>
+  </action>
+  <action name="actRBMedicalGroup">
+   <property name="text">
+    <string>Медицинские группы</string>
+   </property>
+  </action>
+  <action name="actReportReceivedClientsByOrgStructure">
+   <property name="text">
+    <string>Поступление пациентов по отделениям</string>
+   </property>
+  </action>
+  <action name="actReportFinance">
+   <property name="text">
+    <string>Финансовая сводка</string>
+   </property>
+  </action>
+  <action name="actExportFLCR23">
+   <property name="text">
+    <string>Экспорт ФЛК (Краснодарский край)</string>
+   </property>
+  </action>
+  <action name="actReportReceivedClientsByProfileBeds">
+   <property name="text">
+    <string>Поступление пациентов по профилям</string>
+   </property>
+  </action>
+  <action name="actReportReceivedOrgStructure">
+   <property name="text">
+    <string>Отчет по приемному отделению</string>
+   </property>
+  </action>
+  <action name="actReportSurgicalIndicators">
+   <property name="text">
+    <string>Некоторые показатели работы хирурга</string>
+   </property>
+  </action>
+  <action name="actReportSomeSurgicalIndicators">
+   <property name="text">
+    <string>Некоторые показатели хирургической деятельности</string>
+   </property>
+  </action>
+  <action name="actReportF16">
+   <property name="text">
+    <string>Сводная ведомость учета движения больных и коечного фонда по стационару (Ф - 16)</string>
+   </property>
+  </action>
+  <action name="actReportDiagnosisLeaved">
+   <property name="text">
+    <string>Состав больных в стационаре, сроки и исходы лечения среди выбывших</string>
+   </property>
+  </action>
+  <action name="actImportFLS">
+   <property name="text">
+    <string>Импорт ФЛК (Краснодарский край)</string>
+   </property>
+  </action>
+  <action name="actReportControlSurgery">
+   <property name="text">
+    <string>Контроль оперативных вмешательств</string>
+   </property>
+  </action>
+  <action name="actImportCrimea">
+   <property name="text">
+    <string>Импорт врачей (Крым)</string>
+   </property>
+  </action>
+  <action name="actReportOperation">
+   <property name="text">
+    <string>Перечень операций, выполненных врачом-хирургом</string>
+   </property>
+  </action>
+  <action name="actReportF14Children">
+   <property name="text">
+    <string>Состав больных в стационаре, сроки и исходы лечения</string>
+   </property>
+  </action>
+  <action name="actReportTherapeutic">
+   <property name="text">
+    <string>Терапевтический отчет</string>
+   </property>
+  </action>
+  <action name="actRBActionAssistantType">
+   <property name="text">
+    <string>Типы ассистентов</string>
+   </property>
+  </action>
+  <action name="actRBInfoSource">
+   <property name="text">
+    <string>Источники информации</string>
+   </property>
+  </action>
+  <action name="actReportInfoSource">
+   <property name="text">
+    <string>Причина обращения в ЛПУ</string>
+   </property>
+  </action>
+  <action name="actReportAccount">
+   <property name="text">
+    <string>Счет на пациента (Краснодарский край)</string>
+   </property>
+  </action>
+  <action name="actReportChildrenTherapeutic">
+   <property name="text">
+    <string>Детский терапевтический отчет</string>
+   </property>
+  </action>
+  <action name="actReportChildernDuty">
+   <property name="text">
+    <string>Детский дежурный отчет</string>
+   </property>
+  </action>
+  <action name="actReportChildrenSurgical">
+   <property name="text">
+    <string>Детский хирургический отчет</string>
+   </property>
+  </action>
+  <action name="actReportE15S">
+   <property name="text">
+    <string>Ан-з нагрузки на отд-е по плательщикам Э-&amp;15С (стац. виды помощи)</string>
+   </property>
+  </action>
+  <action name="actImportSPR18">
+   <property name="text">
+    <string>Импорт услуг из SP&amp;R18</string>
+   </property>
+  </action>
+  <action name="actImportSPR69">
+   <property name="text">
+    <string>Импорт настроек КСГ из  SPR6&amp;9</string>
+   </property>
+  </action>
+  <action name="actReportRegisterContracts">
+   <property name="text">
+    <string>Реестр договоров по месяцам/датам</string>
+   </property>
+  </action>
+  <action name="actReportActirovania">
+   <property name="text">
+    <string>Журнал актирования</string>
+   </property>
+  </action>
+  <action name="actAgeClassification">
+   <property name="text">
+    <string>Отчет по возрастам</string>
+   </property>
+  </action>
+  <action name="actReportTelefonogramm">
+   <property name="text">
+    <string>Журнал телефонограмм</string>
+   </property>
+  </action>
+  <action name="actReportAttachedClient">
+   <property name="text">
+    <string>Обслуженный контингент</string>
+   </property>
+  </action>
+  <action name="actReportControlMKB">
+   <property name="text">
+    <string>Контроль обращений по МКБ</string>
+   </property>
+  </action>
+  <action name="actReportPatientEntrance">
+   <property name="text">
+    <string>Поступление больных по тяжести состояния</string>
+   </property>
+  </action>
+  <action name="actReportMoving">
+   <property name="text">
+    <string>Сведения о движении больных (отделения и профили)</string>
+   </property>
+  </action>
+  <action name="actReportCompositionNewborn">
+   <property name="text">
+    <string>Состав новорожденных с заболеваниями</string>
+   </property>
+  </action>
+  <action name="actRBFormularies">
+   <property name="text">
+    <string>Лекарственные формуляры</string>
+   </property>
+  </action>
+  <action name="actImportFormularyDLO">
+   <property name="text">
+    <string>Импорт препаратов в формуляр (ДЛО)</string>
+   </property>
+  </action>
+  <action name="actRBDloFormularies">
+   <property name="text">
+    <string>Лекарственные формуляры ДЛО</string>
+   </property>
+  </action>
+  <action name="actRBMedicinesGroup">
+   <property name="text">
+    <string>Группы препаратов</string>
+   </property>
+  </action>
+  <action name="actRBMedicines">
+   <property name="text">
+    <string>Препараты для формуляров</string>
+   </property>
+  </action>
+  <action name="actReportFeedDistribution">
+   <property name="text">
+    <string>Раздаточная ведомость</string>
+   </property>
+  </action>
+  <action name="actImportSPR71">
+   <property name="text">
+    <string>Импорт услуг из SPR&amp;71</string>
+   </property>
+  </action>
+  <action name="actImportSPR72">
+   <property name="text">
+    <string>Импорт услуг из SPR7&amp;2</string>
+   </property>
+  </action>
+  <action name="actImportSPR73">
+   <property name="text">
+    <string>Импорт услуг из SPR7&amp;3</string>
+   </property>
+  </action>
+  <action name="actForma007Moving2015">
+   <property name="text">
+    <string>Листок учета (20&amp;15)</string>
+   </property>
+  </action>
+  <action name="actCheckAccounts">
+   <property name="text">
+    <string>Проверка счетов</string>
+   </property>
+  </action>
+  <action name="actImportSPR01">
+   <property name="text">
+    <string>Импорт МО из &amp;SPR01</string>
+   </property>
+  </action>
+  <action name="actWorkload">
+   <property name="text">
+    <string>Выработка</string>
+   </property>
+  </action>
+  <action name="actImportSPRSMO">
+   <property name="text">
+    <string>Импорт СМО</string>
+   </property>
+  </action>
+  <action name="actReportFE5P">
+   <property name="text">
+    <string>Анализ нагрузки на отд-е (Э-&amp;5П)</string>
+   </property>
+  </action>
+  <action name="actReportAccountService">
+   <property name="text">
+    <string>Сводный реестр услуг</string>
+   </property>
+  </action>
+  <action name="actReportDuplicateEvents">
+   <property name="text">
+    <string>Проверка законченных случаев по поликлинике</string>
+   </property>
+  </action>
+  <action name="actReportUnclosedEvents">
+   <property name="text">
+    <string>Незакрытые обращения</string>
+   </property>
+  </action>
+  <action name="actReportFE24S">
+   <property name="text">
+    <string>Ан-з нагрузки на отд-е по профилям коек Э-&amp;24С (стац. виды помощи)</string>
+   </property>
+  </action>
+  <action name="actReportFinanceSummary">
+   <property name="text">
+    <string>Финансовая сводка по врачам и ассистентам</string>
+   </property>
+  </action>
+  <action name="actExportAttachClient">
+   <property name="text">
+    <string>Экспорт приписанного населения по ФАПам (Краснодарский край)</string>
+   </property>
+  </action>
+  <action name="actReportPatientEntranceOrgStructure">
+   <property name="text">
+    <string>Поступление больных по отделениям</string>
+   </property>
+  </action>
+  <action name="actReportStandart">
+   <property name="text">
+    <string>Отчет по стандартам</string>
+   </property>
+  </action>
+  <action name="actReportExistingClients">
+   <property name="text">
+    <string>Отчет о продолжительности пребывания</string>
+   </property>
+   <property name="toolTip">
+    <string>Отчет о продолжительности пребывания</string>
+   </property>
+  </action>
+  <action name="actEconomicReports">
+   <property name="text">
+    <string>Экономический анализ (Краснодарский край)</string>
+   </property>
+  </action>
+  <action name="actStatReportDD2015_1000">
+   <property name="text">
+    <string>Сведения  о проведении диспансеризации взрослого населения  (таблица &amp;1000)</string>
+   </property>
+  </action>
+  <action name="actImportMKB">
+   <property name="text">
+    <string>Импорт МКБ из S&amp;PR20</string>
+   </property>
+  </action>
+  <action name="actStatReportDD2015_5000">
+   <property name="text">
+    <string>Сведения о выявленных заболеваниях (таблица &amp;5000)</string>
+   </property>
+  </action>
+  <action name="actStatReportDD2015_5001">
+   <property name="text">
+    <string>Сведения о впервые в жизни выявленных заболеваниях (таблица 5&amp;001)</string>
+   </property>
+  </action>
+  <action name="actStatReportDD2015_6000">
+   <property name="text">
+    <string>Сведения о выявленных в ходе диспансеризации подозрениях на заболевание (таблица &amp;6000)</string>
+   </property>
+  </action>
+  <action name="actStatReportDD2017_1000">
+   <property name="text">
+    <string>Сведения  о проведении диспансеризации взрослого населения  (таблица &amp;1000)</string>
+   </property>
+  </action>
+  <action name="actStatReportDD2017_2000">
+   <property name="text">
+    <string>Сведения о первом этапе диспансеризации (таблица &amp;2000)</string>
+   </property>
+  </action>
+  <action name="actStatReportDD2017_3000">
+   <property name="text">
+    <string>Сведения о втором этапе диспансеризации (таблица &amp;3000)</string>
+   </property>
+  </action>
+  <action name="actStatReportDD2017_4000">
+   <property name="text">
+    <string>Сведения о выявленных факторах риска (таблица &amp;4000)</string>
+   </property>
+   <property name="iconText">
+    <string>Сведения о выявленных факторах риска (таблица 4000)</string>
+   </property>
+  </action>
+  <action name="actStatReportDD2017_5000">
+   <property name="text">
+    <string>Сведения о выявленных заболеваниях (таблица &amp;5000)</string>
+   </property>
+  </action>
+  <action name="actStatReportDD2017_5001">
+   <property name="text">
+    <string>Сведения о впервые в жизни выявленных заболеваниях (таблица 5&amp;001)</string>
+   </property>
+  </action>
+  <action name="actStatReportDD2017_6000">
+   <property name="text">
+    <string>Сведения о выявленных в ходе диспансеризации подозрениях на заболевание (таблица &amp;6000)</string>
+   </property>
+  </action>
+  <action name="actStatReportDD2017_7000">
+   <property name="text">
+    <string>Общие результаты диспансеризации (таблица &amp;7000)</string>
+   </property>
+  </action>
+  <action name="actStatReportDD2015_2000">
+   <property name="text">
+    <string>Сведения о первом этапе диспансеризации (таблица &amp;2000)</string>
+   </property>
+  </action>
+  <action name="actStatReportDD2015_3000">
+   <property name="text">
+    <string>Сведения о втором этапе диспансеризации (таблица &amp;3000)</string>
+   </property>
+  </action>
+  <action name="actStatReportDD2015_4000">
+   <property name="text">
+    <string>Сведения о выявленных факторах риска (таблица &amp;4000)</string>
+   </property>
+   <property name="iconText">
+    <string>Сведения о выявленных факторах риска (таблица 4000)</string>
+   </property>
+  </action>
+  <action name="actControlEventResult">
+   <property name="text">
+    <string>Контроль исхода (результата) лечения и обращения</string>
+   </property>
+  </action>
+  <action name="actF030U">
+   <property name="text">
+    <string>Форма 030-Р/у</string>
+   </property>
+  </action>
+  <action name="actF030ru">
+   <property name="text">
+    <string>Форма &amp;030-Р/у (Сведения о ЛС)</string>
+   </property>
+  </action>
+  <action name="actControlHospBedProfile">
+   <property name="text">
+    <string>Контроль обращений по профилям коек</string>
+   </property>
+  </action>
+  <action name="actControlServiceSex">
+   <property name="text">
+    <string>Контроль услуг по полу пациента</string>
+   </property>
+  </action>
+  <action name="actReportExemptionRecipes">
+   <property name="text">
+    <string>Список льготных рецептов</string>
+   </property>
+  </action>
+  <action name="actImportR85ERZCentral">
+   <property name="text">
+    <string>Импорт из ЦС ЕРЗ (Крым)</string>
+   </property>
+  </action>
+  <action name="actReportRecommendations">
+   <property name="text">
+    <string>Отчет по направлениям</string>
+   </property>
+  </action>
+  <action name="actReportControlPaymentAmount">
+   <property name="text">
+    <string>Контроль суммы к оплате</string>
+   </property>
+  </action>
+  <action name="actStatReportDD2015_7000">
+   <property name="text">
+    <string>Общие результаты диспансеризации (таблица &amp;7000)</string>
+   </property>
+  </action>
+  <action name="actStatReportCVD">
+   <property name="text">
+    <string>Цереброваскулярные заболевания</string>
+   </property>
+  </action>
+  <action name="actExportAttachedClientsR23MIAC">
+   <property name="text">
+    <string>Экспорт приписанного населения в МИАЦ (Краснодарский край)</string>
+   </property>
+  </action>
+  <action name="actReportControlDischarge">
+   <property name="text">
+    <string>Контроль наличия действия &quot;Выписка&quot;</string>
+   </property>
+  </action>
+  <action name="ActReportBedFond">
+   <property name="text">
+    <string>Отчёт по коечному фонду</string>
+   </property>
+  </action>
+  <action name="actReportBedspacePEOForm1">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Форма &amp;1. Стационар</string>
+   </property>
+  </action>
+  <action name="actReportBedspacePEOForm2">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Форма &amp;2. Стационар-Операции</string>
+   </property>
+  </action>
+  <action name="actReportBedspacePEOForm3">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Форма &amp;3. Стационар-Реанимация (анестезиология)</string>
+   </property>
+  </action>
+  <action name="actReportBedspacePEOForm4">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Форма &amp;4. Амбулаторные услуги АКО</string>
+   </property>
+  </action>
+  <action name="actReportBedspacePEOForm5">
+   <property name="text">
+    <string>Форма &amp;5. Амбулаторные услуги. Приёмное отделение</string>
+   </property>
+  </action>
+  <action name="actReportStatMainIndicatorsLPU">
+   <property name="text">
+    <string>Раздел &amp;II. Основные показатели деятельности медицинских организаций по оказанию медицинской помощи в стационарных условиях</string>
+   </property>
+  </action>
+  <action name="actAmbMainIndicatorsLPU">
+   <property name="text">
+    <string>Раздел III. Основные показатели деятельности медицинских организаций по оказанию медицинской помощи в амбулаторных условиях (за исключением стоматологической помощи)</string>
+   </property>
+  </action>
+  <action name="actAStomMainIndicatorsLPU">
+   <property name="text">
+    <string>Раздел IV. Основные показатели деятельности медицинских организаций по оказанию стоматологической помощи в амбулаторных условиях</string>
+   </property>
+  </action>
+  <action name="actReportStatDsMainIndicatorsLPU">
+   <property name="text">
+    <string>Раздел &amp;V. Основные показатели деятельности медицинских организаций по оказанию медицинской помощи в условиях дневных стационаров</string>
+   </property>
+  </action>
+  <action name="actReportSalary_Service">
+   <property name="text">
+    <string>Отчёт по услуге</string>
+   </property>
+  </action>
+  <action name="actReportOperationsActivity">
+   <property name="text">
+    <string>Операционная активность</string>
+   </property>
+  </action>
+  <action name="actReportOperationsActivityByActions">
+   <property name="text">
+    <string>Сроки лечения и исходы при операциях</string>
+   </property>
+  </action>
+  <action name="actReportZNOEstablishedFirst">
+   <property name="text">
+    <string>ЗНО установлено впервые</string>
+   </property>
+  </action>
+  <action name="actImportSPR70">
+   <property name="text">
+    <string>Импорт комбинаций КСГ из SPR7&amp;0</string>
+   </property>
+  </action>
+  <action name="actImportSPR64">
+   <property name="text">
+    <string>Импорт ошибок из SPR&amp;64</string>
+   </property>
+  </action>
+  <action name="actImportMIS">
+   <property name="text">
+    <string>Импорт из МИАЦ (Краснодарский край)</string>
+   </property>
+  </action>
+  <action name="actReportSalary_Performer">
+   <property name="text">
+    <string>Отчёт по исполнителю</string>
+   </property>
+  </action>
+  <action name="actImportDLOMIAC">
+   <property name="text">
+    <string>Импорт внутренних кодов ДЛО МИАЦ (Краснодарский край)</string>
+   </property>
+  </action>
+  <action name="actReportSalary_Patient">
+   <property name="text">
+    <string>Отчёт по пациенту</string>
+   </property>
+  </action>
+  <action name="actSynchronizeDLOMIAC">
+   <property name="text">
+    <string>ДЛО</string>
+   </property>
+  </action>
+  <action name="actSynchronizeAttach">
+   <property name="text">
+    <string>Регистр прикреплённого населения</string>
+   </property>
+  </action>
+  <action name="actReportSalary_OrgStructure">
+   <property name="text">
+    <string>Отчёт по подразделению</string>
+   </property>
+  </action>
+  <action name="actReportOrgByOrganisation">
+   <property name="text">
+    <string>Анализ нагрузки на отделение по плательщикам
+</string>
+   </property>
+  </action>
+  <action name="actReportOrgByService">
+   <property name="text">
+    <string>Анализ нагрузки на отделение по услугам</string>
+   </property>
+  </action>
+  <action name="actReportOrgByDoctor">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Анализ нагрузки на врачей</string>
+   </property>
+  </action>
+  <action name="actReportOrgBySection">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Анализ нагрузки по профилям коек</string>
+   </property>
+  </action>
+  <action name="actReportCurePatients">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Отчет о пролеченных больных</string>
+   </property>
+  </action>
+  <action name="actReportAnalizeBillOnDirections">
+   <property name="text">
+    <string>Отчёт по направлениям для ЦЛиП</string>
+   </property>
+  </action>
+  <action name="actReportReceivedPatients">
+   <property name="text">
+    <string>Список поступивших пациентов</string>
+   </property>
+  </action>
+  <action name="actImportEISOMS_SMP">
+   <property name="text">
+    <string>Импорт СМП</string>
+   </property>
+  </action>
+  <action name="actNeurologicalAssistance">
+   <property name="text">
+    <string>Неврологический кабинет</string>
+   </property>
+  </action>
+  <action name="actReportVisitsByClientType">
+   <property name="text">
+    <string>По типу клиента</string>
+   </property>
+  </action>
+  <action name="actPsychologicalAssistance">
+   <property name="text">
+    <string>Психологическая помощь</string>
+   </property>
+  </action>
+  <action name="actLogopedicAssistance">
+   <property name="text">
+    <string>Логопедическая помощь</string>
+   </property>
+  </action>
+  <action name="actReportDeathBSK">
+   <property name="text">
+    <string>Показатели заболеваемости и смертности по БСК</string>
+   </property>
+  </action>
+  <action name="actFinanceSummaryByLoadOnDoctor">
+   <property name="text">
+    <string>Финансовая сводка по нагрузке на врача</string>
+   </property>
+   <property name="iconText">
+    <string>Финансовая сводка по нагрузке на врача</string>
+   </property>
+  </action>
+  <action name="actDailyServicesReport">
+   <property name="text">
+    <string>Ежедневный отчёт</string>
+   </property>
+  </action>
+  <action name="actReportUsageOfHospitalBeds">
+   <property name="text">
+    <string>Анализ использования коечного фонда с учетом плановых показателей</string>
+   </property>
+  </action>
+  <action name="actReportReceivedAndRefusalClients">
+   <property name="text">
+    <string>Журнал учета приема больных ф.&amp;001/у</string>
+   </property>
+  </action>
+  <action name="actReportF027Verification">
+   <property name="text">
+    <string>Проверка формы 0&amp;27</string>
+   </property>
+  </action>
+  <action name="actKSGReselect">
+   <property name="text">
+    <string>Перевыставить КСГ</string>
+   </property>
+  </action>
+  <action name="actReportLeavedMovedDead">
+   <property name="text">
+    <string>Отчёт по выписанным, переведённым и умершим пациентам (МСК Б36)</string>
+   </property>
+  </action>
+  <action name="actReportBedspaceUsage">
+   <property name="text">
+    <string>Коечный фонд и его использование (МСК Б&amp;36)</string>
+   </property>
+  </action>
+  <action name="actReportMovingRVC">
+   <property name="text">
+    <string>Оперативная сводка движения больных в РСЦ</string>
+   </property>
+  </action>
+  <action name="actReportMovingB36">
+   <property name="text">
+    <string>Оперативная сводка движения больных</string>
+   </property>
+  </action>
+  <action name="actReportMovingB36Monthly">
+   <property name="text">
+    <string>Учёт больных и коечного фонда ГКБ №36</string>
+   </property>
+  </action>
+  <action name="actReportStationaryF007">
+   <property name="text">
+    <string>Форма &amp;007/у-02</string>
+   </property>
+  </action>
+  <action name="actImportSPR15">
+   <property name="text">
+    <string>Импорт причин отказов из SPR&amp;15</string>
+   </property>
+  </action>
+  <action name="actDispatchingHospChannelReport">
+   <property name="text">
+    <string>Каналы госпитализации</string>
+   </property>
+  </action>
+  <action name="actDispatchingByOrgStructure">
+   <property name="text">
+    <string>По отделениям</string>
+   </property>
+  </action>
+  <action name="actDispatchingByHospChannels">
+   <property name="text">
+    <string>Каналы госпитализации</string>
+   </property>
+  </action>
+  <action name="actDispatchingForAdmin">
+   <property name="text">
+    <string>Сводка для администратора</string>
+   </property>
+  </action>
+  <action name="actDispatching3">
+   <property name="text">
+    <string>Диспетчерская</string>
+   </property>
+  </action>
+  <action name="actReportConstructor">
+   <property name="text">
+    <string>Конструктор отчётов</string>
+   </property>
+  </action>
+  <action name="actCleanIniFile">
+   <property name="text">
+    <string>Очистка &amp;INI файла</string>
+   </property>
+  </action>
+  <action name="actRBServiceCategory">
+   <property name="text">
+    <string>Категории услуг</string>
+   </property>
+  </action>
+  <action name="actReportFromLogger">
+   <property name="text">
+    <string>Отчет формирования отчетов</string>
+   </property>
+  </action>
+  <action name="actReportHospitalOnko">
+   <property name="text">
+    <string>Госпитализация онко</string>
+   </property>
+  </action>
+  <action name="actReportOnkoHospital">
+   <property name="text">
+    <string>Госпитализация амбулаторных пациентов</string>
+   </property>
+  </action>
+  <action name="actReportPrimaryEventsOnko">
+   <property name="text">
+    <string>Отчет для Выборгского центра</string>
+   </property>
+  </action>
+  <action name="actJobJournal">
+   <property name="text">
+    <string>Журнал процедурного кабинета</string>
+   </property>
+  </action>
+  <action name="actEventContractCheck">
+   <property name="text">
+    <string>Контроль договоров в обращениях</string>
+   </property>
+  </action>
+  <action name="actEventServicesCheck">
+   <property name="text">
+    <string>Контроль услуг и стандартов в обращениях</string>
+   </property>
+   <property name="visible">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actExposedServicesReport">
+   <property name="text">
+    <string>Отчет по выставленным услугам и расчету з/п</string>
+   </property>
+  </action>
+  <action name="actRBDeferredQueueStatus">
+   <property name="text">
+    <string>Статус</string>
+   </property>
+  </action>
+  <action name="actReportPrimarySecondaryOnko">
+   <property name="text">
+    <string>Отчет по первичности/повторности</string>
+   </property>
+  </action>
+  <action name="actRemoveServiceSpecification">
+   <property name="text">
+    <string>Исключить из Прейскуранта следующие услуги</string>
+   </property>
+  </action>
+  <action name="actAddServiceSpecification">
+   <property name="text">
+    <string>Внести в Прейскурант следующие услуги</string>
+   </property>
+  </action>
+  <action name="actChangeServiceSpecification">
+   <property name="text">
+    <string>Изменить наименование/стоимость следующих услуг</string>
+   </property>
+  </action>
+  <action name="actPopulationStructureDetailed">
+   <property name="text">
+    <string>Состав населения по участкам (детализированный)</string>
+   </property>
+  </action>
+  <action name="actReportPNDClientsRegistryByDisability">
+   <property name="text">
+    <string>Переосвидетельствование (по инвалидности)</string>
+   </property>
+  </action>
+  <action name="actStatReportF57New">
+   <property name="text">
+    <string>Ф.57 новая</string>
+   </property>
+  </action>
+  <action name="actStatReportF57Temporary">
+   <property name="text">
+    <string>Ф.57 временная</string>
+   </property>
+  </action>
+  <action name="actReportVIPClients">
+   <property name="text">
+    <string>Сводка по &amp;VIP-пациентам</string>
+   </property>
+  </action>
+  <action name="actReportVIPClientsDetalization">
+   <property name="text">
+    <string>Детализация по V&amp;IP-пациентам</string>
+   </property>
+  </action>
+  <action name="actWaitingListDiagnostic">
+   <property name="text">
+    <string>Лист ожидания (диагностика)</string>
+   </property>
+  </action>
+  <action name="actWaitingListConsultation">
+   <property name="text">
+    <string>Лист ожидания (консультации)</string>
+   </property>
+  </action>
+  <action name="actReportVerifiedAction">
+   <property name="text">
+    <string>Контроль услуг</string>
+   </property>
+  </action>
+  <action name="actNonPaidEvents">
+   <property name="text">
+    <string>Отчет по неоплаченным услугам</string>
+   </property>
+  </action>
+  <action name="actRecreateEvent">
+   <property name="text">
+    <string>Переставить обращений</string>
+   </property>
+  </action>
+  <action name="actRecreateEventCancel">
+   <property name="text">
+    <string>Отменить переставление обращений</string>
+   </property>
+  </action>
+  <action name="actSsmp">
+   <property name="text">
+    <string>ССМП</string>
+   </property>
+  </action>
+  <action name="actOldStyleServiceModifierRemake">
+   <property name="text">
+    <string>Исправить модификаторы услуг старого типа</string>
+   </property>
+  </action>
+  <action name="actReport2000">
+   <property name="text">
+    <string>Отчёт № &amp;2000</string>
+   </property>
+  </action>
+  <action name="actReport2100">
+   <property name="text">
+    <string>Отчёт № 2&amp;100</string>
+   </property>
+  </action>
+  <action name="actReport2101">
+   <property name="text">
+    <string>Отчёт № 21&amp;01</string>
+   </property>
+  </action>
+  <action name="actReport2110">
+   <property name="text">
+    <string>Отчёт № 2110</string>
+   </property>
+  </action>
+  <action name="actReport2120">
+   <property name="text">
+    <string>Отчёт № 2120</string>
+   </property>
+  </action>
+  <action name="actReport2150">
+   <property name="text">
+    <string>Отчёт № 21&amp;50</string>
+   </property>
+  </action>
+  <action name="actReport2180">
+   <property name="text">
+    <string>Отчёт № 21&amp;80</string>
+   </property>
+  </action>
+  <action name="actReport2181">
+   <property name="text">
+    <string>Отчёт № 2181</string>
+   </property>
+  </action>
+  <action name="actReport2190">
+   <property name="text">
+    <string>Отчёт № 2190</string>
+   </property>
+  </action>
+  <action name="actReport2200">
+   <property name="text">
+    <string>Отчёт № 2200</string>
+   </property>
+  </action>
+  <action name="actReport2600">
+   <property name="text">
+    <string>Отчёт № 2&amp;600</string>
+   </property>
+  </action>
+  <action name="actReport2900">
+   <property name="text">
+    <string>Отчёт № 2&amp;900</string>
+   </property>
+  </action>
+  <action name="actQueueControl">
+   <property name="text">
+    <string>Управление очередями</string>
+   </property>
+  </action>
+  <action name="actReportNonCash">
+   <property name="text">
+    <string>Безналичные договоры</string>
+   </property>
+  </action>
+  <action name="actReportNonCashDetails">
+   <property name="text">
+    <string>Финансы (безналичные договоры)</string>
+   </property>
+  </action>
+  <action name="actReportClinicalIssues">
+   <property name="text">
+    <string>Клинические исследования</string>
+   </property>
+  </action>
+  <action name="actReportClinicalIssuesDetails">
+   <property name="text">
+    <string>Финансы (клинические исследования)</string>
+   </property>
+  </action>
+  <action name="actArrivedDepartedClients">
+   <property name="text">
+    <string>Поступление и выписка пациентов (НИИ Петрова)</string>
+   </property>
+  </action>
+  <action name="actReportCurrentProtocol">
+   <property name="text">
+    <string>Конкретный протокол</string>
+   </property>
+  </action>
+  <action name="actExportIEMK">
+   <property name="text">
+    <string>Экспорт ИЭМК (Краснодарский край)</string>
+   </property>
+  </action>
+  <action name="actReportOnPaidServicesPZ12">
+   <property name="text">
+    <string>Отчет по платным услугам</string>
+   </property>
+  </action>
+  <action name="actReportOnEconomicCalcServicesPZ12">
+   <property name="text">
+    <string>Отчет по хоз. расч. услугам</string>
+   </property>
+  </action>
+  <action name="actClientInfoSource">
+   <property name="text">
+    <string>Отчет по источникам информации</string>
+   </property>
+  </action>
+  <action name="actF030_13U">
+   <property name="text">
+    <string>Ф030-13у</string>
+   </property>
+  </action>
+  <action name="actReportOperationProtocolB36">
+   <property name="text">
+    <string>Протоколы операции (МСК Б36)</string>
+   </property>
+  </action>
+  <action name="actUpdatesChecker">
+   <property name="text">
+    <string>Проверка апдейтов</string>
+   </property>
+  </action>
+  <action name="actClientExaminationPlan">
+   <property name="text">
+    <string>Диспансеризация и профилактические осмотры</string>
+   </property>
+  </action>
+  <action name="actRBAccountType">
+   <property name="text">
+    <string>Типы счетов</string>
+   </property>
+  </action>
+  <action name="actReportMSCH3Contingent">
+   <property name="text">
+    <string>Сведения о работе с контингентами (МСЧ 3)</string>
+   </property>
+  </action>
+  <action name="actReportMSCH3Outpatient">
+   <property name="text">
+    <string>Сведения по амбулаторным приемам  (МСЧ 3)</string>
+   </property>
+  </action>
+  <action name="actImportPACS">
+   <property name="text">
+    <string>Импорт ПАКС</string>
+   </property>
+  </action>
+  <action name="actReportTherapeuticClients">
+   <property name="text">
+    <string>Терапевтический отчет (список пациентов)</string>
+   </property>
+  </action>
+  <action name="actPharmacyStore">
+   <property name="text">
+    <string>Склад-Аптека</string>
+   </property>
+  </action>
+  <action name="actReportCancelationReason">
+   <property name="text">
+    <string>Отчет по причинам отказов в оказании услуг (предварительный)</string>
+   </property>
+  </action>
+  <action name="actClientDocumentsCheck">
+   <property name="text">
+    <string>Проверка документов, удостоверяющих личность</string>
+   </property>
+  </action>
+  <action name="actReportHospitalizationTransferReason">
+   <property name="text">
+    <string>Отчет по причинам переносов госпитализаций</string>
+   </property>
+  </action>
+  <action name="actLDES">
+   <property name="text">
+    <string>Обмен данными лабораторных исследований</string>
+   </property>
+  </action>
+  <action name="actionGo1">
+   <property name="text">
+    <string>О &amp;go1</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::TextHeuristicRole</enum>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>false</bool>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

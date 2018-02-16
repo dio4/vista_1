@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OrgEditorDialog</class>
+ <widget class="QDialog" name="OrgEditorDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>717</width>
+    <height>902</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ChangeMe!</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>false</bool>
+  </property>
+  <layout class="QGridLayout">
+   <property name="margin">
+    <number>4</number>
+   </property>
+   <property name="spacing">
+    <number>4</number>
+   </property>
+   <item row="1" column="0">
+    <widget class="QLabel" name="lblShortName">
+     <property name="text">
+      <string>&amp;Наименование</string>
+     </property>
+     <property name="buddy">
+      <cstring>edtShortName</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QLineEdit" name="edtTitle"/>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="lblTitle">
+     <property name="text">
+      <string>Наименование для печати</string>
+     </property>
+     <property name="buddy">
+      <cstring>edtTitle</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0" colspan="2">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QLineEdit" name="edtShortName"/>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="lblFullName">
+     <property name="text">
+      <string>&amp;Полное наименование</string>
+     </property>
+     <property name="buddy">
+      <cstring>edtFullName</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QLineEdit" name="edtFullName"/>
+   </item>
+   <item row="3" column="0" colspan="2">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tabBaseInfo">
+      <attribute name="title">
+       <string>Основная информация</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout">
+       <property name="margin">
+        <number>4</number>
+       </property>
+       <property name="spacing">
+        <number>4</number>
+       </property>
+       <item row="9" column="0">
+        <widget class="QLabel" name="lblChief">
+         <property name="text">
+          <string>Руководитель</string>
+         </property>
+         <property name="buddy">
+          <cstring>edtChief</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="lblINN">
+         <property name="text">
+          <string>ИНН</string>
+         </property>
+         <property name="buddy">
+          <cstring>edtINN</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="16" column="7">
+        <widget class="QLabel" name="lblCanOmitPolicyNumber">
+         <property name="text">
+          <string>Не требует ввода данных полиса:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="20" column="0">
+        <widget class="QLabel" name="lblNotes">
+         <property name="text">
+          <string>Примечания</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+         </property>
+         <property name="buddy">
+          <cstring>edtNotes</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="2">
+        <widget class="QLineEdit" name="edtOGRN">
+         <property name="inputMask">
+          <string>999999999999900; </string>
+         </property>
+        </widget>
+       </item>
+       <item row="12" column="5">
+        <widget class="QLabel" name="lblInfisCode">
+         <property name="toolTip">
+          <string>Код в тер.фонде</string>
+         </property>
+         <property name="text">
+          <string>ИНФИС</string>
+         </property>
+         <property name="scaledContents">
+          <bool>false</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="buddy">
+          <cstring>edtInfisCode</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="5">
+        <widget class="QLabel" name="lblOKATO">
+         <property name="text">
+          <string>ОКАТО</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="buddy">
+          <cstring>edtOKATO</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="19" column="6" colspan="5">
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="3" column="6" colspan="3">
+        <widget class="QLineEdit" name="edtOKATO">
+         <property name="inputMask">
+          <string>99999999999; </string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="5">
+        <widget class="QLabel" name="lblOKFS">
+         <property name="text">
+          <string>ОКФС</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="buddy">
+          <cstring>cmbOKFS</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>ФСС</string>
+         </property>
+        </widget>
+       </item>
+       <item row="16" column="2">
+        <widget class="QCheckBox" name="chkIsCompulsoryInsurer">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="text">
+          <string>ОМС</string>
+         </property>
+        </widget>
+       </item>
+       <item row="15" column="10">
+        <widget class="QCheckBox" name="chkVoluntaryServiceStop">
+         <property name="text">
+          <string>ДМС</string>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="2" colspan="9">
+        <widget class="QLineEdit" name="edtAccountant"/>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="lblKPP">
+         <property name="text">
+          <string>КПП</string>
+         </property>
+         <property name="buddy">
+          <cstring>edtKPP</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="15" column="7">
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Приостановить обслуживание: </string>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="0">
+        <widget class="QLabel" name="lblAccountant">
+         <property name="text">
+          <string>Гл.бухгалтер</string>
+         </property>
+         <property name="buddy">
+          <cstring>edtAccountant</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2" colspan="9">
+        <widget class="QLineEdit" name="edtAddress">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="16" column="9">
+        <widget class="QCheckBox" name="chkCanOmitPolicyNumber">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="15" column="9">
+        <widget class="QCheckBox" name="chkCompulsoryServiceStop">
+         <property name="text">
+          <string>ОМС</string>
+         </property>
+        </widget>
+       </item>
+       <item row="12" column="9" colspan="2">
+        <spacer>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>111</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="lblHead">
+         <property name="text">
+          <string>&amp;Головная организация</string>
+         </property>
+         <property name="buddy">
+          <cstring>cmbHead</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="13" column="2" colspan="9">
+        <widget class="QLineEdit" name="edtObsoleteInfisCode"/>
+       </item>
+       <item row="15" column="2">
+        <widget class="QCheckBox" name="chkIsInsurer">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="2" colspan="9">
+        <widget class="QLineEdit" name="edtPhone"/>
+       </item>
+       <item row="19" column="2" colspan="4">
+        <widget class="QComboBox" name="cmbIsMedical">
+         <item>
+          <property name="text">
+           <string>не определено</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>поликлиника</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>стационар</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>прочая мед.организация</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="12" column="6" colspan="3">
+        <widget class="QLineEdit" name="edtInfisCode">
+         <property name="toolTip">
+          <string>Код в тер.фонде</string>
+         </property>
+        </widget>
+       </item>
+       <item row="20" column="2" colspan="9">
+        <widget class="QTextEdit" name="edtNotes"/>
+       </item>
+       <item row="2" column="2" colspan="8">
+        <widget class="COrgComboBox" name="cmbHead">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="18" column="2" colspan="9">
+        <widget class="CKLADRComboBox" name="cmbArea">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="lblAddress">
+         <property name="text">
+          <string>Адрес</string>
+         </property>
+         <property name="buddy">
+          <cstring>edtAddress</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="6" colspan="5">
+        <widget class="CRBComboBox" name="cmbOKFS"/>
+       </item>
+       <item row="12" column="0">
+        <widget class="QLabel" name="lblNet">
+         <property name="text">
+          <string>&amp;Сеть</string>
+         </property>
+         <property name="buddy">
+          <cstring>cmbNet</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="14" column="2" colspan="4">
+        <widget class="QLineEdit" name="edtMiacCode"/>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="lblOGRN">
+         <property name="text">
+          <string>ОГРН</string>
+         </property>
+         <property name="buddy">
+          <cstring>edtOGRN</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="19" column="0">
+        <widget class="QLabel" name="lblIsHospital">
+         <property name="text">
+          <string>ЛПУ</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="9" colspan="2">
+        <spacer>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>111</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="6" column="6" colspan="3">
+        <widget class="QLineEdit" name="edtOKPO">
+         <property name="inputMask">
+          <string>99999999; </string>
+         </property>
+        </widget>
+       </item>
+       <item row="12" column="2">
+        <widget class="CRBComboBox" name="cmbNet"/>
+       </item>
+       <item row="7" column="0">
+        <widget class="QLabel" name="lblOKVED">
+         <property name="text">
+          <string>ОКВЭД</string>
+         </property>
+         <property name="buddy">
+          <cstring>edtOKVED</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="14" column="0">
+        <widget class="QLabel" name="lblMiacCode">
+         <property name="text">
+          <string>Код &amp;МИАЦ</string>
+         </property>
+         <property name="buddy">
+          <cstring>edtMiacCode</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="2" colspan="9">
+        <widget class="QLineEdit" name="edtChief"/>
+       </item>
+       <item row="17" column="2">
+        <widget class="QCheckBox" name="chkIsVoluntaryInsurer">
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="text">
+          <string>ДМС</string>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="0">
+        <widget class="QLabel" name="lblPhone">
+         <property name="text">
+          <string>Телефон</string>
+         </property>
+         <property name="buddy">
+          <cstring>edtPhone</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="2">
+        <widget class="QLineEdit" name="edtFSS">
+         <property name="inputMask">
+          <string>9999999999; </string>
+         </property>
+        </widget>
+       </item>
+       <item row="15" column="0">
+        <widget class="QLabel" name="lblIsInsurer">
+         <property name="text">
+          <string>Страховая компания</string>
+         </property>
+         <property name="buddy">
+          <cstring>chkIsInsurer</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="18" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Регион</string>
+         </property>
+         <property name="buddy">
+          <cstring>cmbArea</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="2">
+        <widget class="QLineEdit" name="edtOKVED"/>
+       </item>
+       <item row="6" column="5">
+        <widget class="QLabel" name="lblOKPO">
+         <property name="text">
+          <string>ОКПО</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="buddy">
+          <cstring>edtOKPO</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="5">
+        <widget class="QLabel" name="lblOKPF">
+         <property name="text">
+          <string>ОКПФ</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="buddy">
+          <cstring>cmbOKPF</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="9" colspan="2">
+        <spacer>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>111</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="15" column="4" colspan="2">
+        <spacer name="spacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Preferred</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="13" column="0">
+        <widget class="QLabel" name="lblObsoleteInfisCode">
+         <property name="text">
+          <string>Устаревший ИНФИС</string>
+         </property>
+         <property name="buddy">
+          <cstring>edtObsoleteInfisCode</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="2">
+        <widget class="QLineEdit" name="edtKPP">
+         <property name="inputMask">
+          <string>999999999; </string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="10">
+        <widget class="QToolButton" name="btnSelectHeadOrganisation">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="text">
+          <string>...</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="6" colspan="5">
+        <widget class="CRBComboBox" name="cmbOKPF"/>
+       </item>
+       <item row="4" column="2">
+        <widget class="QLineEdit" name="edtINN">
+         <property name="inputMask">
+          <string>999999999900; </string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="5">
+        <widget class="QLabel" name="lblNetricaCode">
+         <property name="text">
+          <string>Код Нетрики</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="6" colspan="5">
+        <widget class="QLineEdit" name="edtNetricaCode"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabAccounts">
+      <attribute name="title">
+       <string>Раcчетные счета</string>
+      </attribute>
+      <layout class="QGridLayout">
+       <property name="margin">
+        <number>4</number>
+       </property>
+       <property name="spacing">
+        <number>4</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="CInDocTableView" name="tblOrganisationAccounts"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabPolicySerials">
+      <attribute name="title">
+       <string>Серии полисов</string>
+      </attribute>
+      <layout class="QGridLayout">
+       <property name="margin">
+        <number>4</number>
+       </property>
+       <property name="spacing">
+        <number>4</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="CInDocTableView" name="tblOrganisationPolicySerials"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="4" margin="4"/>
+ <layoutfunction spacing="4" margin="4"/>
+ <customwidgets>
+  <customwidget>
+   <class>CRBComboBox</class>
+   <extends>QComboBox</extends>
+   <header>library/crbcombobox</header>
+  </customwidget>
+  <customwidget>
+   <class>CInDocTableView</class>
+   <extends>QTableView</extends>
+   <header>library/InDocTable.h</header>
+  </customwidget>
+  <customwidget>
+   <class>COrgComboBox</class>
+   <extends>QComboBox</extends>
+   <header>OrgComboBox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CKLADRComboBox</class>
+   <extends>QComboBox</extends>
+   <header>KLADR/kladrComboxes.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>edtFullName</tabstop>
+  <tabstop>edtShortName</tabstop>
+  <tabstop>edtTitle</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>edtAddress</tabstop>
+  <tabstop>cmbHead</tabstop>
+  <tabstop>btnSelectHeadOrganisation</tabstop>
+  <tabstop>edtOGRN</tabstop>
+  <tabstop>edtINN</tabstop>
+  <tabstop>edtKPP</tabstop>
+  <tabstop>edtFSS</tabstop>
+  <tabstop>edtOKVED</tabstop>
+  <tabstop>edtOKATO</tabstop>
+  <tabstop>cmbOKFS</tabstop>
+  <tabstop>edtOKPO</tabstop>
+  <tabstop>edtChief</tabstop>
+  <tabstop>edtAccountant</tabstop>
+  <tabstop>edtPhone</tabstop>
+  <tabstop>cmbNet</tabstop>
+  <tabstop>edtInfisCode</tabstop>
+  <tabstop>edtObsoleteInfisCode</tabstop>
+  <tabstop>edtMiacCode</tabstop>
+  <tabstop>chkIsInsurer</tabstop>
+  <tabstop>cmbArea</tabstop>
+  <tabstop>cmbIsMedical</tabstop>
+  <tabstop>edtNotes</tabstop>
+  <tabstop>tblOrganisationAccounts</tabstop>
+  <tabstop>tblOrganisationPolicySerials</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>chkIsInsurer</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>chkCompulsoryServiceStop</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>190</x>
+     <y>637</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>643</x>
+     <y>638</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkIsInsurer</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>chkVoluntaryServiceStop</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>190</x>
+     <y>637</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>704</x>
+     <y>638</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>OrgEditorDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>334</x>
+     <y>897</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>330</x>
+     <y>358</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>OrgEditorDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>334</x>
+     <y>897</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>330</x>
+     <y>358</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

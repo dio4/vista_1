@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EQSettingsWindow</class>
+ <widget class="QDialog" name="EQSettingsWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>590</width>
+    <height>307</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Менеджер электронной очереди</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tabControls">
+      <attribute name="title">
+       <string>Кнопки управления</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="5" column="2">
+        <widget class="QPushButton" name="btnStop">
+         <property name="text">
+          <string>Остановить</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QPushButton" name="btnStart">
+         <property name="text">
+          <string>Начать опрос
+кнопок</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="3">
+        <widget class="QPushButton" name="btnSaveControls">
+         <property name="text">
+          <string>Сохранить</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../../s11main.qrc">
+           <normaloff>:/new/prefix1/icons/saveToDB.png</normaloff>:/new/prefix1/icons/saveToDB.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="3">
+        <widget class="QPushButton" name="btnLoadControls">
+         <property name="text">
+          <string>Загрузить</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../../s11main.qrc">
+           <normaloff>:/new/prefix1/icons/loadFromDB.png</normaloff>:/new/prefix1/icons/loadFromDB.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="3">
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="1" column="3">
+        <widget class="QPushButton" name="btnRemoveControl">
+         <property name="text">
+          <string>Удалить</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../../s11main.qrc">
+           <normaloff>:/new/prefix1/icons/remove.png</normaloff>:/new/prefix1/icons/remove.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <widget class="QPushButton" name="btnAddControl">
+         <property name="text">
+          <string>Добавить</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../../s11main.qrc">
+           <normaloff>:/new/prefix1/icons/add.png</normaloff>:/new/prefix1/icons/add.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0" rowspan="5" colspan="3">
+        <widget class="QTableView" name="tblControls">
+         <property name="selectionBehavior">
+          <enum>QAbstractItemView::SelectRows</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QCheckBox" name="chkAutoStart">
+         <property name="text">
+          <string>Запускать опрос автоматически
+при запуске клиента</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabViewerSettings">
+      <attribute name="title">
+       <string>Отображение</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_5">
+       <item row="0" column="0" rowspan="5">
+        <widget class="QGroupBox" name="gbViewedQueueType">
+         <property name="title">
+          <string>Отображаемые очереди</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_4">
+          <item row="0" column="0" colspan="2">
+           <widget class="QTableView" name="tblViewedEQTypes">
+            <property name="selectionBehavior">
+             <enum>QAbstractItemView::SelectRows</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QComboBox" name="cmbAddedQueueType"/>
+          </item>
+          <item row="1" column="1">
+           <widget class="QPushButton" name="btnAddQueue">
+            <property name="text">
+             <string>Добавить</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0" colspan="2">
+           <widget class="QPushButton" name="btnRemoveQueue">
+            <property name="text">
+             <string>Удалить</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLabel" name="lblViewerUpdateTimeout">
+           <property name="text">
+            <string>Частота опроса БД</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDoubleSpinBox" name="dsbViewerUpdateTimeout">
+           <property name="minimum">
+            <double>0.050000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>0.100000000000000</double>
+           </property>
+           <property name="value">
+            <double>0.500000000000000</double>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="lblViewerUpdateTimeoutUnit">
+           <property name="text">
+            <string>сек.</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="2" column="1">
+        <widget class="QGroupBox" name="gbViewerAppearance">
+         <property name="title">
+          <string>Оформление</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_3">
+          <item row="0" column="0">
+           <widget class="QLabel" name="lblViwerRows">
+            <property name="text">
+             <string>строк:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QSpinBox" name="sbViewerRows">
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <number>10</number>
+            </property>
+            <property name="value">
+             <number>1</number>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2" colspan="2">
+           <widget class="QLabel" name="lblViewerColumns">
+            <property name="text">
+             <string>столбцов</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="4">
+           <widget class="QSpinBox" name="sbViewerColumns">
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <number>10</number>
+            </property>
+            <property name="value">
+             <number>1</number>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0" colspan="3">
+           <widget class="QLabel" name="lblViewerMaxTickets">
+            <property name="text">
+             <string>Элементов в очереди</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3" colspan="2">
+           <widget class="QSpinBox" name="sbViewerMaxTickets">
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <number>16</number>
+            </property>
+            <property name="value">
+             <number>6</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>63</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="4" column="1">
+        <widget class="QPushButton" name="btnShowViewer">
+         <property name="text">
+          <string>Начать отображение</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QLabel" name="lblNotifyPort">
+           <property name="text">
+            <string>Порт уведомлений:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="sbNotifyPort">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimum">
+            <number>1000</number>
+           </property>
+           <property name="maximum">
+            <number>99999</number>
+           </property>
+           <property name="value">
+            <number>4002</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>tblControls</tabstop>
+  <tabstop>btnAddControl</tabstop>
+  <tabstop>btnRemoveControl</tabstop>
+  <tabstop>btnLoadControls</tabstop>
+  <tabstop>btnSaveControls</tabstop>
+  <tabstop>btnStart</tabstop>
+  <tabstop>chkAutoStart</tabstop>
+  <tabstop>btnStop</tabstop>
+  <tabstop>tblViewedEQTypes</tabstop>
+  <tabstop>cmbAddedQueueType</tabstop>
+  <tabstop>btnAddQueue</tabstop>
+  <tabstop>btnRemoveQueue</tabstop>
+  <tabstop>dsbViewerUpdateTimeout</tabstop>
+  <tabstop>sbNotifyPort</tabstop>
+  <tabstop>sbViewerRows</tabstop>
+  <tabstop>sbViewerColumns</tabstop>
+  <tabstop>sbViewerMaxTickets</tabstop>
+  <tabstop>btnShowViewer</tabstop>
+  <tabstop>buttonBox</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../../s11main.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>EQSettingsWindow</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>277</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>263</x>
+     <y>-2</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>EQSettingsWindow</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>357</x>
+     <y>280</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>331</x>
+     <y>-2</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

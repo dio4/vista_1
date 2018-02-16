@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ReferralPage</class>
+ <widget class="QWidget" name="ReferralPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1265</width>
+    <height>795</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_5">
+   <item row="0" column="0">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tabReserved">
+      <attribute name="title">
+       <string>Новое направление</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="QTableView" name="tblRefType">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QScrollArea" name="scrollArea">
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>963</width>
+            <height>726</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_8">
+           <item row="0" column="0">
+            <widget class="QSplitter" name="splitter">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <widget class="QWidget" name="layoutWidget">
+              <layout class="QGridLayout" name="gridLayout_6" rowstretch="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
+               <item row="0" column="1">
+                <layout class="QGridLayout" name="gridLayout_3">
+                 <item row="0" column="1">
+                  <widget class="QPushButton" name="btnRefGenNumber">
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>Сформировать</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="0">
+                  <widget class="QLineEdit" name="edtRefNumber">
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item row="11" column="1">
+                <widget class="CICDCodeEditEx" name="edtRefMKB"/>
+               </item>
+               <item row="9" column="0">
+                <widget class="QLabel" name="lblRelegateMo">
+                 <property name="text">
+                  <string>Направлен в МО:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="13" column="0">
+                <widget class="QLabel" name="lblNotes">
+                 <property name="text">
+                  <string>Примечание:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="0">
+                <widget class="QLabel" name="lblRefBedProfile">
+                 <property name="text">
+                  <string>Профиль койки:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="1">
+                <widget class="QComboBox" name="cmbRefHospType">
+                 <item>
+                  <property name="text">
+                   <string>не задано</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Плановая</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Экстренная</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+               <item row="11" column="0">
+                <widget class="QLabel" name="lblRefMKB">
+                 <property name="text">
+                  <string>Диагноз:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="15" column="0">
+                <spacer name="verticalSpacer">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item row="10" column="1">
+                <widget class="CRBComboBox" name="cmbMedProfile"/>
+               </item>
+               <item row="12" column="0" colspan="2">
+                <widget class="QCheckBox" name="chkRefAgreement">
+                 <property name="text">
+                  <string>Согласие на превышение дней ожидания</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QLabel" name="lblPerson">
+                 <property name="text">
+                  <string>Врач:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="14" column="0" colspan="2">
+                <widget class="QTextEdit" name="edtNotes">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="1">
+                <widget class="CRBComboBox" name="cmbRefBedProfile"/>
+               </item>
+               <item row="3" column="1">
+                <widget class="CPersonComboBoxEx" name="cmbPerson"/>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLabel" name="lblRefNumber">
+                 <property name="text">
+                  <string>Номер направления:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="lblRefDate">
+                 <property name="text">
+                  <string>Дата направления:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <widget class="QLabel" name="lblRefHospType">
+                 <property name="text">
+                  <string>Тип госпитализации:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="lblRefPlanned">
+                 <property name="text">
+                  <string>Дата планируемой госпитализации:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="10" column="0">
+                <widget class="QLabel" name="lblMedProfile">
+                 <property name="text">
+                  <string>Специальность:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="1">
+                <layout class="QGridLayout" name="gridLayout_7">
+                 <item row="0" column="0">
+                  <widget class="COrgComboBox" name="cmbRelegateMO"/>
+                 </item>
+                 <item row="0" column="1">
+                  <widget class="QToolButton" name="btnOrgFilter">
+                   <property name="text">
+                    <string>...</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="2">
+                  <widget class="QPushButton" name="btnResetMo">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>60</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>Очистить</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item row="6" column="1">
+                <widget class="CRBComboBox" name="cmbOrgStructure"/>
+               </item>
+               <item row="6" column="0">
+                <widget class="QLabel" name="lblOrgStructureProfile">
+                 <property name="text">
+                  <string>Профиль отделения:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="7" column="1">
+                <widget class="QComboBox" name="cmbStatyonaryType">
+                 <item>
+                  <property name="text">
+                   <string>не задано</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Стационар</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Дневной стационар</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+               <item row="7" column="0">
+                <widget class="QLabel" name="lblStatyonaryType">
+                 <property name="text">
+                  <string>Тип стационара:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <layout class="QFormLayout" name="formLayout">
+                 <property name="fieldGrowthPolicy">
+                  <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+                 </property>
+                 <item row="0" column="0">
+                  <widget class="CDateEdit" name="dtRefPlaned"/>
+                 </item>
+                </layout>
+               </item>
+               <item row="8" column="0">
+                <widget class="QLabel" name="lblExamType">
+                 <property name="text">
+                  <string>Вид назначенного обследования:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="8" column="1">
+                <widget class="QComboBox" name="cmbExamType">
+                 <item>
+                  <property name="text">
+                   <string>не задано</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>инструментальная диагностика</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>методы лучевой диагностики</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="CDateEdit" name="dtRefDate">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>141</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QTableWidget" name="tblMoList">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+             </widget>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <property name="sizeConstraint">
+              <enum>QLayout::SetMaximumSize</enum>
+             </property>
+             <item>
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnAnotherLpu">
+               <property name="text">
+                <string>Запись в другое ЛПУ</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnGetMoList">
+               <property name="text">
+                <string>Запросить список МО</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnSendRef">
+               <property name="text">
+                <string>Отправить направление</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="history">
+      <attribute name="title">
+       <string>История</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="1" column="1">
+        <layout class="QGridLayout" name="gridLayout_4">
+         <item row="0" column="1">
+          <widget class="QPushButton" name="btnUpdateTable">
+           <property name="text">
+            <string>Обновить сведения таблицы</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QPushButton" name="btnUpdateStatuses">
+           <property name="text">
+            <string>Обновить статусы направлений </string>
+           </property>
+           <property name="checkable">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QPushButton" name="btnCancellation">
+           <property name="text">
+            <string>Аннулировать направление</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QPushButton" name="btnResultDocument">
+           <property name="text">
+            <string>Получить результирующий документ</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="4">
+          <widget class="QPushButton" name="btnEditReferral">
+           <property name="text">
+            <string>Редактировать направление</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="0" column="1">
+        <widget class="QScrollArea" name="scrollArea_2">
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents_2">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>1225</width>
+            <height>691</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <property name="margin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QTableView" name="tblHistory">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>200</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CRBComboBox</class>
+   <extends>QComboBox</extends>
+   <header>library/crbcombobox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CDateEdit</class>
+   <extends>QDateEdit</extends>
+   <header>library/DateEdit</header>
+  </customwidget>
+  <customwidget>
+   <class>CPersonComboBoxEx</class>
+   <extends>QComboBox</extends>
+   <header>Orgs/PersonComboBoxEx.h</header>
+  </customwidget>
+  <customwidget>
+   <class>COrgComboBox</class>
+   <extends>QComboBox</extends>
+   <header>Orgs/OrgComboBox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CICDCodeEditEx</class>
+   <extends>QComboBox</extends>
+   <header>library/ICDCodeEdit.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>edtRefNumber</tabstop>
+  <tabstop>btnRefGenNumber</tabstop>
+  <tabstop>dtRefDate</tabstop>
+  <tabstop>dtRefPlaned</tabstop>
+  <tabstop>cmbPerson</tabstop>
+  <tabstop>cmbRefHospType</tabstop>
+  <tabstop>cmbRefBedProfile</tabstop>
+  <tabstop>cmbOrgStructure</tabstop>
+  <tabstop>cmbStatyonaryType</tabstop>
+  <tabstop>cmbRelegateMO</tabstop>
+  <tabstop>btnOrgFilter</tabstop>
+  <tabstop>cmbMedProfile</tabstop>
+  <tabstop>edtRefMKB</tabstop>
+  <tabstop>chkRefAgreement</tabstop>
+  <tabstop>edtNotes</tabstop>
+  <tabstop>btnAnotherLpu</tabstop>
+  <tabstop>btnGetMoList</tabstop>
+  <tabstop>btnSendRef</tabstop>
+  <tabstop>btnResultDocument</tabstop>
+  <tabstop>btnUpdateTable</tabstop>
+  <tabstop>btnUpdateStatuses</tabstop>
+  <tabstop>btnCancellation</tabstop>
+  <tabstop>tblRefType</tabstop>
+  <tabstop>tblMoList</tabstop>
+  <tabstop>scrollArea</tabstop>
+  <tabstop>scrollArea_2</tabstop>
+  <tabstop>tblHistory</tabstop>
+  <tabstop>tabWidget</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

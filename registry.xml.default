@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Системная информация XML. -->
+<registry>
+    <!-- (1) Корневой элемент описания картотеки. -->
+    <query>
+        <!-- (1) элемент, описывающий запрос, по которому строится таблица для картотеки. -->
+        <select>
+            <!-- (1) элемент описания блока SELECT запроса (список полей). -->
+            <!-- (1+)  элемент описания конкретного поля (поле "Client.id AS clientId" добавляется автоматически). -->
+            <!-- Доступные атрибуты: -->
+            <!-- 	alias: (строка) Псевдоним поля (в запросе будет указано после "AS"). По умолчанию: равно выражению поля. -->
+            <!-- 	isColor: (true|1|false|0) Признак того, что поле задает цвет всей строки в отображении. Данная метка должна быть только у одного поля, иначе будет использована последняя. Поля с этой меткой скрыты по умолчанию. По умолчанию: false. -->
+            <!-- 	isHidden: (true|1|false|0) Признак того, что поле скрыто по умолчанию в отображении. По умолчанию: false. -->
+            <!-- 	displayName: (строка) Название поле, показываемое в "шапке" таблицы картотеки.-->
+            <!-- 	align: (l|r|c) Выравнивание данных в столбце (l = по левому краю, r - по правому краю, c - по центру. По умолчанию: с. -->
+            <field displayName="Ф.И.О" width="267" alias="fullName" align="l">
+                <!-- SQL-выражение, по которому формируется значение поля (все, что до "AS somAlias"). -->
+				CONCAT_WS(' ', Client.lastName, Client.firstName, Client.patrName) 
+			</field>
+            <field displayName="Пол" width="27" alias="sex" align="l">IF(Client.sex = 1, 'М', IF(Client.sex = 2, 'Ж', '-'))</field>
+            <field displayName="Дата\nрождения" width="107" alias="birthDate" align="l">DATE_FORMAT(Client.birthDate, '%d.%m.%Y')</field>
+            <field displayName="Возраст" width="80" alias="clientAge" align="l">age(Client.birthDate, CURRENT_DATE())</field>
+            <field displayName="Страховое" width="27" alias="SNILS" align="l">Client.SNILS</field>
+            <field displayName="Документ" width="100" alias="document">getClientDocument(Client.id)</field>
+            <field displayName="Вид наблюдения" width="100" alias="monitoring" align="l">
+				(SELECT IF(rbCMF.id, rbCMF.name, rbCMK.name) 
+				FROM ClientMonitoring 
+					LEFT JOIN rbClientMonitoringKind AS rbCMK ON rbCMK.id = ClientMonitoring.kind_id
+					LEFT JOIN rbClientMonitoringFrequence AS rbCMF ON rbCMF.id = ClientMonitoring.frequence_id 
+					WHERE ClientMonitoring.client_id = Client.id 
+					ORDER BY ClientMonitoring.setDate DESC 
+					LIMIT 1)
+			</field>
+            <field displayName="Инв.\nI гр." width="100" alias="disability1" align="l">
+				IF((Select CD.groupNumber FROM ClientDisability AS CD WHERE CD.client_id = Client.id ORDER BY CD.setDate DESC 
+				LIMIT 1) = 1, '*', '')
+			</field>
+            <field displayName="Инв.\nII гр." width="100" alias="disability2" align="l">
+				IF((Select CD.groupNumber FROM ClientDisability AS CD WHERE CD.client_id = Client.id ORDER BY CD.setDate DESC 
+				LIMIT 1) = 2, '*', '')
+			</field>
+            <field displayName="Инв.\nIII гр." width="100" alias="disability3" align="l">
+				IF((Select CD.groupNumber FROM ClientDisability AS CD WHERE CD.client_id = Client.id ORDER BY CD.setDate DESC 
+				LIMIT 1) = 3, '*', '')
+			</field>
+            <field displayName="Инв.\nпсих." width="100" alias="isNotSomatic" align="l">
+				IF((Select CD.isSomatic FROM ClientDisability AS CD WHERE CD.client_id = Client.id ORDER BY CD.setDate DESC 
+				LIMIT 1) = 0, '*', '')
+			</field>
+            <field displayName="Инв.\nсомат." width="100" alias="isSomatic" align="l">
+				IF((Select CD.isSomatic FROM ClientDisability AS CD WHERE CD.client_id = Client.id ORDER BY CD.setDate DESC 
+				LIMIT 1) = 1, '*', '')
+			</field>
+            <field displayName="Дата переосв." width="100" alias="recertificationDate" align="l">
+				DATE_FORMAT((Select CD.recertificationDate FROM ClientDisability AS CD WHERE CD.client_id = Client.id ORDER BY CD.setDate DESC LIMIT 1), '%d.%m.%Y')
+			</field>
+            <field displayName="Участок" width="100" alias="orgStructure" align="l">
+				(SELECT OrgStructure.name FROM
+					ClientAttach
+					INNER JOIN rbAttachType AS rbAT ON rbAT.id = ClientAttach.attachType_id
+					LEFT JOIN OrgStructure ON OrgStructure.id = ClientAttach.orgStructure_id
+					WHERE ClientAttach.client_id = Client.id AND rbAT.temporary = 0 AND rbAT.outcome = 0 
+					ORDER BY ClientAttach.begDate DESC 
+					LIMIT 1)
+			</field>
+            <field displayName="Цвет" width="100" alias="color" isColor="True">
+				IF((SELECT IF(rbCMF.id, rbCMF.name, rbCMK.name) 
+					FROM ClientMonitoring 
+						LEFT JOIN rbClientMonitoringKind AS rbCMK ON rbCMK.id = ClientMonitoring.kind_id
+						LEFT JOIN rbClientMonitoringFrequence AS rbCMF ON rbCMF.id = ClientMonitoring.frequence_id 
+					WHERE ClientMonitoring.client_id = Client.id 
+					ORDER BY ClientMonitoring.setDate DESC 
+					LIMIT 1) like '', 
+				'red', 
+				NULL)
+			</field>
+        </select>
+        <!-- (1) элемент описания блока FROM запроса (таблица Client (обязательно и без псевдонима) и, при необходимости, нужные ей джойны). -->
+        <from>
+			Client
+		</from>
+        <!-- (0-1) элемент описания блока WHERE запроса (все ограничения выборки, которые будут ВСЕГДА участвовать в запросе независимо от выбранных в интерфейсе фильтров). -->
+        <where>
+			(Client.`deleted`=0)
+			  AND (NOT EXISTS
+					 (SELECT ClientAttach.id
+					  FROM ClientAttach
+					  INNER JOIN rbAttachType ON rbAttachType.id = ClientAttach.attachType_id
+					  WHERE rbAttachType.outcome != 0
+						AND ClientAttach.client_id=Client.id
+						AND NOT YEAR(ClientAttach.begDate)=YEAR(CURRENT_DATE) ))
+		</where>
+        <!-- (0-1) элемент описания блока ORDER BY запроса (список полей для сортировки). -->
+        <order>
+			Client.`lastName`,
+			Client.`firstName`,
+			Client.`patrName`,
+			Client.`birthDate`,
+			Client.`id`
+		</order>
+    </query>
+    <!-- (0-1) элемент описания списка доступных фильтров -->
+    <filterItemList>
+        <!-- (1+) элемент описания конкретного фильтра -->
+        <!-- Доступные атрибуты: -->
+        <!-- 	caption: (строка) Отображаемое имя фильтра. По умолчанию "<Произвольный фильтр>" -->
+        <filterItem caption="Возраст пациента">
+            <!-- (1) элемент описания типа значений, с которыми работает фильтр. -->
+            <!-- Доступные атрибуты: -->
+            <!-- 	name: (str|string|int|double|float|date|datetime|time|rb) Имя типа. По умолчанию: "str" -->
+            <valueTypeInfo name="int">
+                <!-- (0-1) элемент описания префикса значения (левый обрамляющий символ(-ы)), который подставится в запрос перед введенным пользователем значением. Обычно используется, если в запросе необходимо окружить значение, например, ковычками. -->
+                <leftFrameMark>'</leftFrameMark>
+                <!-- (0-1) элемент описания суффикса значения (правый обрамляющий символ(-ы)), который подставится в запрос после введенным пользователем значением. -->
+                <rightFrameMark>'</rightFrameMark>
+            </valueTypeInfo>
+            <!-- (1) выражение фильтра, которое будет подставленно в блок WHERE запроса, если пользователь укажет значение для этого фильтра. В выражении необходимо поставить элементы <op /> и <val />, определяющее положение выражения оператора и значения (списка значений) в выражении фильтра соответственно. -->
+            <expression>age(Client.birthDate, CURRENT_DATE()) <op/>
+                <val/>
+            </expression>
+            <!-- (1) элемент описания списка операторов текущего фильтра. -->
+            <operatorList>
+                <!-- (1+) элемент описания конкретного оператора текущего фильтра. -->
+                <!-- Доступные атрибуты: -->
+                <!-- 	caption: (строка) Отображаемое имя оператора. -->
+                <operator caption="в интервале">
+                    <!-- (1) элемент описания количества значений, которое фильтр потребует от пользователя при выборе текущего оператора. Доступны варианты: любое положительное число, "*". По умолчанию: 0 -->
+                    <valueCount>2</valueCount>
+                    <!-- (0-1) элемент описания выражения, которым будет разделен список полученных от пользователя значений. при формировании запроса -->
+                    <!-- Доступные атрибуты: -->
+                    <!-- 	caption: (строка) Отоброжаемое пользователю, понятное человеку, строковое выражение, разделяющее введенные им значения. -->
+                    <valuesSeparator caption=" до "> AND </valuesSeparator>
+                    <!-- (0-1) элемент описания левого и правого граничных выражений для списка значений, которое фильтр получит от пользователя. Перед подстановкой в запрос список значений от пользователя будут помещены между этими выражениями. -->
+                    <!-- Доступные атрибуты: -->
+                    <!-- 	left: (строка) левое обрамляющее выражение, подставляемое в запрос. По умолчанию: пустая строка. -->
+                    <!-- 	right: (строка) правое обрамляющее выражение, подставляемое в запрос. По умолчанию: пустая строка. -->
+                    <!-- 	leftCaption: (строка) отображаемое пользователю левое обрамляющее выражение. По умолчанию: пустая строка. -->
+                    <!-- 	right: (строка) отображаемое пользователю правое обрамляющее выражение. По умолчанию: пустая строка. -->
+                    <!-- Например, для оператора "принадлежит списку" может быть равно left="(" right=")" -->
+                    <valueListFrameMarks right="" left="" leftCaption=" от " rightCaption=""/>
+                    <!-- (1) элемент описания выражения текущего оператора, которое будет подставленно в вфражение фильтра в то место, которое задано элементом <op /> -->
+                    <expression>BETWEEN</expression>
+                </operator>
+                <operator caption="в списке">
+                    <valueCount>*</valueCount>
+                    <valuesSeparator caption=",">,</valuesSeparator>
+                    <valueListFrameMarks right=")" left="(" leftCaption="(" rightCaption=")"/>
+                    <expression>IN</expression>
+                </operator>
+                <operator caption="равен">
+                    <valueCount>1</valueCount>
+                    <expression>=</expression>
+                </operator>
+                <operator caption="меньше">
+                    <valueCount>1</valueCount>
+                    <expression>&lt;</expression>
+                </operator>
+                <operator caption="больше">
+                    <valueCount>1</valueCount>
+                    <expression>></expression>
+                </operator>
+            </operatorList>
+        </filterItem>
+        <filterItem caption="Фамилия">
+            <valueTypeInfo name="str">
+                <leftFrameMark>'%</leftFrameMark>
+                <rightFrameMark>%'</rightFrameMark>
+            </valueTypeInfo>
+            <operatorList>
+                <operator caption="содержит">
+                    <valueCount>1</valueCount>
+                    <expression>LIKE</expression>
+                </operator>
+            </operatorList>
+            <expression>Client.lastName <op/>
+                <val/>
+            </expression>
+        </filterItem>
+    </filterItemList>
+    <!-- (0-1) элемент описания списка доступных фильтров вида "галочка", отображаемых в картотеке под таблицей. -->
+    <generalCheckFilterList>
+        <!-- (0-1) элемент описания конкретного фильтра вида "галочка". Задает выражение, которое будет подставленно в блок WHERE запроса, если пользователь поставит "галочку" в этом фильтре. -->
+        <!-- Доступные атрибуты: -->
+        <!-- 	caption: (строка) Отоброжаемое пользователю имя фильтра. -->
+        <generalCheckFilter caption="Без вида учета">(SELECT IF(rbCMF.id, rbCMF.name, rbCMK.name) 
+				FROM ClientMonitoring 
+					LEFT JOIN rbClientMonitoringKind AS rbCMK ON rbCMK.id = ClientMonitoring.kind_id
+					LEFT JOIN rbClientMonitoringFrequence AS rbCMF ON rbCMF.id = ClientMonitoring.frequence_id 
+					WHERE ClientMonitoring.client_id = Client.id ORDER BY ClientMonitoring.setDate DESC LIMIT 1) like ''</generalCheckFilter>
+    </generalCheckFilterList>
+</registry>

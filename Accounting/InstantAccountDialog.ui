@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>InstantAccountDialog</class>
+ <widget class="QDialog" name="InstantAccountDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>717</width>
+    <height>386</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Счёт</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>4</number>
+   </property>
+   <property name="margin">
+    <number>4</number>
+   </property>
+   <item>
+    <widget class="QWidget" name="widget" native="true">
+     <layout class="QGridLayout" name="gridLayout">
+      <property name="margin">
+       <number>0</number>
+      </property>
+      <property name="spacing">
+       <number>4</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QSplitter" name="splitter">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="childrenCollapsible">
+         <bool>false</bool>
+        </property>
+        <widget class="CTableView" name="tblAccounts"/>
+        <widget class="CTableView" name="tblAccountItems"/>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupAccount">
+     <property name="title">
+      <string>Итого по счету</string>
+     </property>
+     <layout class="QHBoxLayout">
+      <property name="spacing">
+       <number>4</number>
+      </property>
+      <property name="margin">
+       <number>4</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="lblAccountItemsCount">
+        <property name="text">
+         <string>Позиций</string>
+        </property>
+        <property name="buddy">
+         <cstring>edtAccountItemsCount</cstring>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="edtAccountItemsCount">
+        <property name="alignment">
+         <set>Qt::AlignRight</set>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="lblAccountSum">
+        <property name="text">
+         <string>Выставлено</string>
+        </property>
+        <property name="buddy">
+         <cstring>edtAccountItemsSum</cstring>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="edtAccountItemsSum">
+        <property name="alignment">
+         <set>Qt::AlignRight</set>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="lblAccountPayed">
+        <property name="text">
+         <string>Оплата</string>
+        </property>
+        <property name="buddy">
+         <cstring>edtAccountItemsPayed</cstring>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="edtAccountItemsPayed">
+        <property name="alignment">
+         <set>Qt::AlignRight</set>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="lblAccountRejected">
+        <property name="text">
+         <string>Отказ</string>
+        </property>
+        <property name="buddy">
+         <cstring>edtAccountItemsRefused</cstring>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="edtAccountItemsRefused">
+        <property name="alignment">
+         <set>Qt::AlignRight</set>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="btnECashRegister">
+       <property name="text">
+        <string>Касса</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDialogButtonBox" name="buttonBox">
+       <property name="standardButtons">
+        <set>QDialogButtonBox::Close</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CTableView</class>
+   <extends>QTableView</extends>
+   <header>library/TableView.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>tblAccounts</tabstop>
+  <tabstop>tblAccountItems</tabstop>
+  <tabstop>edtAccountItemsCount</tabstop>
+  <tabstop>edtAccountItemsSum</tabstop>
+  <tabstop>edtAccountItemsPayed</tabstop>
+  <tabstop>edtAccountItemsRefused</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>InstantAccountDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>650</x>
+     <y>375</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>716</x>
+     <y>369</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,859 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="RecipeRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clientId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecipeRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecipeRequestResult" type="tns:ArrayOfRecipe" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfRecipe">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Recipe" nillable="true" type="tns:Recipe" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Recipe">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Seria" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Number" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Fio" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="UnifyId" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="UnifyName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="UnifyCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="TradeName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="NonproprietaryName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Dosage" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CureForm" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CureFormId" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Quantity" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="QuantityElements" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="PackageSize" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="Denominator" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="Credit" type="s:decimal" />
+              <s:element minOccurs="0" maxOccurs="1" name="IdLotGlobal" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ExpirationDate" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="AllowRecipeReserveMultiSupplier" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="AllowRecipeReserveMultiGoscontract" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="Invalid" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="RecipeReserveInfos" type="tns:ArrayOfRecipeReserveInfo" />
+              <s:element minOccurs="0" maxOccurs="1" name="MnnItems" type="tns:ArrayOfMnnItem" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Entity" abstract="true" />
+      <s:complexType name="MnnItem">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Seria" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Number" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Id" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MnnId" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MnnName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="NameLat" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Note" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="RecipeReserveInfo">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Seria" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Number" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ProgramId" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ProgramName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractId" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractNumber" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractName" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfRecipeReserveInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RecipeReserveInfo" nillable="true" type="tns:RecipeReserveInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfMnnItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MnnItem" nillable="true" type="tns:MnnItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RecipeRequestRepeat">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clientId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecipeRequestRepeatResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecipeRequestRepeatResult" type="tns:ArrayOfRecipe" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecipeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clientId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="recipes" type="tns:ArrayOfRecipeResponseInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfRecipeResponseInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RecipeResponseInfo" nillable="true" type="tns:RecipeResponseInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RecipeResponseInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Id" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UnifyId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContractorId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SupplierId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IdGosContract" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IdGosContractGoods" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IdChequeItemGlobal" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IdLotGlobal" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RetailPrice" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Quantity" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="SaleDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChequeDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Denominator" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Note" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RecipeResponseResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="RecipeFind">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clientId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="seria" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="number" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="saleDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecipeFindResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecipeFindResult" type="tns:Recipe" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecipeCheck">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clientId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="recipeInfo" type="tns:RecipeResponseInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecipeCheckResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecipeCheckResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecipeEditCheck">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clientId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="recipeInfo" type="tns:RecipeResponseInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecipeEditCheckResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecipeEditCheckResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecipeDelay">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clientId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="seria" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="number" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="incomeDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecipeDelayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecipeDelayResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecipeClientSave">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clientId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="recipe" type="tns:RecipeClient" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RecipeClient">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Seria" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Number" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Snils" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="PatientFound" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="LpuOgrn" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="LpuFoms" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="LpuFound" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="DoctorCode" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="DoctorFound" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="MkbCode" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="MkbFound" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="FundingSourceCode" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="FundingSourceFound" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="NosologyCode" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="NosologyFound" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="PrivilegeCode" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="ProgramFound" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="ValidPeriodCode" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="ValidPeriodFound" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="PayPercent" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="PayPercentFound" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsTrn" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="TrnCode" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="TrnFound" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="MnnCode" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="MnnFound" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="CureformCode" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="CureformFound" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="UnitCode" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="UnitFound" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsVk" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="Dosage" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Quantity" type="s:decimal" />
+              <s:element minOccurs="0" maxOccurs="1" name="SaleDate" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="IssueDate" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="ExpirationDate" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="RecipeCheck" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Uploaded" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsAnnulled" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="CauseOfAnnulment" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CauseOfAnnulmentFound" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="RecipeClientSaveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecipeClientSaveResult" type="tns:RecipeClient" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecipesClientSave">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clientId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="recipes" type="tns:ArrayOfRecipeClient" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfRecipeClient">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RecipeClient" nillable="true" type="tns:RecipeClient" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RecipesClientSaveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecipesClientSaveResult" type="tns:ArrayOfRecipeClient" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecipeReestrRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clientId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecipeReestrRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecipeReestrRequestResult" type="tns:ArrayOfRecipeReestr" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfRecipeReestr">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RecipeReestr" nillable="true" type="tns:RecipeReestr" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RecipeReestr">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ReestrGuid" type="s1:guid" />
+              <s:element minOccurs="0" maxOccurs="1" name="ReestrItemGuid" type="s1:guid" />
+              <s:element minOccurs="0" maxOccurs="1" name="ReestrItemDetailGuid" type="s1:guid" />
+              <s:element minOccurs="0" maxOccurs="1" name="IdChequeItemGlobal" type="s1:guid" />
+              <s:element minOccurs="0" maxOccurs="1" name="ReestrDate" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="ReestrNumber" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ReestrState" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ReestrItemDetailState" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Deleted" type="s:dateTime" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="ArrayOfRecipe" nillable="true" type="tns:ArrayOfRecipe" />
+      <s:element name="Recipe" nillable="true" type="tns:Recipe" />
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="ArrayOfRecipeReestr" nillable="true" type="tns:ArrayOfRecipeReestr" />
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="RecipeRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:RecipeRequest" />
+  </wsdl:message>
+  <wsdl:message name="RecipeRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:RecipeRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecipeRequestRepeatSoapIn">
+    <wsdl:part name="parameters" element="tns:RecipeRequestRepeat" />
+  </wsdl:message>
+  <wsdl:message name="RecipeRequestRepeatSoapOut">
+    <wsdl:part name="parameters" element="tns:RecipeRequestRepeatResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecipeResponseSoapIn">
+    <wsdl:part name="parameters" element="tns:RecipeResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecipeResponseSoapOut">
+    <wsdl:part name="parameters" element="tns:RecipeResponseResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecipeFindSoapIn">
+    <wsdl:part name="parameters" element="tns:RecipeFind" />
+  </wsdl:message>
+  <wsdl:message name="RecipeFindSoapOut">
+    <wsdl:part name="parameters" element="tns:RecipeFindResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecipeCheckSoapIn">
+    <wsdl:part name="parameters" element="tns:RecipeCheck" />
+  </wsdl:message>
+  <wsdl:message name="RecipeCheckSoapOut">
+    <wsdl:part name="parameters" element="tns:RecipeCheckResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecipeEditCheckSoapIn">
+    <wsdl:part name="parameters" element="tns:RecipeEditCheck" />
+  </wsdl:message>
+  <wsdl:message name="RecipeEditCheckSoapOut">
+    <wsdl:part name="parameters" element="tns:RecipeEditCheckResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecipeDelaySoapIn">
+    <wsdl:part name="parameters" element="tns:RecipeDelay" />
+  </wsdl:message>
+  <wsdl:message name="RecipeDelaySoapOut">
+    <wsdl:part name="parameters" element="tns:RecipeDelayResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecipeClientSaveSoapIn">
+    <wsdl:part name="parameters" element="tns:RecipeClientSave" />
+  </wsdl:message>
+  <wsdl:message name="RecipeClientSaveSoapOut">
+    <wsdl:part name="parameters" element="tns:RecipeClientSaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecipesClientSaveSoapIn">
+    <wsdl:part name="parameters" element="tns:RecipesClientSave" />
+  </wsdl:message>
+  <wsdl:message name="RecipesClientSaveSoapOut">
+    <wsdl:part name="parameters" element="tns:RecipesClientSaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecipeReestrRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:RecipeReestrRequest" />
+  </wsdl:message>
+  <wsdl:message name="RecipeReestrRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:RecipeReestrRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecipeRequestHttpGetIn">
+    <wsdl:part name="clientId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RecipeRequestHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfRecipe" />
+  </wsdl:message>
+  <wsdl:message name="RecipeRequestRepeatHttpGetIn">
+    <wsdl:part name="clientId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RecipeRequestRepeatHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfRecipe" />
+  </wsdl:message>
+  <wsdl:message name="RecipeFindHttpGetIn">
+    <wsdl:part name="clientId" type="s:string" />
+    <wsdl:part name="seria" type="s:string" />
+    <wsdl:part name="number" type="s:string" />
+    <wsdl:part name="saleDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RecipeFindHttpGetOut">
+    <wsdl:part name="Body" element="tns:Recipe" />
+  </wsdl:message>
+  <wsdl:message name="RecipeDelayHttpGetIn">
+    <wsdl:part name="clientId" type="s:string" />
+    <wsdl:part name="seria" type="s:string" />
+    <wsdl:part name="number" type="s:string" />
+    <wsdl:part name="incomeDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RecipeDelayHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="RecipeReestrRequestHttpGetIn">
+    <wsdl:part name="clientId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RecipeReestrRequestHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfRecipeReestr" />
+  </wsdl:message>
+  <wsdl:message name="RecipeRequestHttpPostIn">
+    <wsdl:part name="clientId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RecipeRequestHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfRecipe" />
+  </wsdl:message>
+  <wsdl:message name="RecipeRequestRepeatHttpPostIn">
+    <wsdl:part name="clientId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RecipeRequestRepeatHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfRecipe" />
+  </wsdl:message>
+  <wsdl:message name="RecipeFindHttpPostIn">
+    <wsdl:part name="clientId" type="s:string" />
+    <wsdl:part name="seria" type="s:string" />
+    <wsdl:part name="number" type="s:string" />
+    <wsdl:part name="saleDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RecipeFindHttpPostOut">
+    <wsdl:part name="Body" element="tns:Recipe" />
+  </wsdl:message>
+  <wsdl:message name="RecipeDelayHttpPostIn">
+    <wsdl:part name="clientId" type="s:string" />
+    <wsdl:part name="seria" type="s:string" />
+    <wsdl:part name="number" type="s:string" />
+    <wsdl:part name="incomeDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RecipeDelayHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="RecipeReestrRequestHttpPostIn">
+    <wsdl:part name="clientId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RecipeReestrRequestHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfRecipeReestr" />
+  </wsdl:message>
+  <wsdl:portType name="RecipeServiceSoap">
+    <wsdl:operation name="RecipeRequest">
+      <wsdl:input message="tns:RecipeRequestSoapIn" />
+      <wsdl:output message="tns:RecipeRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecipeRequestRepeat">
+      <wsdl:input message="tns:RecipeRequestRepeatSoapIn" />
+      <wsdl:output message="tns:RecipeRequestRepeatSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecipeResponse">
+      <wsdl:input message="tns:RecipeResponseSoapIn" />
+      <wsdl:output message="tns:RecipeResponseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecipeFind">
+      <wsdl:input message="tns:RecipeFindSoapIn" />
+      <wsdl:output message="tns:RecipeFindSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecipeCheck">
+      <wsdl:input message="tns:RecipeCheckSoapIn" />
+      <wsdl:output message="tns:RecipeCheckSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecipeEditCheck">
+      <wsdl:input message="tns:RecipeEditCheckSoapIn" />
+      <wsdl:output message="tns:RecipeEditCheckSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecipeDelay">
+      <wsdl:input message="tns:RecipeDelaySoapIn" />
+      <wsdl:output message="tns:RecipeDelaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecipeClientSave">
+      <wsdl:input message="tns:RecipeClientSaveSoapIn" />
+      <wsdl:output message="tns:RecipeClientSaveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecipesClientSave">
+      <wsdl:input message="tns:RecipesClientSaveSoapIn" />
+      <wsdl:output message="tns:RecipesClientSaveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecipeReestrRequest">
+      <wsdl:input message="tns:RecipeReestrRequestSoapIn" />
+      <wsdl:output message="tns:RecipeReestrRequestSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="RecipeServiceHttpGet">
+    <wsdl:operation name="RecipeRequest">
+      <wsdl:input message="tns:RecipeRequestHttpGetIn" />
+      <wsdl:output message="tns:RecipeRequestHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecipeRequestRepeat">
+      <wsdl:input message="tns:RecipeRequestRepeatHttpGetIn" />
+      <wsdl:output message="tns:RecipeRequestRepeatHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecipeFind">
+      <wsdl:input message="tns:RecipeFindHttpGetIn" />
+      <wsdl:output message="tns:RecipeFindHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecipeDelay">
+      <wsdl:input message="tns:RecipeDelayHttpGetIn" />
+      <wsdl:output message="tns:RecipeDelayHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecipeReestrRequest">
+      <wsdl:input message="tns:RecipeReestrRequestHttpGetIn" />
+      <wsdl:output message="tns:RecipeReestrRequestHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="RecipeServiceHttpPost">
+    <wsdl:operation name="RecipeRequest">
+      <wsdl:input message="tns:RecipeRequestHttpPostIn" />
+      <wsdl:output message="tns:RecipeRequestHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecipeRequestRepeat">
+      <wsdl:input message="tns:RecipeRequestRepeatHttpPostIn" />
+      <wsdl:output message="tns:RecipeRequestRepeatHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecipeFind">
+      <wsdl:input message="tns:RecipeFindHttpPostIn" />
+      <wsdl:output message="tns:RecipeFindHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecipeDelay">
+      <wsdl:input message="tns:RecipeDelayHttpPostIn" />
+      <wsdl:output message="tns:RecipeDelayHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecipeReestrRequest">
+      <wsdl:input message="tns:RecipeReestrRequestHttpPostIn" />
+      <wsdl:output message="tns:RecipeReestrRequestHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RecipeServiceSoap" type="tns:RecipeServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RecipeRequest">
+      <soap:operation soapAction="http://tempuri.org/RecipeRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecipeRequestRepeat">
+      <soap:operation soapAction="http://tempuri.org/RecipeRequestRepeat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecipeResponse">
+      <soap:operation soapAction="http://tempuri.org/RecipeResponse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecipeFind">
+      <soap:operation soapAction="http://tempuri.org/RecipeFind" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecipeCheck">
+      <soap:operation soapAction="http://tempuri.org/RecipeCheck" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecipeEditCheck">
+      <soap:operation soapAction="http://tempuri.org/RecipeEditCheck" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecipeDelay">
+      <soap:operation soapAction="http://tempuri.org/RecipeDelay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecipeClientSave">
+      <soap:operation soapAction="http://tempuri.org/RecipeClientSave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecipesClientSave">
+      <soap:operation soapAction="http://tempuri.org/RecipesClientSave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecipeReestrRequest">
+      <soap:operation soapAction="http://tempuri.org/RecipeReestrRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="RecipeServiceSoap12" type="tns:RecipeServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RecipeRequest">
+      <soap12:operation soapAction="http://tempuri.org/RecipeRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecipeRequestRepeat">
+      <soap12:operation soapAction="http://tempuri.org/RecipeRequestRepeat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecipeResponse">
+      <soap12:operation soapAction="http://tempuri.org/RecipeResponse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecipeFind">
+      <soap12:operation soapAction="http://tempuri.org/RecipeFind" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecipeCheck">
+      <soap12:operation soapAction="http://tempuri.org/RecipeCheck" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecipeEditCheck">
+      <soap12:operation soapAction="http://tempuri.org/RecipeEditCheck" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecipeDelay">
+      <soap12:operation soapAction="http://tempuri.org/RecipeDelay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecipeClientSave">
+      <soap12:operation soapAction="http://tempuri.org/RecipeClientSave" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecipesClientSave">
+      <soap12:operation soapAction="http://tempuri.org/RecipesClientSave" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecipeReestrRequest">
+      <soap12:operation soapAction="http://tempuri.org/RecipeReestrRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="RecipeServiceHttpGet" type="tns:RecipeServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="RecipeRequest">
+      <http:operation location="/RecipeRequest" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecipeRequestRepeat">
+      <http:operation location="/RecipeRequestRepeat" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecipeFind">
+      <http:operation location="/RecipeFind" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecipeDelay">
+      <http:operation location="/RecipeDelay" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecipeReestrRequest">
+      <http:operation location="/RecipeReestrRequest" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="RecipeServiceHttpPost" type="tns:RecipeServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="RecipeRequest">
+      <http:operation location="/RecipeRequest" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecipeRequestRepeat">
+      <http:operation location="/RecipeRequestRepeat" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecipeFind">
+      <http:operation location="/RecipeFind" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecipeDelay">
+      <http:operation location="/RecipeDelay" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecipeReestrRequest">
+      <http:operation location="/RecipeReestrRequest" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RecipeService">
+    <wsdl:port name="RecipeServiceSoap" binding="tns:RecipeServiceSoap">
+      <soap:address location="http://10.0.1.155/drugstore/RecipeService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="RecipeServiceSoap12" binding="tns:RecipeServiceSoap12">
+      <soap12:address location="http://10.0.1.155/drugstore/RecipeService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="RecipeServiceHttpGet" binding="tns:RecipeServiceHttpGet">
+      <http:address location="http://10.0.1.155/drugstore/RecipeService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="RecipeServiceHttpPost" binding="tns:RecipeServiceHttpPost">
+      <http:address location="http://10.0.1.155/drugstore/RecipeService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

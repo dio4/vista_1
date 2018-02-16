@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ExportR23NativePage1</class>
+ <widget class="QWidget" name="ExportR23NativePage1">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>727</width>
+    <height>456</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout">
+   <item row="4" column="1" colspan="2">
+    <widget class="QComboBox" name="cmbPayMethod">
+     <item>
+      <property name="text">
+       <string>посещение, койко-день</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>простая, сложная и комплексная</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>законченный случай лечения</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="1" column="1" colspan="2">
+    <widget class="QSpinBox" name="edtRegistryNumber">
+     <property name="maximum">
+      <number>99999</number>
+     </property>
+    </widget>
+   </item>
+   <item row="14" column="0" colspan="3">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnExport">
+       <property name="text">
+        <string>экспорт</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnCancel">
+       <property name="text">
+        <string>прервать</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="2" column="1" colspan="2">
+    <widget class="CRBComboBox" name="cmbAccountType"/>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="lblRegistryNumber">
+     <property name="text">
+      <string>Номер реестра счета</string>
+     </property>
+     <property name="buddy">
+      <cstring>edtRegistryNumber</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="0">
+    <widget class="QCheckBox" name="chkIgnoreErrors">
+     <property name="text">
+      <string>Игнорировать ошибки</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="lblAccountType">
+     <property name="text">
+      <string>Тип счета</string>
+     </property>
+     <property name="buddy">
+      <cstring>cmbAccountType</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="0" colspan="3">
+    <widget class="QTextBrowser" name="logBrowser"/>
+   </item>
+   <item row="9" column="0">
+    <widget class="QCheckBox" name="chkVerboseLog">
+     <property name="text">
+      <string>Подробный отчет</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="lblPayMethod">
+     <property name="text">
+      <string>Метод оплаты</string>
+     </property>
+     <property name="buddy">
+      <cstring>cmbPayMethod</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="13" column="0" colspan="3">
+    <spacer>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="0" column="0" colspan="3">
+    <spacer>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="12" column="0" colspan="3">
+    <widget class="CProgressBar" name="progressBar">
+     <property name="value">
+      <number>24</number>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="lblOrgStructureCode">
+     <property name="toolTip">
+      <string>Код подразделения, в которое был направлен пациент из внешней организации</string>
+     </property>
+     <property name="text">
+      <string>Код подразделения</string>
+     </property>
+     <property name="buddy">
+      <cstring>edtOrgStructureCode</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1" colspan="2">
+    <widget class="QLineEdit" name="edtOrgStructureCode">
+     <property name="toolTip">
+      <string>Код подразделения, в которое был направлен пациент из внешней организации</string>
+     </property>
+     <property name="inputMask">
+      <string>99999; </string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="1">
+    <widget class="QCheckBox" name="chkUpdateAccountNumber">
+     <property name="text">
+      <string>Заменить номер счета</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0">
+    <widget class="QLabel" name="lblDats">
+     <property name="toolTip">
+      <string>Используется для заполнения поля &lt;b&gt;DATS&lt;/b&gt;</string>
+     </property>
+     <property name="text">
+      <string>Дата формирования реестра</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0">
+    <widget class="QLabel" name="lblDatps">
+     <property name="toolTip">
+      <string>Используется для заполнения поля &lt;b&gt;DATPS&lt;/b&gt;</string>
+     </property>
+     <property name="text">
+      <string>Дата формирования персонального счета</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="1">
+    <widget class="CDateEdit" name="edtDats">
+     <property name="toolTip">
+      <string>Используется для заполнения поля &lt;b&gt;DATS&lt;/b&gt;</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="1">
+    <widget class="CDateEdit" name="edtDatps">
+     <property name="toolTip">
+      <string>Используется для заполнения поля &lt;b&gt;DATPS&lt;/b&gt;</string>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="1">
+    <widget class="QCheckBox" name="chkGenInvoice">
+     <property name="text">
+      <string>Формировать счет-фактуру</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CDateEdit</class>
+   <extends>QDateEdit</extends>
+   <header>library/DateEdit</header>
+  </customwidget>
+  <customwidget>
+   <class>CRBComboBox</class>
+   <extends>QComboBox</extends>
+   <header>library/crbcombobox</header>
+  </customwidget>
+  <customwidget>
+   <class>CProgressBar</class>
+   <extends>QProgressBar</extends>
+   <header>library/ProgressBar.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>edtRegistryNumber</tabstop>
+  <tabstop>cmbAccountType</tabstop>
+  <tabstop>cmbPayMethod</tabstop>
+  <tabstop>edtOrgStructureCode</tabstop>
+  <tabstop>chkVerboseLog</tabstop>
+  <tabstop>chkIgnoreErrors</tabstop>
+  <tabstop>logBrowser</tabstop>
+  <tabstop>btnExport</tabstop>
+  <tabstop>btnCancel</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EdtReferralDialog</class>
+ <widget class="QDialog" name="EdtReferralDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>248</width>
+    <height>504</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Редактирования направления</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="19" column="0" colspan="2">
+    <widget class="CRBComboBox" name="cmbSpeciality"/>
+   </item>
+   <item row="1" column="0" colspan="2">
+    <widget class="CRBComboBox" name="cmbReferralType">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="lblReferralType">
+     <property name="text">
+      <string>Тип направления:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="lblReferralNumber">
+     <property name="text">
+      <string>Номер направления:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0" colspan="2">
+    <widget class="QLineEdit" name="edtReferralNumber"/>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="lblReferralDate">
+     <property name="text">
+      <string>Дата выдачи направления:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QDateEdit" name="edtReferralDate"/>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="lblReferralHospDate">
+     <property name="text">
+      <string>Планируемая дата:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1">
+    <widget class="QDateEdit" name="edtReferralPlanedDate"/>
+   </item>
+   <item row="6" column="0">
+    <widget class="QLabel" name="lblRelegateMO">
+     <property name="text">
+      <string>Направлен в МО:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0" colspan="2">
+    <widget class="COrgComboBox" name="cmbRelegateMo"/>
+   </item>
+   <item row="8" column="0">
+    <widget class="QLabel" name="lblReferralMKB">
+     <property name="text">
+      <string>Код МКБ:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="0" colspan="2">
+    <widget class="CICDCodeEditEx" name="cmbReferralMKB"/>
+   </item>
+   <item row="10" column="0">
+    <widget class="QLabel" name="lblClinicType">
+     <property name="text">
+      <string>Тип стационара:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="0" colspan="2">
+    <widget class="QComboBox" name="cmbClinicType">
+     <item>
+      <property name="text">
+       <string>не задано</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>стационар</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>дневной стационар</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="18" column="0">
+    <widget class="QLabel" name="lblReferralSpeciality">
+     <property name="text">
+      <string>Специальность:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="20" column="0" colspan="2">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+   <item row="12" column="0">
+    <widget class="QLabel" name="lblPerson">
+     <property name="text">
+      <string>Врач:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="16" column="0">
+    <widget class="QLabel" name="lblOrgStructureProfile">
+     <property name="text">
+      <string>Профиль отделения:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="13" column="0" colspan="2">
+    <widget class="CPersonComboBoxEx" name="cmbPerson"/>
+   </item>
+   <item row="14" column="0">
+    <widget class="QLabel" name="lblBedProfile">
+     <property name="text">
+      <string>Профиль койки:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="15" column="0" colspan="2">
+    <widget class="CRBComboBox" name="cmbBedProfile"/>
+   </item>
+   <item row="17" column="0" colspan="2">
+    <widget class="CRBComboBox" name="cmbOrgStructure"/>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>COrgComboBox</class>
+   <extends>QComboBox</extends>
+   <header>Orgs/OrgComboBox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CRBComboBox</class>
+   <extends>QComboBox</extends>
+   <header>library/crbcombobox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CICDCodeEditEx</class>
+   <extends>QComboBox</extends>
+   <header>library/ICDCodeEdit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CPersonComboBoxEx</class>
+   <extends>QComboBox</extends>
+   <header>Orgs/PersonComboBoxEx.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>EdtReferralDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>EdtReferralDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

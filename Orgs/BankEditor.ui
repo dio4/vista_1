@@ -1,0 +1,200 @@
+<ui version="4.0" >
+ <class>BankEditorDialog</class>
+ <widget class="QDialog" name="BankEditorDialog" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>343</width>
+    <height>184</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>ChangeMe!</string>
+  </property>
+  <property name="sizeGripEnabled" >
+   <bool>false</bool>
+  </property>
+  <layout class="QGridLayout" >
+   <property name="margin" >
+    <number>4</number>
+   </property>
+   <property name="spacing" >
+    <number>4</number>
+   </property>
+   <item row="4" column="1" colspan="2" >
+    <widget class="QLineEdit" name="edtSubAccount" >
+     <property name="inputMask" >
+      <string>99999999999999999999; </string>
+     </property>
+     <property name="maxLength" >
+      <number>20</number>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1" colspan="2" >
+    <widget class="QLineEdit" name="edtCorrAccount" >
+     <property name="inputMask" >
+      <string>99999999999999999999; </string>
+     </property>
+     <property name="maxLength" >
+      <number>20</number>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1" colspan="2" >
+    <widget class="QLineEdit" name="edtBranchName" >
+     <property name="maxLength" >
+      <number>100</number>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1" colspan="2" >
+    <widget class="QLineEdit" name="edtName" >
+     <property name="maxLength" >
+      <number>100</number>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1" >
+    <widget class="QLineEdit" name="edtBIK" >
+     <property name="inputMask" >
+      <string>999999999; </string>
+     </property>
+     <property name="maxLength" >
+      <number>9</number>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2" >
+    <spacer>
+     <property name="orientation" >
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0" >
+      <size>
+       <width>151</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="0" column="0" >
+    <widget class="QLabel" name="lblName" >
+     <property name="text" >
+      <string>&amp;Наименование</string>
+     </property>
+     <property name="buddy" >
+      <cstring>edtName</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" >
+    <widget class="QLabel" name="lblBIK" >
+     <property name="text" >
+      <string>&amp;БИК</string>
+     </property>
+     <property name="buddy" >
+      <cstring>edtBIK</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0" >
+    <widget class="QLabel" name="lblBranchName" >
+     <property name="text" >
+      <string>Наименование &amp;филиала</string>
+     </property>
+     <property name="buddy" >
+      <cstring>edtBranchName</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0" >
+    <widget class="QLabel" name="lblCorrAccount" >
+     <property name="text" >
+      <string>&amp;Корр.счет</string>
+     </property>
+     <property name="buddy" >
+      <cstring>edtCorrAccount</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0" >
+    <widget class="QLabel" name="lblSubAccount" >
+     <property name="text" >
+      <string>&amp;Суб.счет</string>
+     </property>
+     <property name="buddy" >
+      <cstring>edtSubAccount</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0" >
+    <spacer>
+     <property name="orientation" >
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0" >
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="6" column="0" colspan="3" >
+    <widget class="QDialogButtonBox" name="buttonBox" >
+     <property name="orientation" >
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons" >
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>edtName</tabstop>
+  <tabstop>edtBIK</tabstop>
+  <tabstop>edtBranchName</tabstop>
+  <tabstop>edtCorrAccount</tabstop>
+  <tabstop>edtSubAccount</tabstop>
+  <tabstop>buttonBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>BankEditorDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>158</x>
+     <y>446</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>51</x>
+     <y>436</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>BankEditorDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>238</x>
+     <y>446</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>146</x>
+     <y>424</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ItemEditorDialog</class>
+ <widget class="QDialog" name="ItemEditorDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>482</width>
+    <height>509</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ChangeMe!</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>true</bool>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="margin">
+    <number>4</number>
+   </property>
+   <property name="spacing">
+    <number>4</number>
+   </property>
+   <item row="4" column="1" colspan="3">
+    <widget class="QLineEdit" name="edtOKSOCode"/>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="lblFederalCode">
+     <property name="text">
+      <string>&amp;Федеральный код</string>
+     </property>
+     <property name="buddy">
+      <cstring>edtFederalCode</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="0">
+    <widget class="QLabel" name="lblVersSpec">
+     <property name="text">
+      <string>Версия справочника</string>
+     </property>
+     <property name="buddy">
+      <cstring>cmbVersSpec</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="14" column="0">
+    <widget class="QLabel" name="lblSex">
+     <property name="text">
+      <string>&amp;Пол</string>
+     </property>
+     <property name="buddy">
+      <cstring>cmbSex</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="1" colspan="2">
+    <widget class="CRBComboBox" name="cmbProvinceService"/>
+   </item>
+   <item row="8" column="1" colspan="3">
+    <widget class="QComboBox" name="cmbVersSpec">
+     <item>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>V004</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>V015</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="lblName">
+     <property name="text">
+      <string>&amp;Наименование</string>
+     </property>
+     <property name="buddy">
+      <cstring>edtName</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1" colspan="3">
+    <widget class="QLineEdit" name="edtFederalCode"/>
+   </item>
+   <item row="9" column="1" colspan="2">
+    <widget class="CRBComboBox" name="cmbLocalService"/>
+   </item>
+   <item row="14" column="1">
+    <widget class="QComboBox" name="cmbSex">
+     <item>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>М</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Ж</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="13" column="0">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="10" column="0">
+    <widget class="QLabel" name="lblProvinceService">
+     <property name="text">
+      <string>Услуга для областного населения</string>
+     </property>
+     <property name="buddy">
+      <cstring>cmbProvinceService</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="16" column="0">
+    <widget class="QLabel" name="lblMKBFilter">
+     <property name="text">
+      <string>&amp;Фильтр диагнозов по МКБ</string>
+     </property>
+     <property name="buddy">
+      <cstring>edtMKBFilter</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="14" column="2" colspan="2">
+    <spacer>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>141</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="2" column="1" colspan="3">
+    <widget class="QLineEdit" name="edtShortName"/>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="lblName_2">
+     <property name="text">
+      <string>Наименование по ОКСО</string>
+     </property>
+     <property name="buddy">
+      <cstring>edtOKSOName</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="lblShortName">
+     <property name="text">
+      <string>Краткое наименование</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0">
+    <widget class="QLabel" name="lblSyncGUID">
+     <property name="text">
+      <string>Код синхронизации</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="1" colspan="3">
+    <widget class="QLineEdit" name="edtSyncGUID"/>
+   </item>
+   <item row="6" column="0">
+    <widget class="QLabel" name="lblRegionalCode">
+     <property name="text">
+      <string>&amp;Региональный код</string>
+     </property>
+     <property name="buddy">
+      <cstring>edtRegionalCode</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="1" colspan="3">
+    <widget class="QLineEdit" name="edtRegionalCode"/>
+   </item>
+   <item row="16" column="1" colspan="3">
+    <widget class="QLineEdit" name="edtMKBFilter"/>
+   </item>
+   <item row="18" column="0">
+    <spacer>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>73</width>
+       <height>16</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="21" column="0" colspan="4">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="0">
+    <widget class="QLabel" name="lblOtherService">
+     <property name="text">
+      <string>Услуга для прочего населения</string>
+     </property>
+     <property name="buddy">
+      <cstring>cmbOtherService</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="lblCode">
+     <property name="text">
+      <string>&amp;Код</string>
+     </property>
+     <property name="buddy">
+      <cstring>edtCode</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="3">
+    <widget class="QToolButton" name="btnSelectOtherService">
+     <property name="text">
+      <string>...</string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="3">
+    <widget class="QToolButton" name="btnSelectLocalService">
+     <property name="text">
+      <string>...</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1" colspan="3">
+    <widget class="QLineEdit" name="edtCode"/>
+   </item>
+   <item row="15" column="1" colspan="3">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="spacing">
+      <number>4</number>
+     </property>
+     <item>
+      <widget class="QComboBox" name="cmbBegAgeUnit">
+       <item>
+        <property name="text">
+         <string/>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Д</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Н</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>М</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Г</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="edtBegAgeCount">
+       <property name="inputMask">
+        <string>000; </string>
+       </property>
+       <property name="maxLength">
+        <number>3</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="lblAgeSep">
+       <property name="text">
+        <string>по</string>
+       </property>
+       <property name="buddy">
+        <cstring>cmbEndAgeUnit</cstring>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="cmbEndAgeUnit">
+       <item>
+        <property name="text">
+         <string/>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Д</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Н</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>М</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Г</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="edtEndAgeCount">
+       <property name="inputMask">
+        <string>000; </string>
+       </property>
+       <property name="maxLength">
+        <number>3</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="3" column="1" colspan="3">
+    <widget class="QLineEdit" name="edtOKSOName"/>
+   </item>
+   <item row="10" column="3">
+    <widget class="QToolButton" name="btnSelectProvinceService">
+     <property name="text">
+      <string>...</string>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="1" colspan="2">
+    <widget class="CRBComboBox" name="cmbOtherService"/>
+   </item>
+   <item row="15" column="0">
+    <widget class="QLabel" name="lblAge">
+     <property name="text">
+      <string>&amp;Возраст</string>
+     </property>
+     <property name="buddy">
+      <cstring>cmbBegAgeUnit</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="lblName_3">
+     <property name="text">
+      <string>Код по &amp;ОКСО</string>
+     </property>
+     <property name="buddy">
+      <cstring>edtOKSOCode</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1" colspan="3">
+    <widget class="QLineEdit" name="edtName"/>
+   </item>
+   <item row="12" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Услуга для подушевого финансирования</string>
+     </property>
+    </widget>
+   </item>
+   <item row="12" column="1" colspan="2">
+    <widget class="CRBComboBox" name="cmbFundingService"/>
+   </item>
+   <item row="12" column="3">
+    <widget class="QToolButton" name="btnSelectFundingService">
+     <property name="text">
+      <string>...</string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="0">
+    <widget class="QLabel" name="lblLocalService">
+     <property name="text">
+      <string>&amp;Услуга для местного населения</string>
+     </property>
+     <property name="buddy">
+      <cstring>cmbLocalService</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="19" column="0" colspan="4">
+    <layout class="QGridLayout" name="gridLayout_2">
+     <property name="spacing">
+      <number>3</number>
+     </property>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Досупное количество номерков по дням от текущей даты (в %)</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="CItemListView" name="tblQueueShare"/>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CRBComboBox</class>
+   <extends>QComboBox</extends>
+   <header>library/crbcombobox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CItemListView</class>
+   <extends>QTableView</extends>
+   <header>library/ItemListView.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>edtCode</tabstop>
+  <tabstop>edtName</tabstop>
+  <tabstop>edtShortName</tabstop>
+  <tabstop>edtOKSOName</tabstop>
+  <tabstop>edtOKSOCode</tabstop>
+  <tabstop>edtFederalCode</tabstop>
+  <tabstop>edtRegionalCode</tabstop>
+  <tabstop>cmbVersSpec</tabstop>
+  <tabstop>cmbLocalService</tabstop>
+  <tabstop>btnSelectLocalService</tabstop>
+  <tabstop>cmbProvinceService</tabstop>
+  <tabstop>btnSelectProvinceService</tabstop>
+  <tabstop>cmbOtherService</tabstop>
+  <tabstop>btnSelectOtherService</tabstop>
+  <tabstop>cmbSex</tabstop>
+  <tabstop>cmbBegAgeUnit</tabstop>
+  <tabstop>edtBegAgeCount</tabstop>
+  <tabstop>cmbEndAgeUnit</tabstop>
+  <tabstop>edtEndAgeCount</tabstop>
+  <tabstop>edtMKBFilter</tabstop>
+  <tabstop>buttonBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>ItemEditorDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>168</x>
+     <y>372</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>117</x>
+     <y>106</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>ItemEditorDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>372</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>247</x>
+     <y>107</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

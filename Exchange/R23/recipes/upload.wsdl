@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="RecipesClientSave">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clientId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="recipes" type="tns:ArrayOfRecipeClient" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfRecipeClient">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RecipeClient" nillable="true" type="tns:RecipeClient" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RecipeClient">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Seria" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Number" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Snils" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="PatientFound" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="LpuOgrn" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="LpuFoms" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="LpuFound" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="DoctorCode" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="DoctorFound" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="MkbCode" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="MkbFound" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="FundingSourceCode" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="FundingSourceFound" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="NosologyCode" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="NosologyFound" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="PrivilegeCode" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="PrivilegeCodeFound" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="ProgramFound" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="ValidPeriodCode" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="ValidPeriodFound" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="PayPercent" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="PayPercentFound" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsTrn" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="TrnCode" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="TrnFound" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="MnnCode" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="MnnFound" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="CureformCode" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="CureformFound" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="UnitCode" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="UnitFound" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsVk" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="Dosage" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Quantity" type="s:decimal" />
+              <s:element minOccurs="0" maxOccurs="1" name="SaleDate" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="IssueDate" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="ExpirationDate" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="RecipeCheck" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Uploaded" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsAnnulled" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="CauseOfAnnulment" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="CauseOfAnnulmentFound" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Entity" abstract="true" />
+      <s:element name="RecipesClientSaveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecipesClientSaveResult" type="tns:ArrayOfRecipeClient" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoctorsClientSave">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clientId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="doctors" type="tns:ArrayOfDoctorClient" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDoctorClient">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DoctorClient" nillable="true" type="tns:DoctorClient" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DoctorClient">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Snils" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Login" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Firstname" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Lastname" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Patronymic" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DoctorCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DoctorDeleted" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="LpuName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="LpuFullname" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="LpuOgrn" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="JobName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SpecialityName" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="DoctorsClientSaveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DoctorsClientSaveResult" type="tns:ArrayOfDoctorClient" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PersonClientSave">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clientId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="persons" type="tns:ArrayOfPersonClient" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPersonClient">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PersonClient" nillable="true" type="tns:PersonClient" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PersonClient">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Id" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Snils" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Firstname" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Lastname" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Patronymic" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Sex" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Birthday" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="Deleted" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="Uploaded" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="Check" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="PrivilegeDocuments" type="tns:ArrayOfPrivilegeDocumentClient" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfPrivilegeDocumentClient">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PrivilegeDocumentClient" nillable="true" type="tns:PrivilegeDocumentClient" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PrivilegeDocumentClient">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="PersonId" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="PrivilegeDocumentSeria" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="PrivilegeDocumentNumber" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="PrivilegeDocumentName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="PrivilegeCategoryCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="PrivilegeDocumentStart" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="PrivilegeDocumentEnd" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="PrivilegeDocumentDeleted" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="Uploaded" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="Check" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ProgramName" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="PersonClientSaveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PersonClientSaveResult" type="tns:ArrayOfPersonClient" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PersonClientCheck">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clientId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="persons" type="tns:ArrayOfPersonClient" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PersonClientCheckResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PersonClientCheckResult" type="tns:ArrayOfPersonClient" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="RecipesClientSaveSoapIn">
+    <wsdl:part name="parameters" element="tns:RecipesClientSave" />
+  </wsdl:message>
+  <wsdl:message name="RecipesClientSaveSoapOut">
+    <wsdl:part name="parameters" element="tns:RecipesClientSaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="DoctorsClientSaveSoapIn">
+    <wsdl:part name="parameters" element="tns:DoctorsClientSave" />
+  </wsdl:message>
+  <wsdl:message name="DoctorsClientSaveSoapOut">
+    <wsdl:part name="parameters" element="tns:DoctorsClientSaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="PersonClientSaveSoapIn">
+    <wsdl:part name="parameters" element="tns:PersonClientSave" />
+  </wsdl:message>
+  <wsdl:message name="PersonClientSaveSoapOut">
+    <wsdl:part name="parameters" element="tns:PersonClientSaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="PersonClientCheckSoapIn">
+    <wsdl:part name="parameters" element="tns:PersonClientCheck" />
+  </wsdl:message>
+  <wsdl:message name="PersonClientCheckSoapOut">
+    <wsdl:part name="parameters" element="tns:PersonClientCheckResponse" />
+  </wsdl:message>
+  <wsdl:portType name="UploadServiceSoap">
+    <wsdl:operation name="RecipesClientSave">
+      <wsdl:input message="tns:RecipesClientSaveSoapIn" />
+      <wsdl:output message="tns:RecipesClientSaveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoctorsClientSave">
+      <wsdl:input message="tns:DoctorsClientSaveSoapIn" />
+      <wsdl:output message="tns:DoctorsClientSaveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PersonClientSave">
+      <wsdl:input message="tns:PersonClientSaveSoapIn" />
+      <wsdl:output message="tns:PersonClientSaveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PersonClientCheck">
+      <wsdl:input message="tns:PersonClientCheckSoapIn" />
+      <wsdl:output message="tns:PersonClientCheckSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="UploadServiceHttpGet" />
+  <wsdl:portType name="UploadServiceHttpPost" />
+  <wsdl:binding name="UploadServiceSoap" type="tns:UploadServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RecipesClientSave">
+      <soap:operation soapAction="http://tempuri.org/RecipesClientSave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoctorsClientSave">
+      <soap:operation soapAction="http://tempuri.org/DoctorsClientSave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PersonClientSave">
+      <soap:operation soapAction="http://tempuri.org/PersonClientSave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PersonClientCheck">
+      <soap:operation soapAction="http://tempuri.org/PersonClientCheck" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="UploadServiceSoap12" type="tns:UploadServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RecipesClientSave">
+      <soap12:operation soapAction="http://tempuri.org/RecipesClientSave" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoctorsClientSave">
+      <soap12:operation soapAction="http://tempuri.org/DoctorsClientSave" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PersonClientSave">
+      <soap12:operation soapAction="http://tempuri.org/PersonClientSave" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PersonClientCheck">
+      <soap12:operation soapAction="http://tempuri.org/PersonClientCheck" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="UploadServiceHttpGet" type="tns:UploadServiceHttpGet">
+    <http:binding verb="GET" />
+  </wsdl:binding>
+  <wsdl:binding name="UploadServiceHttpPost" type="tns:UploadServiceHttpPost">
+    <http:binding verb="POST" />
+  </wsdl:binding>
+  <wsdl:service name="UploadService">
+    <wsdl:port name="UploadServiceSoap" binding="tns:UploadServiceSoap">
+      <soap:address location="http://10.0.1.154/drugstore/UploadService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="UploadServiceSoap12" binding="tns:UploadServiceSoap12">
+      <soap12:address location="http://10.0.1.154/drugstore/UploadService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="UploadServiceHttpGet" binding="tns:UploadServiceHttpGet">
+      <http:address location="http://10.0.1.154/drugstore/UploadService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="UploadServiceHttpPost" binding="tns:UploadServiceHttpPost">
+      <http:address location="http://10.0.1.154/drugstore/UploadService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

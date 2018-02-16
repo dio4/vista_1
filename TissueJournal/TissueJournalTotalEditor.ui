@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TissueJournalTotalEditorDialog</class>
+ <widget class="QDialog" name="TissueJournalTotalEditorDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>498</width>
+    <height>267</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Изменить атрибуты выбранных Действий</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>true</bool>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="margin">
+    <number>4</number>
+   </property>
+   <property name="spacing">
+    <number>4</number>
+   </property>
+   <item row="1" column="1" colspan="2">
+    <widget class="CPersonComboBoxEx" name="cmbPersonInJournal">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1" colspan="2">
+    <widget class="CPersonComboBoxEx" name="cmbAssistantInAction">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="0" colspan="3">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QCheckBox" name="chkPersonInJournal">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>Ответственный в журнале</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QCheckBox" name="chkAssistantInAction">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>Ассистент в действии</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QCheckBox" name="chkStatus">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>Статус</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1" colspan="2">
+    <widget class="QComboBox" name="cmbStatus">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <item>
+      <property name="text">
+       <string>Начато</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Ожидание</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Закончено</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Отменено</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Без результата</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Назначено</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QCheckBox" name="chkPersonInAction">
+     <property name="text">
+      <string>Ответственный в действии</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1" colspan="2">
+    <widget class="CPersonComboBoxEx" name="cmbPersonInAction">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0">
+    <widget class="QCheckBox" name="chkMKB">
+     <property name="text">
+      <string>МКБ</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="0">
+    <widget class="QCheckBox" name="chkMorphologyMKB">
+     <property name="text">
+      <string>Морфология МКБ</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="1">
+    <widget class="CICDCodeEditEx" name="cmbMKB">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="1">
+    <widget class="CICDMorphologyCodeEditEx" name="cmbMorphologyMKB">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="2">
+    <widget class="QLabel" name="lblMKBText">
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="2">
+    <widget class="QLabel" name="lblMorphologyMKBText">
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1" colspan="2">
+    <widget class="CPersonComboBoxEx" name="cmbAssistantInAction2">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1" colspan="2">
+    <widget class="CPersonComboBoxEx" name="cmbAssistantInAction3">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CPersonComboBoxEx</class>
+   <extends>QComboBox</extends>
+   <header>Orgs/PersonComboBoxEx.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CICDCodeEditEx</class>
+   <extends>QComboBox</extends>
+   <header>library/ICDCodeEdit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CICDMorphologyCodeEditEx</class>
+   <extends>QComboBox</extends>
+   <header>library/ICDMorphologyCodeEdit.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>chkStatus</tabstop>
+  <tabstop>cmbStatus</tabstop>
+  <tabstop>chkPersonInJournal</tabstop>
+  <tabstop>cmbPersonInJournal</tabstop>
+  <tabstop>chkPersonInAction</tabstop>
+  <tabstop>cmbPersonInAction</tabstop>
+  <tabstop>chkAssistantInAction</tabstop>
+  <tabstop>cmbAssistantInAction</tabstop>
+  <tabstop>chkMKB</tabstop>
+  <tabstop>cmbMKB</tabstop>
+  <tabstop>chkMorphologyMKB</tabstop>
+  <tabstop>cmbMorphologyMKB</tabstop>
+  <tabstop>buttonBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>TissueJournalTotalEditorDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>254</x>
+     <y>238</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>244</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>TissueJournalTotalEditorDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>322</x>
+     <y>238</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>244</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkStatus</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cmbStatus</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>46</x>
+     <y>15</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>219</x>
+     <y>10</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkPersonInJournal</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cmbPersonInJournal</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>79</x>
+     <y>50</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>214</x>
+     <y>52</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkPersonInAction</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cmbPersonInAction</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>99</x>
+     <y>77</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>386</x>
+     <y>80</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkAssistantInAction</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cmbAssistantInAction</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>112</x>
+     <y>104</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>387</x>
+     <y>107</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkMKB</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cmbMKB</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>46</x>
+     <y>191</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>252</x>
+     <y>194</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkMorphologyMKB</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cmbMorphologyMKB</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>86</x>
+     <y>211</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>252</x>
+     <y>221</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkAssistantInAction</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cmbAssistantInAction2</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>71</x>
+     <y>85</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>332</x>
+     <y>109</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkAssistantInAction</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cmbAssistantInAction3</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>71</x>
+     <y>85</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>332</x>
+     <y>133</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

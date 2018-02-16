@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ContractTypeEditorDialog</class>
+ <widget class="QDialog" name="ContractTypeEditorDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>318</width>
+    <height>158</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ChangeMe!</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>false</bool>
+  </property>
+  <layout class="QGridLayout">
+   <property name="margin">
+    <number>4</number>
+   </property>
+   <property name="spacing">
+    <number>4</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QLabel" name="lblCode">
+     <property name="text">
+      <string>&amp;Код</string>
+     </property>
+     <property name="buddy">
+      <cstring>edtCode</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QLineEdit" name="edtCode"/>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="lblName">
+     <property name="text">
+      <string>На&amp;именование</string>
+     </property>
+     <property name="buddy">
+      <cstring>edtName</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QLineEdit" name="edtName">
+     <property name="minimumSize">
+      <size>
+       <width>200</width>
+       <height>0</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <spacer>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>73</width>
+       <height>41</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="6" column="0" colspan="2">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="lblMask">
+     <property name="text">
+      <string>Маска</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QLineEdit" name="edtMask">
+     <property name="toolTip">
+      <string>&lt;table&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;b&gt; Символ&lt;/b&gt;&lt;/td&gt;
+&lt;td&gt;&lt;b&gt; Значение&lt;/b&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt; A &lt;/td&gt;
+&lt;td&gt; ASCII обязательный символ A-Z, a-z &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt; a &lt;/td&gt;
+&lt;td&gt; ASCII не обязательный символ A-Z, a-z &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt; N &lt;/td&gt;
+&lt;td&gt; ASCII обязательный символ A-Z, a-z, 0-9 &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt; n &lt;/td&gt;
+&lt;td&gt; ASCII не обязательный символ A-Z, a-z, 0-9 &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt; X &lt;/td&gt;
+&lt;td&gt; Любой обязательный символ &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt; x &lt;/td&gt;
+&lt;td&gt; Любой не обязательный символ &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt; 9 &lt;/td&gt;
+&lt;td&gt; Цифра обязательная 0-9&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt; 0 &lt;/td&gt;
+&lt;td&gt; Не обязательная цифра 0-9 &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt; D &lt;/td&gt;
+&lt;td&gt; Цифра обязательная 1-9&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt; d &lt;/td&gt;
+&lt;td&gt; Не обязательная цифра 1-9 &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt; H &lt;/td&gt;
+&lt;td&gt; Шесстнадцатиричная цифра обязательная A-f, a-f, 0-9&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt; h &lt;/td&gt;
+&lt;td&gt; Шесстнадцатиричная цифра не обязательная A-f, a-f, 0-9&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt; B &lt;/td&gt;
+&lt;td&gt; Обязательный бинарный символ 0-1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt; b &lt;/td&gt;
+&lt;td&gt; Не обязательный бинарный символ 0-1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt; &amp;#62; &lt;/td&gt;
+&lt;td&gt; Все последующие символы в верхнем регистре&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt; &amp;#60; &lt;/td&gt;
+&lt;td&gt; Все последующие символы в верхнем регистре&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt; ! &lt;/td&gt;
+&lt;td&gt; Отключить учет регистра&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt; \ &lt;/td&gt;
+&lt;td&gt; Экранирование специальных символов&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;h3&gt;Примеры: &lt;/h3&gt;
+&lt;table&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;b&gt; Маска&lt;/b&gt;&lt;/td&gt;
+&lt;td&gt;&lt;b&gt; Значение&lt;/b&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;000.000.000.000;_&lt;/td&gt;
+&lt;td&gt;IP-aдресс, пустые _ &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;HH:HH:HH:HH:HH:HH;_ &lt;/td&gt;
+&lt;td&gt;MAC-адресс &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;9999999999;_&lt;/td&gt;
+&lt;td&gt;Мобильный телефон 10 символов &lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QCheckBox" name="chkMaskEnabled">
+     <property name="text">
+      <string>Включить маску</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>edtCode</tabstop>
+  <tabstop>edtName</tabstop>
+  <tabstop>buttonBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>ContractTypeEditorDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>194</x>
+     <y>309</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>156</x>
+     <y>318</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>ContractTypeEditorDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>309</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>311</x>
+     <y>318</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

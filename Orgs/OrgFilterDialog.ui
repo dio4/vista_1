@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OrgFilterDialog</class>
+ <widget class="QDialog" name="OrgFilterDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>286</width>
+    <height>288</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Выбор организации</string>
+  </property>
+  <layout class="QGridLayout">
+   <property name="margin">
+    <number>4</number>
+   </property>
+   <property name="spacing">
+    <number>4</number>
+   </property>
+   <item row="9" column="0">
+    <spacer>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="lblName">
+     <property name="text">
+      <string>&amp;Название содержит</string>
+     </property>
+     <property name="buddy">
+      <cstring>edtName</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QLineEdit" name="edtName"/>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="lblInfis">
+     <property name="text">
+      <string>Код ИН&amp;ФИС</string>
+     </property>
+     <property name="buddy">
+      <cstring>edtInfis</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QLineEdit" name="edtINN"/>
+   </item>
+   <item row="10" column="0" colspan="2">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="lblINN">
+     <property name="text">
+      <string>&amp;ИНН</string>
+     </property>
+     <property name="buddy">
+      <cstring>edtINN</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QLineEdit" name="edtInfis"/>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="lblOGRN">
+     <property name="text">
+      <string>&amp;ОГРН</string>
+     </property>
+     <property name="buddy">
+      <cstring>edtOGRN</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QLineEdit" name="edtOGRN"/>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="lblOKVED">
+     <property name="text">
+      <string>ОКВЭ&amp;Д</string>
+     </property>
+     <property name="buddy">
+      <cstring>edtOKVED</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QLineEdit" name="edtOKVED"/>
+   </item>
+   <item row="6" column="1">
+    <widget class="QComboBox" name="cmbIsInsurer">
+     <item>
+      <property name="text">
+       <string>не задано</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Нет</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Да</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="6" column="0">
+    <widget class="QLabel" name="lblIsInsurer">
+     <property name="text">
+      <string>&amp;Страховая компания</string>
+     </property>
+     <property name="buddy">
+      <cstring>cmbIsInsurer</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1">
+    <widget class="QLineEdit" name="edtmiacCode"/>
+   </item>
+   <item row="7" column="0" colspan="2">
+    <widget class="QCheckBox" name="chkLocalsOnly">
+     <property name="text">
+      <string>Только местные МО</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="lblmiacCode">
+     <property name="text">
+      <string>МИАЦ</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="0">
+    <widget class="QCheckBox" name="chkActiveOnly">
+     <property name="text">
+      <string>Только действующие</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>edtName</tabstop>
+  <tabstop>edtINN</tabstop>
+  <tabstop>edtOGRN</tabstop>
+  <tabstop>edtInfis</tabstop>
+  <tabstop>edtOKVED</tabstop>
+  <tabstop>cmbIsInsurer</tabstop>
+  <tabstop>buttonBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>OrgFilterDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>262</x>
+     <y>198</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>153</x>
+     <y>175</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>OrgFilterDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>275</x>
+     <y>198</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>282</x>
+     <y>175</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

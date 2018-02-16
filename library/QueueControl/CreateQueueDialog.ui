@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CreateQueueDialog</class>
+ <widget class="QDialog" name="CreateQueueDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>223</width>
+    <height>266</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Добавление очереди</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0" colspan="2">
+    <widget class="QLabel" name="lblQueueType">
+     <property name="text">
+      <string>Профиль помощи:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="2">
+    <widget class="CRBComboBox" name="cmbMedicalProfile"/>
+   </item>
+   <item row="2" column="0" colspan="2">
+    <widget class="QLabel" name="lblDateBegin">
+     <property name="text">
+      <string>Дата начала оказания мед. помощи:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0" colspan="2">
+    <widget class="QDateEdit" name="edtBeginDate"/>
+   </item>
+   <item row="4" column="0" colspan="2">
+    <widget class="QLabel" name="lblEndDate">
+     <property name="text">
+      <string>Дата окончания оказания мед. помощи:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0" colspan="2">
+    <widget class="QDateEdit" name="edtEndDate"/>
+   </item>
+   <item row="6" column="0">
+    <widget class="QLabel" name="lblContacts">
+     <property name="text">
+      <string>Контакты:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0" colspan="2">
+    <widget class="QLineEdit" name="edtContacts"/>
+   </item>
+   <item row="8" column="0">
+    <widget class="QLabel" name="lblComment">
+     <property name="text">
+      <string>Комментарий:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="0" colspan="2">
+    <widget class="QLineEdit" name="edtComment"/>
+   </item>
+   <item row="10" column="0">
+    <widget class="QPushButton" name="btnCreate">
+     <property name="text">
+      <string>Добавить</string>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="1">
+    <widget class="QPushButton" name="btnCancel">
+     <property name="text">
+      <string>Отмена</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CRBComboBox</class>
+   <extends>QComboBox</extends>
+   <header>library/crbcombobox.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

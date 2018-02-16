@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TempInvalidEditDialog</class>
+ <widget class="QDialog" name="TempInvalidEditDialog">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1075</width>
+    <height>553</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Документ временной нетрудоспособности</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="0" colspan="3">
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="7" column="5">
+      <widget class="QLabel" name="lblMainNumber">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>Номер основного листка</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QLabel" name="lblBusyness">
+       <property name="maximumSize">
+        <size>
+         <width>107</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Занятость</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="0" colspan="7">
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>0</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="lblSerial">
+       <property name="maximumSize">
+        <size>
+         <width>107</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Номер ЛН</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1" colspan="2">
+      <widget class="CICDCodeEditEx" name="edtDiagnosis">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="5">
+      <widget class="QLabel" name="lblDiseaseCharacter">
+       <property name="maximumSize">
+        <size>
+         <width>102</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Характер</string>
+       </property>
+       <property name="buddy">
+        <cstring>cmbDiseaseCharacter</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="6">
+      <widget class="CRBComboBox" name="cmbExtraReason"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="lblPrev">
+       <property name="maximumSize">
+        <size>
+         <width>107</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Продлён</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="4">
+      <widget class="CRBComboBox" name="cmbReason">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1" colspan="2">
+      <widget class="QLabel" name="lblPrevNumberValue">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QLabel" name="lblReason">
+       <property name="maximumSize">
+        <size>
+         <width>102</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Причина</string>
+       </property>
+       <property name="buddy">
+        <cstring>cmbReason</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="3">
+      <widget class="QLabel" name="lblCaseLength">
+       <property name="maximumSize">
+        <size>
+         <width>102</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Дней</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="0" colspan="7">
+      <widget class="CInDocTableView" name="tblPeriods">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Ignored">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="4">
+      <widget class="QLabel" name="lblLengthValue">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1" colspan="2">
+      <widget class="CRBComboBox" name="cmbDoctype">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="4">
+      <widget class="QLineEdit" name="edtPlaceWork">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="lblDiagnosis">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>107</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Диагноз</string>
+       </property>
+       <property name="buddy">
+        <cstring>edtDiagnosis</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0" colspan="7">
+      <widget class="QCheckBox" name="chkGovEmoploymentService">
+       <property name="text">
+        <string>Состоит на учёте в государственных учереждения службы занятости</string>
+       </property>
+       <property name="tristate">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="3">
+      <widget class="QLabel" name="lblPlaceWork">
+       <property name="maximumSize">
+        <size>
+         <width>102</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Место работы</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="6">
+      <widget class="QLabel" name="lblExternalLengthValue">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="lblCaseBegDate">
+       <property name="maximumSize">
+        <size>
+         <width>107</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Дата начала ВУТ</string>
+       </property>
+       <property name="buddy">
+        <cstring>edtCaseBegDate</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLineEdit" name="edtNumber">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maxLength">
+        <number>16</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="1" colspan="2">
+      <widget class="CEnumComboBox" name="cmbBusyness"/>
+     </item>
+     <item row="2" column="5">
+      <widget class="QLabel" name="lblExternalLength">
+       <property name="maximumSize">
+        <size>
+         <width>102</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>вне ЛПУ</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="4">
+      <widget class="QLabel" name="lblCaseLengthValue">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="lblDoctype">
+       <property name="maximumSize">
+        <size>
+         <width>107</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Документ</string>
+       </property>
+       <property name="buddy">
+        <cstring>cmbDoctype</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1" colspan="2">
+      <widget class="CDateEdit" name="edtCaseBegDate">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="displayFormat">
+        <string>dd.MM.yyyy</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QPushButton" name="btnNewLN">
+       <property name="text">
+        <string>Сформировать 
+новый номер ЛН</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="6">
+      <widget class="CRBComboBox" name="cmbDiseaseCharacter"/>
+     </item>
+     <item row="2" column="3">
+      <widget class="QLabel" name="lblLength">
+       <property name="maximumSize">
+        <size>
+         <width>102</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Длительность</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="15">
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>0</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="0" column="5">
+      <widget class="QLabel" name="lblExtraReason">
+       <property name="maximumSize">
+        <size>
+         <width>102</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Доп.причина</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="5" colspan="2">
+      <widget class="QCheckBox" name="chkInsuranceOfficeMark">
+       <property name="text">
+        <string>Отметка страхового стола</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="4">
+      <widget class="QSpinBox" name="edtOtherAge">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QComboBox" name="cmbOtherSex">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>40</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <item>
+        <property name="text">
+         <string/>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>М</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Ж</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="lblOtherSex">
+       <property name="maximumSize">
+        <size>
+         <width>107</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Пол</string>
+       </property>
+       <property name="buddy">
+        <cstring>cmbOtherSex</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="3">
+      <widget class="QLabel" name="lblOtherAge">
+       <property name="maximumSize">
+        <size>
+         <width>102</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Возраст</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="6">
+      <widget class="QLineEdit" name="edtMainNumber">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0">
+    <widget class="QPushButton" name="btnTempInvalidProlong">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>Продлить</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QPushButton" name="btnSendInFSS">
+     <property name="text">
+      <string>Подписать и отправить в ФСС</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CRBComboBox</class>
+   <extends>QComboBox</extends>
+   <header>library/crbcombobox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CInDocTableView</class>
+   <extends>QTableView</extends>
+   <header>library/InDocTable.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CDateEdit</class>
+   <extends>QDateEdit</extends>
+   <header>library/DateEdit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CICDCodeEditEx</class>
+   <extends>QLineEdit</extends>
+   <header>library/ICDCodeEdit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CEnumComboBox</class>
+   <extends>QComboBox</extends>
+   <header>library/Enum.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>cmbDoctype</tabstop>
+  <tabstop>edtDiagnosis</tabstop>
+  <tabstop>edtCaseBegDate</tabstop>
+  <tabstop>cmbBusyness</tabstop>
+  <tabstop>tblPeriods</tabstop>
+  <tabstop>btnTempInvalidProlong</tabstop>
+  <tabstop>buttonBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>TempInvalidEditDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>526</x>
+     <y>336</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>153</x>
+     <y>172</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>TempInvalidEditDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>539</x>
+     <y>336</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>244</x>
+     <y>172</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

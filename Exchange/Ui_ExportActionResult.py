@@ -1,0 +1,178 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'ExportActionResult.ui'
+#
+# Created: Thu Dec 05 15:42:31 2013
+#      by: PyQt4 UI code generator 4.9.6
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt4 import QtCore, QtGui
+
+try:
+    _fromUtf8 = QtCore.QString.fromUtf8
+except AttributeError:
+    def _fromUtf8(s):
+        return s
+
+try:
+    _encoding = QtGui.QApplication.UnicodeUTF8
+    def _translate(context, text, disambig):
+        return QtGui.QApplication.translate(context, text, disambig, _encoding)
+except AttributeError:
+    def _translate(context, text, disambig):
+        return QtGui.QApplication.translate(context, text, disambig)
+
+class Ui_ExportActionResultDialog(object):
+    def setupUi(self, ExportActionResultDialog):
+        ExportActionResultDialog.setObjectName(_fromUtf8("ExportActionResultDialog"))
+        ExportActionResultDialog.resize(769, 714)
+        self.gridLayout = QtGui.QGridLayout(ExportActionResultDialog)
+        self.gridLayout.setObjectName(_fromUtf8("gridLayout"))
+        self.splitter = QtGui.QSplitter(ExportActionResultDialog)
+        self.splitter.setOrientation(QtCore.Qt.Horizontal)
+        self.splitter.setObjectName(_fromUtf8("splitter"))
+        self.treeContracts = QtGui.QTreeView(self.splitter)
+        self.treeContracts.setObjectName(_fromUtf8("treeContracts"))
+        self.widget = QtGui.QWidget(self.splitter)
+        self.widget.setObjectName(_fromUtf8("widget"))
+        self.verticalLayout = QtGui.QVBoxLayout(self.widget)
+        self.verticalLayout.setMargin(0)
+        self.verticalLayout.setObjectName(_fromUtf8("verticalLayout"))
+        self.horizontalLayout_2 = QtGui.QHBoxLayout()
+        self.horizontalLayout_2.setObjectName(_fromUtf8("horizontalLayout_2"))
+        self.lblBegDate = QtGui.QLabel(self.widget)
+        self.lblBegDate.setObjectName(_fromUtf8("lblBegDate"))
+        self.horizontalLayout_2.addWidget(self.lblBegDate)
+        self.edtBegDate = CDateEdit(self.widget)
+        self.edtBegDate.setCalendarPopup(True)
+        self.edtBegDate.setObjectName(_fromUtf8("edtBegDate"))
+        self.horizontalLayout_2.addWidget(self.edtBegDate)
+        self.verticalLayout.addLayout(self.horizontalLayout_2)
+        self.horizontalLayout_3 = QtGui.QHBoxLayout()
+        self.horizontalLayout_3.setObjectName(_fromUtf8("horizontalLayout_3"))
+        self.lblEndDate = QtGui.QLabel(self.widget)
+        self.lblEndDate.setObjectName(_fromUtf8("lblEndDate"))
+        self.horizontalLayout_3.addWidget(self.lblEndDate)
+        self.edtEndDate = CDateEdit(self.widget)
+        self.edtEndDate.setCalendarPopup(True)
+        self.edtEndDate.setObjectName(_fromUtf8("edtEndDate"))
+        self.horizontalLayout_3.addWidget(self.edtEndDate)
+        self.verticalLayout.addLayout(self.horizontalLayout_3)
+        self.horizontalLayout_14 = QtGui.QHBoxLayout()
+        self.horizontalLayout_14.setObjectName(_fromUtf8("horizontalLayout_14"))
+        self.label_9 = QtGui.QLabel(self.widget)
+        self.label_9.setObjectName(_fromUtf8("label_9"))
+        self.horizontalLayout_14.addWidget(self.label_9)
+        self.edtDate = CDateEdit(self.widget)
+        self.edtDate.setObjectName(_fromUtf8("edtDate"))
+        self.horizontalLayout_14.addWidget(self.edtDate)
+        self.verticalLayout.addLayout(self.horizontalLayout_14)
+        self.horizontalLayout_15 = QtGui.QHBoxLayout()
+        self.horizontalLayout_15.setObjectName(_fromUtf8("horizontalLayout_15"))
+        self.label_10 = QtGui.QLabel(self.widget)
+        self.label_10.setObjectName(_fromUtf8("label_10"))
+        self.horizontalLayout_15.addWidget(self.label_10)
+        self.boxPeriod = QtGui.QSpinBox(self.widget)
+        self.boxPeriod.setObjectName(_fromUtf8("boxPeriod"))
+        self.horizontalLayout_15.addWidget(self.boxPeriod)
+        self.verticalLayout.addLayout(self.horizontalLayout_15)
+        self.chkPerevystavl = QtGui.QCheckBox(self.widget)
+        self.chkPerevystavl.setChecked(True)
+        self.chkPerevystavl.setObjectName(_fromUtf8("chkPerevystavl"))
+        self.verticalLayout.addWidget(self.chkPerevystavl)
+        self.horizontalLayout = QtGui.QHBoxLayout()
+        self.horizontalLayout.setObjectName(_fromUtf8("horizontalLayout"))
+        self.lblOrgStructure = QtGui.QLabel(self.widget)
+        self.lblOrgStructure.setObjectName(_fromUtf8("lblOrgStructure"))
+        self.horizontalLayout.addWidget(self.lblOrgStructure)
+        self.cmbOrgStructure = COrgStructureComboBox(self.widget)
+        self.cmbOrgStructure.setObjectName(_fromUtf8("cmbOrgStructure"))
+        self.horizontalLayout.addWidget(self.cmbOrgStructure)
+        self.verticalLayout.addLayout(self.horizontalLayout)
+        self.horizontalLayout_4 = QtGui.QHBoxLayout()
+        self.horizontalLayout_4.setObjectName(_fromUtf8("horizontalLayout_4"))
+        self.lblPerson = QtGui.QLabel(self.widget)
+        self.lblPerson.setObjectName(_fromUtf8("lblPerson"))
+        self.horizontalLayout_4.addWidget(self.lblPerson)
+        self.cmbPerson = CPersonComboBoxEx(self.widget)
+        self.cmbPerson.setObjectName(_fromUtf8("cmbPerson"))
+        self.cmbPerson.addItem(_fromUtf8(""))
+        self.horizontalLayout_4.addWidget(self.cmbPerson)
+        self.verticalLayout.addLayout(self.horizontalLayout_4)
+        self.horizontalLayout_5 = QtGui.QHBoxLayout()
+        self.horizontalLayout_5.setObjectName(_fromUtf8("horizontalLayout_5"))
+        self.lblEventType = QtGui.QLabel(self.widget)
+        self.lblEventType.setObjectName(_fromUtf8("lblEventType"))
+        self.horizontalLayout_5.addWidget(self.lblEventType)
+        self.cmbEventType = CRBComboBox(self.widget)
+        self.cmbEventType.setObjectName(_fromUtf8("cmbEventType"))
+        self.horizontalLayout_5.addWidget(self.cmbEventType)
+        self.verticalLayout.addLayout(self.horizontalLayout_5)
+        self.horizontalLayout_6 = QtGui.QHBoxLayout()
+        self.horizontalLayout_6.setObjectName(_fromUtf8("horizontalLayout_6"))
+        self.lblClass = QtGui.QLabel(self.widget)
+        self.lblClass.setObjectName(_fromUtf8("lblClass"))
+        self.horizontalLayout_6.addWidget(self.lblClass)
+        self.cmbClass = QtGui.QComboBox(self.widget)
+        self.cmbClass.setObjectName(_fromUtf8("cmbClass"))
+        self.cmbClass.addItem(_fromUtf8(""))
+        self.cmbClass.addItem(_fromUtf8(""))
+        self.cmbClass.addItem(_fromUtf8(""))
+        self.cmbClass.addItem(_fromUtf8(""))
+        self.horizontalLayout_6.addWidget(self.cmbClass)
+        self.verticalLayout.addLayout(self.horizontalLayout_6)
+        self.horizontalLayout_7 = QtGui.QHBoxLayout()
+        self.horizontalLayout_7.setObjectName(_fromUtf8("horizontalLayout_7"))
+        self.lblActionType = QtGui.QLabel(self.widget)
+        self.lblActionType.setObjectName(_fromUtf8("lblActionType"))
+        self.horizontalLayout_7.addWidget(self.lblActionType)
+        self.cmbActionType = CActionTypeComboBox(self.widget)
+        self.cmbActionType.setEnabled(False)
+        self.cmbActionType.setObjectName(_fromUtf8("cmbActionType"))
+        self.horizontalLayout_7.addWidget(self.cmbActionType)
+        self.verticalLayout.addLayout(self.horizontalLayout_7)
+        spacerItem = QtGui.QSpacerItem(20, 40, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Expanding)
+        self.verticalLayout.addItem(spacerItem)
+        self.gridLayout.addWidget(self.splitter, 0, 0, 1, 1)
+        self.buttonBox = QtGui.QDialogButtonBox(ExportActionResultDialog)
+        self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
+        self.buttonBox.setStandardButtons(QtGui.QDialogButtonBox.Cancel|QtGui.QDialogButtonBox.Ok)
+        self.buttonBox.setObjectName(_fromUtf8("buttonBox"))
+        self.gridLayout.addWidget(self.buttonBox, 1, 0, 1, 1)
+        self.lblBegDate.setBuddy(self.edtBegDate)
+        self.lblEndDate.setBuddy(self.edtEndDate)
+        self.lblOrgStructure.setBuddy(self.cmbOrgStructure)
+        self.lblPerson.setBuddy(self.cmbPerson)
+        self.lblEventType.setBuddy(self.cmbPerson)
+        self.lblClass.setBuddy(self.cmbClass)
+        self.lblActionType.setBuddy(self.cmbActionType)
+
+        self.retranslateUi(ExportActionResultDialog)
+        QtCore.QObject.connect(self.buttonBox, QtCore.SIGNAL(_fromUtf8("accepted()")), ExportActionResultDialog.accept)
+        QtCore.QObject.connect(self.buttonBox, QtCore.SIGNAL(_fromUtf8("rejected()")), ExportActionResultDialog.reject)
+        QtCore.QMetaObject.connectSlotsByName(ExportActionResultDialog)
+
+    def retranslateUi(self, ExportActionResultDialog):
+        ExportActionResultDialog.setWindowTitle(_translate("ExportActionResultDialog", "Экспорт результатов действий", None))
+        self.lblBegDate.setText(_translate("ExportActionResultDialog", "Дата начала периода", None))
+        self.lblEndDate.setText(_translate("ExportActionResultDialog", "Дата окончания периода", None))
+        self.label_9.setText(_translate("ExportActionResultDialog", "дата посылки", None))
+        self.label_10.setText(_translate("ExportActionResultDialog", "отчётный месяц", None))
+        self.chkPerevystavl.setText(_translate("ExportActionResultDialog", "включать подлежащие перевыставлению", None))
+        self.lblOrgStructure.setText(_translate("ExportActionResultDialog", "Подразделение", None))
+        self.lblPerson.setText(_translate("ExportActionResultDialog", "&Врач", None))
+        self.cmbPerson.setItemText(0, _translate("ExportActionResultDialog", "Врач", None))
+        self.lblEventType.setText(_translate("ExportActionResultDialog", "&Тип обращения", None))
+        self.lblClass.setText(_translate("ExportActionResultDialog", "Кла&сс действия", None))
+        self.cmbClass.setItemText(0, _translate("ExportActionResultDialog", "Статус", None))
+        self.cmbClass.setItemText(1, _translate("ExportActionResultDialog", "Диагностика", None))
+        self.cmbClass.setItemText(2, _translate("ExportActionResultDialog", "Лечение", None))
+        self.cmbClass.setItemText(3, _translate("ExportActionResultDialog", "Прочие мероприятия", None))
+        self.lblActionType.setText(_translate("ExportActionResultDialog", "&Тип действия", None))
+
+from Events.ActionTypeComboBox import CActionTypeComboBox
+from library.crbcombobox import CRBComboBox
+from library.DateEdit import CDateEdit
+from Orgs.PersonComboBoxEx import CPersonComboBoxEx
+from Orgs.OrgStructComboBoxes import COrgStructureComboBox

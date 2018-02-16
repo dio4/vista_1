@@ -1,0 +1,3769 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>appPreferencesDialog</class>
+ <widget class="QDialog" name="appPreferencesDialog">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1298</width>
+    <height>1032</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Умолчания</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>false</bool>
+  </property>
+  <property name="modal">
+   <bool>true</bool>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_3">
+   <property name="margin">
+    <number>4</number>
+   </property>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tabMain">
+      <attribute name="title">
+       <string>Основные настройки</string>
+      </attribute>
+      <layout class="QGridLayout">
+       <property name="margin">
+        <number>4</number>
+       </property>
+       <property name="spacing">
+        <number>4</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QLabel" name="lblOrganisation">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>130</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>&amp;ЛПУ</string>
+         </property>
+         <property name="buddy">
+          <cstring>cmbOrganisation</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="CPolyclinicComboBox" name="cmbOrganisation"/>
+       </item>
+       <item row="0" column="2">
+        <widget class="QToolButton" name="btnSelectOrganisation">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Ignored">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>...</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="lblOrgStructure">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>130</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>&amp;Подразделение</string>
+         </property>
+         <property name="buddy">
+          <cstring>cmbOrgStructure</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="COrgStructureComboBox" name="cmbOrgStructure"/>
+       </item>
+       <item row="2" column="1" colspan="2">
+        <widget class="QCheckBox" name="chkFilterPaymentByOrgStructure">
+         <property name="text">
+          <string>При выставлении счетов &amp;учитывать текущее подразделение</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <spacer>
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>61</width>
+           <height>174</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="4" column="1">
+        <widget class="CKLADRComboBox" name="cmbDefaultCity"/>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="lblDefaultCity">
+         <property name="minimumSize">
+          <size>
+           <width>130</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>&amp;Нас.пункт по умолчанию</string>
+         </property>
+         <property name="buddy">
+          <cstring>cmbDefaultCity</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1" colspan="2">
+        <widget class="QCheckBox" name="chkOrgStructurePriorityForAddActions">
+         <property name="text">
+          <string>Приоритет подразделения для функции &quot;Добавить ...&quot;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="CKLADRComboBox" name="cmbProvince"/>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="lblDefaultCity_2">
+         <property name="minimumSize">
+          <size>
+           <width>130</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>&amp;Область</string>
+         </property>
+         <property name="buddy">
+          <cstring>cmbProvince</cstring>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabEmail">
+      <attribute name="title">
+       <string>e-mail</string>
+      </attribute>
+      <layout class="QGridLayout">
+       <property name="margin">
+        <number>4</number>
+       </property>
+       <property name="spacing">
+        <number>4</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QLabel" name="lblSMTPServer">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>130</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>SM&amp;TP сервер</string>
+         </property>
+         <property name="buddy">
+          <cstring>edtSMTPServer</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="edtSMTPServer">
+         <property name="minimumSize">
+          <size>
+           <width>300</width>
+           <height>0</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLabel" name="lblSMTPPort">
+         <property name="text">
+          <string>по&amp;рт</string>
+         </property>
+         <property name="buddy">
+          <cstring>edtSMTPPort</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <widget class="QLineEdit" name="edtSMTPPort">
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>50</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="inputMask">
+          <string/>
+         </property>
+         <property name="maxLength">
+          <number>6</number>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="lblMailAddress">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>130</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>&amp;Адрес эл. почты</string>
+         </property>
+         <property name="buddy">
+          <cstring>edtMailAddress</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="edtMailAddress">
+         <property name="minimumSize">
+          <size>
+           <width>300</width>
+           <height>0</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QCheckBox" name="chkSMTPAuthentification">
+         <property name="text">
+          <string>на сервере требуется аутентификация</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="lblSMTPLogin">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>130</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>&amp;Логин</string>
+         </property>
+         <property name="buddy">
+          <cstring>edtSMTPLogin</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="edtSMTPLogin">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>300</width>
+           <height>0</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="lblSMTPPassword">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>130</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>&amp;Пароль</string>
+         </property>
+         <property name="buddy">
+          <cstring>edtSMTPPassword</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLineEdit" name="edtSMTPPassword">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>300</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="echoMode">
+          <enum>QLineEdit::Password</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <spacer>
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>211</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabEIS">
+      <attribute name="title">
+       <string>Сервер ЕИС</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <property name="margin">
+        <number>4</number>
+       </property>
+       <property name="spacing">
+        <number>4</number>
+       </property>
+       <item row="3" column="1" colspan="2">
+        <widget class="QLineEdit" name="edtDatabaseName">
+         <property name="minimumSize">
+          <size>
+           <width>300</width>
+           <height>0</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="lblUserName">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>130</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Логин</string>
+         </property>
+         <property name="buddy">
+          <cstring>edtUserName</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="2">
+        <spacer name="verticalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>225</width>
+           <height>262</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="5" column="1" colspan="2">
+        <widget class="QLineEdit" name="edtPassword">
+         <property name="minimumSize">
+          <size>
+           <width>300</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="echoMode">
+          <enum>QLineEdit::Password</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="lblPassword">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>130</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Пароль</string>
+         </property>
+         <property name="buddy">
+          <cstring>edtPassword</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1" colspan="2">
+        <widget class="QLineEdit" name="edtUserName">
+         <property name="minimumSize">
+          <size>
+           <width>300</width>
+           <height>0</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="lblDatabaseName">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>130</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>База</string>
+         </property>
+         <property name="buddy">
+          <cstring>edtDatabaseName</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QSpinBox" name="edtServerPort">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximum">
+          <number>99999</number>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="lblServerPort">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Порт</string>
+         </property>
+         <property name="buddy">
+          <cstring>edtServerPort</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1" colspan="2">
+        <widget class="QLineEdit" name="edtServerName">
+         <property name="minimumSize">
+          <size>
+           <width>300</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>localhost</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="lblServerName">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>130</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Адрес</string>
+         </property>
+         <property name="buddy">
+          <cstring>edtServerName</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QComboBox" name="cmbDriverName">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="currentIndex">
+          <number>1</number>
+         </property>
+         <item>
+          <property name="text">
+           <string>MySQL</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>FireBird</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="lblDriverName">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>130</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Тип</string>
+         </property>
+         <property name="buddy">
+          <cstring>cmbDriverName</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="0">
+        <widget class="QPushButton" name="btnEisTest">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Проверить соединение</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="lblCodepage">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>130</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Кодировка</string>
+         </property>
+         <property name="buddy">
+          <cstring>edtPassword</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1" colspan="2">
+        <widget class="QLineEdit" name="edtCodepage">
+         <property name="minimumSize">
+          <size>
+           <width>300</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Win_1251</string>
+         </property>
+         <property name="echoMode">
+          <enum>QLineEdit::Normal</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabSocCard">
+      <attribute name="title">
+       <string>Социальная карта</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="spacing">
+        <number>4</number>
+       </property>
+       <property name="margin">
+        <number>4</number>
+       </property>
+       <item>
+        <widget class="QCheckBox" name="chkEnableSocCardSupport">
+         <property name="text">
+          <string>Включить поддержку социальной карты</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="grpCardReaderSettings">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="title">
+          <string>Настройки считывателя карт</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_3">
+          <property name="margin">
+           <number>4</number>
+          </property>
+          <property name="spacing">
+           <number>4</number>
+          </property>
+          <item row="2" column="4">
+           <widget class="QSpinBox" name="sbIssBSC2">
+            <property name="maximum">
+             <number>255</number>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="3">
+           <widget class="QSpinBox" name="sbIssBSC1">
+            <property name="maximum">
+             <number>255</number>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="5">
+           <widget class="QSpinBox" name="sbIssBSC3">
+            <property name="maximum">
+             <number>255</number>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2" colspan="3">
+           <widget class="QSpinBox" name="sbPortNumber">
+            <property name="toolTip">
+             <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Номер COM-порта, к которому подключено устройство (&lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-weight:600;&quot;&gt;0&lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; – для USB-картридера)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="6">
+           <widget class="QSpinBox" name="sbIssBSC4">
+            <property name="maximum">
+             <number>255</number>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="2" colspan="4">
+           <widget class="QLineEdit" name="edtOperatorId"/>
+          </item>
+          <item row="2" column="7">
+           <widget class="QSpinBox" name="sbIssBSC5">
+            <property name="maximum">
+             <number>255</number>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2" colspan="3">
+           <widget class="QSpinBox" name="sbDevId">
+            <property name="maximum">
+             <number>655362</number>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="6" colspan="2">
+           <widget class="QPushButton" name="btnSocCardTest">
+            <property name="text">
+             <string>Проверить соединение</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="2">
+           <widget class="QSpinBox" name="sbIssBSC0">
+            <property name="maximum">
+             <number>255</number>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="lblPortNumber">
+            <property name="minimumSize">
+             <size>
+              <width>130</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Номер COM порта (0-USB)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="lblDevIdl">
+            <property name="minimumSize">
+             <size>
+              <width>130</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Номер устройства</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="lblIssBSC">
+            <property name="minimumSize">
+             <size>
+              <width>130</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Код банка</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="lblOperatorId">
+            <property name="minimumSize">
+             <size>
+              <width>130</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Оператор</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="grpCardRbSettings">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="title">
+          <string>Настойки справочников</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_4">
+          <property name="margin">
+           <number>4</number>
+          </property>
+          <property name="spacing">
+           <number>4</number>
+          </property>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="edtDocumentTypeRbFileName"/>
+          </item>
+          <item row="0" column="2">
+           <widget class="QToolButton" name="btnSelectDocumentTypeRbFileName">
+            <property name="text">
+             <string>...</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QToolButton" name="btnSelectClientBenefitRbFileName">
+            <property name="text">
+             <string>...</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="lblDocumentTypeRbFileName">
+            <property name="minimumSize">
+             <size>
+              <width>130</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Типы документов                   </string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="edtClientBenefitRbFileName"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="lblClientBenefitRbFileName">
+            <property name="minimumSize">
+             <size>
+              <width>130</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Категории льгот</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="chkDefaultClientSearchUsingSocCard">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>Поиск пациентов по-умолчанию через социальную карту</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="chkCardReaderEmulation">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>Эмулировать считыватель карт</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabTerFund">
+      <attribute name="title">
+       <string>Тер.фонд</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="spacing">
+        <number>4</number>
+       </property>
+       <property name="margin">
+        <number>4</number>
+       </property>
+       <item>
+        <widget class="QGroupBox" name="grpTFCheckPolicy">
+         <property name="title">
+          <string>Сервис поиска и проверки полиса ОМС</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_5">
+          <property name="margin">
+           <number>4</number>
+          </property>
+          <property name="spacing">
+           <number>4</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="lblTFCPUrl">
+            <property name="minimumSize">
+             <size>
+              <width>130</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>&amp;Адрес</string>
+            </property>
+            <property name="buddy">
+             <cstring>edtTFCPUrl</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1" colspan="3">
+           <widget class="QLineEdit" name="edtTFCPUrl">
+            <property name="minimumSize">
+             <size>
+              <width>300</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>http://172.24.119.3/identWS/services/Ident</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="lblTFCPLogin">
+            <property name="minimumSize">
+             <size>
+              <width>130</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>&amp;Логин</string>
+            </property>
+            <property name="buddy">
+             <cstring>edtTFCPLogin</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="edtTFCPLogin">
+            <property name="minimumSize">
+             <size>
+              <width>300</width>
+              <height>0</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2" colspan="2">
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>372</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="lblTFCPPassword">
+            <property name="minimumSize">
+             <size>
+              <width>130</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>&amp;Пароль</string>
+            </property>
+            <property name="buddy">
+             <cstring>edtTFCPPassword</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="edtTFCPPassword">
+            <property name="minimumSize">
+             <size>
+              <width>300</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="echoMode">
+             <enum>QLineEdit::Password</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="2">
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>238</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="2" column="3">
+           <widget class="QPushButton" name="btnTFCPTest">
+            <property name="text">
+             <string>Проверить соединение</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0" colspan="4">
+           <widget class="QCheckBox" name="chkLoadAttach">
+            <property name="text">
+             <string>Загружать прикрепление</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="grpAttach">
+         <property name="title">
+          <string>Web-сервис «Регистр прикрепленного населения»</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_10">
+          <property name="margin">
+           <number>4</number>
+          </property>
+          <property name="spacing">
+           <number>4</number>
+          </property>
+          <item row="0" column="1" colspan="5">
+           <widget class="QLineEdit" name="edtAttachUrl">
+            <property name="minimumSize">
+             <size>
+              <width>300</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="lblAttachPassword">
+            <property name="minimumSize">
+             <size>
+              <width>130</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Пароль</string>
+            </property>
+            <property name="buddy">
+             <cstring>edtAttachPassword</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QLineEdit" name="edtAttachPassword">
+            <property name="minimumSize">
+             <size>
+              <width>300</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="echoMode">
+             <enum>QLineEdit::Password</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="2">
+           <spacer name="horizontalSpacer_12">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>238</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="2" column="2">
+           <spacer name="horizontalSpacer_11">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>372</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="6" column="2">
+           <spacer name="horizontalSpacer_15">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>238</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="lblAttachLogin">
+            <property name="minimumSize">
+             <size>
+              <width>130</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Логин</string>
+            </property>
+            <property name="buddy">
+             <cstring>edtAttachLogin</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="lblAttachUrl">
+            <property name="minimumSize">
+             <size>
+              <width>130</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Адрес</string>
+            </property>
+            <property name="buddy">
+             <cstring>edtAttachUrl</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="edtAttachLogin">
+            <property name="minimumSize">
+             <size>
+              <width>300</width>
+              <height>0</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <widget class="QLineEdit" name="edtAttachOldPassword">
+            <property name="minimumSize">
+             <size>
+              <width>300</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="echoMode">
+             <enum>QLineEdit::Password</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="lblAttachOldPassword">
+            <property name="minimumSize">
+             <size>
+              <width>130</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Старый пароль</string>
+            </property>
+            <property name="buddy">
+             <cstring>edtAttachOldPassword</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="3">
+           <widget class="QPushButton" name="btnAttachTest">
+            <property name="text">
+             <string>Проверить соединение</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="3">
+           <widget class="QPushButton" name="btnAttachRegister">
+            <property name="text">
+             <string>Регистрация</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="3">
+           <widget class="QCheckBox" name="chkAttachRegisterMultiple">
+            <property name="text">
+             <string>зарегистрировать все отделения</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0" colspan="4">
+           <widget class="QCheckBox" name="chkTransmitAttachData">
+            <property name="text">
+             <string>По умолчанию передавать данные</string>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="0" colspan="4">
+           <widget class="QCheckBox" name="chkDebugSoapAttach">
+            <property name="text">
+             <string>Записывать передаваемые запросы</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="grpKzCheckIIN">
+         <property name="focusPolicy">
+          <enum>Qt::StrongFocus</enum>
+         </property>
+         <property name="title">
+          <string>Сервис поиска прикреплённого населения</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_18">
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="edtIINLogin"/>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="lblIINUrl">
+            <property name="minimumSize">
+             <size>
+              <width>130</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Адрес</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="lblIINPassword">
+            <property name="minimumSize">
+             <size>
+              <width>130</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Пароль</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="2">
+           <spacer name="horizontalSpacer_8">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="1" column="2" colspan="2">
+           <spacer name="horizontalSpacer_6">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Expanding</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="1" colspan="3">
+           <widget class="QLineEdit" name="edtIINUrl"/>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="edtIINPassword"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="lblIINLogin">
+            <property name="minimumSize">
+             <size>
+              <width>130</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Логин</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="3">
+           <widget class="QPushButton" name="btnIINCheck">
+            <property name="text">
+             <string>Проверить подключение</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>205</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabRecipes">
+      <attribute name="title">
+       <string>Льготные рецепты</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_16">
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="grpRecipesExchange">
+         <property name="title">
+          <string>Сервис МИАЦ</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_17">
+          <item row="0" column="0">
+           <widget class="QLabel" name="lblRecipesExchangeUrl">
+            <property name="text">
+             <string>Адрес</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="edtRecipesExchangeUrl">
+            <property name="text">
+             <string>http://10.0.1.154/drugstore/RecipeService.asmx</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="lblRecipesExchangeClientId">
+            <property name="text">
+             <string>Идентификатор учреждения</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="edtRecipesExchangeClientId"/>
+          </item>
+          <item row="3" column="1">
+           <spacer name="verticalSpacer_9">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>407</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="2" column="0">
+           <widget class="QCheckBox" name="chkRecipesLog">
+            <property name="text">
+             <string>Записывать передаваемые запросы</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <spacer name="horizontalSpacer_5">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>401</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabPersonSync">
+      <attribute name="title">
+       <string>Синхронизация сотрудников</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_23">
+       <item row="1" column="1" colspan="2">
+        <spacer name="verticalSpacer_10">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>407</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="0" column="0" colspan="3">
+        <widget class="QWidget" name="grpPersonSync" native="true">
+         <layout class="QGridLayout" name="gridLayout_21">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>Используемая система синхронизации</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="2">
+           <widget class="QLineEdit" name="edtPersonSyncPassword"/>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="lblPersonSyncPassword">
+            <property name="text">
+             <string>Пароль</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QLineEdit" name="edtPersonSyncUrl">
+            <property name="text">
+             <string>http://10.0.1.61:3845/ard</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="lblPersonSyncUrl">
+            <property name="text">
+             <string>Адрес</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="lblPersonSyncLogin">
+            <property name="text">
+             <string>Логин</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="2">
+           <widget class="QLineEdit" name="edtPersonSyncLogin"/>
+          </item>
+          <item row="0" column="2">
+           <widget class="QComboBox" name="cmbPersonSyncService">
+            <item>
+             <property name="text">
+              <string>Парус</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>1С-Кадры (ДККБ)</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabMIP">
+      <attribute name="title">
+       <string>МИП</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_9">
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="grpMIP">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="title">
+          <string>Удаленный сервис УЭК</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_8">
+          <property name="margin">
+           <number>4</number>
+          </property>
+          <property name="spacing">
+           <number>4</number>
+          </property>
+          <item row="2" column="1" colspan="2">
+           <spacer name="horizontalSpacer_9">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>238</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="lblTFCPUrl_3">
+            <property name="minimumSize">
+             <size>
+              <width>130</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>&amp;Адрес сервиса считывателя</string>
+            </property>
+            <property name="buddy">
+             <cstring>edtTFCPUrl</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="3">
+           <widget class="QPushButton" name="btnMIPTest">
+            <property name="text">
+             <string>Проверить соединение</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>Адрес сервиса клинического контекста</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1" colspan="3">
+           <widget class="QLineEdit" name="edtMIPUrl">
+            <property name="minimumSize">
+             <size>
+              <width>300</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>http://127.0.0.1:2116/MIPWinSrv/</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1" colspan="3">
+           <widget class="QLineEdit" name="edtMIPContext">
+            <property name="text">
+             <string>http://127.0.0.1:2116/WSMCC/</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QGroupBox" name="grpBarCodeReader">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="title">
+          <string>Сканер полиса ОМС</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+         <layout class="QFormLayout" name="formLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="Label">
+            <property name="text">
+             <string>Имя сканера штрихкодов</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="cmbBarCodeReader">
+            <property name="editable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QCheckBox" name="uekDirectAccess">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="text">
+          <string>Прямой доступ к УЭК</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <spacer name="verticalSpacer_5">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>497</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabEGISZ">
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <attribute name="title">
+       <string>ЕГИЗС</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_10">
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="grpEgisz">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>70</height>
+          </size>
+         </property>
+         <property name="title">
+          <string>Региональный фрагмент ЕГИЗС СПб</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_12">
+          <property name="spacing">
+           <number>6</number>
+          </property>
+          <item row="1" column="0">
+           <widget class="QLabel" name="lblEgiszAddress">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>1</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Адрес сервера</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="edtEgiszAddress">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>4</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <spacer name="verticalSpacer_6">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Expanding</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_2">
+      <attribute name="title">
+       <string>ССМП</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_28">
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="grpSSMP">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="title">
+          <string>Сервис СМП</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_27">
+          <item row="0" column="0">
+           <widget class="QLabel" name="lblSSMP">
+            <property name="text">
+             <string>Адрес сервера:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="edtSSMPAddress"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <spacer name="verticalSpacer_13">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>753</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>ЭПОМС</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_34">
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="grpEpoms">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>70</height>
+          </size>
+         </property>
+         <property name="title">
+          <string>Использовать ЭПОМС</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_22">
+          <property name="spacing">
+           <number>6</number>
+          </property>
+          <item row="0" column="1">
+           <layout class="QGridLayout" name="gridLayout_24">
+            <item row="0" column="2">
+             <widget class="QComboBox" name="cmbScardName"/>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLabel" name="lblEpomsDevice">
+              <property name="maximumSize">
+               <size>
+                <width>150</width>
+                <height>200</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Устройство</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <spacer name="verticalSpacer_16">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabGRKM">
+      <attribute name="title">
+       <string>ГРКМ</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_31">
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="grpGrkm">
+         <property name="title">
+          <string>Городской реестр карт маршрутизации</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_30">
+          <item row="0" column="0">
+           <widget class="QLabel" name="lblGrkmAddress">
+            <property name="text">
+             <string>Адрес:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="edtGrkmAddress"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="lblGrkmUser">
+            <property name="text">
+             <string>Пользователь:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="edtGrkmUser"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="lblGrkmPassword">
+            <property name="text">
+             <string>Пароль:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="edtGrkmPassword"/>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="lblHrkmLevelMO">
+            <property name="text">
+             <string>Уровень учреждения:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QComboBox" name="cmbGrkmLevel">
+            <item>
+             <property name="text">
+              <string>Первичный уровень</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Первый уровень</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Второй уровень</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Третий уровень</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <spacer name="verticalSpacer_14">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>685</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabReferralsService">
+      <attribute name="title">
+       <string>Направления на госпитализацию</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_29">
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="grpReferral">
+         <property name="title">
+          <string>Сервис ТФОМС:</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_19">
+          <item row="1" column="0">
+           <widget class="QLabel" name="lblRefUser">
+            <property name="text">
+             <string>Пользователь:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="lblRefUrl">
+            <property name="text">
+             <string>Адрес:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="lblRefPassword">
+            <property name="text">
+             <string>Пароль:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="edtRefUrl"/>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="edtRefPassword"/>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="edtRefUser"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QGroupBox" name="chkUOService">
+         <property name="title">
+          <string>Сервис УО:</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_20">
+          <item row="1" column="0">
+           <widget class="QLabel" name="lblUOServiceToken">
+            <property name="text">
+             <string>Токен:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="edtUOServiceAddress"/>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="lblUOServiceAddress">
+            <property name="text">
+             <string>Адрес:                </string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="edtUOServiceToken"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <spacer name="verticalSpacer_11">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>552</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabDiabetRegistry">
+      <attribute name="title">
+       <string>Регистр диабета</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_11">
+       <item row="5" column="4">
+        <spacer name="verticalSpacer_7">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="0" column="1" colspan="4">
+        <widget class="QGroupBox" name="grpUseDiaReg">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>70</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>120</height>
+          </size>
+         </property>
+         <property name="title">
+          <string>Использовать интеграцию с  регистром Диабета</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_14">
+          <item row="0" column="0">
+           <layout class="QGridLayout" name="gridLayout_13">
+            <item row="0" column="0">
+             <widget class="QLabel" name="lblDiaRegAddress">
+              <property name="minimumSize">
+               <size>
+                <width>195</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Адрес сервера</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLineEdit" name="edtDiaRegAddress"/>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="lblDiaRegUserName">
+              <property name="text">
+               <string>Имя пользователя</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLineEdit" name="edtDiaRegUserName">
+              <property name="maximumSize">
+               <size>
+                <width>200</width>
+                <height>16777215</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="lbllDiaRegPassword">
+              <property name="text">
+               <string>Пароль</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QLineEdit" name="edtDiaRegPassword">
+              <property name="maximumSize">
+               <size>
+                <width>200</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="echoMode">
+               <enum>QLineEdit::Password</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabAlfalab">
+      <attribute name="title">
+       <string>ЛИС Альфалаб</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_33">
+       <item row="1" column="0">
+        <spacer name="verticalSpacer_15">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>662</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="grpAlfalab">
+         <property name="title">
+          <string>Обмен с ЛИС АльфаЛАБ</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_32">
+          <item row="0" column="0">
+           <widget class="QLabel" name="lblAlfalabHost">
+            <property name="text">
+             <string>Адрес</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="CLineEdit" name="edtAlfalabHost">
+            <property name="text">
+             <string>http://217.79.12.120:9901</string>
+            </property>
+            <property name="placeholderText">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="lblAlfalabSender">
+            <property name="text">
+             <string>Код отправителя</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="edtAlfalabSender"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="lblAlfalabReceiver">
+            <property name="text">
+             <string>Код получателя</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="edtAlfalabReceiver"/>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="lblAlfalabPassword">
+            <property name="text">
+             <string>Пароль</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLineEdit" name="edtAlfalabPassword">
+            <property name="echoMode">
+             <enum>QLineEdit::Password</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabDeferredQueue">
+      <attribute name="title">
+       <string>ЖОС</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_15">
+       <item row="0" column="3">
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="1" column="1">
+        <widget class="QSpinBox" name="edtDaysAmountToShowBefore">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="suffix">
+          <string/>
+         </property>
+         <property name="prefix">
+          <string/>
+         </property>
+         <property name="minimum">
+          <number>-999</number>
+         </property>
+         <property name="maximum">
+          <number>0</number>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <spacer name="verticalSpacer_8">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>614</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="lblDaysAmountToShow">
+         <property name="text">
+          <string>Кол-во отображаемых дней:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Дата постановки в очередь относительно текущей</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Максимальная дата записи относительно текущей</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0" colspan="3">
+        <widget class="QCheckBox" name="chkHideFinishedInDeferredQueue">
+         <property name="text">
+          <string>Скрывать отработанные</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QSpinBox" name="edtDaysAmountToShowAfter">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="suffix">
+          <string/>
+         </property>
+         <property name="prefix">
+          <string>+</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0" colspan="2">
+        <widget class="Line" name="line">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0" colspan="2">
+        <widget class="QCheckBox" name="chkDefaultMaxDateByAttach">
+         <property name="toolTip">
+          <string>Д-1 - +3 дня, Д-2 - +14 дней, Д-3 - +30 дней, Д-4 - +3 месяца, Д-5 - + 6 месяцев, Д-6 - +1 год.</string>
+         </property>
+         <property name="text">
+          <string>Рассчитывать максимальную дату исходя из типа прикрепления</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="aisSocLab">
+      <attribute name="title">
+       <string>АИС &quot;Соц-Лаборатория&quot;</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_26">
+       <item row="1" column="0">
+        <spacer name="verticalSpacer_12">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="chkEnableSocLab">
+         <property name="title">
+          <string>Включить работу с АИС &quot;Соц-Лаборатория&quot;</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_25">
+          <item row="7" column="0">
+           <widget class="QLabel" name="label_8">
+            <property name="text">
+             <string>Пароль</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="label_7">
+            <property name="text">
+             <string>Логин</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_6">
+            <property name="text">
+             <string>Адрес</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="label_5">
+            <property name="text">
+             <string>Порт</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QLineEdit" name="edtSocLabPort">
+            <property name="inputMask">
+             <string>00000; </string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="edtSocLabAddress">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <widget class="QLineEdit" name="edtSocLabLog">
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="1">
+           <widget class="QLineEdit" name="edtSocLabPass">
+            <property name="echoMode">
+             <enum>QLineEdit::Password</enum>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabLN">
+      <attribute name="title">
+       <string>Листы нетрудоспособности</string>
+      </attribute>
+      <widget class="QGroupBox" name="grpLNService">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>1271</width>
+         <height>82</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Сервис листов нетрудоспособности</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_38">
+        <item row="0" column="0">
+         <widget class="QLabel" name="lblLNAddress">
+          <property name="text">
+           <string>Адрес внутреннего сервиса:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="edtLNAddress"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="btnLNCheckService">
+          <property name="text">
+           <string>Проверить соединение</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="personalCabinetTab">
+      <attribute name="title">
+       <string>Личный кабинет</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_37">
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="grpPersCab">
+         <property name="title">
+          <string>Сервис &quot;Личный кабинет&quot;</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_36">
+          <item row="0" column="0">
+           <widget class="QLabel" name="lblHostPersCab">
+            <property name="text">
+             <string>Хост ЛПУ:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="edtHostPersCab"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <spacer name="verticalSpacer_17">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>791</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabMisc">
+      <attribute name="title">
+       <string>Прочие настройки</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="1" column="4">
+        <widget class="QLabel" name="lblQueuing">
+         <property name="text">
+          <string>При постановке в очередь (График)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="27" column="4">
+        <widget class="QLabel" name="lblLISAddress">
+         <property name="text">
+          <string>Адрес ЛИС</string>
+         </property>
+         <property name="buddy">
+          <cstring>edtDicomViewerAddress</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="28" column="1" colspan="3">
+        <widget class="QLineEdit" name="edtTimeRangeColors">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выделение ячеек столбца &amp;quot;Поступил&amp;quot; на вкладке &amp;quot;Присутствует&amp;quot; стационарного монитора.&lt;br/&gt;Задается в формате &amp;quot;&lt;span style=&quot; font-style:italic;&quot;&gt;nn1-mm1:color1;nn2-mm2:color2&lt;/span&gt;&amp;quot;, где &lt;/p&gt;&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;nn&lt;/span&gt; - с момента начала события прошло более nn минут;&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;mm&lt;/span&gt; - с момента начала события прошло менее mm минут;&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;color&lt;/span&gt; - цвет выделения. Допустимые цвета: &lt;span style=&quot; font-style:italic; color:#ff0000;&quot;&gt;red&lt;/span&gt; , &lt;span style=&quot; font-style:italic; color:#0000ff;&quot;&gt;blue&lt;/span&gt; , &lt;span style=&quot; font-style:italic;&quot;&gt;green&lt;/span&gt;, &lt;span style=&quot; font-style:italic; color:#ffff00;&quot;&gt;yellow&lt;/span&gt; и т.д. Полный список допустимых цветов приведен в списке, предоставленном консорциумом WWW по адресу &lt;a href=&quot;http://www.w3.org/TR/SVG/types.html#ColorKeywords&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://www.w3.org/TR/SVG/types.html#ColorKeywords&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="34" column="4">
+        <widget class="QCheckBox" name="chkJobsOperatingLabOrders">
+         <property name="text">
+          <string>Доступ к заявкам ОДЛИ из журнала выполения работ</string>
+         </property>
+        </widget>
+       </item>
+       <item row="12" column="4">
+        <widget class="QCheckBox" name="chkHighlightInvalidDate">
+         <property name="text">
+          <string>Подсвечивать даты с ошибками</string>
+         </property>
+        </widget>
+       </item>
+       <item row="28" column="4">
+        <widget class="QLabel" name="lblBrowserPath">
+         <property name="text">
+          <string>Путь к браузеру</string>
+         </property>
+         <property name="buddy">
+          <cstring>edtDicomViewerAddress</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="33" column="1" colspan="3">
+        <widget class="QSpinBox" name="edtDefaultPrintFontSize">
+         <property name="maximum">
+          <number>40</number>
+         </property>
+        </widget>
+       </item>
+       <item row="25" column="4">
+        <widget class="QLabel" name="lblDicomViewerAddress">
+         <property name="text">
+          <string>Адрес Dicom Viewer</string>
+         </property>
+         <property name="buddy">
+          <cstring>edtDicomViewerAddress</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="22" column="5">
+        <widget class="QLineEdit" name="edtExaroEditor"/>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="lblTempInvalidDoctype">
+         <property name="text">
+          <string>Документ ВУТ по умолчанию</string>
+         </property>
+         <property name="buddy">
+          <cstring>cmbTempInvalidDoctype</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="17" column="0" colspan="4">
+        <widget class="QCheckBox" name="chkAmbulanceUserCheckable">
+         <property name="text">
+          <string>Показывать подтверждение записей амбулаторного приема</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="lblCheckActionChange">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Изменение действий при условии наличия счетов</string>
+         </property>
+         <property name="buddy">
+          <cstring>cmbCheckActionChange</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="24" column="0">
+        <widget class="QLabel" name="lblDocumentEditor">
+         <property name="text">
+          <string>Внешний редактор документов</string>
+         </property>
+         <property name="buddy">
+          <cstring>edtDocumentEditor</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="24" column="3">
+        <widget class="QToolButton" name="btnSelectDocumentEditor">
+         <property name="text">
+          <string>...</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1" colspan="2">
+        <widget class="QLineEdit" name="edtTemplateDir">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="lblCheckDiagChange">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Изменение диагнозов при условии наличия счетов</string>
+         </property>
+         <property name="buddy">
+          <cstring>cmbCheckDiagChange</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="24" column="1" colspan="2">
+        <widget class="QLineEdit" name="edtDocumentEditor"/>
+       </item>
+       <item row="4" column="3">
+        <widget class="QToolButton" name="btnSelectTemplateDir">
+         <property name="text">
+          <string>...</string>
+         </property>
+        </widget>
+       </item>
+       <item row="25" column="0">
+        <widget class="QLabel" name="lblExtGenRep">
+         <property name="text">
+          <string>Внешний генератор отчетов</string>
+         </property>
+         <property name="buddy">
+          <cstring>edtExtGenRep</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="25" column="1" colspan="2">
+        <widget class="QLineEdit" name="edtExtGenRep"/>
+       </item>
+       <item row="25" column="3">
+        <widget class="QToolButton" name="btnSelectExtGenRep">
+         <property name="text">
+          <string>...</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="lblTemplateDir">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Директория с шаблонами документов</string>
+         </property>
+         <property name="buddy">
+          <cstring>edtTemplateDir</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="27" column="0">
+        <widget class="QLabel" name="lblCachBox">
+         <property name="text">
+          <string>Касса</string>
+         </property>
+         <property name="buddy">
+          <cstring>edtCachBox</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="lblLabelPrinter">
+         <property name="text">
+          <string>Принтер для визиток пациентов и наклеек</string>
+         </property>
+         <property name="buddy">
+          <cstring>cmbLabelPrinter</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="12" column="0">
+        <widget class="QLabel" name="lblF025DefaultPrimacy">
+         <property name="text">
+          <string>Первичность/повторность ф.&amp;025 по умолчанию</string>
+         </property>
+         <property name="buddy">
+          <cstring>cmbF025DefaultPrimacy</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="5" colspan="2">
+        <widget class="QComboBox" name="cmbDoubleClickQueueClient">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <item>
+          <property name="text">
+           <string/>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Новое обращение</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Изменить жалобы/примечания</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Напечатать приглашение</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Перейти в график</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="2" column="1" colspan="3">
+        <widget class="CRBComboBox" name="cmbTempInvalidDoctype">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="5" colspan="2">
+        <widget class="QComboBox" name="cmbQueuing">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <item>
+          <property name="text">
+           <string>Ничего не выводить</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Выводить номерок</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Выводить жалобы</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Выводить номерок и жалобы</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="2" column="5" colspan="2">
+        <widget class="QComboBox" name="cmbDoubleClickQueuePerson">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <item>
+          <property name="text">
+           <string>Изменить жалобы/примечания</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Перейти в картотеку</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Новое обращение</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="0" column="5" colspan="2">
+        <widget class="CRBComboBox" name="cmbTempInvalidReason">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+        </widget>
+       </item>
+       <item row="27" column="1" colspan="3">
+        <widget class="QLineEdit" name="edtCachBox"/>
+       </item>
+       <item row="22" column="0" colspan="4">
+        <widget class="QCheckBox" name="chkShowVisitDateInRegistry">
+         <property name="text">
+          <string>Отображать дату последнего посещения в картотеке</string>
+         </property>
+        </widget>
+       </item>
+       <item row="38" column="0">
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="4" column="4">
+        <widget class="QLabel" name="lblDoubleClickQueueClient">
+         <property name="text">
+          <string>Двойной щелчок в листе предварительной записи пациента</string>
+         </property>
+         <property name="buddy">
+          <cstring>cmbDoubleClickQueueClient</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="15" column="0" colspan="4">
+        <widget class="QCheckBox" name="chkAddressOnlyByKLADR">
+         <property name="text">
+          <string>Ввод адреса только по КЛАДРу</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="4">
+        <widget class="QLabel" name="lblTempInvalidReason">
+         <property name="text">
+          <string>Причина ВУТ по умолчанию</string>
+         </property>
+         <property name="buddy">
+          <cstring>cmbTempInvalidReason</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="4">
+        <widget class="QLabel" name="lblDoubleClickQueuePerson">
+         <property name="text">
+          <string>Двойной щелчок в листе предварительной записи врача</string>
+         </property>
+         <property name="buddy">
+          <cstring>cmbDoubleClickQueuePerson</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="15" column="4">
+        <widget class="QCheckBox" name="chkUseCounterInAccounts">
+         <property name="toolTip">
+          <string>К выставляемому счёту будет применен счетчик с кодом &quot;Contracts&quot;</string>
+         </property>
+         <property name="text">
+          <string>Использовать счётчик при выставлении счетов</string>
+         </property>
+        </widget>
+       </item>
+       <item row="24" column="5">
+        <widget class="QLineEdit" name="edtExtArchiver"/>
+       </item>
+       <item row="22" column="6">
+        <widget class="QToolButton" name="btnSelectExaroEditor">
+         <property name="text">
+          <string>...</string>
+         </property>
+        </widget>
+       </item>
+       <item row="24" column="6">
+        <widget class="QToolButton" name="btnSelectExtArchiver">
+         <property name="text">
+          <string>...</string>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="0" colspan="4">
+        <widget class="QCheckBox" name="chkAutoPrimacy">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="text">
+          <string>Отключить автоматическое определение первичности/повторности</string>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="28" column="5" colspan="2">
+        <widget class="QLineEdit" name="edtBrowserPath"/>
+       </item>
+       <item row="25" column="5" colspan="2">
+        <widget class="QLineEdit" name="edtDicomViewerAddress"/>
+       </item>
+       <item row="31" column="4">
+        <widget class="QCheckBox" name="chkAddNotes">
+         <property name="text">
+          <string>Добавлять жалобы в примечания</string>
+         </property>
+        </widget>
+       </item>
+       <item row="27" column="5" colspan="2">
+        <widget class="QLineEdit" name="edtLISAddress"/>
+       </item>
+       <item row="29" column="4">
+        <widget class="QCheckBox" name="chkEpircisModule">
+         <property name="text">
+          <string>Адрес модуля эпикризов</string>
+         </property>
+        </widget>
+       </item>
+       <item row="29" column="5" colspan="2">
+        <widget class="QLineEdit" name="edtEpircisModule">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>http://</string>
+         </property>
+        </widget>
+       </item>
+       <item row="28" column="0">
+        <widget class="QLabel" name="lblTimeRangeColors">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выделение ячеек столбца &amp;quot;Поступил&amp;quot; на вкладке &amp;quot;Присутствует&amp;quot; стационарного монитора.&lt;br/&gt;Задается в формате &amp;quot;&lt;span style=&quot; font-style:italic;&quot;&gt;nn1-mm1:color1;nn2-mm2:color2&lt;/span&gt;&amp;quot;, где &lt;/p&gt;&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;nn&lt;/span&gt; - с момента начала события прошло более nn минут;&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;mm&lt;/span&gt; - с момента начала события прошло менее mm минут;&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;color&lt;/span&gt; - цвет выделения. Допустимые цвета: &lt;span style=&quot; font-style:italic; color:#ff0000;&quot;&gt;red&lt;/span&gt; , &lt;span style=&quot; font-style:italic; color:#0000ff;&quot;&gt;blue&lt;/span&gt; , &lt;span style=&quot; font-style:italic;&quot;&gt;green&lt;/span&gt;, &lt;span style=&quot; font-style:italic; color:#ffff00;&quot;&gt;yellow&lt;/span&gt; и т.д. Полный список допустимых цветов приведен в списке, предоставленном консорциумом WWW по адресу &lt;a href=&quot;http://www.w3.org/TR/SVG/types.html#ColorKeywords&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://www.w3.org/TR/SVG/types.html#ColorKeywords&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="text">
+          <string>Цветовая маркировка в стационарном мониторе</string>
+         </property>
+         <property name="buddy">
+          <cstring>edtTimeRangeColors</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="29" column="0" colspan="4">
+        <widget class="QCheckBox" name="chkShowErrorMessages">
+         <property name="text">
+          <string>Показывать сообщения об ошибках</string>
+         </property>
+        </widget>
+       </item>
+       <item row="32" column="0">
+        <widget class="QLabel" name="lblDefaultPrintFont">
+         <property name="text">
+          <string>Шрифт по умолчанию для печати</string>
+         </property>
+        </widget>
+       </item>
+       <item row="31" column="0" colspan="4">
+        <widget class="QCheckBox" name="chkDisableSumPricesCol">
+         <property name="text">
+          <string>Не показывать столбец &quot;Стоимость визита&quot; в таблице &quot;Договоры&quot; (Расчет - Договоры)</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="32" column="1" colspan="3">
+        <widget class="QFontComboBox" name="cmbDefaultPrintFont"/>
+       </item>
+       <item row="1" column="1" colspan="3">
+        <widget class="QComboBox" name="cmbCheckActionChange">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <item>
+          <property name="text">
+           <string>Запретить</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Спросить</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Разрешить</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QCheckBox" name="chkGroupPrintWithutDialog">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Times New Roman,serif'; font-size:10pt;&quot;&gt;При включенной настройке после  выбора различных экшенов автоматически будет печататься первый по порядку шаблон печати&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="text">
+          <string>Групповая печать без диалогового окна</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1" colspan="3">
+        <widget class="QComboBox" name="cmbCheckDiagChange">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <item>
+          <property name="text">
+           <string>Запретить</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Спросить</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Разрешить</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="12" column="1" colspan="3">
+        <widget class="QComboBox" name="cmbF025DefaultPrimacy">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <item>
+          <property name="text">
+           <string>Повторный</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Первичный</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Пытаться угадать по специальности</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Пытаться угадать по специалисту</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="6" column="1" colspan="3">
+        <widget class="QComboBox" name="cmbLabelPrinter">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="4">
+        <widget class="QLabel" name="lblHospitalizationDefaultEventType">
+         <property name="text">
+          <string>Цель обращения по умолчанию для госпитализации</string>
+         </property>
+         <property name="buddy">
+          <cstring>cmbHospitalizationDefaultEventType</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="4">
+        <widget class="QLabel" name="lblDoubleClickQueueFreeOrder">
+         <property name="text">
+          <string>Двойной щелчок в списке свободных номерков</string>
+         </property>
+         <property name="buddy">
+          <cstring>cmbDoubleClickQueueFreeOrder</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="5">
+        <widget class="QComboBox" name="cmbDoubleClickQueueFreeOrder">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <item>
+          <property name="text">
+           <string/>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Поставить в очередь</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Выполнить бронирование</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="6" column="5">
+        <widget class="CRBComboBox" name="cmbHospitalizationDefaultEventType">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+        </widget>
+       </item>
+       <item row="22" column="4">
+        <widget class="QLabel" name="lblExaroPath">
+         <property name="text">
+          <string>Внешний редактор отчетов E&amp;xaro</string>
+         </property>
+         <property name="buddy">
+          <cstring>edtExaroEditor</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="24" column="4">
+        <widget class="QLabel" name="lblExtArchiver">
+         <property name="text">
+          <string>Внешний архиватор</string>
+         </property>
+         <property name="buddy">
+          <cstring>edtExtArchiver</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="17" column="4">
+        <widget class="QCheckBox" name="chkUseCounterInContracts">
+         <property name="toolTip">
+          <string>При создании договора к нему будет применен счетчик с кодом &quot;Contracts&quot;</string>
+         </property>
+         <property name="text">
+          <string>Использовать счётчик при создании договоров</string>
+         </property>
+        </widget>
+       </item>
+       <item row="20" column="4">
+        <widget class="QCheckBox" name="chkShowHospitalisation">
+         <property name="text">
+          <string>Отображать информацию о госпитализациях</string>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="4">
+        <widget class="QCheckBox" name="chkHighlightRedDate">
+         <property name="text">
+          <string>Подсвечивать выходные и праздничные даты</string>
+         </property>
+        </widget>
+       </item>
+       <item row="21" column="4">
+        <widget class="QCheckBox" name="chkDefaultSubdivision">
+         <property name="toolTip">
+          <string>Есть настройка включена, то подразделение по умолчанию (Настройки/Умолчания) определяется исходя из подразделения выставленного в карте сотрудника (Справочники/Персонал/Сотрудники) </string>
+         </property>
+         <property name="text">
+          <string>Определять подразделение по пользователю</string>
+         </property>
+        </widget>
+       </item>
+       <item row="21" column="2">
+        <widget class="QSpinBox" name="edtAverageDuration">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+        </widget>
+       </item>
+       <item row="21" column="0" colspan="2">
+        <widget class="QLabel" name="lblAverageDuration">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Средняя продолжительность заболевания</string>
+         </property>
+         <property name="buddy">
+          <cstring>edtAverageDuration</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="35" column="4" rowspan="3" colspan="3">
+        <widget class="QGroupBox" name="grpIEMK">
+         <property name="title">
+          <string>ИЭМК</string>
+         </property>
+         <property name="flat">
+          <bool>false</bool>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_35">
+          <item row="0" column="0">
+           <widget class="QLabel" name="lblIEMKCaseURL">
+            <property name="text">
+             <string>Адрес сервиса случаев</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="CLineEdit" name="edtIEMKCaseURL"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="lblIEMKPixURL">
+            <property name="text">
+             <string>Адрес сервиса пациентов</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="CLineEdit" name="edtIEMKPixURL"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="lblIEMKGUID">
+            <property name="text">
+             <string>GUID</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="CLineEdit" name="edtIEMKGUID"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="32" column="4" colspan="3">
+        <widget class="QCheckBox" name="chkLinkingPerson">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Устанавливает фильтр по подразделению, указанному в Умолчаниях, для выпадающего списка врачей.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="text">
+          <string> Привязка выбора врача к подразделению и к типам события</string>
+         </property>
+        </widget>
+       </item>
+       <item row="33" column="0">
+        <widget class="QLabel" name="lblPrintFontSize">
+         <property name="text">
+          <string>Размер шрифта по умолчанию для печати</string>
+         </property>
+        </widget>
+       </item>
+       <item row="33" column="4">
+        <widget class="QCheckBox" name="chkPrintPreview">
+         <property name="text">
+          <string>Показывать холст перед печатью шаблона</string>
+         </property>
+        </widget>
+       </item>
+       <item row="35" column="0" rowspan="3" colspan="4">
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QGroupBox" name="groupBox">
+           <property name="title">
+            <string>Инкрементальная автоподстановка</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_7">
+            <item row="0" column="0">
+             <widget class="QLabel" name="lblCompleterReduceIdleTimeout">
+              <property name="text">
+               <string>Задержка перед началом
+сокращения списка, с</string>
+              </property>
+              <property name="buddy">
+               <cstring>sbCompleterReduceIdleTimeout</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QSpinBox" name="sbCompleterReduceIdleTimeout">
+              <property name="maximum">
+               <number>32</number>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <widget class="QLabel" name="lblCompleterReduceCharCount">
+              <property name="text">
+               <string>Минимальное кол-во символов, 
+по которым усекается список</string>
+              </property>
+              <property name="buddy">
+               <cstring>sbCompleterReduceCharCount</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="3">
+             <widget class="QSpinBox" name="sbCompleterReduceCharCount"/>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="34" column="0" colspan="4">
+        <widget class="QCheckBox" name="chkAutoJobTicketEditing">
+         <property name="text">
+          <string>Автоматическое открытие/закрытие работы в Выполнении работ</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabGlobal">
+      <attribute name="title">
+       <string>Глобальные настройки</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_6">
+       <item row="0" column="0" colspan="2">
+        <widget class="CTableView" name="tblGlobal"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CRBComboBox</class>
+   <extends>QComboBox</extends>
+   <header>library/crbcombobox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CTableView</class>
+   <extends>QTableView</extends>
+   <header>library/TableView.h</header>
+  </customwidget>
+  <customwidget>
+   <class>COrgStructureComboBox</class>
+   <extends>QComboBox</extends>
+   <header>Orgs/OrgStructComboBoxes</header>
+  </customwidget>
+  <customwidget>
+   <class>CLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>library/LineEdit</header>
+  </customwidget>
+  <customwidget>
+   <class>CPolyclinicComboBox</class>
+   <extends>QComboBox</extends>
+   <header>Orgs/OrgComboBox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CKLADRComboBox</class>
+   <extends>QComboBox</extends>
+   <header>KLADR/kladrComboxes.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>cmbOrganisation</tabstop>
+  <tabstop>cmbOrgStructure</tabstop>
+  <tabstop>chkFilterPaymentByOrgStructure</tabstop>
+  <tabstop>chkOrgStructurePriorityForAddActions</tabstop>
+  <tabstop>cmbDefaultCity</tabstop>
+  <tabstop>cmbProvince</tabstop>
+  <tabstop>btnSelectOrganisation</tabstop>
+  <tabstop>edtSMTPServer</tabstop>
+  <tabstop>edtSMTPPort</tabstop>
+  <tabstop>edtMailAddress</tabstop>
+  <tabstop>chkSMTPAuthentification</tabstop>
+  <tabstop>edtSMTPLogin</tabstop>
+  <tabstop>edtSMTPPassword</tabstop>
+  <tabstop>cmbDriverName</tabstop>
+  <tabstop>edtServerName</tabstop>
+  <tabstop>edtServerPort</tabstop>
+  <tabstop>edtDatabaseName</tabstop>
+  <tabstop>edtUserName</tabstop>
+  <tabstop>edtPassword</tabstop>
+  <tabstop>chkEnableSocCardSupport</tabstop>
+  <tabstop>sbPortNumber</tabstop>
+  <tabstop>sbDevId</tabstop>
+  <tabstop>sbIssBSC0</tabstop>
+  <tabstop>sbIssBSC1</tabstop>
+  <tabstop>sbIssBSC2</tabstop>
+  <tabstop>sbIssBSC3</tabstop>
+  <tabstop>sbIssBSC4</tabstop>
+  <tabstop>sbIssBSC5</tabstop>
+  <tabstop>edtOperatorId</tabstop>
+  <tabstop>btnSocCardTest</tabstop>
+  <tabstop>edtDocumentTypeRbFileName</tabstop>
+  <tabstop>btnSelectDocumentTypeRbFileName</tabstop>
+  <tabstop>edtClientBenefitRbFileName</tabstop>
+  <tabstop>btnSelectClientBenefitRbFileName</tabstop>
+  <tabstop>chkDefaultClientSearchUsingSocCard</tabstop>
+  <tabstop>chkCardReaderEmulation</tabstop>
+  <tabstop>grpTFCheckPolicy</tabstop>
+  <tabstop>edtTFCPUrl</tabstop>
+  <tabstop>edtTFCPLogin</tabstop>
+  <tabstop>edtTFCPPassword</tabstop>
+  <tabstop>chkLoadAttach</tabstop>
+  <tabstop>grpAttach</tabstop>
+  <tabstop>edtAttachUrl</tabstop>
+  <tabstop>edtAttachLogin</tabstop>
+  <tabstop>edtAttachPassword</tabstop>
+  <tabstop>edtAttachOldPassword</tabstop>
+  <tabstop>chkTransmitAttachData</tabstop>
+  <tabstop>chkDebugSoapAttach</tabstop>
+  <tabstop>chkAttachRegisterMultiple</tabstop>
+  <tabstop>btnAttachRegister</tabstop>
+  <tabstop>btnAttachTest</tabstop>
+  <tabstop>grpKzCheckIIN</tabstop>
+  <tabstop>edtIINUrl</tabstop>
+  <tabstop>edtIINLogin</tabstop>
+  <tabstop>edtIINPassword</tabstop>
+  <tabstop>btnIINCheck</tabstop>
+  <tabstop>cmbCheckDiagChange</tabstop>
+  <tabstop>cmbCheckActionChange</tabstop>
+  <tabstop>cmbTempInvalidDoctype</tabstop>
+  <tabstop>edtTemplateDir</tabstop>
+  <tabstop>btnSelectTemplateDir</tabstop>
+  <tabstop>chkGroupPrintWithutDialog</tabstop>
+  <tabstop>cmbLabelPrinter</tabstop>
+  <tabstop>cmbF025DefaultPrimacy</tabstop>
+  <tabstop>chkAddressOnlyByKLADR</tabstop>
+  <tabstop>chkAmbulanceUserCheckable</tabstop>
+  <tabstop>edtAverageDuration</tabstop>
+  <tabstop>chkShowVisitDateInRegistry</tabstop>
+  <tabstop>edtDocumentEditor</tabstop>
+  <tabstop>btnSelectDocumentEditor</tabstop>
+  <tabstop>edtExtGenRep</tabstop>
+  <tabstop>btnSelectExtGenRep</tabstop>
+  <tabstop>edtCachBox</tabstop>
+  <tabstop>cmbTempInvalidReason</tabstop>
+  <tabstop>cmbQueuing</tabstop>
+  <tabstop>cmbDoubleClickQueuePerson</tabstop>
+  <tabstop>cmbDoubleClickQueueClient</tabstop>
+  <tabstop>cmbDoubleClickQueueFreeOrder</tabstop>
+  <tabstop>cmbHospitalizationDefaultEventType</tabstop>
+  <tabstop>sbCompleterReduceIdleTimeout</tabstop>
+  <tabstop>sbCompleterReduceCharCount</tabstop>
+  <tabstop>btnEisTest</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>buttonBox</tabstop>
+  <tabstop>tblGlobal</tabstop>
+  <tabstop>edtDiaRegUserName</tabstop>
+  <tabstop>grpMIP</tabstop>
+  <tabstop>edtDiaRegAddress</tabstop>
+  <tabstop>cmbBarCodeReader</tabstop>
+  <tabstop>edtMIPContext</tabstop>
+  <tabstop>grpUseDiaReg</tabstop>
+  <tabstop>edtMIPUrl</tabstop>
+  <tabstop>btnMIPTest</tabstop>
+  <tabstop>edtEgiszAddress</tabstop>
+  <tabstop>grpBarCodeReader</tabstop>
+  <tabstop>edtDiaRegPassword</tabstop>
+  <tabstop>edtDaysAmountToShowAfter</tabstop>
+  <tabstop>chkDefaultMaxDateByAttach</tabstop>
+  <tabstop>chkHideFinishedInDeferredQueue</tabstop>
+  <tabstop>edtDaysAmountToShowBefore</tabstop>
+  <tabstop>grpRecipesExchange</tabstop>
+  <tabstop>edtRecipesExchangeUrl</tabstop>
+  <tabstop>edtRecipesExchangeClientId</tabstop>
+  <tabstop>edtPersonSyncLogin</tabstop>
+  <tabstop>edtPersonSyncUrl</tabstop>
+  <tabstop>edtPersonSyncPassword</tabstop>
+  <tabstop>chkUseCounterInContracts</tabstop>
+  <tabstop>chkShowHospitalisation</tabstop>
+  <tabstop>chkHighlightRedDate</tabstop>
+  <tabstop>chkDefaultSubdivision</tabstop>
+  <tabstop>chkHighlightInvalidDate</tabstop>
+  <tabstop>chkUseCounterInAccounts</tabstop>
+  <tabstop>edtExaroEditor</tabstop>
+  <tabstop>btnSelectExaroEditor</tabstop>
+  <tabstop>edtExtArchiver</tabstop>
+  <tabstop>btnSelectExtArchiver</tabstop>
+  <tabstop>edtDicomViewerAddress</tabstop>
+  <tabstop>edtLISAddress</tabstop>
+  <tabstop>edtBrowserPath</tabstop>
+  <tabstop>chkAutoPrimacy</tabstop>
+  <tabstop>grpEgisz</tabstop>
+  <tabstop>uekDirectAccess</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>appPreferencesDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>179</x>
+     <y>30</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>101</x>
+     <y>219</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>appPreferencesDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>258</x>
+     <y>30</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>280</x>
+     <y>219</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkSMTPAuthentification</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>edtSMTPPassword</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>285</x>
+     <y>148</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>463</x>
+     <y>206</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkSMTPAuthentification</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>lblSMTPPassword</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>285</x>
+     <y>148</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>39</x>
+     <y>206</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkSMTPAuthentification</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>lblSMTPLogin</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>285</x>
+     <y>148</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>39</x>
+     <y>177</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkSMTPAuthentification</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>edtSMTPLogin</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>285</x>
+     <y>148</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>463</x>
+     <y>177</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkEpircisModule</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>edtEpircisModule</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>669</x>
+     <y>506</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1078</x>
+     <y>506</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

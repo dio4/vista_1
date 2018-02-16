@@ -1,0 +1,118 @@
+<ui version="4.0" >
+ <class>ActionPropertyChooserDialog</class>
+ <widget class="QDialog" name="ActionPropertyChooserDialog" >
+  <property name="windowModality" >
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>233</width>
+    <height>320</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Dialog</string>
+  </property>
+  <layout class="QGridLayout" >
+   <property name="margin" >
+    <number>4</number>
+   </property>
+   <property name="spacing" >
+    <number>4</number>
+   </property>
+   <item row="3" column="0" >
+    <widget class="QDialogButtonBox" name="buttonBox" >
+     <property name="orientation" >
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons" >
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" >
+    <widget class="CInDocTableView" name="tblChoose" >
+     <property name="editTriggers" >
+      <set>QAbstractItemView::NoEditTriggers</set>
+     </property>
+     <property name="dragEnabled" >
+      <bool>true</bool>
+     </property>
+     <property name="dragDropMode" >
+      <enum>QAbstractItemView::InternalMove</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" >
+    <widget class="QCheckBox" name="chkShowUnit" >
+     <property name="text" >
+      <string>Показывать единицы измерения</string>
+     </property>
+     <property name="tristate" >
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0" >
+    <widget class="QCheckBox" name="chkShowNorm" >
+     <property name="text" >
+      <string>Показывать норму</string>
+     </property>
+     <property name="tristate" >
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CInDocTableView</class>
+   <extends>QTableView</extends>
+   <header>library/InDocTable.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>tblChoose</tabstop>
+  <tabstop>chkShowUnit</tabstop>
+  <tabstop>chkShowNorm</tabstop>
+  <tabstop>buttonBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>ActionPropertyChooserDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>603</x>
+     <y>286</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>574</x>
+     <y>746</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>ActionPropertyChooserDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>646</x>
+     <y>286</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>672</x>
+     <y>746</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

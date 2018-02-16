@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ArrivedDepartedPatients</class>
+ <widget class="QDialog" name="ArrivedDepartedPatients">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>468</width>
+    <height>352</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QWidget" name="widget" native="true">
+     <layout class="QGridLayout" name="gridLayout_2">
+      <property name="margin">
+       <number>0</number>
+      </property>
+      <item row="1" column="2">
+       <widget class="CDateEdit" name="edtEndDate"/>
+      </item>
+      <item row="1" column="1">
+       <widget class="CDateEdit" name="edtBegDate"/>
+      </item>
+      <item row="2" column="2">
+       <widget class="QTimeEdit" name="edtEndTime">
+        <property name="displayFormat">
+         <string>H:mm</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QTimeEdit" name="edtBegTime">
+        <property name="displayFormat">
+         <string>H:mm</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="lblBegDateTime">
+        <property name="text">
+         <string>Начало промежутка</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="lblEndDateTime">
+        <property name="text">
+         <string>Конец промежутка</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="lblLPU">
+     <property name="text">
+      <string>Подразделения</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="CRBListBox" name="lstLPU"/>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="chkAllLPU">
+     <property name="text">
+      <string>Построить по всему ЛПУ</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="chkNoFinanceDetail">
+     <property name="text">
+      <string>Не детализировать по типам финансирования</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CDateEdit</class>
+   <extends>QDateEdit</extends>
+   <header>library/DateEdit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CRBListBox</class>
+   <extends>QTableView</extends>
+   <header>library/RBListBox.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>edtBegDate</tabstop>
+  <tabstop>edtEndDate</tabstop>
+  <tabstop>edtBegTime</tabstop>
+  <tabstop>edtEndTime</tabstop>
+  <tabstop>lstLPU</tabstop>
+  <tabstop>chkAllLPU</tabstop>
+  <tabstop>chkNoFinanceDetail</tabstop>
+  <tabstop>buttonBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>ArrivedDepartedPatients</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>224</x>
+     <y>326</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>ArrivedDepartedPatients</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>292</x>
+     <y>332</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkAllLPU</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>lstLPU</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>82</x>
+     <y>294</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>75</x>
+     <y>130</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

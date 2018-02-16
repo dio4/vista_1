@@ -1,0 +1,163 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'F:\svn-s11\s11\Registry\VisitBeforeRecordClient.ui'
+#
+# Created: Fri Jun 15 12:16:06 2012
+#      by: PyQt4 UI code generator 4.9.1
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt4 import QtCore, QtGui
+
+try:
+    _fromUtf8 = QtCore.QString.fromUtf8
+except AttributeError:
+    _fromUtf8 = lambda s: s
+
+class Ui_VisitBeforeRecordClient(object):
+    def setupUi(self, VisitBeforeRecordClient):
+        VisitBeforeRecordClient.setObjectName(_fromUtf8("VisitBeforeRecordClient"))
+        VisitBeforeRecordClient.resize(489, 553)
+        self.gridLayout = QtGui.QGridLayout(VisitBeforeRecordClient)
+        self.gridLayout.setMargin(4)
+        self.gridLayout.setSpacing(4)
+        self.gridLayout.setObjectName(_fromUtf8("gridLayout"))
+        self.horizontalLayout = QtGui.QHBoxLayout()
+        self.horizontalLayout.setSpacing(4)
+        self.horizontalLayout.setObjectName(_fromUtf8("horizontalLayout"))
+        self.label = QtGui.QLabel(VisitBeforeRecordClient)
+        self.label.setAlignment(QtCore.Qt.AlignCenter)
+        self.label.setObjectName(_fromUtf8("label"))
+        self.horizontalLayout.addWidget(self.label)
+        self.edtBeginDateVisitBeforeRecordClient = CDateEdit(VisitBeforeRecordClient)
+        self.edtBeginDateVisitBeforeRecordClient.setCalendarPopup(True)
+        self.edtBeginDateVisitBeforeRecordClient.setObjectName(_fromUtf8("edtBeginDateVisitBeforeRecordClient"))
+        self.horizontalLayout.addWidget(self.edtBeginDateVisitBeforeRecordClient)
+        self.label_2 = QtGui.QLabel(VisitBeforeRecordClient)
+        self.label_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_2.setObjectName(_fromUtf8("label_2"))
+        self.horizontalLayout.addWidget(self.label_2)
+        self.edtEndDateVisitBeforeRecordClient = CDateEdit(VisitBeforeRecordClient)
+        self.edtEndDateVisitBeforeRecordClient.setCalendarPopup(True)
+        self.edtEndDateVisitBeforeRecordClient.setObjectName(_fromUtf8("edtEndDateVisitBeforeRecordClient"))
+        self.horizontalLayout.addWidget(self.edtEndDateVisitBeforeRecordClient)
+        spacerItem = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem)
+        self.gridLayout.addLayout(self.horizontalLayout, 0, 0, 1, 5)
+        self.label_3 = QtGui.QLabel(VisitBeforeRecordClient)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Maximum, QtGui.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label_3.sizePolicy().hasHeightForWidth())
+        self.label_3.setSizePolicy(sizePolicy)
+        self.label_3.setObjectName(_fromUtf8("label_3"))
+        self.gridLayout.addWidget(self.label_3, 1, 0, 1, 1)
+        self.cmbOrgStructureVisitBeforeRecordClient = COrgStructureComboBox(VisitBeforeRecordClient)
+        self.cmbOrgStructureVisitBeforeRecordClient.setObjectName(_fromUtf8("cmbOrgStructureVisitBeforeRecordClient"))
+        self.gridLayout.addWidget(self.cmbOrgStructureVisitBeforeRecordClient, 1, 1, 1, 4)
+        self.label_4 = QtGui.QLabel(VisitBeforeRecordClient)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Maximum, QtGui.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label_4.sizePolicy().hasHeightForWidth())
+        self.label_4.setSizePolicy(sizePolicy)
+        self.label_4.setObjectName(_fromUtf8("label_4"))
+        self.gridLayout.addWidget(self.label_4, 2, 0, 1, 1)
+        self.cmbSpecialityVisitBeforeRecordClient = CRBComboBox(VisitBeforeRecordClient)
+        self.cmbSpecialityVisitBeforeRecordClient.setObjectName(_fromUtf8("cmbSpecialityVisitBeforeRecordClient"))
+        self.gridLayout.addWidget(self.cmbSpecialityVisitBeforeRecordClient, 2, 1, 1, 4)
+        self.label_5 = QtGui.QLabel(VisitBeforeRecordClient)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Maximum, QtGui.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label_5.sizePolicy().hasHeightForWidth())
+        self.label_5.setSizePolicy(sizePolicy)
+        self.label_5.setObjectName(_fromUtf8("label_5"))
+        self.gridLayout.addWidget(self.label_5, 3, 0, 1, 1)
+        self.cmbPersonVisitBeforeRecordClient = CPersonComboBoxEx(VisitBeforeRecordClient)
+        self.cmbPersonVisitBeforeRecordClient.setObjectName(_fromUtf8("cmbPersonVisitBeforeRecordClient"))
+        self.gridLayout.addWidget(self.cmbPersonVisitBeforeRecordClient, 3, 1, 1, 4)
+        self.chkNoVisitBeforeRecordClient = QtGui.QCheckBox(VisitBeforeRecordClient)
+        self.chkNoVisitBeforeRecordClient.setObjectName(_fromUtf8("chkNoVisitBeforeRecordClient"))
+        self.gridLayout.addWidget(self.chkNoVisitBeforeRecordClient, 4, 0, 1, 5)
+        self.splitter = QtGui.QSplitter(VisitBeforeRecordClient)
+        self.splitter.setOrientation(QtCore.Qt.Vertical)
+        self.splitter.setChildrenCollapsible(False)
+        self.splitter.setObjectName(_fromUtf8("splitter"))
+        self.txtVisitBeforeRecordClient = QtGui.QTextBrowser(self.splitter)
+        self.txtVisitBeforeRecordClient.setObjectName(_fromUtf8("txtVisitBeforeRecordClient"))
+        self.tblVisitByQueue = CTableView(self.splitter)
+        self.tblVisitByQueue.setObjectName(_fromUtf8("tblVisitByQueue"))
+        self.gridLayout.addWidget(self.splitter, 5, 0, 1, 5)
+        spacerItem1 = QtGui.QSpacerItem(152, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
+        self.gridLayout.addItem(spacerItem1, 6, 0, 1, 2)
+        self.btnCreateVisitBeforeRecordClient = QtGui.QPushButton(VisitBeforeRecordClient)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btnCreateVisitBeforeRecordClient.sizePolicy().hasHeightForWidth())
+        self.btnCreateVisitBeforeRecordClient.setSizePolicy(sizePolicy)
+        self.btnCreateVisitBeforeRecordClient.setMinimumSize(QtCore.QSize(100, 0))
+        self.btnCreateVisitBeforeRecordClient.setObjectName(_fromUtf8("btnCreateVisitBeforeRecordClient"))
+        self.gridLayout.addWidget(self.btnCreateVisitBeforeRecordClient, 6, 2, 1, 1)
+        self.btnPrintVisitBeforeRecordClient = QtGui.QPushButton(VisitBeforeRecordClient)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btnPrintVisitBeforeRecordClient.sizePolicy().hasHeightForWidth())
+        self.btnPrintVisitBeforeRecordClient.setSizePolicy(sizePolicy)
+        self.btnPrintVisitBeforeRecordClient.setMinimumSize(QtCore.QSize(100, 0))
+        self.btnPrintVisitBeforeRecordClient.setObjectName(_fromUtf8("btnPrintVisitBeforeRecordClient"))
+        self.gridLayout.addWidget(self.btnPrintVisitBeforeRecordClient, 6, 3, 1, 1)
+        self.btnCancelVisitBeforeRecordClient = QtGui.QPushButton(VisitBeforeRecordClient)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btnCancelVisitBeforeRecordClient.sizePolicy().hasHeightForWidth())
+        self.btnCancelVisitBeforeRecordClient.setSizePolicy(sizePolicy)
+        self.btnCancelVisitBeforeRecordClient.setMinimumSize(QtCore.QSize(100, 0))
+        self.btnCancelVisitBeforeRecordClient.setObjectName(_fromUtf8("btnCancelVisitBeforeRecordClient"))
+        self.gridLayout.addWidget(self.btnCancelVisitBeforeRecordClient, 6, 4, 1, 1)
+
+        self.retranslateUi(VisitBeforeRecordClient)
+        QtCore.QMetaObject.connectSlotsByName(VisitBeforeRecordClient)
+        VisitBeforeRecordClient.setTabOrder(self.edtBeginDateVisitBeforeRecordClient, self.edtEndDateVisitBeforeRecordClient)
+        VisitBeforeRecordClient.setTabOrder(self.edtEndDateVisitBeforeRecordClient, self.cmbOrgStructureVisitBeforeRecordClient)
+        VisitBeforeRecordClient.setTabOrder(self.cmbOrgStructureVisitBeforeRecordClient, self.cmbSpecialityVisitBeforeRecordClient)
+        VisitBeforeRecordClient.setTabOrder(self.cmbSpecialityVisitBeforeRecordClient, self.cmbPersonVisitBeforeRecordClient)
+        VisitBeforeRecordClient.setTabOrder(self.cmbPersonVisitBeforeRecordClient, self.chkNoVisitBeforeRecordClient)
+        VisitBeforeRecordClient.setTabOrder(self.chkNoVisitBeforeRecordClient, self.txtVisitBeforeRecordClient)
+        VisitBeforeRecordClient.setTabOrder(self.txtVisitBeforeRecordClient, self.tblVisitByQueue)
+        VisitBeforeRecordClient.setTabOrder(self.tblVisitByQueue, self.btnCreateVisitBeforeRecordClient)
+        VisitBeforeRecordClient.setTabOrder(self.btnCreateVisitBeforeRecordClient, self.btnPrintVisitBeforeRecordClient)
+        VisitBeforeRecordClient.setTabOrder(self.btnPrintVisitBeforeRecordClient, self.btnCancelVisitBeforeRecordClient)
+
+    def retranslateUi(self, VisitBeforeRecordClient):
+        VisitBeforeRecordClient.setWindowTitle(QtGui.QApplication.translate("VisitBeforeRecordClient", "Протокол обращений пациента по предварительной записи", None, QtGui.QApplication.UnicodeUTF8))
+        self.label.setText(QtGui.QApplication.translate("VisitBeforeRecordClient", "с", None, QtGui.QApplication.UnicodeUTF8))
+        self.edtBeginDateVisitBeforeRecordClient.setDisplayFormat(QtGui.QApplication.translate("VisitBeforeRecordClient", "dd.MM.yyyy", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_2.setText(QtGui.QApplication.translate("VisitBeforeRecordClient", "по", None, QtGui.QApplication.UnicodeUTF8))
+        self.edtEndDateVisitBeforeRecordClient.setDisplayFormat(QtGui.QApplication.translate("VisitBeforeRecordClient", "dd.MM.yyyy", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_3.setText(QtGui.QApplication.translate("VisitBeforeRecordClient", "Подразделение", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_4.setText(QtGui.QApplication.translate("VisitBeforeRecordClient", "Специальность", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_5.setText(QtGui.QApplication.translate("VisitBeforeRecordClient", "Врач", None, QtGui.QApplication.UnicodeUTF8))
+        self.chkNoVisitBeforeRecordClient.setText(QtGui.QApplication.translate("VisitBeforeRecordClient", "Показывать записи без обращения", None, QtGui.QApplication.UnicodeUTF8))
+        self.btnCreateVisitBeforeRecordClient.setText(QtGui.QApplication.translate("VisitBeforeRecordClient", "Начать выполнение", None, QtGui.QApplication.UnicodeUTF8))
+        self.btnPrintVisitBeforeRecordClient.setText(QtGui.QApplication.translate("VisitBeforeRecordClient", "Печать", None, QtGui.QApplication.UnicodeUTF8))
+        self.btnCancelVisitBeforeRecordClient.setText(QtGui.QApplication.translate("VisitBeforeRecordClient", "Отмена", None, QtGui.QApplication.UnicodeUTF8))
+
+from Orgs.PersonComboBoxEx import CPersonComboBoxEx
+from library.crbcombobox import CRBComboBox
+from Orgs.OrgStructComboBoxes import COrgStructureComboBox
+from library.TableView import CTableView
+from library.DateEdit import CDateEdit
+
+if __name__ == "__main__":
+    import sys
+    app = QtGui.QApplication(sys.argv)
+    VisitBeforeRecordClient = QtGui.QDialog()
+    ui = Ui_VisitBeforeRecordClient()
+    ui.setupUi(VisitBeforeRecordClient)
+    VisitBeforeRecordClient.show()
+    sys.exit(app.exec_())
+

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" 
+             xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+             name="IConvertservice" 
+             targetNamespace="http://tempuri.org/" 
+             xmlns:tns="http://tempuri.org/" 
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+             xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" 
+             xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/">
+
+  <message name="GiveNewOrders0Request">
+    <part name="Value" type="xs:string"/>
+  </message>
+
+  <message name="GiveNewOrders0Response">
+    <part name="return" type="xs:int"/>
+  </message>
+
+  <message name="SendTableTest1Request"/>
+
+  <message name="SendTableTest1Response">
+    <part name="return" type="xs:string"/>
+  </message>
+
+  <message name="SendTableSpecimen2Request"/>
+
+  <message name="SendTableSpecimen2Response">
+    <part name="return" type="xs:string"/>
+  </message>
+
+  <message name="UpdateDoctors3Request">
+    <part name="Value" type="xs:string"/>
+  </message>
+
+  <message name="UpdateDoctors3Response">
+    <part name="return" type="xs:int"/>
+  </message>
+
+  <portType name="IConvert">
+
+    <operation name="GiveNewOrders">
+      <input message="tns:GiveNewOrders0Request"/>
+      <output message="tns:GiveNewOrders0Response"/>
+    </operation>
+    
+    <operation name="SendTableTest">
+      <input message="tns:SendTableTest1Request"/>
+      <output message="tns:SendTableTest1Response"/>
+    </operation>
+    
+    <operation name="SendTableSpecimen">
+      <input message="tns:SendTableSpecimen2Request"/>
+      <output message="tns:SendTableSpecimen2Response"/>
+    </operation>
+    
+    <operation name="UpdateDoctors">
+      <input message="tns:UpdateDoctors3Request"/>
+      <output message="tns:UpdateDoctors3Response"/>
+    </operation>
+    
+  </portType>
+  
+  <binding name="IConvertbinding" type="tns:IConvert">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    
+    <operation name="GiveNewOrders">
+      <soap:operation soapAction="urn:unAcrossIntf-IConvert#GiveNewOrders" style="rpc"/>
+      <input message="tns:GiveNewOrders0Request">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:unAcrossIntf-IConvert"/>
+      </input>
+      <output message="tns:GiveNewOrders0Response">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:unAcrossIntf-IConvert"/>
+      </output>
+    </operation>
+    
+    <operation name="SendTableTest">
+      <soap:operation soapAction="urn:unAcrossIntf-IConvert#SendTableTest" style="rpc"/>
+      <input message="tns:SendTableTest1Request">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:unAcrossIntf-IConvert"/>
+      </input>
+      <output message="tns:SendTableTest1Response">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:unAcrossIntf-IConvert"/>
+      </output>
+    </operation>
+    
+    <operation name="SendTableSpecimen">
+      <soap:operation soapAction="urn:unAcrossIntf-IConvert#SendTableSpecimen" style="rpc"/>
+      <input message="tns:SendTableSpecimen2Request">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:unAcrossIntf-IConvert"/>
+      </input>
+      <output message="tns:SendTableSpecimen2Response">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:unAcrossIntf-IConvert"/>
+      </output>
+    </operation>
+    
+    <operation name="UpdateDoctors">
+      <soap:operation soapAction="urn:unAcrossIntf-IConvert#UpdateDoctors" style="rpc"/>
+      <input message="tns:UpdateDoctors3Request">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:unAcrossIntf-IConvert"/>
+      </input>
+      <output message="tns:UpdateDoctors3Response">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:unAcrossIntf-IConvert"/>
+      </output>
+    </operation>
+    
+  </binding>
+  
+  <service name="IConvertservice">
+    <port name="IConvertPort" binding="tns:IConvertbinding">
+      <soap:address location="http://localhost/cgi-bin/serviceserv.exe/soap/IConvert"/>
+    </port>
+  </service>
+  
+</definitions>

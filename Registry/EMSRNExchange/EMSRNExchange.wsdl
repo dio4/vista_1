@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://webservice.ktsz.spb.ru/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://webservice.ktsz.spb.ru/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Этот веб-сервис предназначен для обмена данными в рамках Единого медико-социального регистра населения Санкт-Петербурга. ВНИМАНИЕ!!! Использование данного сервиса разрешается только в рамках соответствующих договоров. Если вы не имеете договора об использовании данного сервиса немедленно прекратите информационное взаимодействие с данным сервисом. Все случаи использования сервиса без официального разрешения будут расследованы и виновные будут преследоваться в установленном законами порядке.</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://webservice.ktsz.spb.ru/">
+      <s:element name="MessageList_XML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MessageList_XMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MessageList_XMLResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Message_XML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="MessageID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Message_XMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Message_XMLResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MessageObtained_XML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="MessageID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MessageObtained_XMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MessageObtained_XMLResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MessageDeclined_XML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="MessageID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Reason" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MessageDeclined_XMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MessageDeclined_XMLResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PersonBenefitCategories">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PatronymicName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SNILS" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PersonBenefitCategoriesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PersonBenefitCategoriesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="MessageList_XMLSoapIn">
+    <wsdl:part name="parameters" element="tns:MessageList_XML" />
+  </wsdl:message>
+  <wsdl:message name="MessageList_XMLSoapOut">
+    <wsdl:part name="parameters" element="tns:MessageList_XMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="Message_XMLSoapIn">
+    <wsdl:part name="parameters" element="tns:Message_XML" />
+  </wsdl:message>
+  <wsdl:message name="Message_XMLSoapOut">
+    <wsdl:part name="parameters" element="tns:Message_XMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="MessageObtained_XMLSoapIn">
+    <wsdl:part name="parameters" element="tns:MessageObtained_XML" />
+  </wsdl:message>
+  <wsdl:message name="MessageObtained_XMLSoapOut">
+    <wsdl:part name="parameters" element="tns:MessageObtained_XMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="MessageDeclined_XMLSoapIn">
+    <wsdl:part name="parameters" element="tns:MessageDeclined_XML" />
+  </wsdl:message>
+  <wsdl:message name="MessageDeclined_XMLSoapOut">
+    <wsdl:part name="parameters" element="tns:MessageDeclined_XMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="PersonBenefitCategoriesSoapIn">
+    <wsdl:part name="parameters" element="tns:PersonBenefitCategories" />
+  </wsdl:message>
+  <wsdl:message name="PersonBenefitCategoriesSoapOut">
+    <wsdl:part name="parameters" element="tns:PersonBenefitCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="EMSRNExchangeSoap">
+    <wsdl:operation name="MessageList_XML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">public string MessageList_XML(string User, string Password).  Метод возвращает текстовую строку, содержащую список уведомлений, которые могут быть получены от данного веб-сервиса. Список представлен в формате XML.</wsdl:documentation>
+      <wsdl:input message="tns:MessageList_XMLSoapIn" />
+      <wsdl:output message="tns:MessageList_XMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Message_XML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">public string Message_XML(string User, string Password, int MessageID).  Метод возвращает текстовую строку, содержащую в формате XML содержание уведомления по его идентификационному коду. Код уведомления может быть получен с применением метода MessageList_XML().</wsdl:documentation>
+      <wsdl:input message="tns:Message_XMLSoapIn" />
+      <wsdl:output message="tns:Message_XMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MessageObtained_XML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">public string MessageObtained_XML(string User, string Password, int MessageID).  Используя этот метод пользователь веб-сервиса подтверждает, что он получил уведомление с данным кодом (уведомления по коду пользователь получает используя метод Message_XML()). После подтверждения указанное уведомление помечается как прочитанное, и в дальнейшем пользователю показываться не будет. Метод возвращает текстовую строку, содержащую в формате XML код ошибки (если код ошибки 0 - нет ошибок) по результатам работы этой процедуры.</wsdl:documentation>
+      <wsdl:input message="tns:MessageObtained_XMLSoapIn" />
+      <wsdl:output message="tns:MessageObtained_XMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MessageDeclined_XML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">public string MessageDeclined_XML(string User, string Password, int MessageID, string Reason). Используя этот метод пользователь веб-сервиса сообщает, что он отклонил данное сообщение с указанием причины отклонения.получил уведомление с данным кодом (уведомления по коду пользователь получает используя метод Message_XML()). После подтверждения указанное уведомление помечается как отклоненное, и в дальнейшем пользователю показываться не будет. Метод возвращает объект типа XML документ.</wsdl:documentation>
+      <wsdl:input message="tns:MessageDeclined_XMLSoapIn" />
+      <wsdl:output message="tns:MessageDeclined_XMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PersonBenefitCategories">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">public string PersonBenefitCategories(string User, string Password, string LastName, string Name, string PatronymicName, string SNILS).  Метод возвращает текстовую строку, содержащую в формате XML коды категорий льгот для персоны.</wsdl:documentation>
+      <wsdl:input message="tns:PersonBenefitCategoriesSoapIn" />
+      <wsdl:output message="tns:PersonBenefitCategoriesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EMSRNExchangeSoap" type="tns:EMSRNExchangeSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="MessageList_XML">
+      <soap:operation soapAction="http://webservice.ktsz.spb.ru/MessageList_XML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Message_XML">
+      <soap:operation soapAction="http://webservice.ktsz.spb.ru/Message_XML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MessageObtained_XML">
+      <soap:operation soapAction="http://webservice.ktsz.spb.ru/MessageObtained_XML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MessageDeclined_XML">
+      <soap:operation soapAction="http://webservice.ktsz.spb.ru/MessageDeclined_XML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PersonBenefitCategories">
+      <soap:operation soapAction="http://webservice.ktsz.spb.ru/PersonBenefitCategories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="EMSRNExchangeSoap12" type="tns:EMSRNExchangeSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="MessageList_XML">
+      <soap12:operation soapAction="http://webservice.ktsz.spb.ru/MessageList_XML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Message_XML">
+      <soap12:operation soapAction="http://webservice.ktsz.spb.ru/Message_XML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MessageObtained_XML">
+      <soap12:operation soapAction="http://webservice.ktsz.spb.ru/MessageObtained_XML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MessageDeclined_XML">
+      <soap12:operation soapAction="http://webservice.ktsz.spb.ru/MessageDeclined_XML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PersonBenefitCategories">
+      <soap12:operation soapAction="http://webservice.ktsz.spb.ru/PersonBenefitCategories" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EMSRNExchange">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Этот веб-сервис предназначен для обмена данными в рамках Единого медико-социального регистра населения Санкт-Петербурга. ВНИМАНИЕ!!! Использование данного сервиса разрешается только в рамках соответствующих договоров. Если вы не имеете договора об использовании данного сервиса немедленно прекратите информационное взаимодействие с данным сервисом. Все случаи использования сервиса без официального разрешения будут расследованы и виновные будут преследоваться в установленном законами порядке.</wsdl:documentation>
+    <wsdl:port name="EMSRNExchangeSoap" binding="tns:EMSRNExchangeSoap">
+      <soap:address location="https://webservice.ktsz.spb.ru:4443/EMSRNExchange.asmx" />
+    </wsdl:port>
+    <wsdl:port name="EMSRNExchangeSoap12" binding="tns:EMSRNExchangeSoap12">
+      <soap12:address location="https://webservice.ktsz.spb.ru:4443/EMSRNExchange.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

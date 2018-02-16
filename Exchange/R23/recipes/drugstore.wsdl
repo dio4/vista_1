@@ -1,0 +1,836 @@
+<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+                  xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+                  xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/"
+                  xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://tempuri.org/">
+    <wsdl:types>
+        <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+            <s:element name="RemainRequest">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="clientId" type="s:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="RemainRequestResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="1" maxOccurs="1" name="RemainRequestResult" type="s:long"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="RemainResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="clientId" type="s:string"/>
+                        <s:element minOccurs="1" maxOccurs="1" name="timestamp" type="s:long"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="remains" type="tns:ArrayOfRemain"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:complexType name="ArrayOfRemain">
+                <s:sequence>
+                    <s:element minOccurs="0" maxOccurs="unbounded" name="Remain" nillable="true" type="tns:Remain"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="Remain">
+                <s:complexContent mixed="false">
+                    <s:extension base="tns:Entity">
+                        <s:sequence>
+                            <s:element minOccurs="0" maxOccurs="1" name="GUID" type="s:string"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="CONTRACTOR_ID" type="s:long"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="DRUGSTORE_LOT_GUID" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="UNIFY_GUID" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="CONTRACT_ITEM_GUID" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="STORE" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="SUPPLIER" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="PRODUCT" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="UNIT" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="SERIA" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="DOCUMENT_TYPE" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="DOCUMENT_ID" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="DOCUMENT_NUMBER" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="DOCUMENT_ITEM_ID" type="s:string"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="DOCUMENT_DATE" type="s:dateTime"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="INVOICE_DATE" type="s:dateTime"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="INVOICE_NUMBER" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="BARCODE" type="s:string"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="NUMERATOR" type="s:int"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="DENOMINATOR" type="s:int"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="QUANTITY_ADD" type="s:decimal"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="QUANTITY_SUB" type="s:decimal"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="QUANTITY_RES" type="s:decimal"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="QUANTITY_REM" type="s:decimal"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="QUANTITY_INVOICE" type="s:decimal"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="QUANTITY_RETURN_SUPPLIER" type="s:decimal"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="PRODUCER_VAT" type="s:decimal"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="PRODUCER_PRICE" type="s:decimal"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="PRODUCER_PRICE_VAT" type="s:decimal"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="SUPPLIER_VAT" type="s:decimal"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="SUPPLIER_PRICE" type="s:decimal"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="SUPPLIER_PRICE_VAT" type="s:decimal"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="RETAIL_VAT" type="s:decimal"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="RETAIL_PRICE" type="s:decimal"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="RETAIL_PRICE_VAT" type="s:decimal"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="INTERNAL_INVOICE_DATE" type="s:dateTime"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="INTERNAL_INVOICE_NUMBER" type="s:string"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="STORE_ID" type="s:long"/>
+                        </s:sequence>
+                    </s:extension>
+                </s:complexContent>
+            </s:complexType>
+            <s:complexType name="Entity" abstract="true"/>
+            <s:element name="RemainResponseResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="1" maxOccurs="1" name="RemainResponseResult" type="s:boolean"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="RemainDownload">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="clientId" type="s:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="RemainDownloadResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="RemainDownloadResult"
+                                   type="tns:ArrayOfRemainOutput"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:complexType name="ArrayOfRemainOutput">
+                <s:sequence>
+                    <s:element minOccurs="0" maxOccurs="unbounded" name="RemainOutput" nillable="true"
+                               type="tns:RemainOutput"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="RemainOutput">
+                <s:complexContent mixed="false">
+                    <s:extension base="tns:Entity">
+                        <s:sequence>
+                            <s:element minOccurs="0" maxOccurs="1" name="Id" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="DrugstoreId" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="DrugstoreName" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="ProductUnifyId" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="ProductName" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="ProducerName" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="CountryName" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="Mnn" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="Trn" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="Cureform" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="Dosage" type="s:string"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="Package" type="s:int"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="Denominator" type="s:int"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="Price" type="s:decimal"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="Quantity" type="s:decimal"/>
+                        </s:sequence>
+                    </s:extension>
+                </s:complexContent>
+            </s:complexType>
+            <s:element name="ShipmentRequest">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="clientId" type="s:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="ShipmentRequestResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="1" maxOccurs="1" name="ShipmentRequestResult" type="s:long"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="ShipmentResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="clientId" type="s:string"/>
+                        <s:element minOccurs="1" maxOccurs="1" name="timestamp" type="s:long"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="shipments" type="tns:ArrayOfShipment"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:complexType name="ArrayOfShipment">
+                <s:sequence>
+                    <s:element minOccurs="0" maxOccurs="unbounded" name="Shipment" nillable="true" type="tns:Shipment"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="Shipment">
+                <s:complexContent mixed="false">
+                    <s:extension base="tns:Entity">
+                        <s:sequence>
+                            <s:element minOccurs="0" maxOccurs="1" name="GUID" type="s:string"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="CLIENT_ID" type="s:long"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="CONTRACTOR_GUID" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="UNIFY_GUID" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="OPERATIONAL_OFFER_LPU_ITEM_GUID"
+                                       type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="ORDER_LPU_ITEM_GUID" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="ID_GOS_CONTRACT_GOODS" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="ID_INVOICE_OUT_GLOBAL" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="ID_INVOICE_OUT_ITEM_GLOBAL" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="DOCUMENT_NUMBER" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="DOCUMENT_STATE" type="s:string"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="DOCUMENT_DATE" type="s:dateTime"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="CONTRACTOR" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="STORE" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="PRODUCT" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="UNIT" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="SERIA" type="s:string"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="NUMERATOR" type="s:int"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="DENOMINATOR" type="s:int"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="QUANTITY" type="s:decimal"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="QUANTITY_ADD" type="s:decimal"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="QUANTITY_SUB" type="s:decimal"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="QUANTITY_RES" type="s:decimal"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="QUANTITY_REM" type="s:decimal"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="PRICE" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="RETAIL_VAT" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="RETAIL_PRICE" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="RETAIL_PRICE_VAT" type="s:string"/>
+                        </s:sequence>
+                    </s:extension>
+                </s:complexContent>
+            </s:complexType>
+            <s:element name="ShipmentResponseResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="1" maxOccurs="1" name="ShipmentResponseResult" type="s:boolean"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="ContractorRequest">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="clientId" type="s:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="ContractorRequestResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="1" maxOccurs="1" name="ContractorRequestResult" type="s:long"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="ContractorResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="clientId" type="s:string"/>
+                        <s:element minOccurs="1" maxOccurs="1" name="timestamp" type="s:long"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="contractors" type="tns:ArrayOfContractor"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:complexType name="ArrayOfContractor">
+                <s:sequence>
+                    <s:element minOccurs="0" maxOccurs="unbounded" name="Contractor" nillable="true"
+                               type="tns:Contractor"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="Contractor">
+                <s:complexContent mixed="false">
+                    <s:extension base="tns:Entity">
+                        <s:sequence>
+                            <s:element minOccurs="0" maxOccurs="1" name="ID_CONTRACTOR_GLOBAL" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="NAME" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="FULL_NAME" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="INN" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="ADDRESS" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="PHONE" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="OKPO" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="OKONH" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="KPP" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="EMAIL" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="BANK" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="CORR_BANK" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="ACCOUNT" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="BANK_ADDRESS" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="CORR_ACCOUNT" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="BIK" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="MNEMOCODE" type="s:string"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="COD_ID" type="s:long"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="COD_OUT_ID" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="COD_Source" type="s:string"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="Depts" type="s:long"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="FO_OGRN" type="s:string"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="A_COD" type="s:long"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="DATE_MODIFIED" type="s:dateTime"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="INSERTDATE" type="s:dateTime"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="DATE_DELETED" type="s:dateTime"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="ID_FOLDER" type="s:long"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="IMPORT_PROVIDER" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="ESFI_EXPORT_PATH" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="ESFI_CODE" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="XML_DETAIL" type="s:string"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="ID_PRICING_PRICING_MODEL" type="s:long"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="INVOICE_LOADER_SETTINGS_FILE_NAME"
+                                       type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="CODE" type="s:string"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="MAKE_SCHET_FACTURA" type="s:boolean"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="DIRECTOR_FIO" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="BUH_FIO" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="INVOICE_ACCESS_POINT" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="ID_MOL" type="s:string"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="CHECK_CONTRACTS" type="s:boolean"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="USE_VAT" type="s:boolean"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="NAME_PREFIX" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="NAME_SUFFIX" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="TAX_REG_CERT" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="UR_ADDRESS" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="CONTRACT_NAME" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="LEGAL_PERS_SHORT" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="LEGAL_PERS" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="EXPORT_ACCESS_POINT" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="DIRECTOR_DOC" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="BUH_DOC" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="MED_LIC" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="FARM_LIC" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="LIC_2" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="LIC_3" type="s:string"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="MED_DATE" type="s:dateTime"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="FARM_DATE" type="s:dateTime"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="LIC2_DATE" type="s:dateTime"/>
+                            <s:element minOccurs="0" maxOccurs="1" name="LIC3_DATE" type="s:dateTime"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="IS_FILIAL" type="s:boolean"/>
+                            <s:element minOccurs="1" maxOccurs="1" name="OWNER_ID" type="s:long"/>
+                        </s:sequence>
+                    </s:extension>
+                </s:complexContent>
+            </s:complexType>
+            <s:complexType name="ContractorLotWinner">
+                <s:complexContent mixed="false">
+                    <s:extension base="tns:Contractor"/>
+                </s:complexContent>
+            </s:complexType>
+            <s:element name="ContractorResponseResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="1" maxOccurs="1" name="ContractorResponseResult" type="s:boolean"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="ServerContractorRequest">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="clientId" type="s:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="ServerContractorRequestResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="ServerContractorRequestResult"
+                                   type="tns:ArrayOfContractor"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="ServerContractorResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="clientId" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="stateRecipes" type="tns:ArrayOfResultProcessing"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:complexType name="ArrayOfResultProcessing">
+                <s:sequence>
+                    <s:element minOccurs="0" maxOccurs="unbounded" name="ResultProcessing" nillable="true"
+                               type="tns:ResultProcessing"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="ResultProcessing">
+                <s:sequence>
+                    <s:element minOccurs="0" maxOccurs="1" name="Id" type="s:string"/>
+                    <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string"/>
+                    <s:element minOccurs="0" maxOccurs="1" name="Note" type="s:string"/>
+                </s:sequence>
+            </s:complexType>
+            <s:element name="ServerContractorResponseResponse">
+                <s:complexType/>
+            </s:element>
+            <s:element name="long" type="s:long"/>
+            <s:element name="ArrayOfRemainOutput" nillable="true" type="tns:ArrayOfRemainOutput"/>
+            <s:element name="ArrayOfContractor" nillable="true" type="tns:ArrayOfContractor"/>
+        </s:schema>
+    </wsdl:types>
+    <wsdl:message name="RemainRequestSoapIn">
+        <wsdl:part name="parameters" element="tns:RemainRequest"/>
+    </wsdl:message>
+    <wsdl:message name="RemainRequestSoapOut">
+        <wsdl:part name="parameters" element="tns:RemainRequestResponse"/>
+    </wsdl:message>
+    <wsdl:message name="RemainResponseSoapIn">
+        <wsdl:part name="parameters" element="tns:RemainResponse"/>
+    </wsdl:message>
+    <wsdl:message name="RemainResponseSoapOut">
+        <wsdl:part name="parameters" element="tns:RemainResponseResponse"/>
+    </wsdl:message>
+    <wsdl:message name="RemainDownloadSoapIn">
+        <wsdl:part name="parameters" element="tns:RemainDownload"/>
+    </wsdl:message>
+    <wsdl:message name="RemainDownloadSoapOut">
+        <wsdl:part name="parameters" element="tns:RemainDownloadResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ShipmentRequestSoapIn">
+        <wsdl:part name="parameters" element="tns:ShipmentRequest"/>
+    </wsdl:message>
+    <wsdl:message name="ShipmentRequestSoapOut">
+        <wsdl:part name="parameters" element="tns:ShipmentRequestResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ShipmentResponseSoapIn">
+        <wsdl:part name="parameters" element="tns:ShipmentResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ShipmentResponseSoapOut">
+        <wsdl:part name="parameters" element="tns:ShipmentResponseResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ContractorRequestSoapIn">
+        <wsdl:part name="parameters" element="tns:ContractorRequest"/>
+    </wsdl:message>
+    <wsdl:message name="ContractorRequestSoapOut">
+        <wsdl:part name="parameters" element="tns:ContractorRequestResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ContractorResponseSoapIn">
+        <wsdl:part name="parameters" element="tns:ContractorResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ContractorResponseSoapOut">
+        <wsdl:part name="parameters" element="tns:ContractorResponseResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ServerContractorRequestSoapIn">
+        <wsdl:part name="parameters" element="tns:ServerContractorRequest"/>
+    </wsdl:message>
+    <wsdl:message name="ServerContractorRequestSoapOut">
+        <wsdl:part name="parameters" element="tns:ServerContractorRequestResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ServerContractorResponseSoapIn">
+        <wsdl:part name="parameters" element="tns:ServerContractorResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ServerContractorResponseSoapOut">
+        <wsdl:part name="parameters" element="tns:ServerContractorResponseResponse"/>
+    </wsdl:message>
+    <wsdl:message name="RemainRequestHttpGetIn">
+        <wsdl:part name="clientId" type="s:string"/>
+    </wsdl:message>
+    <wsdl:message name="RemainRequestHttpGetOut">
+        <wsdl:part name="Body" element="tns:long"/>
+    </wsdl:message>
+    <wsdl:message name="RemainDownloadHttpGetIn">
+        <wsdl:part name="clientId" type="s:string"/>
+    </wsdl:message>
+    <wsdl:message name="RemainDownloadHttpGetOut">
+        <wsdl:part name="Body" element="tns:ArrayOfRemainOutput"/>
+    </wsdl:message>
+    <wsdl:message name="ShipmentRequestHttpGetIn">
+        <wsdl:part name="clientId" type="s:string"/>
+    </wsdl:message>
+    <wsdl:message name="ShipmentRequestHttpGetOut">
+        <wsdl:part name="Body" element="tns:long"/>
+    </wsdl:message>
+    <wsdl:message name="ContractorRequestHttpGetIn">
+        <wsdl:part name="clientId" type="s:string"/>
+    </wsdl:message>
+    <wsdl:message name="ContractorRequestHttpGetOut">
+        <wsdl:part name="Body" element="tns:long"/>
+    </wsdl:message>
+    <wsdl:message name="ServerContractorRequestHttpGetIn">
+        <wsdl:part name="clientId" type="s:string"/>
+    </wsdl:message>
+    <wsdl:message name="ServerContractorRequestHttpGetOut">
+        <wsdl:part name="Body" element="tns:ArrayOfContractor"/>
+    </wsdl:message>
+    <wsdl:message name="RemainRequestHttpPostIn">
+        <wsdl:part name="clientId" type="s:string"/>
+    </wsdl:message>
+    <wsdl:message name="RemainRequestHttpPostOut">
+        <wsdl:part name="Body" element="tns:long"/>
+    </wsdl:message>
+    <wsdl:message name="RemainDownloadHttpPostIn">
+        <wsdl:part name="clientId" type="s:string"/>
+    </wsdl:message>
+    <wsdl:message name="RemainDownloadHttpPostOut">
+        <wsdl:part name="Body" element="tns:ArrayOfRemainOutput"/>
+    </wsdl:message>
+    <wsdl:message name="ShipmentRequestHttpPostIn">
+        <wsdl:part name="clientId" type="s:string"/>
+    </wsdl:message>
+    <wsdl:message name="ShipmentRequestHttpPostOut">
+        <wsdl:part name="Body" element="tns:long"/>
+    </wsdl:message>
+    <wsdl:message name="ContractorRequestHttpPostIn">
+        <wsdl:part name="clientId" type="s:string"/>
+    </wsdl:message>
+    <wsdl:message name="ContractorRequestHttpPostOut">
+        <wsdl:part name="Body" element="tns:long"/>
+    </wsdl:message>
+    <wsdl:message name="ServerContractorRequestHttpPostIn">
+        <wsdl:part name="clientId" type="s:string"/>
+    </wsdl:message>
+    <wsdl:message name="ServerContractorRequestHttpPostOut">
+        <wsdl:part name="Body" element="tns:ArrayOfContractor"/>
+    </wsdl:message>
+    <wsdl:portType name="DrugstoreServiceSoap">
+        <wsdl:operation name="RemainRequest">
+            <wsdl:input message="tns:RemainRequestSoapIn"/>
+            <wsdl:output message="tns:RemainRequestSoapOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="RemainResponse">
+            <wsdl:input message="tns:RemainResponseSoapIn"/>
+            <wsdl:output message="tns:RemainResponseSoapOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="RemainDownload">
+            <wsdl:input message="tns:RemainDownloadSoapIn"/>
+            <wsdl:output message="tns:RemainDownloadSoapOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="ShipmentRequest">
+            <wsdl:input message="tns:ShipmentRequestSoapIn"/>
+            <wsdl:output message="tns:ShipmentRequestSoapOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="ShipmentResponse">
+            <wsdl:input message="tns:ShipmentResponseSoapIn"/>
+            <wsdl:output message="tns:ShipmentResponseSoapOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="ContractorRequest">
+            <wsdl:input message="tns:ContractorRequestSoapIn"/>
+            <wsdl:output message="tns:ContractorRequestSoapOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="ContractorResponse">
+            <wsdl:input message="tns:ContractorResponseSoapIn"/>
+            <wsdl:output message="tns:ContractorResponseSoapOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="ServerContractorRequest">
+            <wsdl:input message="tns:ServerContractorRequestSoapIn"/>
+            <wsdl:output message="tns:ServerContractorRequestSoapOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="ServerContractorResponse">
+            <wsdl:input message="tns:ServerContractorResponseSoapIn"/>
+            <wsdl:output message="tns:ServerContractorResponseSoapOut"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="DrugstoreServiceHttpGet">
+        <wsdl:operation name="RemainRequest">
+            <wsdl:input message="tns:RemainRequestHttpGetIn"/>
+            <wsdl:output message="tns:RemainRequestHttpGetOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="RemainDownload">
+            <wsdl:input message="tns:RemainDownloadHttpGetIn"/>
+            <wsdl:output message="tns:RemainDownloadHttpGetOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="ShipmentRequest">
+            <wsdl:input message="tns:ShipmentRequestHttpGetIn"/>
+            <wsdl:output message="tns:ShipmentRequestHttpGetOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="ContractorRequest">
+            <wsdl:input message="tns:ContractorRequestHttpGetIn"/>
+            <wsdl:output message="tns:ContractorRequestHttpGetOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="ServerContractorRequest">
+            <wsdl:input message="tns:ServerContractorRequestHttpGetIn"/>
+            <wsdl:output message="tns:ServerContractorRequestHttpGetOut"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="DrugstoreServiceHttpPost">
+        <wsdl:operation name="RemainRequest">
+            <wsdl:input message="tns:RemainRequestHttpPostIn"/>
+            <wsdl:output message="tns:RemainRequestHttpPostOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="RemainDownload">
+            <wsdl:input message="tns:RemainDownloadHttpPostIn"/>
+            <wsdl:output message="tns:RemainDownloadHttpPostOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="ShipmentRequest">
+            <wsdl:input message="tns:ShipmentRequestHttpPostIn"/>
+            <wsdl:output message="tns:ShipmentRequestHttpPostOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="ContractorRequest">
+            <wsdl:input message="tns:ContractorRequestHttpPostIn"/>
+            <wsdl:output message="tns:ContractorRequestHttpPostOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="ServerContractorRequest">
+            <wsdl:input message="tns:ServerContractorRequestHttpPostIn"/>
+            <wsdl:output message="tns:ServerContractorRequestHttpPostOut"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="DrugstoreServiceSoap" type="tns:DrugstoreServiceSoap">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="RemainRequest">
+            <soap:operation soapAction="http://tempuri.org/RemainRequest" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="RemainResponse">
+            <soap:operation soapAction="http://tempuri.org/RemainResponse" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="RemainDownload">
+            <soap:operation soapAction="http://tempuri.org/RemainDownload" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ShipmentRequest">
+            <soap:operation soapAction="http://tempuri.org/ShipmentRequest" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ShipmentResponse">
+            <soap:operation soapAction="http://tempuri.org/ShipmentResponse" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ContractorRequest">
+            <soap:operation soapAction="http://tempuri.org/ContractorRequest" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ContractorResponse">
+            <soap:operation soapAction="http://tempuri.org/ContractorResponse" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ServerContractorRequest">
+            <soap:operation soapAction="http://tempuri.org/ServerContractorRequest" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ServerContractorResponse">
+            <soap:operation soapAction="http://tempuri.org/ServerContractorResponse" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="DrugstoreServiceSoap12" type="tns:DrugstoreServiceSoap">
+        <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="RemainRequest">
+            <soap12:operation soapAction="http://tempuri.org/RemainRequest" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="RemainResponse">
+            <soap12:operation soapAction="http://tempuri.org/RemainResponse" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="RemainDownload">
+            <soap12:operation soapAction="http://tempuri.org/RemainDownload" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ShipmentRequest">
+            <soap12:operation soapAction="http://tempuri.org/ShipmentRequest" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ShipmentResponse">
+            <soap12:operation soapAction="http://tempuri.org/ShipmentResponse" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ContractorRequest">
+            <soap12:operation soapAction="http://tempuri.org/ContractorRequest" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ContractorResponse">
+            <soap12:operation soapAction="http://tempuri.org/ContractorResponse" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ServerContractorRequest">
+            <soap12:operation soapAction="http://tempuri.org/ServerContractorRequest" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ServerContractorResponse">
+            <soap12:operation soapAction="http://tempuri.org/ServerContractorResponse" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="DrugstoreServiceHttpGet" type="tns:DrugstoreServiceHttpGet">
+        <http:binding verb="GET"/>
+        <wsdl:operation name="RemainRequest">
+            <http:operation location="/RemainRequest"/>
+            <wsdl:input>
+                <http:urlEncoded/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:mimeXml part="Body"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="RemainDownload">
+            <http:operation location="/RemainDownload"/>
+            <wsdl:input>
+                <http:urlEncoded/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:mimeXml part="Body"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ShipmentRequest">
+            <http:operation location="/ShipmentRequest"/>
+            <wsdl:input>
+                <http:urlEncoded/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:mimeXml part="Body"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ContractorRequest">
+            <http:operation location="/ContractorRequest"/>
+            <wsdl:input>
+                <http:urlEncoded/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:mimeXml part="Body"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ServerContractorRequest">
+            <http:operation location="/ServerContractorRequest"/>
+            <wsdl:input>
+                <http:urlEncoded/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:mimeXml part="Body"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="DrugstoreServiceHttpPost" type="tns:DrugstoreServiceHttpPost">
+        <http:binding verb="POST"/>
+        <wsdl:operation name="RemainRequest">
+            <http:operation location="/RemainRequest"/>
+            <wsdl:input>
+                <mime:content type="application/x­www­form­urlencoded"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:mimeXml part="Body"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="RemainDownload">
+            <http:operation location="/RemainDownload"/>
+            <wsdl:input>
+                <mime:content type="application/x­www­form­urlencoded"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:mimeXml part="Body"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ShipmentRequest">
+            <http:operation location="/ShipmentRequest"/>
+            <wsdl:input>
+                <mime:content type="application/x­www­form­urlencoded"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:mimeXml part="Body"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ContractorRequest">
+            <http:operation location="/ContractorRequest"/>
+            <wsdl:input>
+                <mime:content type="application/x­www­form­urlencoded"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:mimeXml part="Body"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ServerContractorRequest">
+            <http:operation location="/ServerContractorRequest"/>
+            <wsdl:input>
+                <mime:content type="application/x­www­form­urlencoded"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:mimeXml part="Body"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="DrugstoreService">
+        <wsdl:port name="DrugstoreServiceSoap" binding="tns:DrugstoreServiceSoap">
+            <soap:address location="http://10.0.1.154/drugstore/DrugstoreService.asmx"/>
+        </wsdl:port>
+        <wsdl:port name="DrugstoreServiceSoap12" binding="tns:DrugstoreServiceSoap12">
+            <soap12:address location="http://10.0.1.154/drugstore/DrugstoreService.asmx"/>
+        </wsdl:port>
+        <wsdl:port name="DrugstoreServiceHttpGet" binding="tns:DrugstoreServiceHttpGet">
+            <http:address location="http://10.0.1.154/drugstore/DrugstoreService.asmx"/>
+        </wsdl:port>
+        <wsdl:port name="DrugstoreServiceHttpPost" binding="tns:DrugstoreServiceHttpPost">
+            <http:address location="http://10.0.1.154/drugstore/DrugstoreService.asmx"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddDosesDialog</class>
+ <widget class="QDialog" name="AddDosesDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>766</width>
+    <height>613</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Выбор доз</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="3" column="2">
+    <layout class="QGridLayout" name="gridLayout_3">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetDefaultConstraint</enum>
+     </property>
+     <item row="0" column="0" colspan="2">
+      <widget class="QLabel" name="lblRangeDoses">
+       <property name="text">
+        <string>Выбор доз</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0" colspan="2">
+      <widget class="QPushButton" name="btnAddDoseToNextDay">
+       <property name="text">
+        <string>Заполнить дозы на следующий день</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0" colspan="2">
+      <widget class="QTableView" name="tblDoseList"/>
+     </item>
+     <item row="5" column="0" colspan="2">
+      <widget class="QPushButton" name="btnAddDoseToAllDay">
+       <property name="text">
+        <string>Заполнить дозы на все дни</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="4" column="2">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QLabel" name="lblInjectionPath">
+         <property name="text">
+          <string>Путь введения</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="CRBComboBox" name="cmbInjectionPath"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="lblInterval">
+         <property name="text">
+          <string>Интервал</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="cmbInterval">
+         <item>
+          <property name="text">
+           <string>ежедневно</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>через день</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>раз в два дня</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="lblBegDate">
+         <property name="text">
+          <string>Дата начала приёма</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="CDateEdit" name="edtBegDate"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="lblEndDate">
+         <property name="text">
+          <string>Дата окончания приёма</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="CDateEdit" name="edtEndDate"/>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetDefaultConstraint</enum>
+       </property>
+       <item>
+        <widget class="QLabel" name="lblWhileTaking">
+         <property name="text">
+          <string>Время приёма</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTableView" name="tblTimeList">
+         <property name="editTriggers">
+          <set>QAbstractItemView::AllEditTriggers</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CDateEdit</class>
+   <extends>QDateEdit</extends>
+   <header>library/DateEdit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CRBComboBox</class>
+   <extends>QComboBox</extends>
+   <header>library/crbcombobox.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>AddDosesDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>AddDosesDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

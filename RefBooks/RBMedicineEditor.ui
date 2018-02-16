@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ItemEditorDialog</class>
+ <widget class="QDialog" name="ItemEditorDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>382</width>
+    <height>456</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ChangeMe!</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>true</bool>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="margin">
+    <number>4</number>
+   </property>
+   <property name="spacing">
+    <number>4</number>
+   </property>
+   <item row="6" column="0">
+    <widget class="QLabel" name="lblMnnLat">
+     <property name="text">
+      <string>&amp;МНН (латинское)</string>
+     </property>
+     <property name="buddy">
+      <cstring>edtName</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="1">
+    <widget class="QLineEdit" name="edtMnnLat"/>
+   </item>
+   <item row="7" column="0">
+    <widget class="QLabel" name="lblTradeName">
+     <property name="text">
+      <string>&amp;Торговое наименование</string>
+     </property>
+     <property name="buddy">
+      <cstring>edtName</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="1">
+    <widget class="QLineEdit" name="edtIssueForm"/>
+   </item>
+   <item row="9" column="1">
+    <widget class="QLineEdit" name="edtIssueFormLat"/>
+   </item>
+   <item row="9" column="0">
+    <widget class="QLabel" name="lblIssueFormLat">
+     <property name="text">
+      <string>Форма выпуска (латинская)</string>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="0">
+    <widget class="QLabel" name="lblIsDrugs">
+     <property name="text">
+      <string>Наркотик</string>
+     </property>
+     <property name="buddy">
+      <cstring>edtName</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="1">
+    <widget class="QLineEdit" name="edtTradeName"/>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="lblUnit">
+     <property name="text">
+      <string>Единица измерения</string>
+     </property>
+     <property name="buddy">
+      <cstring>edtName</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="CRBComboBox" name="cmbUnit"/>
+   </item>
+   <item row="10" column="0">
+    <widget class="QLabel" name="lblConcentration">
+     <property name="text">
+      <string>Концентрация</string>
+     </property>
+     <property name="buddy">
+      <cstring>edtName</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="17" column="0">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="15" column="1">
+    <widget class="QLineEdit" name="edtBaseUnitsInMinIndiv"/>
+   </item>
+   <item row="16" column="0">
+    <widget class="QLabel" name="lblMinIndivInPacking">
+     <property name="text">
+      <string>&amp;Мин.неделим. в упаковке</string>
+     </property>
+     <property name="buddy">
+      <cstring>edtName</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="1">
+    <widget class="QLineEdit" name="edtConcentration"/>
+   </item>
+   <item row="5" column="1">
+    <widget class="QLineEdit" name="edtMnn"/>
+   </item>
+   <item row="13" column="0">
+    <widget class="QLabel" name="lblMinIndivUnit">
+     <property name="text">
+      <string>&amp;Мин. неделимая единица</string>
+     </property>
+     <property name="buddy">
+      <cstring>edtName</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="13" column="1">
+    <widget class="CRBComboBox" name="cmbMinIndivUnit"/>
+   </item>
+   <item row="15" column="0">
+    <widget class="QLabel" name="lblBaseUnitsInMinIndiv">
+     <property name="text">
+      <string>&amp;Базовых единиц в мин.неделим.</string>
+     </property>
+     <property name="buddy">
+      <cstring>edtName</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="14" column="1">
+    <widget class="CRBComboBox" name="cmbPackingUnit"/>
+   </item>
+   <item row="2" column="1" colspan="2">
+    <widget class="QLineEdit" name="edtName"/>
+   </item>
+   <item row="18" column="0" colspan="3">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1" colspan="2">
+    <widget class="QLineEdit" name="edtCode"/>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="lblCode">
+     <property name="text">
+      <string>&amp;Код</string>
+     </property>
+     <property name="buddy">
+      <cstring>edtCode</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="lblName">
+     <property name="text">
+      <string>&amp;Наименование</string>
+     </property>
+     <property name="buddy">
+      <cstring>edtName</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="16" column="1">
+    <widget class="QLineEdit" name="edtMinIndivInPacking"/>
+   </item>
+   <item row="14" column="0">
+    <widget class="QLabel" name="lblPackingUnit">
+     <property name="text">
+      <string>&amp;Единица упаковки</string>
+     </property>
+     <property name="buddy">
+      <cstring>edtName</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="lblMnn">
+     <property name="text">
+      <string>&amp;МНН</string>
+     </property>
+     <property name="buddy">
+      <cstring>edtName</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="12" column="0">
+    <widget class="QLabel" name="lblBaseUnit">
+     <property name="text">
+      <string>&amp;Базовая единица</string>
+     </property>
+     <property name="buddy">
+      <cstring>edtName</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="12" column="1">
+    <widget class="CRBComboBox" name="cmbBaseUnit"/>
+   </item>
+   <item row="11" column="1">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QRadioButton" name="rbtnIsDrugYes">
+       <property name="text">
+        <string>да</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="rbtnIsDrugNo">
+       <property name="text">
+        <string>нет</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="8" column="0">
+    <widget class="QLabel" name="lblIssueForm">
+     <property name="text">
+      <string>Форма выпуска</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="lblGroup">
+     <property name="text">
+      <string>&amp;Группа</string>
+     </property>
+     <property name="buddy">
+      <cstring>cmbGroup</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="CRBComboBox" name="cmbGroup"/>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CRBComboBox</class>
+   <extends>QComboBox</extends>
+   <header>library/crbcombobox.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>edtCode</tabstop>
+  <tabstop>edtName</tabstop>
+  <tabstop>cmbUnit</tabstop>
+  <tabstop>cmbGroup</tabstop>
+  <tabstop>edtMnn</tabstop>
+  <tabstop>edtMnnLat</tabstop>
+  <tabstop>edtTradeName</tabstop>
+  <tabstop>edtIssueForm</tabstop>
+  <tabstop>edtIssueFormLat</tabstop>
+  <tabstop>edtConcentration</tabstop>
+  <tabstop>rbtnIsDrugYes</tabstop>
+  <tabstop>rbtnIsDrugNo</tabstop>
+  <tabstop>cmbBaseUnit</tabstop>
+  <tabstop>cmbMinIndivUnit</tabstop>
+  <tabstop>cmbPackingUnit</tabstop>
+  <tabstop>edtBaseUnitsInMinIndiv</tabstop>
+  <tabstop>edtMinIndivInPacking</tabstop>
+  <tabstop>buttonBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>ItemEditorDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>170</x>
+     <y>376</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>117</x>
+     <y>106</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>ItemEditorDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>250</x>
+     <y>376</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>247</x>
+     <y>107</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

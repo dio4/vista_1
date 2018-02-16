@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ItemFinderDialog</class>
+ <widget class="QDialog" name="ItemFinderDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>560</width>
+    <height>370</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ChangeMe!</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>true</bool>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="margin">
+    <number>4</number>
+   </property>
+   <property name="spacing">
+    <number>4</number>
+   </property>
+   <item row="0" column="1" colspan="2">
+    <widget class="QLineEdit" name="edtCode">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="3" colspan="4">
+    <widget class="QCheckBox" name="chkPrim">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="whatsThis">
+      <string>В справочнике МКБ обычно отмечается звёздочкой</string>
+     </property>
+     <property name="text">
+      <string>уточняется в других рубриках</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="6">
+    <widget class="QToolButton" name="btnSelectService">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string>...</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="1" colspan="3">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="spacing">
+      <number>4</number>
+     </property>
+     <item>
+      <widget class="QComboBox" name="cmbBegAgeUnit">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <item>
+        <property name="text">
+         <string/>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Д</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Н</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>М</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Г</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="edtBegAgeCount">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="inputMask">
+        <string>000; </string>
+       </property>
+       <property name="maxLength">
+        <number>3</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="lblAgeSep">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>по</string>
+       </property>
+       <property name="buddy">
+        <cstring>cmbEndAgeUnit</cstring>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="cmbEndAgeUnit">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <item>
+        <property name="text">
+         <string/>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Д</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Н</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>М</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Г</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="edtEndAgeCount">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="inputMask">
+        <string>000; </string>
+       </property>
+       <property name="maxLength">
+        <number>3</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="8" column="1" colspan="5">
+    <widget class="CRBComboBox" name="cmbService">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="5" colspan="2">
+    <spacer name="spacer_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>173</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="3" column="1" colspan="6">
+    <widget class="CRBComboBox" name="cmbMKBSubclass">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="whatsThis">
+      <string>Последующее уточнение кода диагноза, не предписанное справочником МКБ</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1" colspan="6">
+    <widget class="QComboBox" name="cmbCharacters">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="whatsThis">
+      <string>Допустимый характер заболевания, применяется для контроля ввода</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1">
+    <widget class="QSpinBox" name="edtDuration">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="maximum">
+      <number>999</number>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="2" colspan="5">
+    <spacer>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>289</width>
+       <height>17</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="6" column="1">
+    <widget class="QComboBox" name="cmbSex">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <item>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>М</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Ж</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="6" column="2" colspan="5">
+    <spacer name="spacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>289</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="13" column="0" colspan="7">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="5">
+    <widget class="CDateEdit" name="edtEndDate">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="date">
+      <date>
+       <year>2200</year>
+       <month>1</month>
+       <day>1</day>
+      </date>
+     </property>
+     <property name="calendarPopup">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="1">
+    <widget class="CDateEdit" name="edtBegDate">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="calendarPopup">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0">
+    <widget class="QCheckBox" name="chkSex">
+     <property name="text">
+      <string>&amp;Пол</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QCheckBox" name="chkMKBSubclass">
+     <property name="text">
+      <string>Cу&amp;бклассификация
+МКБ по 5 знаку</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QCheckBox" name="chkCode">
+     <property name="text">
+      <string>Код</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" rowspan="2">
+    <widget class="QCheckBox" name="chkName">
+     <property name="text">
+      <string>Наименование</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QCheckBox" name="chkCharacters">
+     <property name="text">
+      <string>&amp;Характер</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QCheckBox" name="chkDuration">
+     <property name="text">
+      <string>&amp;Длительность</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="0">
+    <widget class="QCheckBox" name="chkService">
+     <property name="text">
+      <string>&amp;Услуга</string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="4">
+    <widget class="QCheckBox" name="chkEndDate">
+     <property name="text">
+      <string>Дата окончания:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0">
+    <widget class="QCheckBox" name="chkAge">
+     <property name="text">
+      <string>&amp;Возраст</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1" colspan="6">
+    <widget class="QTextEdit" name="edtName">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="0">
+    <widget class="QCheckBox" name="chkBegDate">
+     <property name="text">
+      <string>Дата начала:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="0">
+    <widget class="QCheckBox" name="chkOMSMTR">
+     <property name="text">
+      <string>Краевой/Инокрай</string>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="2">
+    <widget class="QCheckBox" name="chkMTR">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string>Инокраевой</string>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="1">
+    <widget class="QCheckBox" name="chkOMS">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string>Краевой</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CRBComboBox</class>
+   <extends>QComboBox</extends>
+   <header>library/crbcombobox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CDateEdit</class>
+   <extends>QDateEdit</extends>
+   <header>library/DateEdit.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>edtCode</tabstop>
+  <tabstop>chkPrim</tabstop>
+  <tabstop>edtName</tabstop>
+  <tabstop>cmbMKBSubclass</tabstop>
+  <tabstop>cmbCharacters</tabstop>
+  <tabstop>edtDuration</tabstop>
+  <tabstop>cmbSex</tabstop>
+  <tabstop>cmbBegAgeUnit</tabstop>
+  <tabstop>edtBegAgeCount</tabstop>
+  <tabstop>cmbEndAgeUnit</tabstop>
+  <tabstop>edtEndAgeCount</tabstop>
+  <tabstop>cmbService</tabstop>
+  <tabstop>btnSelectService</tabstop>
+  <tabstop>buttonBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>ItemFinderDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>169</x>
+     <y>339</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>105</x>
+     <y>344</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>ItemFinderDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>249</x>
+     <y>339</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>221</x>
+     <y>344</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkCode</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>edtCode</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>52</x>
+     <y>13</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>175</x>
+     <y>13</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkCode</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>chkPrim</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>52</x>
+     <y>13</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>379</x>
+     <y>13</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkMKBSubclass</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cmbMKBSubclass</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>52</x>
+     <y>135</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>307</x>
+     <y>135</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkCharacters</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cmbCharacters</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>52</x>
+     <y>164</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>307</x>
+     <y>164</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkDuration</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>edtDuration</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>52</x>
+     <y>188</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>146</x>
+     <y>188</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkSex</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cmbSex</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>52</x>
+     <y>212</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>146</x>
+     <y>212</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkAge</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cmbBegAgeUnit</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>52</x>
+     <y>237</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>122</x>
+     <y>237</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkAge</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>edtBegAgeCount</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>52</x>
+     <y>237</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>168</x>
+     <y>237</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkAge</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>lblAgeSep</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>52</x>
+     <y>237</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>203</x>
+     <y>237</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkAge</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cmbEndAgeUnit</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>52</x>
+     <y>237</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>230</x>
+     <y>237</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkAge</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>edtEndAgeCount</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>52</x>
+     <y>237</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>276</x>
+     <y>237</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkService</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cmbService</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>52</x>
+     <y>262</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>292</x>
+     <y>262</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkService</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>btnSelectService</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>52</x>
+     <y>262</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>497</x>
+     <y>262</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkBegDate</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>edtBegDate</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>52</x>
+     <y>286</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>146</x>
+     <y>286</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkEndDate</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>edtEndDate</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>347</x>
+     <y>286</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>286</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkName</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>edtName</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>52</x>
+     <y>74</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>307</x>
+     <y>74</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkOMSMTR</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>chkOMS</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>63</x>
+     <y>330</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>169</x>
+     <y>330</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkOMSMTR</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>chkMTR</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>63</x>
+     <y>330</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>256</x>
+     <y>330</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,59 @@
+<ui version="4.0" >
+ <class>DiagnosisConfirmationDialog</class>
+ <widget class="QDialog" name="DiagnosisConfirmationDialog" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>593</width>
+    <height>97</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Внимание</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout" >
+   <item row="0" column="0" colspan="3" >
+    <widget class="QLabel" name="lblMessage" >
+     <property name="text" >
+      <string>Ведён код J06.0 (Острый ларингофарингит)
+Ранее для этого пациента был указан код J06.9 (Острая инфекция верхних дыхательных путей неуточненная)
+Изменить на этот код?</string>
+     </property>
+     <property name="alignment" >
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     </property>
+     <property name="textInteractionFlags" >
+      <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" >
+    <widget class="QPushButton" name="btnAcceptOld" >
+     <property name="text" >
+      <string>Изменить на J06.9</string>
+     </property>
+     <property name="default" >
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1" >
+    <widget class="QPushButton" name="btnAcceptNew" >
+     <property name="text" >
+      <string>Принять J06.0</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2" >
+    <widget class="QPushButton" name="btnAcceptNewAndModifyOld" >
+     <property name="text" >
+      <string>Принять J06.0 и отметить J06.9 как изменённый</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,1077 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PersonsListDialog</class>
+ <widget class="QDialog" name="PersonsListDialog">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>908</width>
+    <height>717</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Список записей</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>true</bool>
+  </property>
+  <property name="modal">
+   <bool>true</bool>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="margin">
+    <number>4</number>
+   </property>
+   <property name="spacing">
+    <number>4</number>
+   </property>
+   <item row="30" column="0">
+    <widget class="CTableView" name="tblItems">
+     <property name="whatsThis">
+      <string comment="ура!">список записей</string>
+     </property>
+     <property name="tabKeyNavigation">
+      <bool>false</bool>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="32" column="0" colspan="2">
+    <layout class="QHBoxLayout" stretch="0,0,0,0,0,0,0,0">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <property name="margin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>всего: </string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="chkOnlyOwn">
+       <property name="text">
+        <string>Только свои</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="chkOnlyWorking">
+       <property name="text">
+        <string>Только работающие</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="chkOnlyResearcher">
+       <property name="text">
+        <string>Только главные исследователи</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnSync">
+       <property name="text">
+        <string>Синхронизация</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QDialogButtonBox" name="buttonBox">
+       <property name="standardButtons">
+        <set>QDialogButtonBox::Close</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="3" column="0">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
+     <property name="contextMenuPolicy">
+      <enum>Qt::NoContextMenu</enum>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <property name="elideMode">
+      <enum>Qt::ElideNone</enum>
+     </property>
+     <widget class="QWidget" name="tabCommon">
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <attribute name="title">
+       <string>Общее</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="11" column="0">
+        <widget class="QCheckBox" name="chkSpec">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Специальность</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="2">
+        <widget class="QCheckBox" name="chkUserRightsProfile">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Профиль прав</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="2">
+        <widget class="QCheckBox" name="chkLPU">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Внешнее ЛПУ</string>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="2">
+        <widget class="QCheckBox" name="chkAcademicDegree">
+         <property name="text">
+          <string>Учёная степень</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QLineEdit" name="edtFirstName">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="3">
+        <widget class="CEnumComboBox" name="cmbAcademicDegree">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="CEnumComboBox" name="cmbOccupationType">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="2">
+        <widget class="QCheckBox" name="chkIsReservist">
+         <property name="text">
+          <string>Отношение к военной службе</string>
+         </property>
+        </widget>
+       </item>
+       <item row="13" column="1">
+        <widget class="CRBComboBox" name="cmbActivity">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QCheckBox" name="chkFirstName">
+         <property name="text">
+          <string>Имя</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="3">
+        <widget class="CRBComboBox" name="cmbUserRightsProfile">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QCheckBox" name="chkOccupationType">
+         <property name="text">
+          <string>Тип занятия должности</string>
+         </property>
+        </widget>
+       </item>
+       <item row="13" column="0">
+        <widget class="QCheckBox" name="chkActivity">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Вид деятельности</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QCheckBox" name="chkLastName">
+         <property name="text">
+          <string>Фамилия</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="3">
+        <widget class="CEnumComboBox" name="cmbIsReservist">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLineEdit" name="edtLastName">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="1">
+        <widget class="COrgStructureComboBox" name="boxStrPodr">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="1">
+        <widget class="QLineEdit" name="edtPatrName">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="3">
+        <widget class="CEnumComboBox" name="cmbEmploymentType">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QCheckBox" name="chkCode">
+         <property name="text">
+          <string>Код</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="edtCode">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="13" column="3">
+        <widget class="QLineEdit" name="edtFedCode">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="0">
+        <widget class="QCheckBox" name="chkStrPodr">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Структурное подразделение</string>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="2">
+        <widget class="QCheckBox" name="chkEmploymentType">
+         <property name="text">
+          <string>Режим работы</string>
+         </property>
+        </widget>
+       </item>
+       <item row="13" column="2">
+        <widget class="QCheckBox" name="chkFedCode">
+         <property name="text">
+          <string>Федеральный код</string>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="1">
+        <widget class="CRBComboBox" name="cmbSpeciality">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0">
+        <widget class="QCheckBox" name="chkPatrName">
+         <property name="text">
+          <string>Отчество</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="3">
+        <widget class="CPolyclinicExtendedComboBox" name="cmbOrg">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabPrivateInform">
+      <attribute name="title">
+       <string>Личное</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_6">
+       <item row="0" column="0">
+        <layout class="QGridLayout" name="gridLayout_5">
+         <item row="1" column="0">
+          <widget class="QCheckBox" name="chkMaritalStatus">
+           <property name="text">
+            <string>Семейное положение</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QCheckBox" name="chkBirthDate">
+           <property name="text">
+            <string>Дата рождения</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="CDateEdit" name="edtBirthDate">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QComboBox" name="cmbSex">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <item>
+            <property name="text">
+             <string/>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>М</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Ж</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QCheckBox" name="chkCitizenship">
+           <property name="text">
+            <string>Гражданство</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="CEnumComboBox" name="cmbRegistryType">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="CRBComboBox" name="cmbCitizenship">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QCheckBox" name="chkSex">
+           <property name="text">
+            <string>Пол</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QCheckBox" name="chkRegistryType">
+           <property name="text">
+            <string>Тип регистрации</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="CEnumComboBox" name="cmbMaritalStatus">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <spacer name="horizontalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="0">
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabQualification">
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <attribute name="title">
+       <string>Квалификация</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_4">
+       <item row="0" column="0">
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="1" column="1">
+          <widget class="CRBComboBox" name="cmbCategory">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="CEnumComboBox" name="cmbEducationType">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QCheckBox" name="chkCategory">
+           <property name="text">
+            <string>Категория</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QCheckBox" name="chkEducationType">
+           <property name="text">
+            <string>Тип образования</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="0">
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CRBComboBox</class>
+   <extends>QComboBox</extends>
+   <header>library/crbcombobox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CTableView</class>
+   <extends>QTableView</extends>
+   <header>library/TableView.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CDateEdit</class>
+   <extends>QDateEdit</extends>
+   <header>library/DateEdit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>COrgStructureComboBox</class>
+   <extends>QComboBox</extends>
+   <header>Orgs/OrgStructComboBoxes.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CPolyclinicExtendedComboBox</class>
+   <extends>QComboBox</extends>
+   <header>Orgs/OrgComboBox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CEnumComboBox</class>
+   <extends>QComboBox</extends>
+   <header>library/Enum.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>chkCode</tabstop>
+  <tabstop>edtCode</tabstop>
+  <tabstop>chkLastName</tabstop>
+  <tabstop>edtLastName</tabstop>
+  <tabstop>chkFirstName</tabstop>
+  <tabstop>edtFirstName</tabstop>
+  <tabstop>chkPatrName</tabstop>
+  <tabstop>edtPatrName</tabstop>
+  <tabstop>chkStrPodr</tabstop>
+  <tabstop>boxStrPodr</tabstop>
+  <tabstop>chkSpec</tabstop>
+  <tabstop>cmbSpeciality</tabstop>
+  <tabstop>chkActivity</tabstop>
+  <tabstop>cmbActivity</tabstop>
+  <tabstop>chkOccupationType</tabstop>
+  <tabstop>cmbOccupationType</tabstop>
+  <tabstop>chkUserRightsProfile</tabstop>
+  <tabstop>cmbUserRightsProfile</tabstop>
+  <tabstop>chkLPU</tabstop>
+  <tabstop>cmbOrg</tabstop>
+  <tabstop>chkIsReservist</tabstop>
+  <tabstop>cmbIsReservist</tabstop>
+  <tabstop>chkEmploymentType</tabstop>
+  <tabstop>cmbEmploymentType</tabstop>
+  <tabstop>chkAcademicDegree</tabstop>
+  <tabstop>cmbAcademicDegree</tabstop>
+  <tabstop>chkFedCode</tabstop>
+  <tabstop>edtFedCode</tabstop>
+  <tabstop>tblItems</tabstop>
+  <tabstop>chkOnlyOwn</tabstop>
+  <tabstop>chkOnlyWorking</tabstop>
+  <tabstop>chkOnlyResearcher</tabstop>
+  <tabstop>btnSync</tabstop>
+  <tabstop>buttonBox</tabstop>
+  <tabstop>chkRegistryType</tabstop>
+  <tabstop>cmbRegistryType</tabstop>
+  <tabstop>chkMaritalStatus</tabstop>
+  <tabstop>cmbMaritalStatus</tabstop>
+  <tabstop>chkCitizenship</tabstop>
+  <tabstop>cmbCitizenship</tabstop>
+  <tabstop>chkSex</tabstop>
+  <tabstop>cmbSex</tabstop>
+  <tabstop>chkBirthDate</tabstop>
+  <tabstop>edtBirthDate</tabstop>
+  <tabstop>chkEducationType</tabstop>
+  <tabstop>cmbEducationType</tabstop>
+  <tabstop>chkCategory</tabstop>
+  <tabstop>cmbCategory</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>PersonsListDialog</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>902</x>
+     <y>711</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>777</x>
+     <y>420</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkFedCode</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>edtFedCode</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>667</x>
+     <y>234</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>888</x>
+     <y>234</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkFedCode</sender>
+   <signal>clicked()</signal>
+   <receiver>edtFedCode</receiver>
+   <slot>setFocus()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>667</x>
+     <y>234</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>888</x>
+     <y>234</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkStrPodr</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>boxStrPodr</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>207</x>
+     <y>162</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>252</x>
+     <y>162</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkSpec</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cmbSpeciality</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>124</x>
+     <y>198</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>307</x>
+     <y>195</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkPatrName</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>edtPatrName</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>172</x>
+     <y>135</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>300</x>
+     <y>137</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkActivity</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cmbActivity</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>153</x>
+     <y>231</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>241</x>
+     <y>225</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkFirstName</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>edtFirstName</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>172</x>
+     <y>107</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>244</x>
+     <y>109</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkLastName</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>edtLastName</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>139</x>
+     <y>81</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>256</x>
+     <y>78</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkCode</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>edtCode</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>182</x>
+     <y>43</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>263</x>
+     <y>47</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkOccupationType</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cmbOccupationType</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>649</x>
+     <y>50</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>707</x>
+     <y>45</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkAcademicDegree</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cmbAcademicDegree</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>619</x>
+     <y>200</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>726</x>
+     <y>200</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkEmploymentType</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cmbEmploymentType</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>616</x>
+     <y>168</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>748</x>
+     <y>167</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkIsReservist</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cmbIsReservist</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>660</x>
+     <y>137</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>701</x>
+     <y>136</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkLPU</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cmbOrg</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>551</x>
+     <y>108</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>694</x>
+     <y>106</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkUserRightsProfile</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cmbUserRightsProfile</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>543</x>
+     <y>76</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>684</x>
+     <y>78</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkRegistryType</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cmbRegistryType</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>140</x>
+     <y>42</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>290</x>
+     <y>47</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkMaritalStatus</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cmbMaritalStatus</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>165</x>
+     <y>76</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>258</x>
+     <y>79</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkCitizenship</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cmbCitizenship</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>122</x>
+     <y>110</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>231</x>
+     <y>115</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkEducationType</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cmbEducationType</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>116</x>
+     <y>46</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>276</x>
+     <y>50</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkCategory</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cmbCategory</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>95</x>
+     <y>76</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>252</x>
+     <y>76</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkSex</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cmbSex</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>56</x>
+     <y>145</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>269</x>
+     <y>148</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkBirthDate</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>edtBirthDate</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>129</x>
+     <y>176</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>254</x>
+     <y>176</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

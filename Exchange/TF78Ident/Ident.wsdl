@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://identification.ws.eis.spb.ru/"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/"
+             targetNamespace="http://identification.ws.eis.spb.ru/" name="IdentService">
+	<types>
+		<xsd:schema>
+			<xsd:import namespace="http://jaxb.dev.java.net/array" schemaLocation="Ident.xsd1"></xsd:import>
+		</xsd:schema>
+		<xsd:schema>
+<!--			<xsd:import namespace="http://identification.ws.eis.spb.ru/" schemaLocation="Ident.xsd2"></xsd:import>  -->
+	    	<xsd:include schemaLocation="Ident.xsd2"/>
+		</xsd:schema>
+	</types>
+    <message name="doIdentification">
+        <part name="parameters" element="tns:doIdentification"></part>
+    </message>
+    <message name="doIdentificationResponse">
+        <part name="parameters" element="tns:doIdentificationResponse"></part>
+    </message>
+    <message name="Exception">
+        <part name="fault" element="tns:Exception"></part>
+    </message>
+    <message name="getIdTArea">
+        <part name="parameters" element="tns:getIdTArea"></part>
+    </message>
+    <message name="getIdTAreaResponse">
+        <part name="parameters" element="tns:getIdTAreaResponse"></part>
+    </message>
+    <message name="getIdGeonimName">
+        <part name="parameters" element="tns:getIdGeonimName"></part>
+    </message>
+    <message name="getIdGeonimNameResponse">
+        <part name="parameters" element="tns:getIdGeonimNameResponse"></part>
+    </message>
+    <message name="getIdGeonimType">
+        <part name="parameters" element="tns:getIdGeonimType"></part>
+    </message>
+    <message name="getIdGeonimTypeResponse">
+        <part name="parameters" element="tns:getIdGeonimTypeResponse"></part>
+    </message>
+    <message name="getIdSmo">
+        <part name="parameters" element="tns:getIdSmo"></part>
+    </message>
+    <message name="getIdSmoResponse">
+        <part name="parameters" element="tns:getIdSmoResponse"></part>
+    </message>
+    <message name="getIdNet">
+        <part name="parameters" element="tns:getIdNet"></part>
+    </message>
+    <message name="getIdNetResponse">
+        <part name="parameters" element="tns:getIdNetResponse"></part>
+    </message>
+    <message name="getIdMo">
+        <part name="parameters" element="tns:getIdMo"></part>
+    </message>
+    <message name="getIdMoResponse">
+        <part name="parameters" element="tns:getIdMoResponse"></part>
+    </message>
+    <portType name="Ident">
+        <operation name="doIdentification">
+            <input message="tns:doIdentification"></input>
+            <output message="tns:doIdentificationResponse"></output>
+            <fault message="tns:Exception" name="Exception"></fault>
+        </operation>
+        <operation name="getIdTArea">
+            <input message="tns:getIdTArea"></input>
+            <output message="tns:getIdTAreaResponse"></output>
+            <fault message="tns:Exception" name="Exception"></fault>
+        </operation>
+        <operation name="getIdGeonimName">
+            <input message="tns:getIdGeonimName"></input>
+            <output message="tns:getIdGeonimNameResponse"></output>
+            <fault message="tns:Exception" name="Exception"></fault>
+        </operation>
+        <operation name="getIdGeonimType">
+            <input message="tns:getIdGeonimType"></input>
+            <output message="tns:getIdGeonimTypeResponse"></output>
+            <fault message="tns:Exception" name="Exception"></fault>
+        </operation>
+        <operation name="getIdSmo">
+            <input message="tns:getIdSmo"></input>
+            <output message="tns:getIdSmoResponse"></output>
+            <fault message="tns:Exception" name="Exception"></fault>
+        </operation>
+        <operation name="getIdNet">
+            <input message="tns:getIdNet"></input>
+            <output message="tns:getIdNetResponse"></output>
+            <fault message="tns:Exception" name="Exception"></fault>
+        </operation>
+        <operation name="getIdMo">
+            <input message="tns:getIdMo"></input>
+            <output message="tns:getIdMoResponse"></output>
+            <fault message="tns:Exception" name="Exception"></fault>
+        </operation>
+    </portType>
+    <binding name="IdentPortBinding" type="tns:Ident">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"></soap:binding>
+        <operation name="doIdentification">
+            <soap:operation soapAction=""></soap:operation>
+            <input>
+                <soap:body use="literal"></soap:body>
+            </input>
+            <output>
+                <soap:body use="literal"></soap:body>
+            </output>
+            <fault name="Exception">
+                <soap:fault name="Exception" use="literal"></soap:fault>
+            </fault>
+        </operation>
+        <operation name="getIdTArea">
+            <soap:operation soapAction=""></soap:operation>
+            <input>
+                <soap:body use="literal"></soap:body>
+            </input>
+            <output>
+                <soap:body use="literal"></soap:body>
+            </output>
+            <fault name="Exception">
+                <soap:fault name="Exception" use="literal"></soap:fault>
+            </fault>
+        </operation>
+        <operation name="getIdGeonimName">
+            <soap:operation soapAction=""></soap:operation>
+            <input>
+                <soap:body use="literal"></soap:body>
+            </input>
+            <output>
+                <soap:body use="literal"></soap:body>
+            </output>
+            <fault name="Exception">
+                <soap:fault name="Exception" use="literal"></soap:fault>
+            </fault>
+        </operation>
+        <operation name="getIdGeonimType">
+            <soap:operation soapAction=""></soap:operation>
+            <input>
+                <soap:body use="literal"></soap:body>
+            </input>
+            <output>
+                <soap:body use="literal"></soap:body>
+            </output>
+            <fault name="Exception">
+                <soap:fault name="Exception" use="literal"></soap:fault>
+            </fault>
+        </operation>
+        <operation name="getIdSmo">
+            <soap:operation soapAction=""></soap:operation>
+            <input>
+                <soap:body use="literal"></soap:body>
+            </input>
+            <output>
+                <soap:body use="literal"></soap:body>
+            </output>
+            <fault name="Exception">
+                <soap:fault name="Exception" use="literal"></soap:fault>
+            </fault>
+        </operation>
+        <operation name="getIdNet">
+            <soap:operation soapAction=""></soap:operation>
+            <input>
+                <soap:body use="literal"></soap:body>
+            </input>
+            <output>
+                <soap:body use="literal"></soap:body>
+            </output>
+            <fault name="Exception">
+                <soap:fault name="Exception" use="literal"></soap:fault>
+            </fault>
+        </operation>
+        <operation name="getIdMo">
+            <soap:operation soapAction=""></soap:operation>
+            <input>
+                <soap:body use="literal"></soap:body>
+            </input>
+            <output>
+                <soap:body use="literal"></soap:body>
+            </output>
+            <fault name="Exception">
+                <soap:fault name="Exception" use="literal"></soap:fault>
+            </fault>
+        </operation>
+    </binding>
+    <service name="IdentService">
+        <port name="IdentPort" binding="tns:IdentPortBinding">
+            <soap:address location="http://10.20.31.213:80/identWS/services/Ident"></soap:address>
+        </port>
+    </service>
+</definitions>

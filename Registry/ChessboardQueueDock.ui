@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>399</width>
+    <height>659</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="1" colspan="9">
+    <widget class="QSplitter" name="splitter">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="CTreeView" name="treeOrgStructure"/>
+     <widget class="CRBListBox" name="tblSpeciality"/>
+     <widget class="CRBListBox" name="tblPersonnel"/>
+    </widget>
+   </item>
+   <item row="1" column="9">
+    <widget class="CDateEdit" name="edtEndDate"/>
+   </item>
+   <item row="1" column="6">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>с</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="8">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>по</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="7">
+    <widget class="CDateEdit" name="edtBegDate"/>
+   </item>
+   <item row="1" column="5">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="2" column="1" colspan="9">
+    <widget class="CTableView" name="tblChessboardAmbQueue"/>
+   </item>
+   <item row="1" column="3">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Дата </string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2">
+    <widget class="QToolButton" name="btnRefresh">
+     <property name="font">
+      <font>
+       <pointsize>8</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+       <strikeout>true</strikeout>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string>Обновить список номерков</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="../s11main.qrc">
+       <normaloff>:/new/prefix1/icons/refresh.png</normaloff>:/new/prefix1/icons/refresh.png</iconset>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CDateEdit</class>
+   <extends>QDateEdit</extends>
+   <header>library/DateEdit</header>
+  </customwidget>
+  <customwidget>
+   <class>CTableView</class>
+   <extends>QTableView</extends>
+   <header>library/TableView.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CRBListBox</class>
+   <extends>QListView</extends>
+   <header>library/RBListBox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CTreeView</class>
+   <extends>QTreeView</extends>
+   <header>library/TreeView.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>treeOrgStructure</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../s11main.qrc"/>
+ </resources>
+ <connections/>
+</ui>

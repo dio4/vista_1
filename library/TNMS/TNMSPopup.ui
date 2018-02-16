@@ -1,0 +1,5575 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TNMSPopup</class>
+ <widget class="QWidget" name="TNMSPopup">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>229</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="margin">
+    <number>2</number>
+   </property>
+   <property name="spacing">
+    <number>2</number>
+   </property>
+   <item row="1" column="18">
+    <widget class="QComboBox" name="cmbPResection">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QComboBox" name="cmbPTumor">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>is</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1mi</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1d</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2d</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3d</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4d</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4e</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="lblCTumor">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>cT</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QComboBox" name="cmbCTumor">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>is</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1mi</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1d</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2d</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3d</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4d</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4e</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="0" column="2">
+    <widget class="QLabel" name="lblCNodus">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>N</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="3">
+    <widget class="QComboBox" name="cmbCNodus">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1mi</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3c</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="0" column="4">
+    <widget class="QLabel" name="lblCMetastasis">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>M</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="5">
+    <widget class="QComboBox" name="cmbCMetastasis">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1d</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1e</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="0" column="19">
+    <widget class="QLabel" name="lblCSt">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>  Стадия</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="20">
+    <widget class="QComboBox" name="cmbCSt">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>I</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IA</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IC</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>II</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IIA</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IIB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IIC</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>III</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IIIA</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IIIB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IIIC</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IVA</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IVB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IVC</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>неприменимо</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>неизвестно</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="lblPTumor">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>pT</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2">
+    <widget class="QLabel" name="lblPNodus">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>N</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="4">
+    <widget class="QLabel" name="lblPMetastasis">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>M</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="10">
+    <widget class="QComboBox" name="cmbCGrade">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="1" column="19">
+    <widget class="QLabel" name="lblPSt">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>  Стадия</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1">
+    <widget class="QComboBox" name="cmbYCTumor">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>is</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1mi</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1d</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2d</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3d</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4d</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4e</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="0" column="8">
+    <widget class="QComboBox" name="cmbCSerum">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="6" column="3">
+    <widget class="QComboBox" name="cmbYPNodus">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1mi</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3c</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="8" column="4">
+    <widget class="QLabel" name="lblAMetastasis">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>M</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="12">
+    <widget class="QComboBox" name="cmbCLymphatic">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="0" column="14">
+    <widget class="QComboBox" name="cmbCVein">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="0" column="7">
+    <widget class="QLabel" name="lblCSerum">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>S</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="9">
+    <widget class="QLabel" name="lblCGrade">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>G</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="13">
+    <widget class="QLabel" name="lblCVein">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>V</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="11">
+    <widget class="QLabel" name="lblCLymphatic">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>L</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="15">
+    <widget class="QLabel" name="lblCPerineural">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>Pn</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="16">
+    <widget class="QComboBox" name="cmbCPerineural">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="0" column="17">
+    <widget class="QLabel" name="lblCResection">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>R</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="18">
+    <widget class="QComboBox" name="cmbCResection">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="lblRTumor">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>rT</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="lblYTumor">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>yT</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="lblYCTumor">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>ycT</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0">
+    <widget class="QLabel" name="lblYPTumor">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>ypT</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="0">
+    <widget class="QLabel" name="lblATumor">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>aT</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="1">
+    <widget class="QComboBox" name="cmbYPTumor">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>is</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1mi</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1d</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2d</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3d</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4d</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4e</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QComboBox" name="cmbYTumor">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>is</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1mi</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1d</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2d</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3d</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4d</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4e</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QComboBox" name="cmbRTumor">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>is</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1mi</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1d</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2d</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3d</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4d</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4e</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="8" column="1">
+    <widget class="QComboBox" name="cmbATumor">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>is</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1mi</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1d</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2d</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3d</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4d</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4e</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="4" column="19">
+    <widget class="QLabel" name="lblYSt">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>  Стадия</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="19">
+    <widget class="QLabel" name="lblRSt">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>  Стадия</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="19">
+    <widget class="QLabel" name="lblYCSt">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>  Стадия</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="19">
+    <widget class="QLabel" name="lblYPSt">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>  Стадия</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="19">
+    <widget class="QLabel" name="lblASt">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>  Стадия</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="3">
+    <widget class="QComboBox" name="cmbPNodus">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1mi</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3c</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="4" column="17">
+    <widget class="QLabel" name="lblYResection">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>R</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="14">
+    <widget class="QComboBox" name="cmbPVein">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="3" column="18">
+    <widget class="QComboBox" name="cmbRResection">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="0" column="6">
+    <widget class="QComboBox" name="cmbCM1Localization">
+     <item>
+      <property name="text">
+       <string>ADD</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>BRA</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>HEP</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>LYM</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>MAR</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>OSS</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PLE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PUL</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SKI</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>OTH</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="8" column="6">
+    <widget class="QComboBox" name="cmbAM1Localization">
+     <item>
+      <property name="text">
+       <string>ADD</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>BRA</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>HEP</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>LYM</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>MAR</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>OSS</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PLE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PUL</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SKI</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>OTH</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="5" column="6">
+    <widget class="QComboBox" name="cmbYCM1Localization">
+     <item>
+      <property name="text">
+       <string>ADD</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>BRA</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>HEP</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>LYM</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>MAR</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>OSS</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PLE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PUL</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SKI</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>OTH</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="4" column="6">
+    <widget class="QComboBox" name="cmbYM1Localization">
+     <item>
+      <property name="text">
+       <string>ADD</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>BRA</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>HEP</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>LYM</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>MAR</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>OSS</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PLE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PUL</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SKI</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>OTH</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="8" column="20">
+    <widget class="QComboBox" name="cmbASt">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>I</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IA</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IC</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>II</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IIA</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IIB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IIC</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>III</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IIIA</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IIIB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IIIC</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IVA</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IVB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IVC</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>неприменимо</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>неизвестно</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="5" column="2">
+    <widget class="QLabel" name="lblYCNodus">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>N</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="2">
+    <widget class="QLabel" name="lblRNodus">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>N</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="16">
+    <widget class="QComboBox" name="cmbYPerineural">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="1" column="20">
+    <widget class="QComboBox" name="cmbPSt">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>I</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IA</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IC</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>II</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IIA</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IIB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IIC</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>III</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IIIA</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IIIB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IIIC</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IVA</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IVB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IVC</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>неприменимо</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>неизвестно</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="4" column="20">
+    <widget class="QComboBox" name="cmbYSt">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>I</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IA</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IC</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>II</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IIA</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IIB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IIC</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>III</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IIIA</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IIIB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IIIC</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IVA</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IVB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IVC</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>неприменимо</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>неизвестно</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="3" column="12">
+    <widget class="QComboBox" name="cmbRLymphatic">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="8" column="13">
+    <widget class="QLabel" name="lblAVein">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>V</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="15">
+    <widget class="QLabel" name="lblYPerineural">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>Pn</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="6">
+    <widget class="QComboBox" name="cmbYPM1Localization">
+     <item>
+      <property name="text">
+       <string>ADD</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>BRA</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>HEP</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>LYM</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>MAR</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>OSS</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PLE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PUL</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SKI</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>OTH</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="8" column="16">
+    <widget class="QComboBox" name="cmbAPerineural">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="4" column="18">
+    <widget class="QComboBox" name="cmbYResection">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="6" column="20">
+    <widget class="QComboBox" name="cmbYPSt">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>I</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IA</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IC</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>II</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IIA</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IIB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IIC</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>III</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IIIA</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IIIB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IIIC</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IVA</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IVB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IVC</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>неприменимо</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>неизвестно</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="8" column="18">
+    <widget class="QComboBox" name="cmbAResection">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="1" column="17">
+    <widget class="QLabel" name="lblPResection">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>R</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="15">
+    <widget class="QLabel" name="lblAPerineural">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>Pn</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="17">
+    <widget class="QLabel" name="lblYCResection">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>R</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="13">
+    <widget class="QLabel" name="lblYVein">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>V</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="18">
+    <widget class="QComboBox" name="cmbYPResection">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="3" column="11">
+    <widget class="QLabel" name="lblRLymphatic">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>L</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="3">
+    <widget class="QComboBox" name="cmbYNodus">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1mi</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3c</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="5" column="20">
+    <widget class="QComboBox" name="cmbYCSt">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>I</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IA</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IC</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>II</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IIA</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IIB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IIC</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>III</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IIIA</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IIIB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IIIC</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IVA</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IVB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IVC</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>неприменимо</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>неизвестно</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="5" column="3">
+    <widget class="QComboBox" name="cmbYCNodus">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1mi</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3c</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="3" column="3">
+    <widget class="QComboBox" name="cmbRNodus">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1mi</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3c</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="3" column="20">
+    <widget class="QComboBox" name="cmbRSt">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>I</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IA</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IC</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>II</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IIA</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IIB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IIC</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>III</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IIIA</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IIIB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IIIC</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IVA</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IVB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IVC</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>неприменимо</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>неизвестно</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="8" column="3">
+    <widget class="QComboBox" name="cmbANodus">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1mi</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3c</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="5" column="4">
+    <widget class="QLabel" name="lblYCMetastasis">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>M</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="5">
+    <widget class="QComboBox" name="cmbRMetastasis">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1d</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1e</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="5" column="16">
+    <widget class="QComboBox" name="cmbYCPerineural">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="5" column="15">
+    <widget class="QLabel" name="lblYCPerineural">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>Pn</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="15">
+    <widget class="QLabel" name="lblYPPerineural">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>Pn</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="16">
+    <widget class="QComboBox" name="cmbRPerineural">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="8" column="14">
+    <widget class="QComboBox" name="cmbAVein">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="6" column="17">
+    <widget class="QLabel" name="lblYPResection">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>R</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="17">
+    <widget class="QLabel" name="lblRResection">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>R</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="14">
+    <widget class="QComboBox" name="cmbRVein">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="1" column="12">
+    <widget class="QComboBox" name="cmbPLymphatic">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="5" column="12">
+    <widget class="QComboBox" name="cmbYCLymphatic">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="4" column="12">
+    <widget class="QComboBox" name="cmbYLymphatic">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="1" column="15">
+    <widget class="QLabel" name="lblPPerineural">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>Pn</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="14">
+    <widget class="QComboBox" name="cmbYVein">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="5" column="14">
+    <widget class="QComboBox" name="cmbYCVein">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="3" column="13">
+    <widget class="QLabel" name="lblRVein">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>V</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="18">
+    <widget class="QComboBox" name="cmbYCResection">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="1" column="16">
+    <widget class="QComboBox" name="cmbPPerineural">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="6" column="12">
+    <widget class="QComboBox" name="cmbYPLymphatic">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="8" column="12">
+    <widget class="QComboBox" name="cmbALymphatic">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="1" column="11">
+    <widget class="QLabel" name="lblPLymphatic">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>L</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="4">
+    <widget class="QLabel" name="lblYPMetastasis">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>M</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="2">
+    <widget class="QLabel" name="lblYNodus">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>N</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="16">
+    <widget class="QComboBox" name="cmbYPPerineural">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="6" column="2">
+    <widget class="QLabel" name="lblYPNodus">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>N</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="4">
+    <widget class="QLabel" name="lblYMetastasis">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>M</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="11">
+    <widget class="QLabel" name="lblALymphatic">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>L</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="7">
+    <widget class="QLabel" name="lblPSerum">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>S</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="7">
+    <widget class="QLabel" name="lblRSerum">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>S</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="7">
+    <widget class="QLabel" name="lblYSerum">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>S</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="7">
+    <widget class="QLabel" name="lblYCSerum">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>S</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="7">
+    <widget class="QLabel" name="lblYPSerum">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>S</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="7">
+    <widget class="QLabel" name="lblASerum">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>S</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="9">
+    <widget class="QLabel" name="lblPGrade">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>G</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="9">
+    <widget class="QLabel" name="lblYGrade">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>G</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="9">
+    <widget class="QLabel" name="lblRGrade">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>G</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="8">
+    <widget class="QComboBox" name="cmbPSerum">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="5" column="5">
+    <widget class="QComboBox" name="cmbYCMetastasis">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1d</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1e</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="3" column="4">
+    <widget class="QLabel" name="lblRMetastasis">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>M</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="5">
+    <widget class="QComboBox" name="cmbAMetastasis">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1d</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1e</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="1" column="5">
+    <widget class="QComboBox" name="cmbPMetastasis">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1d</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1e</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="8" column="17">
+    <widget class="QLabel" name="lblAResection">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>R</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="15">
+    <widget class="QLabel" name="lblRPerineural">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>Pn</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="14">
+    <widget class="QComboBox" name="cmbYPVein">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="6" column="5">
+    <widget class="QComboBox" name="cmbYPMetastasis">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1d</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1e</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="8" column="2">
+    <widget class="QLabel" name="lblANodus">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>N</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="6">
+    <widget class="QComboBox" name="cmbRM1Localization">
+     <item>
+      <property name="text">
+       <string>ADD</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>BRA</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>HEP</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>LYM</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>MAR</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>OSS</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PLE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PUL</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SKI</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>OTH</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="4" column="11">
+    <widget class="QLabel" name="lblYLymphatic">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>L</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="6">
+    <widget class="QComboBox" name="cmbPM1Localization">
+     <item>
+      <property name="text">
+       <string>ADD</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>BRA</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>HEP</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>LYM</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>MAR</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>OSS</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PLE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PUL</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SKI</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>OTH</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="6" column="11">
+    <widget class="QLabel" name="lblYPLymphatic">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>L</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="11">
+    <widget class="QLabel" name="lblYCLymphatic">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>L</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="13">
+    <widget class="QLabel" name="lblYPVein">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>V</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="5">
+    <widget class="QComboBox" name="cmbYMetastasis">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1a</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1b</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1c</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1d</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1e</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="1" column="13">
+    <widget class="QLabel" name="lblPVein">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>V</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="13">
+    <widget class="QLabel" name="lblYCVein">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>V</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="9">
+    <widget class="QLabel" name="lblYCGrade">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>G</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="9">
+    <widget class="QLabel" name="lblYPGrade">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>G</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="9">
+    <widget class="QLabel" name="lblAGrade">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>G</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="8">
+    <widget class="QComboBox" name="cmbRSerum">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="4" column="8">
+    <widget class="QComboBox" name="cmbYSerum">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="8" column="8">
+    <widget class="QComboBox" name="cmbASerum">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="5" column="8">
+    <widget class="QComboBox" name="cmbYCSerum">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="6" column="8">
+    <widget class="QComboBox" name="cmbYPSerum">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="1" column="10">
+    <widget class="QComboBox" name="cmbPGrade">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="3" column="10">
+    <widget class="QComboBox" name="cmbRGrade">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="5" column="10">
+    <widget class="QComboBox" name="cmbYCGrade">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="4" column="10">
+    <widget class="QComboBox" name="cmbYGrade">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="9" column="12" colspan="9" alignment="Qt::AlignRight">
+    <widget class="QCheckBox" name="chkShowExtra">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>Показывать дополнительные</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="10">
+    <widget class="QComboBox" name="cmbYPGrade">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="8" column="10">
+    <widget class="QComboBox" name="cmbAGrade">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text">
+       <string>--</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>cmbCTumor</tabstop>
+  <tabstop>cmbCNodus</tabstop>
+  <tabstop>cmbCMetastasis</tabstop>
+  <tabstop>cmbCSt</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

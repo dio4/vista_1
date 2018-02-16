@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LogicalControlMesDialog</class>
+ <widget class="QDialog" name="LogicalControlMesDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1096</width>
+    <height>804</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Логический контроль событий с МЭС </string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="margin">
+    <number>4</number>
+   </property>
+   <property name="spacing">
+    <number>4</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QLabel" name="lblBegin">
+     <property name="text">
+      <string>с   </string>
+     </property>
+     <property name="buddy">
+      <cstring>dateBeginPeriod</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="CDateEdit" name="dateBeginPeriod">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="displayFormat">
+      <string>dd.MM.yyyy</string>
+     </property>
+     <property name="calendarPopup">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2">
+    <widget class="QLabel" name="lblEnd">
+     <property name="text">
+      <string>  по    </string>
+     </property>
+     <property name="buddy">
+      <cstring>dateEndPeriod</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="3">
+    <widget class="CDateEdit" name="dateEndPeriod">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="displayFormat">
+      <string>dd.MM.yyyy</string>
+     </property>
+     <property name="calendarPopup">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="6">
+    <widget class="QLabel" name="lblEventFeature">
+     <property name="text">
+      <string>Особенности</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="7">
+    <widget class="QComboBox" name="cmbEventFeature">
+     <item>
+      <property name="text">
+       <string>Не учитывать</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Только выполненные</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Только невыполненные</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="0" column="8">
+    <spacer name="horizontalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>42</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="3" column="6">
+    <widget class="QLabel" name="lblOrgStructure">
+     <property name="text">
+      <string>Подразделение</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="7" colspan="2">
+    <widget class="COrgStructureComboBox" name="cmbOrgStructure">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="6">
+    <widget class="QLabel" name="lblSpeciality">
+     <property name="text">
+      <string>&amp;Специальность</string>
+     </property>
+     <property name="buddy">
+      <cstring>cmbSpeciality</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="7" colspan="2">
+    <widget class="CRBComboBox" name="cmbSpeciality">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="whatsThis">
+      <string>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="6">
+    <widget class="QLabel" name="lblPersonal">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>&amp;Врач</string>
+     </property>
+     <property name="buddy">
+      <cstring>cmbPerson</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="7" colspan="2">
+    <widget class="CPersonComboBoxEx" name="cmbPerson"/>
+   </item>
+   <item row="9" column="0" colspan="9">
+    <widget class="CProgressBar" name="prbControlMes">
+     <property name="format">
+      <string>%p%</string>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="0" colspan="9">
+    <widget class="CRemarkListWidget" name="listResultControlMes">
+     <property name="editTriggers">
+      <set>QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed|QAbstractItemView::SelectedClicked</set>
+     </property>
+     <property name="selectionMode">
+      <enum>QAbstractItemView::ExtendedSelection</enum>
+     </property>
+     <property name="flow">
+      <enum>QListView::TopToBottom</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="0" colspan="9">
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <property name="spacing">
+      <number>4</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="btnStartControl">
+       <property name="text">
+        <string>начать выполнение</string>
+       </property>
+       <property name="autoDefault">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="lblCountLine">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnEndControl">
+       <property name="text">
+        <string>прервать</string>
+       </property>
+       <property name="autoDefault">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="8" column="0" colspan="2">
+    <widget class="QCheckBox" name="chkMes">
+     <property name="text">
+      <string>Наличие МЭС</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="2" colspan="2">
+    <widget class="QCheckBox" name="chkDuration">
+     <property name="text">
+      <string>Длительность события</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="4">
+    <widget class="QCheckBox" name="chkMKB">
+     <property name="text">
+      <string>Заключительный диагноз</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="8">
+    <widget class="QCheckBox" name="chkExecActions">
+     <property name="text">
+      <string>Наличие выполненных действий</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="7">
+    <widget class="QCheckBox" name="chkCountVisits">
+     <property name="text">
+      <string>Кол-во визитов</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="2" colspan="7">
+    <widget class="CMESComboBox" name="cmbMes"/>
+   </item>
+   <item row="6" column="0" colspan="2">
+    <widget class="QLabel" name="lblMes">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>МЭС</string>
+     </property>
+     <property name="buddy">
+      <cstring>cmbMes</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="2" colspan="4">
+    <widget class="CRBComboBox" name="cmbEventPurpose"/>
+   </item>
+   <item row="3" column="0" colspan="2">
+    <widget class="QLabel" name="lblEventPurpose">
+     <property name="text">
+      <string>Назначение события</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0" colspan="2">
+    <widget class="QLabel" name="lblEventType">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>Тип события</string>
+     </property>
+     <property name="buddy">
+      <cstring>cmbEventType</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="2" colspan="4">
+    <widget class="CRBComboBox" name="cmbEventType"/>
+   </item>
+   <item row="5" column="2" colspan="4">
+    <widget class="CRBComboBox" name="cmbEventProfile"/>
+   </item>
+   <item row="5" column="0" colspan="2">
+    <widget class="QLabel" name="lblEventProfile">
+     <property name="text">
+      <string>Профиль МЭС</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="5">
+    <widget class="QComboBox" name="cmbEventExec">
+     <item>
+      <property name="text">
+       <string>Все</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Законченные</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Незаконченные</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="0" column="4">
+    <widget class="QLabel" name="lblEventExec">
+     <property name="text">
+      <string>Учитывать события</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="5" colspan="2">
+    <widget class="QCheckBox" name="chkNotAlternative">
+     <property name="text">
+      <string>Не выполнена альтернативность</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CDateEdit</class>
+   <extends>QDateEdit</extends>
+   <header>library/DateEdit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CMESComboBox</class>
+   <extends>QComboBox</extends>
+   <header>library/MES/MESComboBox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CRBComboBox</class>
+   <extends>QComboBox</extends>
+   <header>library/crbcombobox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CPersonComboBoxEx</class>
+   <extends>QComboBox</extends>
+   <header>Orgs/PersonComboBoxEx.h</header>
+  </customwidget>
+  <customwidget>
+   <class>COrgStructureComboBox</class>
+   <extends>QComboBox</extends>
+   <header>Orgs/OrgStructComboBoxes.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CProgressBar</class>
+   <extends>QProgressBar</extends>
+   <header>library/ProgressBar.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CRemarkListWidget</class>
+   <extends>QListWidget</extends>
+   <header>RemarkListWidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>dateBeginPeriod</tabstop>
+  <tabstop>dateEndPeriod</tabstop>
+  <tabstop>cmbEventFeature</tabstop>
+  <tabstop>cmbEventPurpose</tabstop>
+  <tabstop>cmbEventType</tabstop>
+  <tabstop>cmbEventProfile</tabstop>
+  <tabstop>cmbMes</tabstop>
+  <tabstop>cmbOrgStructure</tabstop>
+  <tabstop>cmbSpeciality</tabstop>
+  <tabstop>cmbPerson</tabstop>
+  <tabstop>chkMes</tabstop>
+  <tabstop>chkDuration</tabstop>
+  <tabstop>chkMKB</tabstop>
+  <tabstop>chkCountVisits</tabstop>
+  <tabstop>chkExecActions</tabstop>
+  <tabstop>listResultControlMes</tabstop>
+  <tabstop>btnStartControl</tabstop>
+  <tabstop>btnEndControl</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

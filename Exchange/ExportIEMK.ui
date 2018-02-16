@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ExportIEMKDialog</class>
+ <widget class="QWidget" name="ExportIEMKDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>840</width>
+    <height>780</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Отправка ИЭМК</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tabMain">
+      <attribute name="title">
+       <string>Выгрузка</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_4">
+       <item row="0" column="0">
+        <widget class="QFrame" name="frame">
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
+         </property>
+         <layout class="QGridLayout" name="frameFilters">
+          <property name="margin">
+           <number>0</number>
+          </property>
+          <property name="spacing">
+           <number>6</number>
+          </property>
+          <item row="0" column="0">
+           <layout class="QGridLayout" name="gridLayout_5">
+            <item row="0" column="3">
+             <widget class="CDateEdit" name="edtEndDate"/>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_4">
+              <property name="text">
+               <string>С типом события</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="label_3">
+              <property name="text">
+               <string>По подразделению</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="CDateEdit" name="edtBegDate"/>
+            </item>
+            <item row="3" column="0">
+             <widget class="QCheckBox" name="chkEpicrisis">
+              <property name="text">
+               <string>Веб-эпикризы</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QLabel" name="label">
+              <property name="text">
+               <string>Выгружать случаи с</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <widget class="QLabel" name="label_2">
+              <property name="text">
+               <string>по</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="label_11">
+              <property name="text">
+               <string>Максимальное количество</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="4">
+             <spacer name="horizontalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="1" column="1" colspan="4">
+             <widget class="COrgStructureComboBox" name="cmbOrgStrucutre"/>
+            </item>
+            <item row="2" column="1" colspan="4">
+             <widget class="CRBComboBox" name="cmbEventType"/>
+            </item>
+            <item row="4" column="1" colspan="3">
+             <widget class="CLineEdit" name="edtMaxCount"/>
+            </item>
+            <item row="3" column="1" colspan="3">
+             <widget class="QCheckBox" name="chkResend">
+              <property name="text">
+               <string>Перевыставить отклонённые</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QPushButton" name="btnToggleFilters">
+           <property name="maximumSize">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>^</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="2" column="0">
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <widget class="QLabel" name="label_5">
+           <property name="text">
+            <string>Количество случаев с учетом фильтров:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="CLineEdit" name="edtCountClosed">
+           <property name="toolTip">
+            <string>Закрытые, готовые к отправке случаи</string>
+           </property>
+           <property name="statusTip">
+            <string>Закрытые, готовые к отправке случаи</string>
+           </property>
+           <property name="whatsThis">
+            <string>Закрытые, готовые к отправке случаи</string>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="CLineEdit" name="edtCountOpened">
+           <property name="toolTip">
+            <string>Не закрытые(isClosed) случаи</string>
+           </property>
+           <property name="statusTip">
+            <string>Не закрытые(isClosed) случаи</string>
+           </property>
+           <property name="whatsThis">
+            <string>Не закрытые(isClosed) случаи</string>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="CLineEdit" name="edtCountFailed">
+           <property name="toolTip">
+            <string>Отправленные с ошибкой случаи</string>
+           </property>
+           <property name="statusTip">
+            <string>Отправленные с ошибкой случаи</string>
+           </property>
+           <property name="whatsThis">
+            <string>Отправленные с ошибкой случаи</string>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="3" column="0">
+        <widget class="QSplitter" name="splitter">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <widget class="QTextBrowser" name="txtLog"/>
+         <widget class="CInDocTableView" name="tblErrorLog"/>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnStart">
+           <property name="text">
+            <string>Начать отправку</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabLog">
+      <attribute name="title">
+       <string>Подробный лог</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="0" column="0">
+        <widget class="QTextBrowser" name="txtDetailedLog"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CDateEdit</class>
+   <extends>QDateEdit</extends>
+   <header>library/DateEdit</header>
+  </customwidget>
+  <customwidget>
+   <class>COrgStructureComboBox</class>
+   <extends>QComboBox</extends>
+   <header>Orgs/OrgStructComboBoxes</header>
+  </customwidget>
+  <customwidget>
+   <class>CRBComboBox</class>
+   <extends>QComboBox</extends>
+   <header>library/crbcombobox</header>
+  </customwidget>
+  <customwidget>
+   <class>CLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>library/LineEdit</header>
+  </customwidget>
+  <customwidget>
+   <class>CInDocTableView</class>
+   <extends>QTableView</extends>
+   <header>library/InDocTable.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>edtBegDate</tabstop>
+  <tabstop>edtEndDate</tabstop>
+  <tabstop>cmbOrgStrucutre</tabstop>
+  <tabstop>cmbEventType</tabstop>
+  <tabstop>chkEpicrisis</tabstop>
+  <tabstop>chkResend</tabstop>
+  <tabstop>edtMaxCount</tabstop>
+  <tabstop>btnToggleFilters</tabstop>
+  <tabstop>edtCountClosed</tabstop>
+  <tabstop>edtCountOpened</tabstop>
+  <tabstop>edtCountFailed</tabstop>
+  <tabstop>txtLog</tabstop>
+  <tabstop>tblErrorLog</tabstop>
+  <tabstop>btnStart</tabstop>
+  <tabstop>txtDetailedLog</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btnToggleFilters</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>frame</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>435</x>
+     <y>195</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>456</x>
+     <y>176</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

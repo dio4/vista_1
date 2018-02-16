@@ -1,0 +1,801 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ProbeWorkListWidget</class>
+ <widget class="QWidget" name="ProbeWorkListWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>857</width>
+    <height>887</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_4">
+   <property name="margin">
+    <number>4</number>
+   </property>
+   <property name="spacing">
+    <number>4</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QSplitter" name="splitter_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="childrenCollapsible">
+      <bool>false</bool>
+     </property>
+     <widget class="QGroupBox" name="grpFilter">
+      <property name="title">
+       <string>Фильтр</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <property name="margin">
+        <number>2</number>
+       </property>
+       <property name="spacing">
+        <number>2</number>
+       </property>
+       <item row="6" column="0" colspan="2">
+        <widget class="CRBComboBox" name="cmbPWLEquipment"/>
+       </item>
+       <item row="9" column="0" colspan="2">
+        <widget class="QLabel" name="lblPWLTestGroup">
+         <property name="text">
+          <string>Группа</string>
+         </property>
+        </widget>
+       </item>
+       <item row="30" column="1">
+        <widget class="CApplyResetDialogButtonBox" name="buttonBoxPWL">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="standardButtons">
+          <set>QDialogButtonBox::Apply|QDialogButtonBox::Reset</set>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="0" colspan="2">
+        <widget class="CRBComboBox" name="cmbPWLTestGroup"/>
+       </item>
+       <item row="27" column="0" colspan="2">
+        <widget class="QWidget" name="pnlDates" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <property name="margin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="lblDateFrom">
+            <property name="text">
+             <string>C</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="CDateEdit" name="edtPWLDateFrom"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="lblDateTo">
+            <property name="text">
+             <string>по</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="CDateEdit" name="edtPWLDateTo"/>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="14" column="0" colspan="2">
+        <widget class="QComboBox" name="cmbPWLStatus">
+         <item>
+          <property name="text">
+           <string>-</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Без пробы</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Ожидание</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>В работе</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Закончено</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Без результата</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Назначено</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="29" column="0" colspan="2">
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="28" column="0" colspan="2">
+        <widget class="QGroupBox" name="grpClient">
+         <property name="title">
+          <string>Пациент</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_5">
+          <property name="margin">
+           <number>2</number>
+          </property>
+          <property name="spacing">
+           <number>2</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QCheckBox" name="chkPWLId">
+            <property name="text">
+             <string>Код</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1" colspan="2">
+           <widget class="CRBComboBox" name="cmbPWLAccountingSystem">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0" colspan="3">
+           <widget class="QLineEdit" name="edtPWLId">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="inputMask">
+             <string/>
+            </property>
+            <property name="maxLength">
+             <number>32767</number>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QCheckBox" name="chkPWLLastName">
+            <property name="text">
+             <string>Фамилия</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1" colspan="2">
+           <widget class="QLineEdit" name="edtPWLLastName">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QCheckBox" name="chkPWLFirstName">
+            <property name="text">
+             <string>Имя</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1" colspan="2">
+           <widget class="QLineEdit" name="edtPWLFirstName">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QCheckBox" name="chkPWLPatrName">
+            <property name="text">
+             <string>Отчество</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1" colspan="2">
+           <widget class="QLineEdit" name="edtPWLPatrName">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QCheckBox" name="chkPWLBirthDay">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Дата рождения</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="CDateEdit" name="edtPWLBirthDay">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="calendarPopup">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="2">
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>86</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="17" column="0" colspan="2">
+        <widget class="QLabel" name="lblPWLContainerType">
+         <property name="text">
+          <string>Тип контейнера</string>
+         </property>
+        </widget>
+       </item>
+       <item row="18" column="0" colspan="2">
+        <widget class="CRBComboBox" name="cmbPWLContainerType"/>
+       </item>
+       <item row="20" column="0" colspan="2">
+        <widget class="CPersonComboBoxEx" name="cmbPWLPerson"/>
+       </item>
+       <item row="12" column="0" colspan="2">
+        <widget class="CRBComboBox" name="cmbPWLTest"/>
+       </item>
+       <item row="15" column="0" colspan="2">
+        <widget class="QLabel" name="lblPWLTissueType">
+         <property name="text">
+          <string>Биоматериал</string>
+         </property>
+        </widget>
+       </item>
+       <item row="16" column="0" colspan="2">
+        <widget class="CRBComboBox" name="cmbPWLTissueType"/>
+       </item>
+       <item row="4" column="0" colspan="2">
+        <widget class="COrgComboBox" name="cmbPWLRelegateOrg">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0" colspan="2">
+        <widget class="QCheckBox" name="chkPWLRelegateOrg">
+         <property name="text">
+          <string>Направитель</string>
+         </property>
+        </widget>
+       </item>
+       <item row="23" column="0" colspan="2">
+        <widget class="QLabel" name="lblPWLProbeIdentifier">
+         <property name="text">
+          <string>Идентификатор пробы</string>
+         </property>
+        </widget>
+       </item>
+       <item row="24" column="0" colspan="2">
+        <widget class="QLineEdit" name="edtPWLProbeIdentifier"/>
+       </item>
+       <item row="21" column="0" colspan="2">
+        <widget class="QLabel" name="lblPWLIbm">
+         <property name="text">
+          <string>ИБМ</string>
+         </property>
+        </widget>
+       </item>
+       <item row="19" column="0" colspan="2">
+        <widget class="QLabel" name="lblPWLPerson">
+         <property name="text">
+          <string>Исполнитель</string>
+         </property>
+        </widget>
+       </item>
+       <item row="30" column="0">
+        <spacer name="horizontalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="7" column="0" colspan="2">
+        <widget class="QLabel" name="lblPWLTripod">
+         <property name="text">
+          <string>Штатив</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="0" colspan="2">
+        <widget class="QLineEdit" name="edtPWLTripodNumber"/>
+       </item>
+       <item row="0" column="0" colspan="2">
+        <widget class="QLabel" name="lblPWLOrganisation">
+         <property name="text">
+          <string>ЛПУ</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0" colspan="2">
+        <widget class="QLabel" name="lblPWLEquipment">
+         <property name="text">
+          <string>Оборудование</string>
+         </property>
+        </widget>
+       </item>
+       <item row="13" column="0" colspan="2">
+        <widget class="QLabel" name="lblPWLStatus">
+         <property name="text">
+          <string>Статус</string>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="0" colspan="2">
+        <widget class="QLabel" name="lblPWLTest">
+         <property name="text">
+          <string>Тест</string>
+         </property>
+        </widget>
+       </item>
+       <item row="22" column="0" colspan="2">
+        <widget class="QLineEdit" name="edtPWLIbm"/>
+       </item>
+       <item row="25" column="0" colspan="2">
+        <widget class="QCheckBox" name="chkPWLIsUrgent">
+         <property name="text">
+          <string>Срочный</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="2">
+        <widget class="COrgStructureComboBox" name="cmbPWLOrgStructure"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="pnlPWLProbes" native="true">
+      <layout class="QGridLayout" name="gridLayout_3">
+       <property name="margin">
+        <number>0</number>
+       </property>
+       <property name="spacing">
+        <number>4</number>
+       </property>
+       <item row="0" column="0" colspan="6">
+        <widget class="QTabWidget" name="tabWidgetPWL">
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="tabPWLProbes">
+          <attribute name="title">
+           <string>&amp;Пробы</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0">
+           <property name="spacing">
+            <number>4</number>
+           </property>
+           <property name="margin">
+            <number>4</number>
+           </property>
+           <item>
+            <widget class="QSplitter" name="splitter">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="childrenCollapsible">
+              <bool>false</bool>
+             </property>
+             <widget class="QWidget" name="pnlPWLOnlyProbes" native="true">
+              <layout class="QVBoxLayout" name="verticalLayout">
+               <property name="spacing">
+                <number>4</number>
+               </property>
+               <property name="margin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="CTableView" name="tblPWLOnlyProbes"/>
+               </item>
+               <item>
+                <widget class="QLabel" name="lblOnlyProbesCount">
+                 <property name="text">
+                  <string>Количество: 0</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="pnlPWLOnlyTests" native="true">
+              <layout class="QVBoxLayout" name="verticalLayout_2">
+               <property name="spacing">
+                <number>4</number>
+               </property>
+               <property name="margin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="CSamplePreparationView" name="tblPWLOnlyTests"/>
+               </item>
+               <item>
+                <widget class="QLabel" name="lblOnlyTestsCount">
+                 <property name="text">
+                  <string>Количество: 0</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tabPWLTests">
+          <attribute name="title">
+           <string>&amp;Тесты</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout">
+           <property name="margin">
+            <number>4</number>
+           </property>
+           <property name="spacing">
+            <number>4</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="CSamplePreparationView" name="tblPWLProbe"/>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="lblProbeCount">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Количество проб</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QPushButton" name="btnPWLExport">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Экспорт</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="3">
+        <widget class="QPushButton" name="btnPWLImport">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Импорт</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="4">
+        <widget class="QPushButton" name="btnPWLPrint">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Печать</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="5">
+        <widget class="QPushButton" name="btnRegistration">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Регистрация</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QPushButton" name="btnPWLTripod">
+         <property name="text">
+          <string>Штатив</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CRBComboBox</class>
+   <extends>QComboBox</extends>
+   <header>library/crbcombobox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CDateEdit</class>
+   <extends>QDateEdit</extends>
+   <header>library/DateEdit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>COrgStructureComboBox</class>
+   <extends>QComboBox</extends>
+   <header>Orgs/OrgStructComboBoxes.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CTableView</class>
+   <extends>QTableView</extends>
+   <header>library/TableView.h</header>
+  </customwidget>
+  <customwidget>
+   <class>COrgComboBox</class>
+   <extends>QComboBox</extends>
+   <header>Orgs/OrgComboBox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CPersonComboBoxEx</class>
+   <extends>QComboBox</extends>
+   <header>Orgs/PersonComboBoxEx.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CApplyResetDialogButtonBox</class>
+   <extends>QDialogButtonBox</extends>
+   <header>library/DialogButtonBox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CSamplePreparationView</class>
+   <extends>QTableView</extends>
+   <header>TissueJournal/TissueJournalModels.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>chkPWLRelegateOrg</tabstop>
+  <tabstop>cmbPWLRelegateOrg</tabstop>
+  <tabstop>cmbPWLEquipment</tabstop>
+  <tabstop>edtPWLTripodNumber</tabstop>
+  <tabstop>cmbPWLTestGroup</tabstop>
+  <tabstop>cmbPWLTest</tabstop>
+  <tabstop>cmbPWLStatus</tabstop>
+  <tabstop>cmbPWLTissueType</tabstop>
+  <tabstop>cmbPWLContainerType</tabstop>
+  <tabstop>cmbPWLPerson</tabstop>
+  <tabstop>edtPWLIbm</tabstop>
+  <tabstop>edtPWLProbeIdentifier</tabstop>
+  <tabstop>chkPWLIsUrgent</tabstop>
+  <tabstop>edtPWLDateFrom</tabstop>
+  <tabstop>edtPWLDateTo</tabstop>
+  <tabstop>grpClient</tabstop>
+  <tabstop>chkPWLId</tabstop>
+  <tabstop>cmbPWLAccountingSystem</tabstop>
+  <tabstop>edtPWLId</tabstop>
+  <tabstop>chkPWLLastName</tabstop>
+  <tabstop>edtPWLLastName</tabstop>
+  <tabstop>chkPWLFirstName</tabstop>
+  <tabstop>edtPWLFirstName</tabstop>
+  <tabstop>chkPWLPatrName</tabstop>
+  <tabstop>edtPWLPatrName</tabstop>
+  <tabstop>chkPWLBirthDay</tabstop>
+  <tabstop>edtPWLBirthDay</tabstop>
+  <tabstop>buttonBoxPWL</tabstop>
+  <tabstop>tabWidgetPWL</tabstop>
+  <tabstop>tblPWLOnlyProbes</tabstop>
+  <tabstop>tblPWLOnlyTests</tabstop>
+  <tabstop>tblPWLProbe</tabstop>
+  <tabstop>btnPWLTripod</tabstop>
+  <tabstop>btnPWLExport</tabstop>
+  <tabstop>btnPWLImport</tabstop>
+  <tabstop>btnPWLPrint</tabstop>
+  <tabstop>btnRegistration</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>chkPWLRelegateOrg</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cmbPWLRelegateOrg</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>56</x>
+     <y>35</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>77</x>
+     <y>57</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkPWLId</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cmbPWLAccountingSystem</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>102</x>
+     <y>509</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>258</x>
+     <y>512</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkPWLId</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>edtPWLId</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>31</x>
+     <y>509</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>58</x>
+     <y>534</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkPWLLastName</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>edtPWLLastName</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>82</x>
+     <y>555</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>241</x>
+     <y>556</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkPWLFirstName</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>edtPWLFirstName</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>105</x>
+     <y>577</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>287</x>
+     <y>578</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkPWLPatrName</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>edtPWLPatrName</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>98</x>
+     <y>599</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>248</x>
+     <y>600</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkPWLBirthDay</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>edtPWLBirthDay</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>103</x>
+     <y>621</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>190</x>
+     <y>621</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

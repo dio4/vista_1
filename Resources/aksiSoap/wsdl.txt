@@ -1,0 +1,60 @@
+<definitions 
+    targetNamespace="urn:hl7-org:v3:ws" 
+    xmlns="http://schemas.xmlsoap.org/wsdl/" 
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+    xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" 
+    xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" 
+    xmlns:ns="urn:hl7-org:v3:ws" 
+    xmlns:hl7="urn:hl7-org:v3">
+    
+    <types>
+        <xs:schema 
+            elementFormDefault="qualified" 
+            targetNamespace="urn:hl7-org:v3">
+            <xs:element name="hl7Message" nillable="true">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:any minOccurs="0" maxOccurs="1" processContents="lax"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </types>
+    
+    
+    <message name="msgHl7MessageIn">
+        <part name="ptHl7Message" element="hl7:hl7Message" />
+    </message>
+    
+    <message name="msgHl7MessageOut">
+        <part name="ptHl7Message" element="hl7:hl7Message" />
+    </message>
+    
+    <portType name="portHl7Message">
+        <operation name="opHl7Message">
+            <input message="ns:msgHl7MessageIn"/>
+            <output message="ns:msgHl7MessageOut"/>
+        </operation>
+    </portType>
+    
+    <binding name="bindingHl7Message" type="ns:portHl7Message">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="opHl7Message">
+            <soap:operation soapAction="urn:#opHl7Message" style="document"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+    </binding>
+    
+    <service name="svcHl7Message">
+        <port name="Hl7Message" binding="ns:bindingHl7Message">
+            <soap:address location="http://80.253.2.25/ig_mu/wshl7_ig_mu.svc"/>
+        </port>
+    </service>
+</definitions>

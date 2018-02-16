@@ -1,0 +1,2 @@
+#wsdl2py -b -l http://127.0.0.1/soap/accounting.php?wsdl
+wsdl2py -b IConvert.wsdl

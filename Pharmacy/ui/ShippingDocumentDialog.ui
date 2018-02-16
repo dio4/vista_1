@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ShippingDocumentDialog</class>
+ <widget class="QDialog" name="ShippingDocumentDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>645</width>
+    <height>486</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <property name="margin">
+    <number>4</number>
+   </property>
+   <property name="spacing">
+    <number>4</number>
+   </property>
+   <item row="0" column="0">
+    <layout class="QGridLayout" name="gridLayout">
+     <property name="spacing">
+      <number>4</number>
+     </property>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="edtNumber"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="lblInternalNumber">
+       <property name="text">
+        <string>Номер внутренней накладной</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="edtInternalNumber"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="lblExternalNumber">
+       <property name="text">
+        <string>Номер внешней накладной</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="edtInvoiceNumber"/>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="lblDateTime">
+       <property name="text">
+        <string>Дата-время приема на склад</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="edtExternalNumber"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="lblInvoiceNumber">
+       <property name="text">
+        <string>Номер счет-фактуры</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="lblNumber">
+       <property name="text">
+        <string>Порядковый номер</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QDateTimeEdit" name="edtDateTime">
+       <property name="displayFormat">
+        <string>dd.MM.yyyy HH:mm</string>
+       </property>
+       <property name="calendarPopup">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="lblSupplier">
+       <property name="text">
+        <string>Поставщик</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="CUserComboBox" name="cmbUser"/>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLabel" name="lblShipper">
+       <property name="text">
+        <string>Грузоотправитель</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QLabel" name="lblReason">
+       <property name="text">
+        <string>Основание</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="lblFinalizeUser">
+       <property name="text">
+        <string>Принявший сотрудник</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="2">
+      <widget class="QLabel" name="lblFundSource">
+       <property name="text">
+        <string>Источник финансирования</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="2">
+      <widget class="QLabel" name="lblOrganisation">
+       <property name="text">
+        <string>Организация</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="COrganisationComboBox" name="cmbSupplier"/>
+     </item>
+     <item row="5" column="2">
+      <widget class="QLabel" name="lblStore">
+       <property name="text">
+        <string>Склад</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="COrganisationComboBox" name="cmbShipper"/>
+     </item>
+     <item row="3" column="3">
+      <widget class="CRbItemComboBox" name="cmbFundSource"/>
+     </item>
+     <item row="4" column="3">
+      <widget class="COrganisationComboBox" name="cmbOrganisation"/>
+     </item>
+     <item row="5" column="3">
+      <widget class="CStoreComboBox" name="cmbStore"/>
+     </item>
+     <item row="2" column="3">
+      <widget class="QLineEdit" name="edtReason"/>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0">
+    <widget class="CItemListView" name="tblItems"/>
+   </item>
+   <item row="2" column="0">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Save</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CStoreComboBox</class>
+   <extends>QComboBox</extends>
+   <header>Pharmacy/ItemListComboBox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CItemListView</class>
+   <extends>QTableView</extends>
+   <header>library/ItemListView.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CUserComboBox</class>
+   <extends>QComboBox</extends>
+   <header>Pharmacy/ItemListComboBox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CRbItemComboBox</class>
+   <extends>QComboBox</extends>
+   <header>Pharmacy/ItemListComboBox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>COrganisationComboBox</class>
+   <extends>QComboBox</extends>
+   <header>Pharmacy/ItemListComboBox.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>edtNumber</tabstop>
+  <tabstop>edtInternalNumber</tabstop>
+  <tabstop>edtExternalNumber</tabstop>
+  <tabstop>edtInvoiceNumber</tabstop>
+  <tabstop>edtDateTime</tabstop>
+  <tabstop>cmbUser</tabstop>
+  <tabstop>cmbSupplier</tabstop>
+  <tabstop>cmbShipper</tabstop>
+  <tabstop>edtReason</tabstop>
+  <tabstop>cmbFundSource</tabstop>
+  <tabstop>cmbOrganisation</tabstop>
+  <tabstop>cmbStore</tabstop>
+  <tabstop>tblItems</tabstop>
+  <tabstop>buttonBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>ShippingDocumentDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>252</x>
+     <y>475</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>ShippingDocumentDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>320</x>
+     <y>475</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

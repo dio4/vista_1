@@ -1,0 +1,173 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'ExportIEMK.ui'
+#
+# Created by: PyQt4 UI code generator 4.11.4
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt4 import QtCore, QtGui
+
+try:
+    _fromUtf8 = QtCore.QString.fromUtf8
+except AttributeError:
+    def _fromUtf8(s):
+        return s
+
+try:
+    _encoding = QtGui.QApplication.UnicodeUTF8
+    def _translate(context, text, disambig):
+        return QtGui.QApplication.translate(context, text, disambig, _encoding)
+except AttributeError:
+    def _translate(context, text, disambig):
+        return QtGui.QApplication.translate(context, text, disambig)
+
+class Ui_ExportIEMKDialog(object):
+    def setupUi(self, ExportIEMKDialog):
+        ExportIEMKDialog.setObjectName(_fromUtf8("ExportIEMKDialog"))
+        ExportIEMKDialog.resize(840, 780)
+        self.gridLayout = QtGui.QGridLayout(ExportIEMKDialog)
+        self.gridLayout.setObjectName(_fromUtf8("gridLayout"))
+        self.tabWidget = QtGui.QTabWidget(ExportIEMKDialog)
+        self.tabWidget.setObjectName(_fromUtf8("tabWidget"))
+        self.tabMain = QtGui.QWidget()
+        self.tabMain.setObjectName(_fromUtf8("tabMain"))
+        self.gridLayout_4 = QtGui.QGridLayout(self.tabMain)
+        self.gridLayout_4.setObjectName(_fromUtf8("gridLayout_4"))
+        self.frame = QtGui.QFrame(self.tabMain)
+        self.frame.setFrameShape(QtGui.QFrame.NoFrame)
+        self.frame.setFrameShadow(QtGui.QFrame.Plain)
+        self.frame.setObjectName(_fromUtf8("frame"))
+        self.frameFilters = QtGui.QGridLayout(self.frame)
+        self.frameFilters.setMargin(0)
+        self.frameFilters.setSpacing(6)
+        self.frameFilters.setObjectName(_fromUtf8("frameFilters"))
+        self.gridLayout_5 = QtGui.QGridLayout()
+        self.gridLayout_5.setObjectName(_fromUtf8("gridLayout_5"))
+        self.edtEndDate = CDateEdit(self.frame)
+        self.edtEndDate.setObjectName(_fromUtf8("edtEndDate"))
+        self.gridLayout_5.addWidget(self.edtEndDate, 0, 3, 1, 1)
+        self.label_4 = QtGui.QLabel(self.frame)
+        self.label_4.setObjectName(_fromUtf8("label_4"))
+        self.gridLayout_5.addWidget(self.label_4, 2, 0, 1, 1)
+        self.label_3 = QtGui.QLabel(self.frame)
+        self.label_3.setObjectName(_fromUtf8("label_3"))
+        self.gridLayout_5.addWidget(self.label_3, 1, 0, 1, 1)
+        self.edtBegDate = CDateEdit(self.frame)
+        self.edtBegDate.setObjectName(_fromUtf8("edtBegDate"))
+        self.gridLayout_5.addWidget(self.edtBegDate, 0, 1, 1, 1)
+        self.chkEpicrisis = QtGui.QCheckBox(self.frame)
+        self.chkEpicrisis.setObjectName(_fromUtf8("chkEpicrisis"))
+        self.gridLayout_5.addWidget(self.chkEpicrisis, 3, 0, 1, 1)
+        self.label = QtGui.QLabel(self.frame)
+        self.label.setObjectName(_fromUtf8("label"))
+        self.gridLayout_5.addWidget(self.label, 0, 0, 1, 1)
+        self.label_2 = QtGui.QLabel(self.frame)
+        self.label_2.setObjectName(_fromUtf8("label_2"))
+        self.gridLayout_5.addWidget(self.label_2, 0, 2, 1, 1)
+        self.label_11 = QtGui.QLabel(self.frame)
+        self.label_11.setObjectName(_fromUtf8("label_11"))
+        self.gridLayout_5.addWidget(self.label_11, 4, 0, 1, 1)
+        spacerItem = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
+        self.gridLayout_5.addItem(spacerItem, 0, 4, 1, 1)
+        self.cmbOrgStrucutre = COrgStructureComboBox(self.frame)
+        self.cmbOrgStrucutre.setObjectName(_fromUtf8("cmbOrgStrucutre"))
+        self.gridLayout_5.addWidget(self.cmbOrgStrucutre, 1, 1, 1, 4)
+        self.cmbEventType = CRBComboBox(self.frame)
+        self.cmbEventType.setObjectName(_fromUtf8("cmbEventType"))
+        self.gridLayout_5.addWidget(self.cmbEventType, 2, 1, 1, 4)
+        self.edtMaxCount = CLineEdit(self.frame)
+        self.edtMaxCount.setObjectName(_fromUtf8("edtMaxCount"))
+        self.gridLayout_5.addWidget(self.edtMaxCount, 4, 1, 1, 3)
+        self.chkResend = QtGui.QCheckBox(self.frame)
+        self.chkResend.setObjectName(_fromUtf8("chkResend"))
+        self.gridLayout_5.addWidget(self.chkResend, 3, 1, 1, 3)
+        self.frameFilters.addLayout(self.gridLayout_5, 0, 0, 1, 1)
+        self.gridLayout_4.addWidget(self.frame, 0, 0, 1, 1)
+        self.horizontalLayout = QtGui.QHBoxLayout()
+        self.horizontalLayout.setObjectName(_fromUtf8("horizontalLayout"))
+        self.btnToggleFilters = QtGui.QPushButton(self.tabMain)
+        self.btnToggleFilters.setMaximumSize(QtCore.QSize(40, 20))
+        self.btnToggleFilters.setCheckable(True)
+        self.btnToggleFilters.setObjectName(_fromUtf8("btnToggleFilters"))
+        self.horizontalLayout.addWidget(self.btnToggleFilters)
+        self.gridLayout_4.addLayout(self.horizontalLayout, 1, 0, 1, 1)
+        self.horizontalLayout_4 = QtGui.QHBoxLayout()
+        self.horizontalLayout_4.setObjectName(_fromUtf8("horizontalLayout_4"))
+        self.label_5 = QtGui.QLabel(self.tabMain)
+        self.label_5.setObjectName(_fromUtf8("label_5"))
+        self.horizontalLayout_4.addWidget(self.label_5)
+        self.edtCountClosed = CLineEdit(self.tabMain)
+        self.edtCountClosed.setReadOnly(True)
+        self.edtCountClosed.setObjectName(_fromUtf8("edtCountClosed"))
+        self.horizontalLayout_4.addWidget(self.edtCountClosed)
+        self.edtCountOpened = CLineEdit(self.tabMain)
+        self.edtCountOpened.setReadOnly(True)
+        self.edtCountOpened.setObjectName(_fromUtf8("edtCountOpened"))
+        self.horizontalLayout_4.addWidget(self.edtCountOpened)
+        self.edtCountFailed = CLineEdit(self.tabMain)
+        self.edtCountFailed.setReadOnly(True)
+        self.edtCountFailed.setObjectName(_fromUtf8("edtCountFailed"))
+        self.horizontalLayout_4.addWidget(self.edtCountFailed)
+        self.gridLayout_4.addLayout(self.horizontalLayout_4, 2, 0, 1, 1)
+        self.splitter = QtGui.QSplitter(self.tabMain)
+        self.splitter.setOrientation(QtCore.Qt.Vertical)
+        self.splitter.setObjectName(_fromUtf8("splitter"))
+        self.txtLog = QtGui.QTextBrowser(self.splitter)
+        self.txtLog.setObjectName(_fromUtf8("txtLog"))
+        self.tblErrorLog = CInDocTableView(self.splitter)
+        self.tblErrorLog.setObjectName(_fromUtf8("tblErrorLog"))
+        self.gridLayout_4.addWidget(self.splitter, 3, 0, 1, 1)
+        self.horizontalLayout_3 = QtGui.QHBoxLayout()
+        self.horizontalLayout_3.setObjectName(_fromUtf8("horizontalLayout_3"))
+        spacerItem1 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
+        self.horizontalLayout_3.addItem(spacerItem1)
+        self.btnStart = QtGui.QPushButton(self.tabMain)
+        self.btnStart.setObjectName(_fromUtf8("btnStart"))
+        self.horizontalLayout_3.addWidget(self.btnStart)
+        self.gridLayout_4.addLayout(self.horizontalLayout_3, 4, 0, 1, 1)
+        self.tabWidget.addTab(self.tabMain, _fromUtf8(""))
+        self.tabLog = QtGui.QWidget()
+        self.tabLog.setObjectName(_fromUtf8("tabLog"))
+        self.gridLayout_3 = QtGui.QGridLayout(self.tabLog)
+        self.gridLayout_3.setObjectName(_fromUtf8("gridLayout_3"))
+        self.txtDetailedLog = QtGui.QTextBrowser(self.tabLog)
+        self.txtDetailedLog.setObjectName(_fromUtf8("txtDetailedLog"))
+        self.gridLayout_3.addWidget(self.txtDetailedLog, 0, 0, 1, 1)
+        self.tabWidget.addTab(self.tabLog, _fromUtf8(""))
+        self.gridLayout.addWidget(self.tabWidget, 0, 0, 1, 1)
+
+        self.retranslateUi(ExportIEMKDialog)
+        self.tabWidget.setCurrentIndex(0)
+        QtCore.QObject.connect(self.btnToggleFilters, QtCore.SIGNAL(_fromUtf8("toggled(bool)")), self.frame.setHidden)
+        QtCore.QMetaObject.connectSlotsByName(ExportIEMKDialog)
+
+    def retranslateUi(self, ExportIEMKDialog):
+        ExportIEMKDialog.setWindowTitle(_translate("ExportIEMKDialog", "Отправка ИЭМК", None))
+        self.label_4.setText(_translate("ExportIEMKDialog", "С типом события", None))
+        self.label_3.setText(_translate("ExportIEMKDialog", "По подразделению", None))
+        self.chkEpicrisis.setText(_translate("ExportIEMKDialog", "Веб-эпикризы", None))
+        self.label.setText(_translate("ExportIEMKDialog", "Выгружать случаи с", None))
+        self.label_2.setText(_translate("ExportIEMKDialog", "по", None))
+        self.label_11.setText(_translate("ExportIEMKDialog", "Максимальное количество", None))
+        self.chkResend.setText(_translate("ExportIEMKDialog", "Перевыставить отклонённые", None))
+        self.btnToggleFilters.setText(_translate("ExportIEMKDialog", "^", None))
+        self.label_5.setText(_translate("ExportIEMKDialog", "Количество случаев с учетом фильтров:", None))
+        self.edtCountClosed.setToolTip(_translate("ExportIEMKDialog", "Закрытые, готовые к отправке случаи", None))
+        self.edtCountClosed.setStatusTip(_translate("ExportIEMKDialog", "Закрытые, готовые к отправке случаи", None))
+        self.edtCountClosed.setWhatsThis(_translate("ExportIEMKDialog", "Закрытые, готовые к отправке случаи", None))
+        self.edtCountOpened.setToolTip(_translate("ExportIEMKDialog", "Не закрытые(isClosed) случаи", None))
+        self.edtCountOpened.setStatusTip(_translate("ExportIEMKDialog", "Не закрытые(isClosed) случаи", None))
+        self.edtCountOpened.setWhatsThis(_translate("ExportIEMKDialog", "Не закрытые(isClosed) случаи", None))
+        self.edtCountFailed.setToolTip(_translate("ExportIEMKDialog", "Отправленные с ошибкой случаи", None))
+        self.edtCountFailed.setStatusTip(_translate("ExportIEMKDialog", "Отправленные с ошибкой случаи", None))
+        self.edtCountFailed.setWhatsThis(_translate("ExportIEMKDialog", "Отправленные с ошибкой случаи", None))
+        self.btnStart.setText(_translate("ExportIEMKDialog", "Начать отправку", None))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tabMain), _translate("ExportIEMKDialog", "Выгрузка", None))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tabLog), _translate("ExportIEMKDialog", "Подробный лог", None))
+
+from Orgs.OrgStructComboBoxes import COrgStructureComboBox
+from library.DateEdit import CDateEdit
+from library.InDocTable import CInDocTableView
+from library.LineEdit import CLineEdit
+from library.crbcombobox import CRBComboBox

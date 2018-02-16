@@ -1,0 +1,13 @@
+* Microsoft Visual C++ Compiler for Python 2.7 
+https://www.microsoft.com/en-us/download/details.aspx?id=44266
+
+* SWIG 3.0.8 
+https://sourceforge.net/projects/swig/
+
+* PyScard 
+https://sourceforge.net/projects/pyscard 
+HOWTO: python setup.py build_ext install
+
+
+pip install get some error - https://habrahabr.ru/post/144121/
+

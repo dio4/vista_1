@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ICDMorphologyPopup</class>
+ <widget class="QDialog" name="ICDMorphologyPopup">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="tabPosition">
+      <enum>QTabWidget::South</enum>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tabMorphology">
+      <attribute name="title">
+       <string>&amp;Номенклатура</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="CRBPopupView" name="tblMorphology"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="lblCount">
+         <property name="text">
+          <string>Количеств записей: </string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabFind">
+      <attribute name="title">
+       <string>&amp;Поиск</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="1" column="0">
+        <widget class="QLineEdit" name="edtSearch"/>
+       </item>
+       <item row="1" column="1">
+        <widget class="QToolButton" name="btnSearch">
+         <property name="text">
+          <string>...</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0" colspan="2">
+        <widget class="CTableView" name="tblSearch"/>
+       </item>
+       <item row="0" column="0">
+        <widget class="QCheckBox" name="chkForCurrentMKB">
+         <property name="text">
+          <string>Определенные для текущего диагноза</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CRBPopupView</class>
+   <extends>QTableView</extends>
+   <header>library/crbcombobox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CTableView</class>
+   <extends>QTableView</extends>
+   <header>library/TableView.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>tblMorphology</tabstop>
+  <tabstop>chkForCurrentMKB</tabstop>
+  <tabstop>edtSearch</tabstop>
+  <tabstop>btnSearch</tabstop>
+  <tabstop>tblSearch</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

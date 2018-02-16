@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>452</width>
+    <height>790</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QHBoxLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="margin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QSplitter" name="splitterMain">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="childrenCollapsible">
+      <bool>false</bool>
+     </property>
+     <widget class="QSplitter" name="splitterOrgs">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="handleWidth">
+       <number>2</number>
+      </property>
+      <property name="childrenCollapsible">
+       <bool>false</bool>
+      </property>
+      <widget class="CTreeView" name="treeOrgStructure"/>
+      <widget class="CTreeView" name="treeOrgPersonnel"/>
+     </widget>
+     <widget class="CCalendarWidget" name="calendarWidget">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="firstDayOfWeek">
+       <enum>Qt::Monday</enum>
+      </property>
+     </widget>
+     <widget class="QTabWidget" name="tabPlace">
+      <property name="tabShape">
+       <enum>QTabWidget::Rounded</enum>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tabAmbulatory">
+       <attribute name="title">
+        <string>Амбулаторно</string>
+       </attribute>
+       <layout class="QGridLayout">
+        <property name="margin">
+         <number>4</number>
+        </property>
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item row="1" column="0">
+         <widget class="QSplitter" name="splitterAmb">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <widget class="QFrame" name="frmAmbTimeTable">
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Plain</enum>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_2">
+            <property name="margin">
+             <number>0</number>
+            </property>
+            <item row="1" column="0">
+             <widget class="CEQPanelWidget" name="eqPanelWidget" native="true">
+              <layout class="QGridLayout" name="gridLayout"/>
+              <zorder>btnRefresh</zorder>
+              <zorder>tblAmbTimeTable</zorder>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QToolButton" name="btnRefreshAmb">
+              <property name="font">
+               <font>
+                <pointsize>8</pointsize>
+                <weight>50</weight>
+                <bold>false</bold>
+                <strikeout>true</strikeout>
+               </font>
+              </property>
+              <property name="toolTip">
+               <string>Обновить список номерков</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="../s11main.qrc">
+                <normaloff>:/new/prefix1/icons/refresh.png</normaloff>:/new/prefix1/icons/refresh.png</iconset>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0" colspan="2">
+             <widget class="CTableView" name="tblAmbTimeTable"/>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QFrame" name="frmAmbQueue">
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <property name="margin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="CTableView" name="tblAmbQueue"/>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabHome">
+       <attribute name="title">
+        <string>На дому</string>
+       </attribute>
+       <layout class="QGridLayout">
+        <property name="margin">
+         <number>4</number>
+        </property>
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QSplitter" name="splitterHome">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <widget class="QFrame" name="frmHomeTimeTable">
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Plain</enum>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_3">
+            <property name="margin">
+             <number>0</number>
+            </property>
+            <item row="1" column="1">
+             <widget class="QToolButton" name="btnRefreshHome">
+              <property name="font">
+               <font>
+                <pointsize>8</pointsize>
+                <weight>50</weight>
+                <bold>false</bold>
+                <strikeout>true</strikeout>
+               </font>
+              </property>
+              <property name="toolTip">
+               <string>Обновить список номерков</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="../s11main.qrc">
+                <normaloff>:/new/prefix1/icons/refresh.png</normaloff>:/new/prefix1/icons/refresh.png</iconset>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="0" column="0" colspan="2">
+             <widget class="CTableView" name="tblHomeTimeTable"/>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QFrame" name="frmHomeQueue">
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QVBoxLayout">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="margin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="CTableView" name="tblHomeQueue"/>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabExpert">
+       <attribute name="title">
+        <string>КЭР</string>
+       </attribute>
+      </widget>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CTableView</class>
+   <extends>QTableView</extends>
+   <header>library/TableView.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CTreeView</class>
+   <extends>QTreeView</extends>
+   <header>library/TreeView.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CCalendarWidget</class>
+   <extends>QCalendarWidget</extends>
+   <header location="global">library.calendar</header>
+  </customwidget>
+  <customwidget>
+   <class>CEQPanelWidget</class>
+   <extends>QWidget</extends>
+   <header>library/ElectronicQueue/EQPanelWidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>treeOrgStructure</tabstop>
+  <tabstop>treeOrgPersonnel</tabstop>
+  <tabstop>calendarWidget</tabstop>
+  <tabstop>tabPlace</tabstop>
+  <tabstop>tblAmbTimeTable</tabstop>
+  <tabstop>tblAmbQueue</tabstop>
+  <tabstop>tblHomeTimeTable</tabstop>
+  <tabstop>tblHomeQueue</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../s11main.qrc"/>
+ </resources>
+ <connections/>
+</ui>

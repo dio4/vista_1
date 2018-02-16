@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>JournalBeforeRecordDialog</class>
+ <widget class="QDialog" name="JournalBeforeRecordDialog">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>536</width>
+    <height>354</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Журнал предварительной записи</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>true</bool>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="margin">
+    <number>4</number>
+   </property>
+   <property name="spacing">
+    <number>4</number>
+   </property>
+   <item row="13" column="0">
+    <widget class="QCheckBox" name="chkIgnoreRehabilitation">
+     <property name="text">
+      <string>Не учитывать реабилитационное отделение</string>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="0" colspan="8">
+    <widget class="QCheckBox" name="chkDetailCallCentr">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="text">
+      <string>Детализировать Call-центр</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="3">
+    <widget class="QCheckBox" name="chkPeriodRecord">
+     <property name="text">
+      <string>Период постановки в очередь с</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0" colspan="3">
+    <widget class="QLabel" name="lblUserProfile">
+     <property name="text">
+      <string>Профиль пользователя</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="3" colspan="5">
+    <widget class="CPersonComboBoxEx" name="cmbPerson">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="16" column="0" colspan="8">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="3">
+    <widget class="CDateEdit" name="edtBegDateRecord">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="calendarPopup">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="5">
+    <widget class="CDateEdit" name="edtEndDate">
+     <property name="calendarPopup">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="7">
+    <spacer>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>101</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="7">
+    <spacer>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>101</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="6" column="0" colspan="3">
+    <widget class="QLabel" name="lblSpeciality">
+     <property name="text">
+      <string>&amp;Специальность</string>
+     </property>
+     <property name="buddy">
+      <cstring>cmbSpeciality</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0" colspan="3">
+    <widget class="QCheckBox" name="chkOrgStructure">
+     <property name="text">
+      <string>&amp;Подразделение</string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="3" colspan="5">
+    <widget class="QComboBox" name="cmbQueueType">
+     <item>
+      <property name="text">
+       <string>Амбулаторный прием</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Вызовы</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="3" column="3" colspan="5">
+    <widget class="CPersonComboBoxEx" name="cmbUserId">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="3" colspan="5">
+    <widget class="COrgStructureComboBox" name="cmbOrgStructure">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0" colspan="3">
+    <widget class="QLabel" name="lblPerson">
+     <property name="text">
+      <string>&amp;Врач</string>
+     </property>
+     <property name="buddy">
+      <cstring>cmbPerson</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="12" column="0" colspan="3">
+    <widget class="QCheckBox" name="chkShowWithoutOverTime">
+     <property name="text">
+      <string>Не выводить пациентов сверх очереди</string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="0" colspan="3">
+    <widget class="QLabel" name="lblQueueType">
+     <property name="text">
+      <string>Учитывать</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0" colspan="3">
+    <widget class="QLabel" name="lblUserId">
+     <property name="text">
+      <string>Пользователь</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="3">
+    <widget class="QCheckBox" name="chkPeriodBeforeRecord">
+     <property name="text">
+      <string>Период предварительной записи с</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="3">
+    <widget class="CDateEdit" name="edtBegDate">
+     <property name="calendarPopup">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="4">
+    <widget class="QLabel" name="lblEndDate">
+     <property name="text">
+      <string>по</string>
+     </property>
+     <property name="buddy">
+      <cstring>edtEndDate</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="4">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>по</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="5">
+    <widget class="CDateEdit" name="edtEndDateRecord">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="calendarPopup">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="15" column="2">
+    <spacer>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>21</width>
+       <height>21</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="4" column="3" colspan="5">
+    <widget class="CRBComboBox" name="cmbUserProfile"/>
+   </item>
+   <item row="6" column="3" colspan="5">
+    <widget class="CRBComboBox" name="cmbSpeciality">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="whatsThis">
+      <string>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+   </item>
+   <item row="14" column="0">
+    <widget class="QCheckBox" name="chkShowNotes">
+     <property name="text">
+      <string>Выводить жалобы</string>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="0">
+    <widget class="QCheckBox" name="chkDetailExternalIS">
+     <property name="contextMenuPolicy">
+      <enum>Qt::NoContextMenu</enum>
+     </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;В отчёт будут выведены только записи, выполненные через внешние ИС&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="text">
+      <string>Детализировать запись через внешние ИС</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CDateEdit</class>
+   <extends>QDateEdit</extends>
+   <header>library/DateEdit</header>
+  </customwidget>
+  <customwidget>
+   <class>CPersonComboBoxEx</class>
+   <extends>QComboBox</extends>
+   <header>Orgs/PersonComboBoxEx.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CRBComboBox</class>
+   <extends>QComboBox</extends>
+   <header>library/crbcombobox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>COrgStructureComboBox</class>
+   <extends>QComboBox</extends>
+   <header>Orgs/OrgStructComboBoxes.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>chkPeriodRecord</tabstop>
+  <tabstop>edtBegDate</tabstop>
+  <tabstop>edtEndDate</tabstop>
+  <tabstop>chkPeriodBeforeRecord</tabstop>
+  <tabstop>edtBegDateRecord</tabstop>
+  <tabstop>edtEndDateRecord</tabstop>
+  <tabstop>cmbUserId</tabstop>
+  <tabstop>cmbUserProfile</tabstop>
+  <tabstop>chkOrgStructure</tabstop>
+  <tabstop>cmbOrgStructure</tabstop>
+  <tabstop>cmbSpeciality</tabstop>
+  <tabstop>cmbPerson</tabstop>
+  <tabstop>cmbQueueType</tabstop>
+  <tabstop>chkDetailCallCentr</tabstop>
+  <tabstop>chkDetailExternalIS</tabstop>
+  <tabstop>chkShowWithoutOverTime</tabstop>
+  <tabstop>chkIgnoreRehabilitation</tabstop>
+  <tabstop>chkShowNotes</tabstop>
+  <tabstop>buttonBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>JournalBeforeRecordDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>202</x>
+     <y>279</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>119</x>
+     <y>181</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>JournalBeforeRecordDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>253</x>
+     <y>279</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>316</x>
+     <y>181</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkOrgStructure</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>cmbOrgStructure</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>132</x>
+     <y>131</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>466</x>
+     <y>134</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkOrgStructure</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>cmbSpeciality</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>62</x>
+     <y>131</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>466</x>
+     <y>163</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkOrgStructure</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>cmbPerson</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>33</x>
+     <y>131</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>466</x>
+     <y>192</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkPeriodRecord</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>edtBegDate</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>117</x>
+     <y>17</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>221</x>
+     <y>13</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkPeriodRecord</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>edtEndDate</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>110</x>
+     <y>10</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>312</x>
+     <y>12</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkPeriodBeforeRecord</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>edtEndDateRecord</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>105</x>
+     <y>37</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>334</x>
+     <y>39</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkPeriodBeforeRecord</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>edtBegDateRecord</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>89</x>
+     <y>35</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>215</x>
+     <y>37</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

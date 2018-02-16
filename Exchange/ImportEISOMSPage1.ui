@@ -1,0 +1,75 @@
+<ui version="4.0" >
+ <class>ImportEISOMSPage1</class>
+ <widget class="QWidget" name="ImportEISOMSPage1" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout" >
+   <item row="0" column="0" colspan="2" >
+    <layout class="QHBoxLayout" name="horizontalLayout" >
+     <item>
+      <widget class="QLabel" name="lblFileName" >
+       <property name="text" >
+        <string>Выберите файл</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="edtFileName" />
+     </item>
+     <item>
+      <widget class="QToolButton" name="btnSelectFile" >
+       <property name="text" >
+        <string>...</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnView" >
+       <property name="text" >
+        <string>Просмотреть</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="1" >
+    <widget class="QCheckBox" name="chkImportAfterSMOCheck" >
+     <property name="text" >
+      <string>Импорт данных контроля СМО</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1" >
+    <widget class="QCheckBox" name="chkRemoveFileAfterImport" >
+     <property name="text" >
+      <string>Удалить файл после успешного импорта</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0" >
+    <spacer>
+     <property name="orientation" >
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0" >
+      <size>
+       <width>20</width>
+       <height>251</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

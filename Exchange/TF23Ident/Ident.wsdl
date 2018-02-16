@@ -1,0 +1,85 @@
+<?xml version ='1.0' encoding ='UTF-8' ?> 
+<definitions name='wsrz3'
+ targetNamespace='http://10.20.29.5:8080/wsrz'
+ xmlns:tns='http://10.20.29.5:8080/wsrz'
+ xmlns:soap='http://schemas.xmlsoap.org/wsdl/soap/'
+ xmlns:xsd='http://www.w3.org/2001/XMLSchema'
+ xmlns:soapenc='http://schemas.xmlsoap.org/soap/encoding/'
+ xmlns:wsdl='http://schemas.xmlsoap.org/wsdl/'
+ xmlns='http://schemas.xmlsoap.org/wsdl/'>
+
+<message name='getPolicyInfoRequest3'>
+ <part name='paramSource' type='xsd:string'/>
+ <part name='paramRID' type='xsd:int'/>
+ <part name='paramForDate' type='xsd:string'/>
+ <part name='personSurname' type='xsd:string'/>
+ <part name='personName' type='xsd:string'/>
+ <part name='personPatronymic' type='xsd:string'/>
+ <part name='personSex' type='xsd:string'/>
+ <part name='personBirthDate' type='xsd:string'/>
+ <part name='identityType' type='xsd:unsignedByte'/>
+ <part name='identitySeries' type='xsd:string'/>
+ <part name='identityNumber' type='xsd:string'/>
+ <part name='Snils' type='xsd:string'/>
+ <part name='policyType' type='xsd:unsignedByte'/>
+ <part name='policySeries' type='xsd:string'/>
+ <part name='policyNumber' type='xsd:string'/>
+</message>
+
+<message name='getPolicyInfoResponse3'>
+ <part name='paramID' type='xsd:int'/>
+ <part name='paramRID' type='xsd:int'/>
+ <part name='personSurname' type='xsd:string'/>
+ <part name='personName' type='xsd:string'/>
+ <part name='personPatronymic' type='xsd:string'/>
+ <part name='personSex' type='xsd:string'/>
+ <part name='personBirthDate' type='xsd:string'/>
+ <part name='Snils' type='xsd:string'/>
+ <part name='policyType' type='xsd:unsignedByte'/>
+ <part name='policySeries' type='xsd:string'/>
+ <part name='policyNumber' type='xsd:string'/>
+ <part name='policyFromDate' type='xsd:string'/>
+ <part name='policyTillDate' type='xsd:string'/>
+ <part name='policyOkato' type='xsd:string'/>
+ <part name='policyOgrn' type='xsd:string'/>
+ <part name='policySmo' type='xsd:string'/>
+ <part name='policyKsmo' type='xsd:string'/>
+ <part name='ddVP' type='xsd:string'/>
+ <part name='ddDATN' type='xsd:string'/>
+ <part name='ddDATO' type='xsd:string'/>
+ <part name='ddCODE_MO' type='xsd:string'/>
+ <part name='resultID' type='xsd:int'/>
+ <part name='resultType' type='xsd:int'/>
+ <part name='resultCode' type='xsd:int'/>
+ <part name='resultMessage' type='xsd:string'/>
+</message>
+
+<portType name='wsrzPortType3'>
+ <operation name='getPolicyInfo3'>
+  <input message='tns:getPolicyInfoRequest3'/>
+  <output message='tns:getPolicyInfoResponse3'/>
+ </operation>
+</portType>
+
+<binding name='wsrzBinding3' type='tns:wsrzPortType3'>
+ <soap:binding style='rpc'
+  transport='http://schemas.xmlsoap.org/soap/http'/>
+ <operation name='getPolicyInfo3'>
+  <soap:operation soapAction='urn:xmethods-delayed-quotes#getPolicyInfo3'/>
+  <input>
+   <soap:body use='encoded' namespace='urn:xmethods-delayed-quotes'
+    encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'/>
+  </input>
+  <output>
+   <soap:body use='encoded' namespace='urn:xmethods-delayed-quotes'
+    encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'/>
+  </output>
+ </operation>
+</binding>
+
+<service name='wsrzService3'>
+ <port name='wsrzPort3' binding='tns:wsrzBinding3'>
+  <soap:address location='http://10.20.29.5:8080/wsrz/server3.php'/>
+ </port>
+</service>
+</definitions>

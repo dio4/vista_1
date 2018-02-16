@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ParamsContractDialog</class>
+ <widget class="QDialog" name="ParamsContractDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>351</width>
+    <height>272</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Параметры</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="margin">
+    <number>4</number>
+   </property>
+   <property name="spacing">
+    <number>4</number>
+   </property>
+   <item row="10" column="1">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="11" column="0" colspan="4">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="2">
+    <widget class="QCheckBox" name="chkBase">
+     <property name="text">
+      <string>Основание</string>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0" colspan="2">
+    <widget class="QCheckBox" name="chkNumber">
+     <property name="text">
+      <string>Номер</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="2" colspan="2">
+    <widget class="QLineEdit" name="edtNumber">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="2" colspan="2">
+    <widget class="CDateEdit" name="edtDate">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="calendarPopup">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2" colspan="2">
+    <widget class="QLineEdit" name="edtBase">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0" colspan="2">
+    <widget class="QCheckBox" name="chkDate">
+     <property name="text">
+      <string>Дата</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0" colspan="2">
+    <widget class="QCheckBox" name="chkBegDate">
+     <property name="text">
+      <string>Нач.дата</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0" colspan="2">
+    <widget class="QCheckBox" name="chkEndDate">
+     <property name="text">
+      <string>Кон.дата</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0" colspan="2">
+    <widget class="QCheckBox" name="chkCoefficient">
+     <property name="text">
+      <string>Коэффициент тарифа</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0" colspan="2">
+    <widget class="QCheckBox" name="chkCoefficientEx">
+     <property name="text">
+      <string>Коэффициент расшир. тарифа</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="2" colspan="2">
+    <widget class="QDoubleSpinBox" name="edtCoefficientEx">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="decimals">
+      <number>4</number>
+     </property>
+     <property name="minimum">
+      <double>-99.999899999999997</double>
+     </property>
+     <property name="maximum">
+      <double>99.999899999999997</double>
+     </property>
+     <property name="singleStep">
+      <double>0.010000000000000</double>
+     </property>
+     <property name="value">
+      <double>1.000000000000000</double>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="2" colspan="2">
+    <widget class="QDoubleSpinBox" name="edtCoefficient">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="decimals">
+      <number>4</number>
+     </property>
+     <property name="minimum">
+      <double>-99.999899999999997</double>
+     </property>
+     <property name="maximum">
+      <double>99.999899999999997</double>
+     </property>
+     <property name="singleStep">
+      <double>0.010000000000000</double>
+     </property>
+     <property name="value">
+      <double>1.000000000000000</double>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="2" colspan="2">
+    <widget class="CDateEdit" name="edtBegDate">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="calendarPopup">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="2" colspan="2">
+    <widget class="CDateEdit" name="edtEndDate">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="calendarPopup">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="2">
+    <widget class="QCheckBox" name="chkContractGroup">
+     <property name="text">
+      <string>Группа</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2" colspan="2">
+    <widget class="QLineEdit" name="edtContractGroup">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="0" colspan="2">
+    <widget class="QCheckBox" name="chkCoefficientEx2">
+     <property name="text">
+      <string>Коэффициент второго расшир. тарифа</string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="2" colspan="2">
+    <widget class="QDoubleSpinBox" name="edtCoefficientEx2">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="decimals">
+      <number>4</number>
+     </property>
+     <property name="minimum">
+      <double>-99.999899999999997</double>
+     </property>
+     <property name="maximum">
+      <double>99.999899999999997</double>
+     </property>
+     <property name="singleStep">
+      <double>0.010000000000000</double>
+     </property>
+     <property name="value">
+      <double>1.000000000000000</double>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CDateEdit</class>
+   <extends>QDateEdit</extends>
+   <header>library/DateEdit.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>chkContractGroup</tabstop>
+  <tabstop>edtContractGroup</tabstop>
+  <tabstop>chkBase</tabstop>
+  <tabstop>edtBase</tabstop>
+  <tabstop>chkNumber</tabstop>
+  <tabstop>edtNumber</tabstop>
+  <tabstop>chkDate</tabstop>
+  <tabstop>edtDate</tabstop>
+  <tabstop>chkBegDate</tabstop>
+  <tabstop>edtBegDate</tabstop>
+  <tabstop>chkEndDate</tabstop>
+  <tabstop>edtEndDate</tabstop>
+  <tabstop>chkCoefficient</tabstop>
+  <tabstop>edtCoefficient</tabstop>
+  <tabstop>chkCoefficientEx</tabstop>
+  <tabstop>edtCoefficientEx</tabstop>
+  <tabstop>chkCoefficientEx2</tabstop>
+  <tabstop>edtCoefficientEx2</tabstop>
+  <tabstop>buttonBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>ParamsContractDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>318</x>
+     <y>267</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>114</x>
+     <y>229</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>ParamsContractDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>318</x>
+     <y>267</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>196</x>
+     <y>229</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkBase</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>edtBase</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>112</x>
+     <y>48</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>346</x>
+     <y>45</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkNumber</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>edtNumber</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>63</x>
+     <y>65</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>346</x>
+     <y>65</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkDate</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>edtDate</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>105</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>346</x>
+     <y>88</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkBegDate</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>edtBegDate</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>26</x>
+     <y>110</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>261</x>
+     <y>110</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkEndDate</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>edtEndDate</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>16</x>
+     <y>132</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>261</x>
+     <y>132</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkCoefficient</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>edtCoefficient</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>16</x>
+     <y>161</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>261</x>
+     <y>161</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkCoefficientEx</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>edtCoefficientEx</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>16</x>
+     <y>190</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>280</x>
+     <y>190</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkCoefficientEx2</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>edtCoefficientEx2</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>135</x>
+     <y>207</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>255</x>
+     <y>206</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

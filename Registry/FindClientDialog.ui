@@ -1,0 +1,1313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FindClientDialog</class>
+ <widget class="QDialog" name="FindClientDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>902</width>
+    <height>883</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout_2">
+   <item>
+    <widget class="CTableView" name="tblClients"/>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>321</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>321</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="title">
+      <string>Фильтр</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+     <layout class="QGridLayout">
+      <property name="margin">
+       <number>2</number>
+      </property>
+      <property name="spacing">
+       <number>2</number>
+      </property>
+      <item row="2" column="0">
+       <widget class="CApplyResetDialogButtonBox" name="buttonBoxClient">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="standardButtons">
+         <set>QDialogButtonBox::Apply|QDialogButtonBox::Reset</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QTabWidget" name="tabFilter">
+        <property name="tabPosition">
+         <enum>QTabWidget::North</enum>
+        </property>
+        <property name="tabShape">
+         <enum>QTabWidget::Rounded</enum>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="tabFind">
+         <attribute name="title">
+          <string>&amp;Поиск</string>
+         </attribute>
+         <layout class="QGridLayout" name="gridLayout_18">
+          <property name="margin">
+           <number>1</number>
+          </property>
+          <property name="spacing">
+           <number>1</number>
+          </property>
+          <item row="11" column="0" colspan="3">
+           <widget class="QCheckBox" name="chkFilterContact">
+            <property name="text">
+             <string>Контакт</string>
+            </property>
+           </widget>
+          </item>
+          <item row="15" column="3" colspan="4">
+           <widget class="CRBComboBox" name="cmbFilterDocumentType">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>100</width>
+              <height>0</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="24" column="0" colspan="7">
+           <layout class="QHBoxLayout" name="horizontalLayout_5">
+            <property name="spacing">
+             <number>2</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="lblFilterAddressHouse">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>Дом</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              </property>
+              <property name="buddy">
+               <cstring>edtFilterAddressHouse</cstring>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="edtFilterAddressHouse">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="lblFilterAddressCorpus">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>Корп</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+              <property name="buddy">
+               <cstring>edtFilterAddressCorpus</cstring>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="edtFilterAddressCorpus">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="lblFilterAddressFlat">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>Кв</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+              <property name="buddy">
+               <cstring>edtFilterAddressFlat</cstring>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="edtFilterAddressFlat">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="26" column="0" colspan="6">
+           <widget class="COrgComboBox" name="cmbWorkOrganisation">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="17" column="0" colspan="7">
+           <widget class="QCheckBox" name="chkFilterPolicy">
+            <property name="text">
+             <string>Полис</string>
+            </property>
+           </widget>
+          </item>
+          <item row="25" column="0" colspan="6">
+           <widget class="QCheckBox" name="chkFilterWorkOrganisation">
+            <property name="text">
+             <string>Занятость</string>
+            </property>
+           </widget>
+          </item>
+          <item row="33" column="0">
+           <spacer name="verticalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="26" column="6">
+           <widget class="QToolButton" name="btnSelectWorkOrganisation">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>...</string>
+            </property>
+           </widget>
+          </item>
+          <item row="12" column="3" colspan="4">
+           <widget class="QLineEdit" name="edtFilterSNILS">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="inputMask">
+             <string>999-999-999 99; </string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2" colspan="5">
+           <widget class="CRBComboBox" name="cmbFilterAccountingSystem">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="11" column="3" colspan="4">
+           <widget class="QLineEdit" name="edtFilterContact">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="18" column="0" colspan="7">
+           <widget class="CRBComboBox" name="cmbFilterPolicyType">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="28" column="0" colspan="2">
+           <widget class="QCheckBox" name="chkFilterLocationCardType">
+            <property name="toolTip">
+             <string>Место нахождения амбулаторной карты</string>
+            </property>
+            <property name="text">
+             <string>К</string>
+            </property>
+           </widget>
+          </item>
+          <item row="28" column="2" colspan="5">
+           <widget class="CRBComboBox" name="cmbFilterLocationCardType">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="29" column="0" colspan="2">
+           <widget class="QCheckBox" name="chkFilterStatusObservationType">
+            <property name="toolTip">
+             <string>Статус наблюдения пациента</string>
+            </property>
+            <property name="text">
+             <string>С</string>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="3" colspan="4">
+           <widget class="CDateEdit" name="edtFilterBirthDay">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="calendarPopup">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="29" column="2" colspan="5">
+           <widget class="CRBComboBox" name="cmbFilterStatusObservationType">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="10" column="5" colspan="2">
+           <spacer>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>21</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="12" column="0" colspan="3">
+           <widget class="QCheckBox" name="chkFilterSNILS">
+            <property name="text">
+             <string>СНИЛС</string>
+            </property>
+           </widget>
+          </item>
+          <item row="10" column="0" colspan="3">
+           <widget class="QCheckBox" name="chkFilterSex">
+            <property name="text">
+             <string>Пол</string>
+            </property>
+           </widget>
+          </item>
+          <item row="10" column="3" colspan="2">
+           <widget class="QComboBox" name="cmbFilterSex">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>40</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <item>
+             <property name="text">
+              <string/>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>М</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Ж</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="15" column="0" colspan="3">
+           <widget class="QCheckBox" name="chkFilterDocument">
+            <property name="text">
+             <string>Документ</string>
+            </property>
+           </widget>
+          </item>
+          <item row="16" column="0" colspan="3">
+           <widget class="QLineEdit" name="edtFilterDocumentSerial">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="16" column="3" colspan="4">
+           <widget class="QLineEdit" name="edtFilterDocumentNumber">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="19" column="0" colspan="7">
+           <widget class="CInsurerComboBox" name="cmbFilterPolicyInsurer">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="20" column="0" colspan="3">
+           <widget class="CPolicySerialEdit" name="edtFilterPolicySerial">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="20" column="3" colspan="4">
+           <widget class="QLineEdit" name="edtFilterPolicyNumber">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="21" column="0" colspan="3">
+           <widget class="QCheckBox" name="chkFilterAddress">
+            <property name="text">
+             <string>Адрес</string>
+            </property>
+           </widget>
+          </item>
+          <item row="23" column="0" colspan="7">
+           <widget class="CStreetComboBox" name="cmbFilterAddressStreet">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item row="21" column="3" colspan="4">
+           <widget class="QComboBox" name="cmbFilterAddressType">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <item>
+             <property name="text">
+              <string>Регистрации</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Проживания</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="22" column="0" colspan="7">
+           <widget class="CKLADRComboBox" name="cmbFilterAddressCity">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0" colspan="2">
+           <widget class="QCheckBox" name="chkFilterId">
+            <property name="text">
+             <string>Код</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0" colspan="7">
+           <widget class="QCheckBox" name="chkFilterLastName">
+            <property name="text">
+             <string>Фамилия</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0" colspan="7">
+           <widget class="QLineEdit" name="edtFilterId">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="maxLength">
+             <number>16</number>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0" colspan="7">
+           <widget class="QCheckBox" name="chkFilterFirstName">
+            <property name="text">
+             <string>Имя</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0" colspan="7">
+           <widget class="QLineEdit" name="edtFilterLastName">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0" colspan="7">
+           <widget class="QLineEdit" name="edtFilterFirstName">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0" colspan="7">
+           <widget class="QCheckBox" name="chkFilterPatrName">
+            <property name="text">
+             <string>Отчество</string>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="0" colspan="7">
+           <widget class="QLineEdit" name="edtFilterPatrName">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="0" colspan="3">
+           <widget class="QCheckBox" name="chkFilterBirthDay">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Дата рожд</string>
+            </property>
+           </widget>
+          </item>
+          <item row="30" column="0" colspan="5">
+           <widget class="QCheckBox" name="chkFilterSocStatuses">
+            <property name="text">
+             <string>Соц. статус</string>
+            </property>
+           </widget>
+          </item>
+          <item row="31" column="0" colspan="7">
+           <widget class="CSocStatusComboBox" name="cmbFilterSocStatClass">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="32" column="0" colspan="7">
+           <widget class="CRBComboBox" name="cmbFilterSocStatType">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="27" column="0" colspan="2">
+           <widget class="QCheckBox" name="chkFilterHurtType">
+            <property name="text">
+             <string>Вр</string>
+            </property>
+           </widget>
+          </item>
+          <item row="27" column="2" colspan="5">
+           <widget class="CRBComboBox" name="cmbFilterHurtType">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tabFindEx">
+         <attribute name="title">
+          <string>&amp;Расширенный поиск</string>
+         </attribute>
+         <layout class="QGridLayout" name="gridLayout_17">
+          <property name="margin">
+           <number>1</number>
+          </property>
+          <property name="spacing">
+           <number>1</number>
+          </property>
+          <item row="0" column="0" colspan="4">
+           <widget class="QCheckBox" name="chkFilterCreatePerson">
+            <property name="text">
+             <string>Автор</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0" colspan="4">
+           <widget class="CPersonComboBoxEx" name="cmbFilterCreatePerson">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0" colspan="4">
+           <widget class="QCheckBox" name="chkFilterCreateDate">
+            <property name="text">
+             <string>Дата создания</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0" colspan="4">
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <property name="spacing">
+             <number>2</number>
+            </property>
+            <item>
+             <widget class="CDateEdit" name="edtFilterBegCreateDate">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="calendarPopup">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="CDateEdit" name="edtFilterEndCreateDate">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="calendarPopup">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="4" column="0" colspan="4">
+           <widget class="QCheckBox" name="chkFilterModifyPerson">
+            <property name="text">
+             <string>Автор последнего изменения</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0" colspan="4">
+           <widget class="CPersonComboBoxEx" name="cmbFilterModifyPerson">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0" colspan="4">
+           <widget class="QCheckBox" name="chkFilterModifyDate">
+            <property name="text">
+             <string>Дата последнего изменения</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0" colspan="4">
+           <layout class="QHBoxLayout" name="horizontalLayoutStaff">
+            <property name="spacing">
+             <number>2</number>
+            </property>
+            <item>
+             <widget class="CDateEdit" name="edtFilterBegModifyDate">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="calendarPopup">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="CDateEdit" name="edtFilterEndModifyDate">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="calendarPopup">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="10" column="0">
+           <widget class="QCheckBox" name="chkFilterAge">
+            <property name="text">
+             <string>Возраст</string>
+            </property>
+           </widget>
+          </item>
+          <item row="10" column="1" colspan="2">
+           <widget class="QSpinBox" name="edtFilterBegAge">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="maximum">
+             <number>150</number>
+            </property>
+           </widget>
+          </item>
+          <item row="10" column="3">
+           <widget class="QComboBox" name="cmbFilterBegAge">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <item>
+             <property name="text">
+              <string>Лет</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Мес</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Нед</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Дней</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="11" column="1" colspan="2">
+           <widget class="QSpinBox" name="edtFilterEndAge">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="maximum">
+             <number>150</number>
+            </property>
+            <property name="value">
+             <number>150</number>
+            </property>
+           </widget>
+          </item>
+          <item row="11" column="3">
+           <widget class="QComboBox" name="cmbFilterEndAge">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <item>
+             <property name="text">
+              <string>Лет</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Мес</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Нед</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Дней</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="12" column="0" colspan="2">
+           <widget class="QCheckBox" name="chkFilterAddressOrgStructure">
+            <property name="text">
+             <string>По участку</string>
+            </property>
+           </widget>
+          </item>
+          <item row="14" column="0" colspan="4">
+           <widget class="COrgStructureComboBox" name="cmbFilterAddressOrgStructure">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item row="18" column="0" colspan="4">
+           <widget class="QCheckBox" name="chkFilterAddressIsEmpty">
+            <property name="text">
+             <string>Адрес пуст</string>
+            </property>
+           </widget>
+          </item>
+          <item row="21" column="0" colspan="4">
+           <widget class="QCheckBox" name="chkFilterAttach">
+            <property name="text">
+             <string>Прикрепление к ЛПУ</string>
+            </property>
+           </widget>
+          </item>
+          <item row="22" column="0" colspan="4">
+           <widget class="CPolyclinicComboBox" name="cmbFilterAttachOrganisation">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item row="23" column="0" colspan="4">
+           <widget class="QCheckBox" name="chkFilterAttachNonBase">
+            <property name="text">
+             <string>Любое ЛПУ кроме базового</string>
+            </property>
+           </widget>
+          </item>
+          <item row="24" column="0" colspan="4">
+           <widget class="QCheckBox" name="chkFilterTempInvalid">
+            <property name="text">
+             <string>Период ВУТ</string>
+            </property>
+           </widget>
+          </item>
+          <item row="25" column="0" colspan="4">
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <property name="spacing">
+             <number>2</number>
+            </property>
+            <item>
+             <widget class="CDateEdit" name="edtFilterBegTempInvalid">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Ignored">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="calendarPopup">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="CDateEdit" name="edtFilterEndTempInvalid">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="calendarPopup">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="26" column="0" colspan="4">
+           <widget class="QCheckBox" name="chkFilterRPFUnconfirmed">
+            <property name="text">
+             <string>Неподтверждённые РПФ</string>
+            </property>
+           </widget>
+          </item>
+          <item row="27" column="0" colspan="4">
+           <widget class="QCheckBox" name="chkFilterRPFConfirmed">
+            <property name="text">
+             <string>Период подтверждения РПФ</string>
+            </property>
+           </widget>
+          </item>
+          <item row="28" column="0" colspan="4">
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <property name="spacing">
+             <number>2</number>
+            </property>
+            <item>
+             <widget class="CDateEdit" name="edtFilterBegRPFConfirmed">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="calendarPopup">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="CDateEdit" name="edtFilterEndRPFConfirmed">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="calendarPopup">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="29" column="0">
+           <spacer name="verticalSpacerStaff">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="13" column="0" colspan="4">
+           <widget class="QComboBox" name="cmbFilterAddressOrgStructureType">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <item>
+             <property name="text">
+              <string>Регистрация</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Проживание</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Регистрация или проживание</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Прикрепление</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Регистрация или прикрепление</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Проживание или прикрепление</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Регистрация, проживание или прикрепление</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="16" column="0" colspan="4">
+           <widget class="QComboBox" name="cmbFilterStatusBeds">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <item>
+             <property name="text">
+              <string>не задано</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>на лечении</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>на выписке</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>в очереди</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="17" column="0" colspan="4">
+           <widget class="COrgStructureComboBox" name="cmbFilterOrgStructureBeds">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="15" column="0" colspan="4">
+           <widget class="QCheckBox" name="chkFilterBeds">
+            <property name="text">
+             <string>По койкам</string>
+            </property>
+           </widget>
+          </item>
+          <item row="19" column="0" colspan="4">
+           <layout class="QHBoxLayout" name="horizontalLayout_6">
+            <item>
+             <widget class="QCheckBox" name="chkFilterAttachType">
+              <property name="text">
+               <string>Прикрепление</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="cmbFilterAttachCategory">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <item>
+               <property name="text">
+                <string>-</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Постоянное</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Временное</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Выбыл</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="20" column="0" colspan="4">
+           <widget class="CRBComboBox" name="cmbFilterAttachType">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="0" colspan="2">
+           <widget class="CDateEdit" name="edtFilterEventBegDate">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="calendarPopup">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="2" colspan="2">
+           <widget class="CDateEdit" name="edtFilterEventEndDate">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="calendarPopup">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="0" colspan="2">
+           <widget class="QCheckBox" name="chkFilterEvent">
+            <property name="text">
+             <string>Обращались</string>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="2" colspan="2">
+           <widget class="QCheckBox" name="chkFilterFirstEvent">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>Первично</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QCheckBox" name="chkShowStaffOnly">
+        <property name="text">
+         <string>Только сотрудники</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CDateEdit</class>
+   <extends>QDateEdit</extends>
+   <header>library/DateEdit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>COrgStructureComboBox</class>
+   <extends>QComboBox</extends>
+   <header>Orgs/OrgStructComboBoxes.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CPersonComboBoxEx</class>
+   <extends>QComboBox</extends>
+   <header>Orgs/PersonComboBoxEx.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CRBComboBox</class>
+   <extends>QComboBox</extends>
+   <header>library/crbcombobox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CSocStatusComboBox</class>
+   <extends>QComboBox</extends>
+   <header>Registry/SocStatusComboBox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CKLADRComboBox</class>
+   <extends>QComboBox</extends>
+   <header>KLADR/kladrComboxes.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CStreetComboBox</class>
+   <extends>QComboBox</extends>
+   <header>KLADR/kladrComboxes.h</header>
+  </customwidget>
+  <customwidget>
+   <class>COrgComboBox</class>
+   <extends>QComboBox</extends>
+   <header>Orgs/OrgComboBox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CInsurerComboBox</class>
+   <extends>QComboBox</extends>
+   <header>Orgs/OrgComboBox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CPolyclinicComboBox</class>
+   <extends>QComboBox</extends>
+   <header>Orgs/OrgComboBox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CPolicySerialEdit</class>
+   <extends>QLineEdit</extends>
+   <header>PolicySerialEdit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CApplyResetDialogButtonBox</class>
+   <extends>QDialogButtonBox</extends>
+   <header>library/DialogButtonBox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CTableView</class>
+   <extends>QTableView</extends>
+   <header>library/TableView.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

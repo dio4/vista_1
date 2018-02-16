@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://jaxb.dev.java.net/array">
+<xs:complexType name="stringArray" final="#all"><xs:sequence><xs:element name="item" type="xs:string" minOccurs="0" maxOccurs="unbounded" nillable="true"></xs:element></xs:sequence></xs:complexType>
+</xs:schema>

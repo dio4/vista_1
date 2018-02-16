@@ -1,0 +1,178 @@
+<ui version="4.0" >
+ <class>DublDialog</class>
+ <widget class="QDialog" name="DublDialog" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>320</width>
+    <height>218</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Дублирование графика</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout" >
+   <property name="margin" >
+    <number>4</number>
+   </property>
+   <property name="spacing" >
+    <number>4</number>
+   </property>
+   <item row="0" column="0" colspan="3" >
+    <widget class="QTextBrowser" name="textBrowser" >
+     <property name="html" >
+      <string>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+p, li { white-space: pre-wrap; }
+&lt;/style>&lt;/head>&lt;body style=" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; font-size:9pt;">Выберите режим копирования для выполнения дублирования графика&lt;/p>&lt;/body>&lt;/html></string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" >
+    <widget class="QCheckBox" name="chkStart" >
+     <property name="text" >
+      <string>начинать с</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1" >
+    <widget class="CDateEdit" name="edtStart" >
+     <property name="enabled" >
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2" >
+    <spacer name="horizontalSpacer" >
+     <property name="orientation" >
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0" >
+      <size>
+       <width>134</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="2" column="0" colspan="3" >
+    <widget class="QGroupBox" name="groupBox" >
+     <property name="title" >
+      <string>режим копирования</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout" >
+      <property name="spacing" >
+       <number>4</number>
+      </property>
+      <property name="margin" >
+       <number>4</number>
+      </property>
+      <item>
+       <widget class="QRadioButton" name="rbSingle" >
+        <property name="text" >
+         <string>Один план</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="rbDual" >
+        <property name="text" >
+         <string>Нечет/чёт</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="rbWeek" >
+        <property name="text" >
+         <string>Неделя</string>
+        </property>
+        <property name="checked" >
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="3" column="0" colspan="3" >
+    <widget class="QDialogButtonBox" name="buttonBox" >
+     <property name="orientation" >
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons" >
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CDateEdit</class>
+   <extends>QDateEdit</extends>
+   <header>library/DateEdit.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>textBrowser</tabstop>
+  <tabstop>chkStart</tabstop>
+  <tabstop>edtStart</tabstop>
+  <tabstop>rbSingle</tabstop>
+  <tabstop>rbDual</tabstop>
+  <tabstop>rbWeek</tabstop>
+  <tabstop>buttonBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>DublDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>252</x>
+     <y>213</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>157</x>
+     <y>217</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>DublDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>315</x>
+     <y>213</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>286</x>
+     <y>217</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkStart</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>edtStart</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>66</x>
+     <y>73</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>97</x>
+     <y>76</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

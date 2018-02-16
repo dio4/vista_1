@@ -1,0 +1,482 @@
+<ui version="4.0" >
+ <class>ActionTemplateCreateDialog</class>
+ <widget class="QDialog" name="ActionTemplateCreateDialog" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>328</width>
+    <height>273</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Создание шаблона действия</string>
+  </property>
+  <property name="sizeGripEnabled" >
+   <bool>false</bool>
+  </property>
+  <layout class="QGridLayout" name="gridLayout" >
+   <property name="margin" >
+    <number>4</number>
+   </property>
+   <property name="spacing" >
+    <number>4</number>
+   </property>
+   <item row="0" column="0" >
+    <widget class="QLabel" name="lblName" >
+     <property name="sizePolicy" >
+      <sizepolicy vsizetype="Preferred" hsizetype="Maximum" >
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text" >
+      <string>На&amp;именование</string>
+     </property>
+     <property name="buddy" >
+      <cstring>edtName</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1" colspan="7" >
+    <widget class="QLineEdit" name="edtName" >
+     <property name="minimumSize" >
+      <size>
+       <width>200</width>
+       <height>0</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="8" >
+    <widget class="Line" name="line" >
+     <property name="orientation" >
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0" colspan="8" >
+    <widget class="QLabel" name="lblCase" >
+     <property name="text" >
+      <string>Этот шаблон можно применять в случаях:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0" >
+    <widget class="QLabel" name="lblSex" >
+     <property name="sizePolicy" >
+      <sizepolicy vsizetype="Preferred" hsizetype="Maximum" >
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text" >
+      <string>&amp;Пол</string>
+     </property>
+     <property name="buddy" >
+      <cstring>cmbSex</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1" colspan="2" >
+    <widget class="QComboBox" name="cmbSex" >
+     <property name="sizePolicy" >
+      <sizepolicy vsizetype="Fixed" hsizetype="MinimumExpanding" >
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text" >
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text" >
+       <string>М</string>
+      </property>
+     </item>
+     <item>
+      <property name="text" >
+       <string>Ж</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="3" column="3" colspan="5" >
+    <spacer name="spacer_3" >
+     <property name="orientation" >
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0" >
+      <size>
+       <width>415</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="4" column="0" >
+    <widget class="QLabel" name="lblAge" >
+     <property name="sizePolicy" >
+      <sizepolicy vsizetype="Preferred" hsizetype="Maximum" >
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text" >
+      <string>&amp;Возраст</string>
+     </property>
+     <property name="buddy" >
+      <cstring>cmbBegAgeUnit</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1" colspan="2" >
+    <widget class="QComboBox" name="cmbBegAgeUnit" >
+     <property name="sizePolicy" >
+      <sizepolicy vsizetype="Fixed" hsizetype="Preferred" >
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item>
+      <property name="text" >
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text" >
+       <string>Д</string>
+      </property>
+     </item>
+     <item>
+      <property name="text" >
+       <string>Н</string>
+      </property>
+     </item>
+     <item>
+      <property name="text" >
+       <string>М</string>
+      </property>
+     </item>
+     <item>
+      <property name="text" >
+       <string>Г</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="4" column="3" >
+    <widget class="QLineEdit" name="edtBegAgeCount" >
+     <property name="sizePolicy" >
+      <sizepolicy vsizetype="Fixed" hsizetype="Preferred" >
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="inputMask" >
+      <string>000; </string>
+     </property>
+     <property name="maxLength" >
+      <number>3</number>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="4" >
+    <widget class="QLabel" name="lblAgeSep" >
+     <property name="sizePolicy" >
+      <sizepolicy vsizetype="Preferred" hsizetype="Maximum" >
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text" >
+      <string>по</string>
+     </property>
+     <property name="buddy" >
+      <cstring>cmbEndAgeUnit</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="5" >
+    <widget class="QComboBox" name="cmbEndAgeUnit" >
+     <property name="sizePolicy" >
+      <sizepolicy vsizetype="Fixed" hsizetype="Preferred" >
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="sizeAdjustPolicy" >
+      <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
+     </property>
+     <item>
+      <property name="text" >
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text" >
+       <string>Д</string>
+      </property>
+     </item>
+     <item>
+      <property name="text" >
+       <string>Н</string>
+      </property>
+     </item>
+     <item>
+      <property name="text" >
+       <string>М</string>
+      </property>
+     </item>
+     <item>
+      <property name="text" >
+       <string>Г</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="4" column="6" >
+    <widget class="QLineEdit" name="edtEndAgeCount" >
+     <property name="sizePolicy" >
+      <sizepolicy vsizetype="Fixed" hsizetype="Preferred" >
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="inputMask" >
+      <string>000; </string>
+     </property>
+     <property name="maxLength" >
+      <number>3</number>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="7" >
+    <spacer name="spacer_2" >
+     <property name="orientation" >
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0" >
+      <size>
+       <width>203</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="5" column="0" >
+    <widget class="QLabel" name="lblDiagnosis" >
+     <property name="enabled" >
+      <bool>false</bool>
+     </property>
+     <property name="sizePolicy" >
+      <sizepolicy vsizetype="Preferred" hsizetype="Maximum" >
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text" >
+      <string>&amp;Диагнозы</string>
+     </property>
+     <property name="buddy" >
+      <cstring>edtMKBList</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1" colspan="7" >
+    <widget class="QLineEdit" name="edtMKBList" >
+     <property name="enabled" >
+      <bool>false</bool>
+     </property>
+     <property name="minimumSize" >
+      <size>
+       <width>200</width>
+       <height>0</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0" colspan="8" >
+    <widget class="Line" name="line_2" >
+     <property name="orientation" >
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0" colspan="8" >
+    <widget class="QLabel" name="lblVisibleTo" >
+     <property name="text" >
+      <string>Этот шаблон могут применять:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="0" colspan="2" >
+    <widget class="QRadioButton" name="rbVisibleToOwner" >
+     <property name="text" >
+      <string>Врач</string>
+     </property>
+     <property name="checked" >
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="2" colspan="6" >
+    <widget class="CPersonComboBoxEx" name="cmbOwner" />
+   </item>
+   <item row="9" column="0" colspan="2" >
+    <widget class="QRadioButton" name="rbVisibleToSpeciality" >
+     <property name="text" >
+      <string>Специальность</string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="2" colspan="5" >
+    <widget class="CRBComboBox" name="cmbSpeciality" >
+     <property name="enabled" >
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="7" >
+    <spacer name="horizontalSpacer_4" >
+     <property name="orientation" >
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0" >
+      <size>
+       <width>197</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="10" column="0" colspan="2" >
+    <widget class="QRadioButton" name="rbVisibleToAll" >
+     <property name="text" >
+      <string>Все</string>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="0" >
+    <spacer name="verticalSpacer" >
+     <property name="orientation" >
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0" >
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="12" column="0" colspan="8" >
+    <widget class="QDialogButtonBox" name="buttonBox" >
+     <property name="orientation" >
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons" >
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="4" margin="4" />
+ <customwidgets>
+  <customwidget>
+   <class>CPersonComboBoxEx</class>
+   <extends>QComboBox</extends>
+   <header>Orgs/PersonComboBoxEx.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CRBComboBox</class>
+   <extends>QComboBox</extends>
+   <header>library/crbcombobox.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>edtName</tabstop>
+  <tabstop>cmbSex</tabstop>
+  <tabstop>cmbBegAgeUnit</tabstop>
+  <tabstop>edtBegAgeCount</tabstop>
+  <tabstop>cmbEndAgeUnit</tabstop>
+  <tabstop>edtEndAgeCount</tabstop>
+  <tabstop>edtMKBList</tabstop>
+  <tabstop>rbVisibleToOwner</tabstop>
+  <tabstop>cmbOwner</tabstop>
+  <tabstop>rbVisibleToSpeciality</tabstop>
+  <tabstop>cmbSpeciality</tabstop>
+  <tabstop>rbVisibleToAll</tabstop>
+  <tabstop>buttonBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>ActionTemplateCreateDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>211</x>
+     <y>342</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>94</x>
+     <y>337</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>ActionTemplateCreateDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>265</x>
+     <y>342</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>404</x>
+     <y>337</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rbVisibleToOwner</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cmbOwner</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>45</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>250</x>
+     <y>261</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rbVisibleToSpeciality</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cmbSpeciality</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>72</x>
+     <y>284</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>249</x>
+     <y>285</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

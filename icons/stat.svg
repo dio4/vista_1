@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.44.1"
+   sodipodi:docbase="C:\py\Main-001\icons"
+   sodipodi:docname="stat.svg">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient5518">
+      <stop
+         id="stop5520"
+         offset="0"
+         style="stop-color:#f800ff;stop-opacity:1;" />
+      <stop
+         id="stop5522"
+         offset="1"
+         style="stop-color:#f80000;stop-opacity:0;" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3704">
+      <stop
+         style="stop-color:#f80000;stop-opacity:1;"
+         offset="0"
+         id="stop3706" />
+      <stop
+         style="stop-color:#f80000;stop-opacity:0;"
+         offset="1"
+         id="stop3708" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3704"
+       id="linearGradient3714"
+       x1="182.3228"
+       y1="457.89883"
+       x2="213.98611"
+       y2="268.71198"
+       gradientUnits="userSpaceOnUse"
+       spreadMethod="reflect"
+       gradientTransform="matrix(0.897284,0,0,1.013846,244.0232,-9.587673)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3704"
+       id="linearGradient3718"
+       gradientUnits="userSpaceOnUse"
+       spreadMethod="reflect"
+       x1="182.3228"
+       y1="457.89883"
+       x2="213.98611"
+       y2="268.71198"
+       gradientTransform="matrix(0.897284,0,0,1.154116,130.267,-83.27116)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3704"
+       id="linearGradient3722"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.891332,0,0,0.937497,17.66446,30.51856)"
+       spreadMethod="reflect"
+       x1="182.3228"
+       y1="457.89883"
+       x2="213.98611"
+       y2="268.71198" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.7284497"
+     inkscape:cx="300.96238"
+     inkscape:cy="691.23381"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1280"
+     inkscape:window-height="977"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:none;fill-opacity:1;stroke:none;stroke-opacity:1"
+       id="rect1872"
+       width="451.42856"
+       height="451.42856"
+       x="85.714287"
+       y="129.50504"
+       inkscape:export-filename="C:\py\Main-001\icons\stat.png"
+       inkscape:export-xdpi="6.3699999"
+       inkscape:export-ydpi="6.3699999" />
+    <image
+       xlink:href="stat.svg-rect1872-4294967040.png"
+       sodipodi:absref="C:\py\Main-001\icons\stat.svg-rect1872-4294967040.png"
+       width="250"
+       height="250"
+       transform="matrix(1.805714,0,0,1.805714,85.71429,129.505)"
+       id="image6427"
+       inkscape:export-filename="C:\py\Main-001\icons\stat.png"
+       inkscape:export-xdpi="6.3699999"
+       inkscape:export-ydpi="6.3699999" />
+    <path
+       style="fill:black;fill-opacity:1;fill-rule:evenodd;stroke:black;stroke-width:1.02172422px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 120.25 130.84375 L 85.5625 186.40625 L 106.375 186.40625 L 106.375 531.46875 L 86.4375 531.46875 L 86.4375 545.34375 L 86.4375 559.25 L 106.375 559.25 L 106.375 580.90625 L 120.25 580.90625 L 134.125 580.90625 L 134.125 559.25 L 480.9375 559.25 L 480.9375 580.03125 L 536.5 545.34375 L 480.9375 510.65625 L 480.9375 531.46875 L 134.125 531.46875 L 134.125 186.40625 L 154.9375 186.40625 L 120.25 130.84375 z "
+       id="path2794"
+       inkscape:export-filename="C:\py\Main-001\icons\stat.png"
+       inkscape:export-xdpi="6.3699999"
+       inkscape:export-ydpi="6.3699999" />
+    <rect
+       style="fill:url(#linearGradient3714);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-opacity:1"
+       id="rect2804"
+       width="87.213242"
+       height="334.92798"
+       x="374.32391"
+       y="188.05806"
+       inkscape:export-filename="C:\py\Main-001\icons\stat.png"
+       inkscape:export-xdpi="6.3699999"
+       inkscape:export-ydpi="6.3699999" />
+    <rect
+       y="141.71953"
+       x="260.56772"
+       height="381.26651"
+       width="87.213242"
+       id="rect3716"
+       style="fill:url(#linearGradient3718);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-opacity:1"
+       inkscape:export-filename="C:\py\Main-001\icons\stat.png"
+       inkscape:export-xdpi="6.3699999"
+       inkscape:export-ydpi="6.3699999" />
+    <rect
+       style="fill:url(#linearGradient3722);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-opacity:1"
+       id="rect3720"
+       width="86.634689"
+       height="309.70575"
+       x="147.1008"
+       y="213.28029"
+       inkscape:export-filename="C:\py\Main-001\icons\stat.png"
+       inkscape:export-xdpi="6.3699999"
+       inkscape:export-ydpi="6.3699999" />
+  </g>
+</svg>

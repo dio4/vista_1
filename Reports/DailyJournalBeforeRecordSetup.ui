@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DailyJournalBeforeRecordSetup</class>
+ <widget class="QDialog" name="DailyJournalBeforeRecordSetup">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>605</width>
+    <height>392</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Суточный журнал предварительной записи</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>true</bool>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="margin">
+    <number>4</number>
+   </property>
+   <property name="spacing">
+    <number>4</number>
+   </property>
+   <item row="5" column="2" colspan="3">
+    <widget class="CRBComboBox" name="cmbAccountingSystem"/>
+   </item>
+   <item row="6" column="2" colspan="3">
+    <widget class="QComboBox" name="cmbOrderSorting">
+     <item>
+      <property name="text">
+       <string>по идентификатору</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>по времени</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>по ФИО</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="lblOrgStructure">
+     <property name="text">
+      <string>Подразделение</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="2" colspan="2">
+    <widget class="QCheckBox" name="chkFreeTimes">
+     <property name="text">
+      <string>Выводить свободное время</string>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="2" colspan="2">
+    <widget class="QCheckBox" name="chkNoTimeLinePerson">
+     <property name="text">
+      <string>Выводить пустые графики</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="2">
+    <widget class="QLabel" name="lblBegDate">
+     <property name="text">
+      <string>Дата</string>
+     </property>
+     <property name="buddy">
+      <cstring>edtBegDate</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0">
+    <widget class="QLabel" name="lblOrderSorting">
+     <property name="text">
+      <string>Порядок сортировки</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="lblUserProfile">
+     <property name="text">
+      <string>Тип идентификатора пациента</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2">
+    <widget class="CDateEdit" name="edtBegDate">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="calendarPopup">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="14" column="0" colspan="4">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0" colspan="2">
+    <widget class="QLabel" name="lblIsPrimary">
+     <property name="text">
+      <string>Первичные</string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="2" colspan="2">
+    <widget class="QCheckBox" name="chkPegeFormat">
+     <property name="text">
+      <string>Выводить с начала листа</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="lblPerson">
+     <property name="text">
+      <string>&amp;Врач</string>
+     </property>
+     <property name="buddy">
+      <cstring>cmbPerson</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="3">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="11" column="2">
+    <widget class="QCheckBox" name="chkViewBirthDate">
+     <property name="text">
+      <string>Выводить дату рождения вместо возраста</string>
+     </property>
+    </widget>
+   </item>
+   <item row="13" column="1">
+    <spacer>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>21</width>
+       <height>21</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="12" column="2">
+    <widget class="QCheckBox" name="chkViewRegAdress">
+     <property name="text">
+      <string>Выводить адрес регистрации вместо прикрекления</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="2" colspan="3">
+    <widget class="QComboBox" name="cmbIsPrimary">
+     <item>
+      <property name="text">
+       <string>Нет</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Да</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="4" column="2" colspan="3">
+    <widget class="CPersonComboBoxEx" name="cmbPerson">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="2" colspan="2">
+    <widget class="COrgStructureComboBox" name="cmbOrgStructure">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CDateEdit</class>
+   <extends>QDateEdit</extends>
+   <header>library/DateEdit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>COrgStructureComboBox</class>
+   <extends>QComboBox</extends>
+   <header>Orgs/OrgStructComboBoxes.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CRBComboBox</class>
+   <extends>QComboBox</extends>
+   <header>library/crbcombobox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CPersonComboBoxEx</class>
+   <extends>QComboBox</extends>
+   <header>Orgs/PersonComboBoxEx.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>edtBegDate</tabstop>
+  <tabstop>cmbOrgStructure</tabstop>
+  <tabstop>cmbPerson</tabstop>
+  <tabstop>cmbAccountingSystem</tabstop>
+  <tabstop>cmbOrderSorting</tabstop>
+  <tabstop>cmbIsPrimary</tabstop>
+  <tabstop>chkFreeTimes</tabstop>
+  <tabstop>chkPegeFormat</tabstop>
+  <tabstop>chkNoTimeLinePerson</tabstop>
+  <tabstop>buttonBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>DailyJournalBeforeRecordSetup</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>198</x>
+     <y>284</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>119</x>
+     <y>181</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>DailyJournalBeforeRecordSetup</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>249</x>
+     <y>284</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>316</x>
+     <y>181</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

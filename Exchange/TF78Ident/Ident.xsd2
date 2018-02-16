@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?><xs:schema xmlns:tns="http://identification.ws.eis.spb.ru/" xmlns:ns1="http://jaxb.dev.java.net/array" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://identification.ws.eis.spb.ru/">
+<xs:import namespace="http://jaxb.dev.java.net/array" schemaLocation="Ident.xsd1"></xs:import>
+<xs:element name="Exception" type="tns:Exception"></xs:element>
+<xs:element name="doIdentification" type="tns:doIdentification"></xs:element>
+<xs:element name="doIdentificationResponse" type="tns:doIdentificationResponse"></xs:element>
+<xs:element name="getIdGeonimName" type="tns:getIdGeonimName"></xs:element>
+<xs:element name="getIdGeonimNameResponse" type="tns:getIdGeonimNameResponse"></xs:element>
+<xs:element name="getIdGeonimType" type="tns:getIdGeonimType"></xs:element>
+<xs:element name="getIdGeonimTypeResponse" type="tns:getIdGeonimTypeResponse"></xs:element>
+<xs:element name="getIdMo" type="tns:getIdMo"></xs:element>
+<xs:element name="getIdMoResponse" type="tns:getIdMoResponse"></xs:element>
+<xs:element name="getIdNet" type="tns:getIdNet"></xs:element>
+<xs:element name="getIdNetResponse" type="tns:getIdNetResponse"></xs:element>
+<xs:element name="getIdSmo" type="tns:getIdSmo"></xs:element>
+<xs:element name="getIdSmoResponse" type="tns:getIdSmoResponse"></xs:element>
+<xs:element name="getIdTArea" type="tns:getIdTArea"></xs:element>
+<xs:element name="getIdTAreaResponse" type="tns:getIdTAreaResponse"></xs:element>
+<xs:complexType name="getIdTArea"><xs:sequence><xs:element name="arg0" type="xs:string" minOccurs="0"></xs:element><xs:element name="arg1" type="xs:string" minOccurs="0"></xs:element></xs:sequence></xs:complexType>
+<xs:complexType name="getIdTAreaResponse"><xs:sequence><xs:element name="return" type="ns1:stringArray" minOccurs="0" maxOccurs="unbounded"></xs:element></xs:sequence></xs:complexType>
+<xs:complexType name="Exception"><xs:sequence><xs:element name="message" type="xs:string" minOccurs="0"></xs:element></xs:sequence></xs:complexType>
+<xs:complexType name="getIdGeonimType"><xs:sequence><xs:element name="arg0" type="xs:string" minOccurs="0"></xs:element><xs:element name="arg1" type="xs:string" minOccurs="0"></xs:element></xs:sequence></xs:complexType>
+<xs:complexType name="getIdGeonimTypeResponse"><xs:sequence><xs:element name="return" type="ns1:stringArray" minOccurs="0" maxOccurs="unbounded"></xs:element></xs:sequence></xs:complexType>
+<xs:complexType name="getIdMo"><xs:sequence><xs:element name="arg0" type="xs:string" minOccurs="0"></xs:element><xs:element name="arg1" type="xs:string" minOccurs="0"></xs:element></xs:sequence></xs:complexType>
+<xs:complexType name="getIdMoResponse"><xs:sequence><xs:element name="return" type="ns1:stringArray" minOccurs="0" maxOccurs="unbounded"></xs:element></xs:sequence></xs:complexType>
+<xs:complexType name="getIdSmo"><xs:sequence><xs:element name="arg0" type="xs:string" minOccurs="0"></xs:element><xs:element name="arg1" type="xs:string" minOccurs="0"></xs:element></xs:sequence></xs:complexType>
+<xs:complexType name="getIdSmoResponse"><xs:sequence><xs:element name="return" type="ns1:stringArray" minOccurs="0" maxOccurs="unbounded"></xs:element></xs:sequence></xs:complexType>
+<xs:complexType name="doIdentification"><xs:sequence><xs:element name="arg0" type="xs:string" minOccurs="0"></xs:element><xs:element name="arg1" type="xs:string" minOccurs="0"></xs:element><xs:element name="arg2" type="tns:identTO" minOccurs="0"></xs:element></xs:sequence></xs:complexType>
+<xs:complexType name="identTO"><xs:sequence><xs:element name="idCase" type="xs:string" minOccurs="0"></xs:element><xs:element name="dateBegin" type="xs:string" minOccurs="0"></xs:element><xs:element name="dateEnd" type="xs:string" minOccurs="0"></xs:element><xs:element name="surname" type="xs:string" minOccurs="0"></xs:element><xs:element name="name" type="xs:string" minOccurs="0"></xs:element><xs:element name="secondName" type="xs:string" minOccurs="0"></xs:element><xs:element name="birthday" type="xs:string" minOccurs="0"></xs:element><xs:element name="docNumber" type="xs:string" minOccurs="0"></xs:element><xs:element name="polisS" type="xs:string" minOccurs="0"></xs:element><xs:element name="polisN" type="xs:string" minOccurs="0"></xs:element><xs:element name="idTArea" type="xs:long" minOccurs="0"></xs:element><xs:element name="idGeonimName" type="xs:long" minOccurs="0"></xs:element><xs:element name="idGeonimType" type="xs:long" minOccurs="0"></xs:element><xs:element name="house" type="xs:string" minOccurs="0"></xs:element><xs:element name="idSmo" type="xs:long" minOccurs="0"></xs:element><xs:element name="numTest" type="xs:long" minOccurs="0"></xs:element><xs:element name="agrType" type="xs:long" minOccurs="0"></xs:element><xs:element name="attachList" type="tns:attachListTO" minOccurs="0"></xs:element></xs:sequence></xs:complexType>
+<xs:complexType name="attachListTO"><xs:sequence><xs:element name="attachItem" type="tns:attachTO" nillable="true" minOccurs="0" maxOccurs="unbounded"></xs:element></xs:sequence></xs:complexType>
+<xs:complexType name="attachTO"><xs:sequence><xs:element name="idNet" type="xs:int"></xs:element><xs:element name="idMo" type="xs:int"></xs:element></xs:sequence></xs:complexType>
+<xs:complexType name="doIdentificationResponse"><xs:sequence><xs:element name="return" type="tns:identTO" minOccurs="0"></xs:element></xs:sequence></xs:complexType>
+<xs:complexType name="getIdNet"><xs:sequence><xs:element name="arg0" type="xs:string" minOccurs="0"></xs:element><xs:element name="arg1" type="xs:string" minOccurs="0"></xs:element></xs:sequence></xs:complexType>
+<xs:complexType name="getIdNetResponse"><xs:sequence><xs:element name="return" type="ns1:stringArray" minOccurs="0" maxOccurs="unbounded"></xs:element></xs:sequence></xs:complexType>
+<xs:complexType name="getIdGeonimName"><xs:sequence><xs:element name="arg0" type="xs:string" minOccurs="0"></xs:element><xs:element name="arg1" type="xs:string" minOccurs="0"></xs:element></xs:sequence></xs:complexType>
+<xs:complexType name="getIdGeonimNameResponse"><xs:sequence><xs:element name="return" type="ns1:stringArray" minOccurs="0" maxOccurs="unbounded"></xs:element></xs:sequence></xs:complexType>
+</xs:schema>

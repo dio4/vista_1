@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DentalFormula</class>
+ <widget class="QWidget" name="DentalFormula">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1194</width>
+    <height>632</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Зубная формула</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="DentalFormulaView" name="tblFormula"/>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>300</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="title">
+        <string>Состояния</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="StatesTableView" name="tblStates">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnResetStates">
+          <property name="text">
+           <string>Очистить</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btnHistoryToggle">
+     <property name="text">
+      <string>Показать историю</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="wdgHistory" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QListView" name="lstHistory">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="DentalFormulaView" name="tblFormulaHistoryView"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>DentalFormulaView</class>
+   <extends>QTableView</extends>
+   <header>Forms/F043v2/DentalFormula.h</header>
+  </customwidget>
+  <customwidget>
+   <class>StatesTableView</class>
+   <extends>QTableView</extends>
+   <header>Forms/F043v2/DentalFormula.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>tblFormula</tabstop>
+  <tabstop>tblStates</tabstop>
+  <tabstop>btnResetStates</tabstop>
+  <tabstop>btnHistoryToggle</tabstop>
+  <tabstop>lstHistory</tabstop>
+  <tabstop>tblFormulaHistoryView</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btnHistoryToggle</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>wdgHistory</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>298</x>
+     <y>311</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>264</x>
+     <y>374</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

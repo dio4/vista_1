@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ExportPage1</class>
+ <widget class="QWidget" name="ExportPage1">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>530</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout">
+   <item row="11" column="0" colspan="3">
+    <spacer>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="12" column="1">
+    <widget class="QPushButton" name="btnExport">
+     <property name="text">
+      <string>экспорт</string>
+     </property>
+    </widget>
+   </item>
+   <item row="12" column="2">
+    <widget class="QPushButton" name="btnCancel">
+     <property name="text">
+      <string>прервать</string>
+     </property>
+    </widget>
+   </item>
+   <item row="12" column="0">
+    <spacer>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="10" column="0" colspan="3">
+    <widget class="QTextBrowser" name="logBrowser"/>
+   </item>
+   <item row="8" column="0">
+    <widget class="QCheckBox" name="chkVerboseLog">
+     <property name="text">
+      <string>подробный отчет</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="3">
+    <spacer>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="5" column="0">
+    <widget class="QCheckBox" name="chkExportDS">
+     <property name="text">
+      <string>Выгружать информацию о ДС</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0" colspan="3">
+    <widget class="CProgressBar" name="progressBar">
+     <property name="value">
+      <number>24</number>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QCheckBox" name="chkExportDD">
+     <property name="text">
+      <string>Выгружать информацию о ДД</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0" colspan="3">
+    <widget class="CRBListBox" name="tblEventTypeDD">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0" colspan="3">
+    <widget class="CRBListBox" name="tblEventTypeDS">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="lblRegistryType">
+     <property name="text">
+      <string>Вид реестра оказанной медицинской помощи:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0" colspan="3">
+    <widget class="QComboBox" name="cmbRegistryType">
+     <property name="sizeAdjustPolicy">
+      <enum>QComboBox::AdjustToMinimumContentsLength</enum>
+     </property>
+     <item>
+      <property name="text">
+       <string>Граждане, застрахованные вне территории Архангельской области</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Граждане, застрахованные на территории Архангельской области</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Реестр работающих граждан по Постановлению Правительства РФ от 30.12.2006 г. №864</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Реестр граждан, проходящих дополнительную диспансеризацию по Постановлению Правительства РФ от 30.12.2006 г. №860</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Реестр детей-сирот и детей, оставшихся без попечения родителей, проходящих дополнительную диспансеризацию по Постановлению Правительства РФ от 10.04.2007 г. №22</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Реестр граждан, проходящих дополнительную диспансеризацию по Постановлению Правительства РФ от 30.12.2006 г. №860</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Реестр пребывающих в стационарных учреждениях детей-сирот и детей, находящихся в трудной жизненной ситуации, проходящих диспансеризацию по Постановлению Правительства РФ</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Реестр граждан, проходящих дополнительную диспансеризацию по Постановлению Правительства РФ</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="9" column="0">
+    <widget class="QCheckBox" name="chkEventSplit">
+     <property name="text">
+      <string>разбивать события на визиты</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CProgressBar</class>
+   <extends>QProgressBar</extends>
+   <header>library/ProgressBar.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CRBListBox</class>
+   <extends>QTableView</extends>
+   <header>library/RBListBox.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>chkExportDD</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>tblEventTypeDD</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>143</x>
+     <y>23</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>224</x>
+     <y>87</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkExportDS</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>tblEventTypeDS</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>143</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>224</x>
+     <y>215</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

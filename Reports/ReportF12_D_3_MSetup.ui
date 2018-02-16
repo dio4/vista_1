@@ -1,0 +1,453 @@
+<ui version="4.0" >
+ <class>ReportF12_D_3_MSetupDialog</class>
+ <widget class="QDialog" name="ReportF12_D_3_MSetupDialog" >
+  <property name="windowModality" >
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>496</width>
+    <height>420</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>параметры отчёта</string>
+  </property>
+  <property name="sizeGripEnabled" >
+   <bool>true</bool>
+  </property>
+  <property name="modal" >
+   <bool>true</bool>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_3" >
+   <property name="margin" >
+    <number>4</number>
+   </property>
+   <property name="spacing" >
+    <number>4</number>
+   </property>
+   <item row="0" column="0" >
+    <widget class="QLabel" name="lblBegDate" >
+     <property name="sizePolicy" >
+      <sizepolicy vsizetype="Preferred" hsizetype="Maximum" >
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text" >
+      <string>Дата &amp;начала периода</string>
+     </property>
+     <property name="buddy" >
+      <cstring>edtBegDate</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1" >
+    <widget class="CDateEdit" name="edtBegDate" >
+     <property name="calendarPopup" >
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2" >
+    <spacer>
+     <property name="orientation" >
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0" >
+      <size>
+       <width>261</width>
+       <height>17</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="0" >
+    <widget class="QLabel" name="lblEndDate" >
+     <property name="sizePolicy" >
+      <sizepolicy vsizetype="Preferred" hsizetype="Maximum" >
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text" >
+      <string>Дата &amp;окончания периода</string>
+     </property>
+     <property name="buddy" >
+      <cstring>edtEndDate</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1" >
+    <widget class="CDateEdit" name="edtEndDate" >
+     <property name="calendarPopup" >
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2" >
+    <spacer>
+     <property name="orientation" >
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0" >
+      <size>
+       <width>261</width>
+       <height>17</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="2" column="0" >
+    <widget class="QLabel" name="lblEventType" >
+     <property name="sizePolicy" >
+      <sizepolicy vsizetype="Preferred" hsizetype="Maximum" >
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text" >
+      <string>&amp;Тип обращения</string>
+     </property>
+     <property name="buddy" >
+      <cstring>cmbEventType</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1" colspan="2" >
+    <widget class="CRBComboBox" name="cmbEventType" />
+   </item>
+   <item row="3" column="1" colspan="2" >
+    <widget class="QCheckBox" name="chkOnlyPermanentAttach" >
+     <property name="text" >
+      <string>&amp;Прикреплённые к базовому ЛПУ</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1" colspan="2" >
+    <widget class="QCheckBox" name="chkOnlyPayedEvents" >
+     <property name="text" >
+      <string>Только опла&amp;ченные</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0" colspan="3" >
+    <widget class="QGroupBox" name="gbTable1000" >
+     <property name="title" >
+      <string>Таблица 1000</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout" >
+      <property name="margin" >
+       <number>4</number>
+      </property>
+      <property name="spacing" >
+       <number>4</number>
+      </property>
+      <item row="0" column="0" colspan="2" >
+       <widget class="QLabel" name="label" >
+        <property name="font" >
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="autoFillBackground" >
+         <bool>false</bool>
+        </property>
+        <property name="text" >
+         <string>Число учреждений здравоохранения, осуществляющих дополнительную диспансеризацию:</string>
+        </property>
+        <property name="alignment" >
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+        </property>
+        <property name="wordWrap" >
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" >
+       <widget class="QLabel" name="lblTotalText" >
+        <property name="text" >
+         <string>(3) Всего</string>
+        </property>
+        <property name="buddy" >
+         <cstring>sbCol3</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" >
+       <widget class="QSpinBox" name="sbCol3" >
+        <property name="sizePolicy" >
+         <sizepolicy vsizetype="Fixed" hsizetype="Maximum" >
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximum" >
+         <number>99999</number>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" >
+       <widget class="QLabel" name="label_2" >
+        <property name="text" >
+         <string>(4) в полном объеме собственными силами </string>
+        </property>
+        <property name="wordWrap" >
+         <bool>true</bool>
+        </property>
+        <property name="buddy" >
+         <cstring>sbCol4</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1" >
+       <widget class="QSpinBox" name="sbCol4" >
+        <property name="sizePolicy" >
+         <sizepolicy vsizetype="Fixed" hsizetype="Maximum" >
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximum" >
+         <number>99999</number>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0" colspan="2" >
+       <widget class="QLabel" name="label_4" >
+        <property name="text" >
+         <string>на договорной основе в связи с отсутствием:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0" >
+       <widget class="QLabel" name="label_3" >
+        <property name="text" >
+         <string>(5) необходимого диагностического оборудования </string>
+        </property>
+        <property name="wordWrap" >
+         <bool>true</bool>
+        </property>
+        <property name="buddy" >
+         <cstring>sbCol5</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1" >
+       <widget class="QSpinBox" name="sbCol5" >
+        <property name="sizePolicy" >
+         <sizepolicy vsizetype="Fixed" hsizetype="Maximum" >
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximum" >
+         <number>99999</number>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0" >
+       <widget class="QLabel" name="label_5" >
+        <property name="text" >
+         <string>(6) необходимых специалистов</string>
+        </property>
+        <property name="buddy" >
+         <cstring>sbCol6</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1" >
+       <widget class="QSpinBox" name="sbCol6" >
+        <property name="sizePolicy" >
+         <sizepolicy vsizetype="Fixed" hsizetype="Maximum" >
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximum" >
+         <number>99999</number>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0" >
+       <widget class="QLabel" name="label_6" >
+        <property name="text" >
+         <string>(7) необходимых специалистов и диагностического оборудования </string>
+        </property>
+        <property name="buddy" >
+         <cstring>sbCol7</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="1" >
+       <widget class="QSpinBox" name="sbCol7" >
+        <property name="sizePolicy" >
+         <sizepolicy vsizetype="Fixed" hsizetype="Maximum" >
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximum" >
+         <number>99999</number>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="0" >
+       <widget class="QLabel" name="label_7" >
+        <property name="text" >
+         <string>(8) число организаций, прикрепленных к учреждениям здравоохранения для
+прохождения дополнительной диспансеризации </string>
+        </property>
+        <property name="buddy" >
+         <cstring>sbCol8</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="1" >
+       <widget class="QSpinBox" name="sbCol8" >
+        <property name="sizePolicy" >
+         <sizepolicy vsizetype="Fixed" hsizetype="Maximum" >
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximum" >
+         <number>99999</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="6" column="0" colspan="3" >
+    <widget class="QGroupBox" name="gbTable2000" >
+     <property name="title" >
+      <string>Таблица 2000</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2" >
+      <property name="margin" >
+       <number>4</number>
+      </property>
+      <property name="spacing" >
+       <number>4</number>
+      </property>
+      <item row="0" column="0" >
+       <widget class="QLabel" name="lblTable2000Col3" >
+        <property name="text" >
+         <string>(3) Число граждан, подлежащих дополнительной диспасеризации</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1" >
+       <widget class="QSpinBox" name="sbTable2000Col3" >
+        <property name="sizePolicy" >
+         <sizepolicy vsizetype="Fixed" hsizetype="Maximum" >
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize" >
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximum" >
+         <number>99999</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="7" column="0" colspan="3" >
+    <spacer name="verticalSpacer" >
+     <property name="orientation" >
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0" >
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="8" column="0" colspan="3" >
+    <widget class="QDialogButtonBox" name="buttonBox" >
+     <property name="orientation" >
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons" >
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CRBComboBox</class>
+   <extends>QComboBox</extends>
+   <header>library/crbcombobox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CDateEdit</class>
+   <extends>QDateEdit</extends>
+   <header>library/DateEdit</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>edtBegDate</tabstop>
+  <tabstop>edtEndDate</tabstop>
+  <tabstop>cmbEventType</tabstop>
+  <tabstop>chkOnlyPermanentAttach</tabstop>
+  <tabstop>chkOnlyPayedEvents</tabstop>
+  <tabstop>sbCol3</tabstop>
+  <tabstop>sbCol4</tabstop>
+  <tabstop>sbCol5</tabstop>
+  <tabstop>sbCol6</tabstop>
+  <tabstop>sbCol7</tabstop>
+  <tabstop>sbCol8</tabstop>
+  <tabstop>sbTable2000Col3</tabstop>
+  <tabstop>buttonBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>ReportF12_D_3_MSetupDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>116</x>
+     <y>310</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>70</x>
+     <y>270</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>ReportF12_D_3_MSetupDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>229</x>
+     <y>310</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>279</x>
+     <y>272</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
